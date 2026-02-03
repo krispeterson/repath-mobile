@@ -1,0 +1,74 @@
+{
+  "pack_id": "glenwood-springs-co-us",
+  "pack_version": "0.1.0",
+  "pack_schema_version": "1.1.0",
+  "retrieved_at": "2026-02-02T18:14:12.306466Z",
+  "municipality": {
+    "name": "Glenwood Springs",
+    "region": "CO",
+    "country": "US"
+  },
+  "locations": [
+    {
+      "id": "glenwood-recycling-center",
+      "name": "Downtown Recycling Center",
+      "country": "US"
+    }
+  ],
+  "items": [
+    {
+      "id": "cardboard",
+      "name": "Cardboard",
+      "keywords": [
+        "boxes",
+        "corrugated"
+      ],
+      "option_cards": [
+        {
+          "id": "cardboard-reuse",
+          "kind": "reuse",
+          "title": "Reuse cardboard",
+          "priority": 0,
+          "confidence": 0.7,
+          "actions": [
+            {
+              "type": "copy_text",
+              "label": "Tip",
+              "text": "Reuse boxes if clean. Consider posting on Craigslist, Freecycle, The Buy Nothing Project, or other local sharing groups."
+            }
+          ]
+        },
+        {
+          "id": "cardboard-dropoff",
+          "kind": "dropoff_recycle",
+          "title": "Recycle at drop-off",
+          "priority": 10,
+          "confidence": 0.8,
+          "actions": [
+            {
+              "type": "navigate",
+              "label": "Go",
+              "payload": {
+                "location_id": "glenwood-recycling-center"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cardboard-trash",
+          "kind": "trash",
+          "title": "Trash (last resort)",
+          "priority": 900,
+          "confidence": 0.9,
+          "actions": [
+            {
+              "type": "copy_text",
+              "label": "Why",
+              "text": "Only if contaminated."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

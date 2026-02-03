@@ -1,0 +1,16 @@
+{
+  "name": "repath-mobile",
+  "private": true,
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx expo start",
+    "smoke": "node scripts/smoke.js"
+  },
+  "dependencies": {
+    "expo": "^54.0.33",
+    "expo-location": "~17.0.0",
+    "react": "18.2.0",
+    "react-native": "^0.74.5"
+  }
+}

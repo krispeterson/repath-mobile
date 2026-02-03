@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "RePath",
+    "slug": "repath",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "sdkVersion": "51.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "userInterfaceStyle": "automatic"
+  }
+}
