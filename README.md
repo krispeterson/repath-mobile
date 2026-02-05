@@ -74,8 +74,10 @@ Install guidance (network required):
    ```
 5) (Optional) Export a YOLOv8 TFLite model and labels if you need to swap models, use custom classes,
    or improve accuracy. See `assets/models/README.md` for when and why this is needed.
+   Note: TACO classes require a custom-trained `.pt` checkpoint; the default Ultralytics weights are
+   COCO-based.
 
-   Quick start (default `yolov8n.pt`):
+   Quick start (default `yolov8s.pt`):
    ```bash
    npm run fetch:model -- --imgsz 640 --nms --out-dir assets/models
    ```

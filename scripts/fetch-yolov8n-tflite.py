@@ -19,7 +19,7 @@ def parse_args():
     )
     parser.add_argument(
         "--model",
-        default="yolov8n.pt",
+        default="yolov8s.pt",
         help="Ultralytics model name or path to a .pt file",
     )
     parser.add_argument("--imgsz", type=int, default=640, help="Input image size")
@@ -43,6 +43,7 @@ def main():
         raise SystemExit("--data is required when using --int8")
 
     cwd = os.getcwd()
+    out_dir = os.path.abspath(args.out_dir)
     with tempfile.TemporaryDirectory(prefix="repath-yolo-") as tmpdir:
         os.chdir(tmpdir)
         try:
@@ -72,8 +73,8 @@ def main():
             if not export_path or not os.path.exists(export_path):
                 raise SystemExit("Export failed or output not found.")
 
-            os.makedirs(args.out_dir, exist_ok=True)
-            tflite_out = os.path.join(args.out_dir, "yolov8.tflite")
+            os.makedirs(out_dir, exist_ok=True)
+            tflite_out = os.path.join(out_dir, "yolov8.tflite")
             shutil.copy2(export_path, tflite_out)
 
             labels = model.names if hasattr(model, "names") else {}
@@ -82,7 +83,7 @@ def main():
             else:
                 label_list = list(labels)
 
-            labels_out = os.path.join(args.out_dir, "yolov8.labels.json")
+            labels_out = os.path.join(out_dir, "yolov8.labels.json")
             with open(labels_out, "w", encoding="utf-8") as handle:
                 json.dump(label_list, handle, indent=2)
                 handle.write("\n")
