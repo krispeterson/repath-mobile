@@ -2,22 +2,29 @@
 
 ## Why RePath Mobile exists
 
-Recycling is confusing not because people don’t care, but because the system is fragmented, local, and poorly explained. Rules vary by city, by hauler, by material, and even by context — yet consumers are expected to “just know” what to do.
+Recycling is confusing not because people don’t care, and not because municipalities aren’t trying — but because the system is inherently complex. Rules vary by city, by hauler, by material, by housing type, and by market conditions that change faster than public guidance can realistically keep up.
 
-**RePath Mobile exists to remove that cognitive burden.**
+People are expected to make correct, context-dependent decisions in real time, often with incomplete or outdated information. Municipal recycling programs know this tension well.
+
+**RePath Mobile exists to reduce that friction.**
 
 This app is a camera-first, offline-capable guide that helps people decide what to do with the thing in their hand *right now*: reuse it, give it away, sell it, recycle it, take it to a drop-off location, or trash it as a last resort — based on local rules and real-world constraints.
 
-We’re building RePath Mobile because:
-- Recycling is an **information-routing problem**, not a motivation problem
-- “Is this recyclable?” is the wrong question, but it’s the one people have
-- Showing **ranked, practical options** works better than binary yes/no answers
-- Reducing contamination and confusion often matters more than theoretical recyclability
-- Sustainability tools should be calm, respectful, and non-judgmental
+I am building RePath Mobile because:
+- Recycling is an **information-routing problem**, not an education or motivation problem
+- “Is this recyclable?” is the wrong question, but it’s the question people have
+- Clear, **ranked options** reduce contamination more effectively than yes/no answers
+- Reuse, resale, and proper disposal are as important as recycling itself
+- Tools that lower cognitive load outperform tools that rely on perfect behavior
 
-This repository contains a thin mobile client that consumes **RePath Core** decision logic and municipal data packs. Its purpose is not to moralize or gamify behavior, but to make better choices the path of least resistance — even when offline, even when the answer is “it depends.”
+This repository contains a thin mobile client that consumes **RePath Core** decision logic and municipal data packs. It is designed to complement — not replace — existing municipal guidance by making that guidance more accessible at the moment decisions are made.
 
-RePath is a prosthetic for a broken system, built to help people navigate it with less effort and more confidence.
+For municipalities and recycling professionals, RePath is intended to be a **force multiplier**:
+- a way to extend local rules into people’s pockets
+- a mechanism to reduce wishcycling without increasing enforcement or outreach burden
+- a shared, updatable interface between complex programs and everyday behavior
+
+RePath is not about assigning blame. It’s about acknowledging complexity — and giving people a better path through it.
 
 ## What it is
 
