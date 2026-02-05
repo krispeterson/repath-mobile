@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Pressable, ScrollView, Image, Linking } from "react-native";
+import { View, Text, Pressable, ScrollView, Image, Linking, ActivityIndicator } from "react-native";
 import { Camera } from "react-native-vision-camera";
 import { CAMERA_FPS } from "../domain/scan";
 import { resolveLocationDetails } from "../domain/pack";
@@ -76,8 +76,22 @@ export default function ScanScreen({
       ) : null}
 
       <View style={{ flexDirection: "row", gap: spacing.sm, alignItems: "center" }}>
-        <Pressable onPress={onPrimaryAction} style={{ padding: spacing.md, backgroundColor: colors.ink, borderRadius: radius.md, flex: 1 }}>
-          <Text style={{ color: colors.white, fontWeight: "700", textAlign: "center" }}>{hasCapture ? "Retake" : "Capture"}</Text>
+        <Pressable
+          onPress={onPrimaryAction}
+          style={{
+            padding: spacing.md,
+            backgroundColor: isProcessing ? colors.fog : colors.ink,
+            borderRadius: radius.md,
+            flex: 1
+          }}
+          disabled={isProcessing}
+        >
+          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center", gap: spacing.xs }}>
+            {isProcessing ? <ActivityIndicator size="small" color={colors.charcoal} /> : null}
+            <Text style={{ color: isProcessing ? colors.charcoal : colors.white, fontWeight: "700", textAlign: "center" }}>
+              {isProcessing ? "Processing..." : hasCapture ? "Retake" : "Capture"}
+            </Text>
+          </View>
         </Pressable>
         <Text style={{ fontSize: 12, color: colors.mist }}>Pinch to zoom</Text>
       </View>

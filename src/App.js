@@ -26,6 +26,7 @@ export default function App() {
   const [scanMode, setScanMode] = useState("idle");
   const [scanItems, setScanItems] = useState([]);
   const [scanMessage, setScanMessage] = useState(null);
+  const [isProcessing, setIsProcessing] = useState(false);
   const [captureUri, setCaptureUri] = useState(null);
   const [hasCapture, setHasCapture] = useState(false);
   const [isCapturing, setIsCapturing] = useState(false);
@@ -127,6 +128,7 @@ export default function App() {
     setScanLabels([]);
     setScanItems([]);
     setScanMessage(null);
+    setIsProcessing(false);
     setCaptureUri(null);
     setHasCapture(false);
     setIsCapturing(false);
@@ -161,6 +163,7 @@ export default function App() {
   }
 
   const handleDetections = (labels) => {
+    setIsProcessing(false);
     setScanLabels(labels);
     const items = mapLabelsToItems(labels, packId, pack);
     setScanItems(items);
@@ -174,6 +177,7 @@ export default function App() {
   };
 
   function finalizeCapture() {
+    setIsProcessing(false);
     setScanActive(false);
     setScanMode("idle");
   }
@@ -184,6 +188,7 @@ export default function App() {
     setScanLabels([]);
     setScanItems([]);
     setScanMessage(null);
+    setIsProcessing(false);
     setCaptureUri(null);
     setHasCapture(false);
     setIsCapturing(false);
@@ -197,6 +202,7 @@ export default function App() {
     setScanMessage(null);
     setCaptureUri(null);
     setHasCapture(false);
+    setIsProcessing(true);
     try {
       if (cameraRef.current) {
         const photo = await cameraRef.current.takePhoto();
@@ -209,6 +215,7 @@ export default function App() {
         }
       }
     } catch (error) {
+      setIsProcessing(false);
       if (!captureUri) {
         setScanMessage("Capture failed. Please try again.");
       }
@@ -273,6 +280,7 @@ export default function App() {
           captureUri={captureUri}
           hasCapture={hasCapture}
           scanItems={scanItems}
+          isProcessing={isProcessing}
           pack={pack}
           onPrimaryAction={hasCapture ? retakeScan : triggerScanOnce}
           onBack={() => {
