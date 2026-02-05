@@ -4,11 +4,42 @@
     "slug": "repath",
     "version": "0.0.1",
     "orientation": "portrait",
-    "sdkVersion": "51.0.0",
     "platforms": [
       "ios",
       "android"
     ],
-    "userInterfaceStyle": "automatic"
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      [
+        "react-native-fast-tflite",
+        {
+          "enableAndroidGpuLibraries": true
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ]
+    ],
+    "ios": {
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow RePath to use your camera to scan items."
+      },
+      "bundleIdentifier": "com.anonymous.repath"
+    },
+    "android": {
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ],
+      "package": "com.anonymous.repath",
+      "minSdkVersion": 26
+    },
+    "icon": "./assets/icon.png"
   }
 }

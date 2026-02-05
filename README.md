@@ -1,9 +1,136 @@
-# RePath Mobile (prototype)
+# RePath Mobile
+
+## Why RePath Mobile exists
+
+Recycling is confusing not because people don’t care, but because the system is fragmented, local, and poorly explained. Rules vary by city, by hauler, by material, and even by context — yet consumers are expected to “just know” what to do.
+
+**RePath Mobile exists to remove that cognitive burden.**
+
+This app is a camera-first, offline-capable guide that helps people decide what to do with the thing in their hand *right now*: reuse it, give it away, sell it, recycle it, take it to a drop-off location, or trash it as a last resort — based on local rules and real-world constraints.
+
+We’re building RePath Mobile because:
+- Recycling is an **information-routing problem**, not a motivation problem
+- “Is this recyclable?” is the wrong question, but it’s the one people have
+- Showing **ranked, practical options** works better than binary yes/no answers
+- Reducing contamination and confusion often matters more than theoretical recyclability
+- Sustainability tools should be calm, respectful, and non-judgmental
+
+This repository contains a thin mobile client that consumes **RePath Core** decision logic and municipal data packs. Its purpose is not to moralize or gamify behavior, but to make better choices the path of least resistance — even when offline, even when the answer is “it depends.”
+
+RePath is a prosthetic for a broken system, built to help people navigate it with less effort and more confidence.
+
+## What it is
 
 Minimal React Native (Expo) prototype that:
 - asks for location (or ZIP)
 - loads a municipality pack
 - renders up to 5 ranked Option Cards
 - uses a bundled search index (`assets/packs/search.json`) for lookup
+- supports camera detection (YOLOv8 TFLite, single-shot frame processor for POC stability)
 
 This is a thin proof-of-concept. Replace bundled packs with remote manifest + cached downloads.
+
+## Object detection
+The scan flow uses VisionCamera frame processors with a YOLOv8 TFLite model for single-shot detection (POC), then maps
+labels to pack items via the bundled search index.
+
+Requirements:
+- Development build (VisionCamera + TFLite are native modules; not supported in Expo Go).
+- Generate `assets/models/yolov8.tflite` and `assets/models/yolov8.labels.json` locally (see `assets/models/README.md`).
+
+Dependencies used:
+- `react-native-vision-camera`
+- `react-native-fast-tflite`
+- `react-native-worklets-core`
+
+Install guidance (network required):
+- `npm install`
+
+## Development setup (macOS)
+
+1) Ensure **Python 3.11** is installed and **`python3` points to 3.11**.
+   - Reason: Ultralytics TFLite export depends on TensorFlow + onnx2tf, and those packages
+     currently do not provide compatible wheels for Python 3.12+ or 3.14.
+   - Verify:
+     ```bash
+     python3 --version
+     which python3
+     ```
+   - If this does not show `Python 3.11.x`, update your PATH or version manager so `python3`
+     resolves to 3.11.
+2) Create and activate a virtual environment (recommended to isolate deps):
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+3) Install Ultralytics export deps:
+   ```bash
+   pip install --upgrade pip
+   pip install "ultralytics[export]"
+   ```
+4) Install project dependencies:
+   ```bash
+   npm install
+   ```
+5) (Optional) Export a YOLOv8 TFLite model and labels if you need to swap models, use custom classes,
+   or improve accuracy. See `assets/models/README.md` for when and why this is needed.
+
+   Quick start (default `yolov8n.pt`):
+   ```bash
+   npm run fetch:model -- --imgsz 640 --nms --out-dir assets/models
+   ```
+
+6) Create a development build (required for VisionCamera + TFLite):
+   ```bash
+   npm run prebuild
+   npm run android
+   ```
+   Note: This POC uses `Frame.toArrayBuffer()` for resizing, which requires Android `minSdkVersion` 26+ (set via the `expo-build-properties` plugin in `app.json`).
+   `npm run prebuild` generates `android/` and `ios/` from Expo and then applies a small patch
+   that only bumps Gradle/AGP/Kotlin if the generated versions are below the minimums we need. This
+   keeps the workflow reproducible even when the generated template versions change, without
+   overriding newer versions. Minimums checked: Gradle 8.6, AGP 8.4.2, Kotlin 1.9.24.
+
+   The POC uses a simple JS resize in the frame processor (pixelFormat `rgb`) to avoid extra native
+   dependencies. This is slower than the resize plugin but more stable for a prototype.
+
+   Performance note: this is CPU-heavy and throttled to ~1 FPS for stability. If we move beyond POC,
+   we should swap to a dedicated native resize plugin or a GPU-backed preprocessing path.
+   This builds a dev client that includes native modules. Expo Go will not work.
+
+7) Start the dev server:
+   ```bash
+   npm run start
+   ```
+
+
+
+Notes:
+- The camera pipeline requires a development build (custom native modules). Expo Go will not work.
+- `android/` and `ios/` are generated by Expo prebuild and are intentionally ignored. If you upgrade
+  Expo/RN, re-run `npm run prebuild` and confirm the patch script still applies cleanly.
+- Model binaries in `assets/models/` are generated locally and ignored by git. See
+  `assets/models/README.md` for model export details and quantization options.
+
+## Troubleshooting
+
+- **Expo Go shows a blank camera / scan button fails**
+  - Use a development build; VisionCamera + TFLite are native modules and do not run in Expo Go.
+
+- **`Model not loaded` error**
+  - Ensure `assets/models/yolov8.tflite` exists and is not empty.
+  - Restart Metro after adding the model so it gets bundled.
+
+- **`python3` still points to Python 3.9**
+  - Update your PATH or version manager so `python3` resolves to Python 3.11.
+  - Verify with `which python3` and `python3 --version`.
+
+- **`ultralytics[export]` install fails**
+  - Confirm you are using Python 3.11 inside the venv.
+
+- **Poor detection accuracy**
+  - Confirm your labels in `yolov8.labels.json` match the model classes.
+  - Verify the model input size in `src/App.js` matches your exported model size.
+
+- **Metro doesn't bundle .tflite**
+  - Ensure `metro.config.js` includes `tflite` in `assetExts`.

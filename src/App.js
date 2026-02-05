@@ -1,125 +1,15 @@
-import React, { useState } from "react";
-import { SafeAreaView, View, Text, TextInput, Pressable, ScrollView } from "react-native";
+import React, { useEffect, useRef, useState } from "react";
+import { Text, View } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import * as Location from "expo-location";
-
-import manifest from "../assets/packs/manifest.json";
-import searchIndex from "../assets/packs/search.json";
-import glenwoodPack from "../assets/packs/glenwood-springs-co-us.pack.json";
-import fortPack from "../assets/packs/fort-collins-co-us.pack.json";
-
-function resolvePackFromZip(zip) {
-  return manifest.jurisdictions[String(zip || "").trim()] || null;
-}
-
-function getBundledPack(packId) {
-  if (packId === "glenwood-springs-co-us") return glenwoodPack;
-  if (packId === "fort-collins-co-us") return fortPack;
-  return null;
-}
-
-function normalizeToken(token) {
-  if (!token) return "";
-  if (token.length > 3 && token.endsWith("es")) return token.slice(0, -2);
-  if (token.length > 3 && token.endsWith("s")) return token.slice(0, -1);
-  return token;
-}
-
-function tokenize(text) {
-  if (!text) return [];
-  return String(text)
-    .toLowerCase()
-    .split(/[^a-z0-9]+/g)
-    .map((token) => normalizeToken(token.trim()))
-    .filter((token) => token.length > 0);
-}
-
-function rankCards(cards) {
-  return (cards || [])
-    .map((c) => ({ ...c, score: (c.priority || 0) - ((c.confidence || 0.5) * 10) }))
-    .sort((a, b) => a.score - b.score)
-    .slice(0, 5);
-}
-
-function resolveByHeuristic(pack, q) {
-  let best = null;
-  let bestScore = 0;
-  for (const it of pack.items || []) {
-    let score = 0;
-    const name = (it.name || "").toLowerCase();
-    if (name === q) score += 100;
-    if (name.includes(q)) score += 50;
-    for (const k of it.keywords || []) {
-      const kk = String(k).toLowerCase();
-      if (kk === q) score += 70;
-      else if (kk.includes(q)) score += 25;
-    }
-    if (score > bestScore) {
-      bestScore = score;
-      best = it;
-    }
-  }
-
-  if (bestScore >= 25 && best) return rankCards(best.option_cards);
-  return null;
-}
-
-function resolveItem(pack, packId, text) {
-  const q = String(text || "").trim().toLowerCase();
-  if (!q) return [];
-
-  const packSearch = searchIndex.packs && searchIndex.packs[packId];
-  const tokens = tokenize(q);
-
-  if (packSearch && packSearch.index && tokens.length) {
-    const scores = {};
-    tokens.forEach((token) => {
-      const ids = packSearch.index[token] || [];
-      ids.forEach((id) => {
-        scores[id] = (scores[id] || 0) + 1;
-      });
-    });
-
-    let bestId = null;
-    let bestScore = 0;
-    Object.keys(scores).forEach((id) => {
-      const score = scores[id];
-      if (score > bestScore) {
-        bestScore = score;
-        bestId = id;
-      }
-    });
-
-    if (bestId) {
-      const best = (pack.items || []).find((it) => it.id === bestId);
-      if (best && best.option_cards) {
-        return rankCards(best.option_cards);
-      }
-    }
-  }
-
-  const fallback = resolveByHeuristic(pack, q);
-  if (fallback) return fallback;
-
-  return rankCards([
-    {
-      id: "unknown-item",
-      kind: "unknown",
-      title: "Not sure what this is",
-      subtitle: "Try a different keyword.",
-      priority: 200,
-      confidence: 0.3,
-      actions: [{ type: "copy_text", label: "Tip", text: "When in doubt, don't put it in recycling." }]
-    },
-    {
-      id: "unknown-trash",
-      kind: "trash",
-      title: "Trash (last resort)",
-      priority: 900,
-      confidence: 0.7,
-      actions: [{ type: "copy_text", label: "Note", text: "Better than contaminating recycling streams." }]
-    }
-  ]);
-}
+import { useCameraDevice, useCameraPermission } from "react-native-vision-camera";
+import { useTensorflowModel } from "react-native-fast-tflite";
+import yoloLabels from "../assets/models/yolov8.labels.json";
+import { OnboardScreen, ZipScreen } from "./components";
+import { colors, spacing } from "./ui/theme";
+import { HomeScreen, ScanScreen } from "./screens";
+import { getBundledPack, resolvePackFromZip, mapLabelsToItems, resolveItem } from "./domain";
+import useScanProcessor from "./hooks/useScanProcessor";
 
 export default function App() {
   const [step, setStep] = useState("onboard");
@@ -130,6 +20,42 @@ export default function App() {
   const [results, setResults] = useState([]);
   const [zipError, setZipError] = useState(null);
   const [locationError, setLocationError] = useState(null);
+  const [scanError, setScanError] = useState(null);
+  const [scanLabels, setScanLabels] = useState([]);
+  const [scanActive, setScanActive] = useState(false);
+  const [scanMode, setScanMode] = useState("idle");
+  const [scanItems, setScanItems] = useState([]);
+  const [scanMessage, setScanMessage] = useState(null);
+  const [captureUri, setCaptureUri] = useState(null);
+  const [hasCapture, setHasCapture] = useState(false);
+  const [isCapturing, setIsCapturing] = useState(false);
+
+  const { hasPermission, requestPermission } = useCameraPermission();
+  const device = useCameraDevice("back");
+  const cameraRef = useRef(null);
+  const model = useTensorflowModel(require("../assets/models/yolov8.tflite"));
+
+  if (Array.isArray(yoloLabels) && yoloLabels.length !== 80) {
+    console.log("[TFLite] Warning: expected 80 labels, got", yoloLabels.length);
+  }
+
+  useEffect(() => {
+    if (model.state === "loaded") {
+      debugLogModel();
+    }
+  }, [model.state]);
+
+
+  function debugLogModel() {
+    if (model.state !== "loaded" || !model.model) return;
+    try {
+      console.log("[TFLite] Model keys:", Object.keys(model.model));
+      console.log("[TFLite] Inputs:", model.model.inputs || []);
+      console.log("[TFLite] Outputs:", model.model.outputs || []);
+    } catch (error) {
+      console.log("[TFLite] Tensor info unavailable", error);
+    }
+  }
 
   async function requestLocation() {
     setLocationError(null);
@@ -191,75 +117,174 @@ export default function App() {
     setStep(p ? "home" : "enter_zip");
   }
 
-  function run() {
+  function runSearch() {
     if (!pack || !packId) return;
     setResults(resolveItem(pack, packId, query));
   }
 
-  const placeName = pack?.jurisdiction?.name || pack?.municipality?.name || "";
-  const placeRegion =
-    pack?.jurisdiction?.admin_areas?.[0]?.code || pack?.municipality?.region || pack?.jurisdiction?.country || "";
+  async function startScan() {
+    setScanError(null);
+    setScanLabels([]);
+    setScanItems([]);
+    setScanMessage(null);
+    setCaptureUri(null);
+    setHasCapture(false);
+    setIsCapturing(false);
+
+    if (!pack || !packId) {
+      setScanError("Choose a location first.");
+      return;
+    }
+
+    if (!hasPermission) {
+      const permission = await requestPermission();
+      if (!permission) {
+        setScanError("Camera permission was denied.");
+        return;
+      }
+    }
+
+    if (!device) {
+      setScanError("No camera device available.");
+      return;
+    }
+
+    if (model.state !== "loaded") {
+      setScanError("Model not loaded. Ensure yolov8.tflite is bundled.");
+      return;
+    }
+    debugLogModel();
+
+    setScanMode("idle");
+    setScanActive(true);
+    setStep("scan");
+  }
+
+  const handleDetections = (labels) => {
+    setScanLabels(labels);
+    const items = mapLabelsToItems(labels, packId, pack);
+    setScanItems(items);
+    if (!labels.length) {
+      setScanMessage("No objects detected. Try better lighting or move closer.");
+    } else if (!items.length) {
+      setScanMessage("Detected objects, but no matching items in this pack.");
+    } else {
+      setScanMessage(null);
+    }
+  };
+
+  function finalizeCapture() {
+    setScanActive(false);
+    setScanMode("idle");
+  }
+
+  function retakeScan() {
+    setScanActive(true);
+    setScanMode("idle");
+    setScanLabels([]);
+    setScanItems([]);
+    setScanMessage(null);
+    setCaptureUri(null);
+    setHasCapture(false);
+    setIsCapturing(false);
+  }
+
+  async function triggerScanOnce() {
+    if (isCapturing) return;
+    setIsCapturing(true);
+    setScanMode("idle");
+    setScanActive(true);
+    setScanMessage(null);
+    setCaptureUri(null);
+    setHasCapture(false);
+    try {
+      if (cameraRef.current) {
+        const photo = await cameraRef.current.takePhoto();
+        if (photo?.path) {
+          setCaptureUri(`file://${photo.path}`);
+          setScanMessage(null);
+          setHasCapture(true);
+          setScanMode("capture");
+          setScanActive(true);
+        }
+      }
+    } catch (error) {
+      if (!captureUri) {
+        setScanMessage("Capture failed. Please try again.");
+      }
+    } finally {
+      setIsCapturing(false);
+    }
+  }
+
+  const frameProcessor = useScanProcessor({
+    model,
+    labelNames: yoloLabels,
+    scanActive,
+    scanMode,
+    onDetections: handleDetections,
+    onFinalize: finalizeCapture
+  });
 
   return (
-    <SafeAreaView style={{ flex: 1, padding: 16 }}>
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1, padding: spacing.lg, backgroundColor: colors.snow }}>
       {step === "onboard" && (
-        <View style={{ gap: 12 }}>
-          <Text style={{ fontSize: 28, fontWeight: "700" }}>RePath</Text>
-          <Text style={{ fontSize: 16 }}>Reuse, sell, recycle, drop-off, or trash—based on local rules.</Text>
-          <Pressable onPress={requestLocation} style={{ padding: 12, backgroundColor: "#111", borderRadius: 8 }}>
-            <Text style={{ color: "#fff", textAlign: "center", fontWeight: "600" }}>Use my location</Text>
-          </Pressable>
-          <Pressable onPress={() => setStep("enter_zip")} style={{ padding: 12, borderWidth: 1, borderColor: "#111", borderRadius: 8 }}>
-            <Text style={{ textAlign: "center", fontWeight: "600" }}>Enter location</Text>
-          </Pressable>
-        </View>
+        <OnboardScreen
+          onLocation={requestLocation}
+          onEnterZip={() => setStep("enter_zip")}
+        />
       )}
 
       {step === "enter_zip" && (
-        <View style={{ gap: 12 }}>
-          <Text style={{ fontSize: 20, fontWeight: "700" }}>Choose your area</Text>
-          <TextInput value={zip} onChangeText={(text) => { setZip(text); setZipError(null); }} placeholder="ZIP code" keyboardType="number-pad"
-            style={{ borderWidth: 1, borderColor: "#999", borderRadius: 8, padding: 10 }} />
-          {zipError ? <Text style={{ color: "#b00020" }}>{zipError}</Text> : null}
-          {locationError ? <Text style={{ color: "#b00020" }}>{locationError}</Text> : null}
-          <Pressable onPress={() => chooseZip()} style={{ padding: 12, backgroundColor: "#111", borderRadius: 8 }}>
-            <Text style={{ color: "#fff", textAlign: "center", fontWeight: "600" }}>Continue</Text>
-          </Pressable>
-          <Pressable onPress={requestLocation} style={{ padding: 10 }}>
-            <Text style={{ textAlign: "center", color: "#111", textDecorationLine: "underline" }}>Use my location instead</Text>
-          </Pressable>
-          <Text style={{ fontSize: 12, color: "#555" }}>Prototype uses bundled packs; replace with remote downloads + cache.</Text>
-        </View>
+        <ZipScreen
+          zip={zip}
+          zipError={zipError}
+          locationError={locationError}
+          onZipChange={(text) => {
+            setZip(text);
+            setZipError(null);
+          }}
+          onContinue={() => chooseZip()}
+          onLocation={requestLocation}
+        />
       )}
 
       {step === "home" && pack && (
-        <View style={{ flex: 1, gap: 12 }}>
-          <Text style={{ fontSize: 18, fontWeight: "700" }}>{placeName}{placeRegion ? ", " : ""}{placeRegion}</Text>
-          <View style={{ flexDirection: "row", gap: 8, alignItems: "center" }}>
-            <TextInput value={query} onChangeText={setQuery} placeholder="Search item"
-              style={{ flex: 1, borderWidth: 1, borderColor: "#999", borderRadius: 8, padding: 10 }} />
-            <Pressable onPress={run} style={{ padding: 12, backgroundColor: "#111", borderRadius: 8 }}>
-              <Text style={{ color: "#fff", fontWeight: "600" }}>Go</Text>
-            </Pressable>
-          </View>
-
-          <ScrollView style={{ flex: 1 }} contentContainerStyle={{ gap: 10 }}>
-            {(results.length ? results : resolveItem(pack, packId, query)).map((c) => (
-              <View key={c.id} style={{ borderWidth: 1, borderColor: "#ddd", borderRadius: 12, padding: 12, gap: 6 }}>
-                <Text style={{ fontSize: 16, fontWeight: "700" }}>{c.title}</Text>
-                {c.subtitle ? <Text style={{ color: "#555" }}>{c.subtitle}</Text> : null}
-                <Text style={{ fontSize: 12, color: "#777" }}>{c.kind} • conf {Math.round((c.confidence || 0) * 100)}%</Text>
-                {c.prep_steps?.length ? <Text style={{ color: "#333" }}>Prep: {c.prep_steps.join(" • ")}</Text> : null}
-                {c.actions?.length ? <Text style={{ color: "#333" }}>Actions: {c.actions.map((a) => a.type).join(", ")}</Text> : null}
-              </View>
-            ))}
-          </ScrollView>
-
-          <Pressable onPress={() => setStep("enter_zip")} style={{ padding: 10 }}>
-            <Text style={{ textAlign: "center", color: "#111", textDecorationLine: "underline" }}>Change area</Text>
-          </Pressable>
-        </View>
+        <HomeScreen
+          pack={pack}
+          packId={packId}
+          query={query}
+          onQueryChange={setQuery}
+          onSearch={runSearch}
+          onScan={startScan}
+          onChangeArea={() => setStep("enter_zip")}
+          results={results}
+        />
       )}
-    </SafeAreaView>
+
+      {step === "scan" && (
+        <ScanScreen
+          device={device}
+          cameraRef={cameraRef}
+          scanActive={scanActive}
+          scanLabels={scanLabels}
+          scanMessage={scanMessage}
+          captureUri={captureUri}
+          hasCapture={hasCapture}
+          scanItems={scanItems}
+          pack={pack}
+          onPrimaryAction={hasCapture ? retakeScan : triggerScanOnce}
+          onBack={() => {
+            setScanActive(false);
+            setStep("home");
+          }}
+          frameProcessor={frameProcessor}
+        />
+      )}
+
+      {scanError ? <Text style={{ color: colors.coral }}>{scanError}</Text> : null}
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }

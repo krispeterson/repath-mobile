@@ -5,12 +5,33 @@
   "main": "index.js",
   "scripts": {
     "start": "npx expo start",
-    "smoke": "node scripts/smoke.js"
+    "smoke": "node scripts/smoke.js",
+    "fetch:model": "python3 scripts/fetch-yolov8n-tflite.py",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "prebuild": "npx expo prebuild",
+    "postprebuild": "node scripts/patch-expo-prebuild.js",
+    "clean": "rm -rf node_modules android ios",
+    "test": "node --test test/*.test.cjs"
   },
   "dependencies": {
     "expo": "^54.0.33",
-    "expo-location": "~17.0.0",
-    "react": "18.2.0",
-    "react-native": "^0.74.5"
+    "expo-location": "~19.0.8",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-fast-tflite": "^1.4.0",
+    "react-native-vision-camera": "^4.6.0",
+    "react-native-worklets-core": "^1.5.0",
+    "expo-build-properties": "~0.14.0",
+    "expo-system-ui": "~5.0.4",
+    "react-native-safe-area-context": "^5.0.0"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "~54.0.10",
+    "@babel/plugin-transform-optional-chaining": "^7.22.15",
+    "@babel/plugin-proposal-optional-chaining": "npm:@babel/plugin-transform-optional-chaining@^7.22.15",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.22.15",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "npm:@babel/plugin-transform-nullish-coalescing-operator@^7.22.15",
+    "@babel/plugin-transform-template-literals": "^7.22.15"
   }
 }

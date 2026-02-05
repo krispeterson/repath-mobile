@@ -3,6 +3,10 @@
 .expo-shared/
 web-build/
 
+# Expo prebuild output (generated)
+android/
+ios/
+
 # Metro
 .metro-cache/
 
@@ -12,7 +16,6 @@ web-build/
 # Logs
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 
 # OS / editor
@@ -21,3 +24,18 @@ pnpm-debug.log*
 
 # Node
 node_modules/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.local
+.env.*.local
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# Local model exports (generated)
+assets/models/*
+!assets/models/README.md
