@@ -8,7 +8,7 @@ import yoloLabels from "../assets/models/yolov8.labels.json";
 import { OnboardScreen, ZipScreen } from "./components";
 import { colors, spacing } from "./ui/theme";
 import { HomeScreen, ScanScreen } from "./screens";
-import { getBundledPack, resolvePackFromZip, mapModelLabelsToItems, resolveItem, YOLO_SCORE_THRESHOLD, YOLO_INPUT } from "./domain";
+import { getBundledPack, resolvePackFromZip, resolveDetectedLabelsToItems, resolveItem, YOLO_SCORE_THRESHOLD, YOLO_INPUT } from "./domain";
 import * as ImagePicker from "expo-image-picker";
 import * as ImageManipulator from "expo-image-manipulator";
 import jpeg from "jpeg-js";
@@ -180,7 +180,7 @@ export default function App() {
     const uniqueLabels = Array.from(new Set(labels)).slice(0, 5);
     setScanLabels(uniqueLabels);
     setScanDetections(filtered);
-    const items = mapModelLabelsToItems(uniqueLabels, packId, pack);
+    const items = resolveDetectedLabelsToItems(uniqueLabels, packId, pack);
     setScanItems(items);
     if (!uniqueLabels.length) {
       setScanMessage("No objects detected. Can you or someone else reuse it or compost it? If not, put it in the trash.");
