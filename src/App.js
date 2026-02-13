@@ -20,6 +20,9 @@ import {
 } from "./domain";
 import * as ImagePicker from "expo-image-picker";
 
+const NO_DETECTION_MESSAGE = "No objects detected. Can you or someone else reuse it or compost it? If not, put it in the trash.";
+const LOW_CONFIDENCE_MESSAGE = "We couldn't match this confidently. Can you or someone else reuse it or compost it? If not, put it in the trash.";
+
 export default function App() {
   const [step, setStep] = useState("onboard");
   const [zip, setZip] = useState("");
@@ -87,14 +90,14 @@ export default function App() {
         return;
       }
       setZip(postal);
-      chooseZip(postal);
+      resolvePackForZip(postal);
     } catch (error) {
       setLocationError("Unable to access current location.");
       setStep("enter_zip");
     }
   }
 
-  function chooseZip(nextZip) {
+  function resolvePackForZip(nextZip) {
     const zipValue = String(nextZip !== undefined ? nextZip : zip).trim();
     if (!zipValue) {
       setZipError("Enter a ZIP code.");
@@ -125,22 +128,14 @@ export default function App() {
     setStep(p ? "home" : "enter_zip");
   }
 
-  function runSearch() {
+  function searchInSelectedPack() {
     if (!pack || !packId) return;
     setResults(resolveItem(pack, packId, query));
   }
 
   async function startScan() {
     setScanError(null);
-    setScanLabels([]);
-    setScanDetections([]);
-    setScanItems([]);
-    setScanMessage(null);
-    setIsProcessing(false);
-    setCaptureUri(null);
-    setCaptureSize(null);
-    setHasCapture(false);
-    setIsCapturing(false);
+    resetScanState();
 
     if (!pack || !packId) {
       setScanError("Choose a location first.");
@@ -189,9 +184,9 @@ export default function App() {
     const items = resolveDetectedLabelsToItems(uniqueLabels, packId, pack);
     setScanItems(items);
     if (!uniqueLabels.length) {
-      setScanMessage("No objects detected. Can you or someone else reuse it or compost it? If not, put it in the trash.");
+      setScanMessage(NO_DETECTION_MESSAGE);
     } else if (!items.length) {
-      setScanMessage("We couldn't match this confidently. Can you or someone else reuse it or compost it? If not, put it in the trash.");
+      setScanMessage(LOW_CONFIDENCE_MESSAGE);
     } else {
       setScanMessage(null);
     }
@@ -199,25 +194,15 @@ export default function App() {
 
   function retakeScan() {
     setScanActive(true);
-    setScanLabels([]);
-    setScanDetections([]);
-    setScanItems([]);
-    setScanMessage(null);
-    setIsProcessing(false);
-    setCaptureUri(null);
-    setCaptureSize(null);
-    setHasCapture(false);
-    setIsCapturing(false);
+    resetScanState();
   }
 
   async function triggerScanOnce() {
     if (isCapturing) return;
     setIsCapturing(true);
     setScanActive(true);
+    clearCaptureState();
     setScanMessage(null);
-    setCaptureUri(null);
-    setCaptureSize(null);
-    setHasCapture(false);
     setIsProcessing(true);
     try {
       if (cameraRef.current) {
@@ -290,11 +275,29 @@ export default function App() {
       setCaptureSize({ width: asset.width, height: asset.height });
     }
     setHasCapture(true);
+    clearScanResults();
+    setScanMessage(null);
+    await runDetectionOnImage(asset.uri);
+  }
+
+  function resetScanState() {
+    clearScanResults();
+    clearCaptureState();
+    setIsProcessing(false);
+    setIsCapturing(false);
+  }
+
+  function clearScanResults() {
     setScanLabels([]);
     setScanDetections([]);
     setScanItems([]);
     setScanMessage(null);
-    await runDetectionOnImage(asset.uri);
+  }
+
+  function clearCaptureState() {
+    setCaptureUri(null);
+    setCaptureSize(null);
+    setHasCapture(false);
   }
 
   return (
@@ -316,7 +319,7 @@ export default function App() {
             setZip(text);
             setZipError(null);
           }}
-          onContinue={() => chooseZip()}
+          onContinue={() => resolvePackForZip()}
           onLocation={requestLocation}
         />
       )}
@@ -327,7 +330,7 @@ export default function App() {
           packId={packId}
           query={query}
           onQueryChange={setQuery}
-          onSearch={runSearch}
+          onSearch={searchInSelectedPack}
           onScan={startScan}
           onChangeArea={() => setStep("enter_zip")}
           results={results}
