@@ -1,4 +1,6 @@
 # RePath Mobile
+[![Tests And Coverage](https://github.com/krispeterson/repath-mobile/actions/workflows/tests-and-coverage.yml/badge.svg)](https://github.com/krispeterson/repath-mobile/actions/workflows/tests-and-coverage.yml)
+[![codecov](https://codecov.io/gh/krispeterson/repath-mobile/branch/main/graph/badge.svg)](https://codecov.io/gh/krispeterson/repath-mobile)
 
 ## Why RePath Mobile exists
 
@@ -53,6 +55,7 @@ npm run test:coverage
 Notes:
 - Root-level `test/*.test.cjs` files are not executed by the current runner.
 - For pull requests, CI publishes coverage summary/artifacts and posts coverage delta comments.
+- Set `CODECOV_TOKEN` in GitHub Actions secrets (required for private repositories).
 
 ## Object detection
 The scan flow uses VisionCamera frame processors with a YOLOv8 TFLite model for single-shot detection (POC), then maps
