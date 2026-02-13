@@ -1,11 +1,12 @@
 export function resolvePlace(pack) {
+  const jurisdiction = pack && pack.jurisdiction ? pack.jurisdiction : null;
+  const municipality = pack && pack.municipality ? pack.municipality : null;
+  const adminAreas = jurisdiction && Array.isArray(jurisdiction.admin_areas) ? jurisdiction.admin_areas : [];
+  const adminAreaCode = adminAreas[0] && adminAreas[0].code ? adminAreas[0].code : "";
+
   return {
-    name: pack?.jurisdiction?.name || pack?.municipality?.name || "",
-    region:
-      pack?.jurisdiction?.admin_areas?.[0]?.code ||
-      pack?.municipality?.region ||
-      pack?.jurisdiction?.country ||
-      ""
+    name: (jurisdiction && jurisdiction.name) || (municipality && municipality.name) || "",
+    region: adminAreaCode || (municipality && municipality.region) || (jurisdiction && jurisdiction.country) || ""
   };
 }
 
