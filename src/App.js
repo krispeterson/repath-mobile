@@ -8,11 +8,17 @@ import yoloLabels from "../assets/models/yolov8.labels.json";
 import { OnboardScreen, ZipScreen } from "./components";
 import { colors, spacing } from "./ui/theme";
 import { HomeScreen, ScanScreen } from "./screens";
-import { getBundledPack, resolvePackFromZip, resolveDetectedLabelsToItems, resolveItem, YOLO_SCORE_THRESHOLD, YOLO_INPUT } from "./domain";
+import {
+  getBundledPack,
+  loadImageUriAsRgb,
+  resolveDetectedLabelsToItems,
+  resolveItem,
+  resolvePackFromZip,
+  runDetectionWithBestPreset,
+  YOLO_INPUT,
+  YOLO_SCORE_THRESHOLD
+} from "./domain";
 import * as ImagePicker from "expo-image-picker";
-import * as ImageManipulator from "expo-image-manipulator";
-import jpeg from "jpeg-js";
-import { Buffer } from "buffer";
 
 export default function App() {
   const [step, setStep] = useState("onboard");
@@ -238,70 +244,6 @@ export default function App() {
     }
   }
 
-  function decodeModelOutputs(outputs, names) {
-    const detections = [];
-    if (!Array.isArray(outputs) || outputs.length === 0) return detections;
-    const output = outputs[0];
-    const isTyped = ArrayBuffer.isView(output);
-    const isNested = Array.isArray(output) && Array.isArray(output[0]);
-    const isFlat = isTyped || Array.isArray(output);
-    const normalizeBox = (raw) => {
-      if (!raw) return null;
-      let { x1, y1, x2, y2 } = raw;
-      if ([x1, y1, x2, y2].some((v) => Number.isNaN(v) || v === null || v === undefined)) return null;
-      const maxVal = Math.max(x1, y1, x2, y2);
-      if (maxVal > 1.5) {
-        x1 /= YOLO_INPUT;
-        y1 /= YOLO_INPUT;
-        x2 /= YOLO_INPUT;
-        y2 /= YOLO_INPUT;
-      }
-      const clamp = (v) => Math.max(0, Math.min(1, v));
-      const nx1 = clamp(Math.min(x1, x2));
-      const ny1 = clamp(Math.min(y1, y2));
-      const nx2 = clamp(Math.max(x1, x2));
-      const ny2 = clamp(Math.max(y1, y2));
-      if (nx2 - nx1 <= 0 || ny2 - ny1 <= 0) return null;
-      return { x1: nx1, y1: ny1, x2: nx2, y2: ny2 };
-    };
-
-    const pushDetection = (x1, y1, x2, y2, score, classId) => {
-      const box = normalizeBox({ x1, y1, x2, y2 });
-      if (!box) return;
-      const name = names[classId] || `class_${classId}`;
-      detections.push({ classId, name, score, box });
-    };
-
-    if (isNested && output[0].length === 6) {
-      for (let i = 0; i < output.length; i += 1) {
-        const row = output[i];
-        const score = row[4];
-        const classId = Math.round(row[5]);
-        if (classId >= 0) pushDetection(row[0], row[1], row[2], row[3], score, classId);
-      }
-    } else if (isFlat && output.length % 6 === 0) {
-      const count = output.length / 6;
-      for (let i = 0; i < count; i += 1) {
-        const offset = i * 6;
-        const score = output[offset + 4];
-        const classId = Math.round(output[offset + 5]);
-        if (classId >= 0) {
-          pushDetection(
-            output[offset + 0],
-            output[offset + 1],
-            output[offset + 2],
-            output[offset + 3],
-            score,
-            classId
-          );
-        }
-      }
-    }
-
-    detections.sort((a, b) => b.score - a.score);
-    return detections;
-  }
-
   async function runDetectionOnImage(uri) {
     if (!model || model.state !== "loaded" || !model.model) {
       setScanError("Model not loaded. Ensure yolov8.tflite is bundled.");
@@ -309,72 +251,16 @@ export default function App() {
     }
     setIsProcessing(true);
     try {
-      const manipulated = await ImageManipulator.manipulateAsync(
-        uri,
-        [{ resize: { width: YOLO_INPUT, height: YOLO_INPUT } }],
-        { compress: 1, format: ImageManipulator.SaveFormat.JPEG, base64: true }
-      );
-      if (!manipulated.base64) {
-        throw new Error("Failed to load image data.");
-      }
-      const jpegData = Buffer.from(manipulated.base64, "base64");
-      const decoded = jpeg.decode(jpegData, { useTArray: true });
-      if (!decoded || !decoded.data) {
-        throw new Error("Failed to decode image.");
-      }
-      const rgb = new Uint8Array((decoded.width || YOLO_INPUT) * (decoded.height || YOLO_INPUT) * 3);
-      const src = decoded.data;
-      for (let i = 0, j = 0; i < src.length; i += 4, j += 3) {
-        rgb[j] = src[i];
-        rgb[j + 1] = src[i + 1];
-        rgb[j + 2] = src[i + 2];
-      }
-
-      const inputMeta = model.model.inputs?.[0] || {};
-      const dataType = inputMeta.dataType || inputMeta.type || "uint8";
-      const expectsFloat = String(dataType).toLowerCase().includes("float");
-      const presets = expectsFloat
-        ? [
-            { name: "rgb_0_1", scale: 1 / 255, offset: 0, swapRB: false },
-            { name: "rgb_0_255", scale: 1, offset: 0, swapRB: false },
-            { name: "bgr_0_1", scale: 1 / 255, offset: 0, swapRB: true }
-          ]
-        : [{ name: "uint8", scale: 1, offset: 0, swapRB: false }];
-
-      let outputs = null;
-      let bestDetections = [];
-      for (let i = 0; i < presets.length; i += 1) {
-        const preset = presets[i];
-        let input = rgb;
-        if (expectsFloat) {
-          const floatInput = new Float32Array(rgb.length);
-          for (let j = 0; j < rgb.length; j += 3) {
-            let r = rgb[j];
-            const g = rgb[j + 1];
-            let b = rgb[j + 2];
-            if (preset.swapRB) {
-              const tmp = r;
-              r = b;
-              b = tmp;
-            }
-            floatInput[j] = r * preset.scale + preset.offset;
-            floatInput[j + 1] = g * preset.scale + preset.offset;
-            floatInput[j + 2] = b * preset.scale + preset.offset;
-          }
-          input = floatInput;
-        }
-        outputs = model.model.runSync([input]);
-        const trial = decodeModelOutputs(outputs, Array.isArray(yoloLabels) ? yoloLabels : []);
-        if (!bestDetections.length || (trial[0]?.score || 0) > (bestDetections[0]?.score || 0)) {
-          bestDetections = trial;
-        }
-        if ((trial[0]?.score || 0) >= YOLO_SCORE_THRESHOLD) {
-          break;
-        }
-      }
-
       const names = Array.isArray(yoloLabels) ? yoloLabels : [];
-      const detections = (bestDetections.length ? bestDetections : decodeModelOutputs(outputs, names)).slice(0, 10);
+      const rgb = await loadImageUriAsRgb(uri, YOLO_INPUT);
+      const bestDetections = runDetectionWithBestPreset({
+        model: model.model,
+        labels: names,
+        rgb,
+        scoreThreshold: YOLO_SCORE_THRESHOLD,
+        inputSize: YOLO_INPUT
+      });
+      const detections = bestDetections.slice(0, 10);
       handleDetections(detections);
     } catch (error) {
       setScanMessage("Photo processing failed. Try another image.");
