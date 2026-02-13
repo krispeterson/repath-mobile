@@ -44,6 +44,7 @@ labels to pack items via the bundled search index.
 Requirements:
 - Development build (VisionCamera + TFLite are native modules; not supported in Expo Go).
 - Generate `assets/models/yolov8.tflite` and `assets/models/yolov8.labels.json` locally (see `assets/models/README.md`).
+  - For YOLO-World custom vocab, see the class list extraction + export steps in `assets/models/README.md`.
 
 Dependencies used:
 - `react-native-vision-camera`

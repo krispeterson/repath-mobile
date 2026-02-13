@@ -52,8 +52,30 @@ export default function useScanProcessor({
           return out;
         }
 
+        function normalizeBox(rawBox) {
+          if (!rawBox) return null;
+          let { x1, y1, x2, y2 } = rawBox;
+          if ([x1, y1, x2, y2].some((v) => Number.isNaN(v) || v === null || v === undefined)) {
+            return null;
+          }
+          const maxVal = Math.max(x1, y1, x2, y2);
+          if (maxVal > 1.5) {
+            x1 /= YOLO_INPUT;
+            y1 /= YOLO_INPUT;
+            x2 /= YOLO_INPUT;
+            y2 /= YOLO_INPUT;
+          }
+          const clamp = (v) => Math.max(0, Math.min(1, v));
+          const nx1 = clamp(Math.min(x1, x2));
+          const ny1 = clamp(Math.min(y1, y2));
+          const nx2 = clamp(Math.max(x1, x2));
+          const ny2 = clamp(Math.max(y1, y2));
+          if (nx2 - nx1 <= 0 || ny2 - ny1 <= 0) return null;
+          return { x1: nx1, y1: ny1, x2: nx2, y2: ny2 };
+        }
+
         function decodeOutput(outputs, names) {
-          const labels = [];
+          const detections = [];
           let maxScore = 0;
           let maxClass = -1;
 
@@ -68,10 +90,11 @@ export default function useScanProcessor({
                 const row = output[i];
                 const score = row[4];
                 const classId = Math.round(row[5]);
+                const box = normalizeBox({ x1: row[0], y1: row[1], x2: row[2], y2: row[3] });
                 if (score > maxScore) { maxScore = score; maxClass = classId; }
-                if (score >= YOLO_SCORE_THRESHOLD && classId >= 0) {
+                if (classId >= 0 && box) {
                   const name = names[classId] || `class_${classId}`;
-                  labels.push(name);
+                  detections.push({ classId, name, score, box });
                 }
               }
             } else if (isFlat && output.length % 6 === 0) {
@@ -80,20 +103,27 @@ export default function useScanProcessor({
                 const offset = i * 6;
                 const score = output[offset + 4];
                 const classId = Math.round(output[offset + 5]);
+                const box = normalizeBox({
+                  x1: output[offset + 0],
+                  y1: output[offset + 1],
+                  x2: output[offset + 2],
+                  y2: output[offset + 3]
+                });
                 if (score > maxScore) { maxScore = score; maxClass = classId; }
-                if (score >= YOLO_SCORE_THRESHOLD && classId >= 0) {
+                if (classId >= 0 && box) {
                   const name = names[classId] || `class_${classId}`;
-                  labels.push(name);
+                  detections.push({ classId, name, score, box });
                 }
               }
             }
           }
 
-          return { labels, maxScore, maxClass };
+          detections.sort((a, b) => b.score - a.score);
+          return { detections, maxScore, maxClass };
         }
 
         const names = Array.isArray(labelNames) ? labelNames : [];
-        let decoded = { labels: [], maxScore: 0, maxClass: -1 };
+        let decoded = { detections: [], maxScore: 0, maxClass: -1 };
         let usedPreset = "";
 
         if (expectsFloat) {
@@ -117,9 +147,8 @@ export default function useScanProcessor({
           console.log("[TFLite] maxScore:", decoded.maxScore, "class:", name, "preset:", usedPreset);
         }
 
-        if (decoded.labels.length) {
-          const unique = Array.from(new Set(decoded.labels));
-          runOnDetections(unique.slice(0, 5));
+        if (decoded.detections.length) {
+          runOnDetections(decoded.detections.slice(0, 10));
         } else if (scanMode === "capture") {
           runOnDetections([]);
         }

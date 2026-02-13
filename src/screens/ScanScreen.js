@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import { View, Text, Pressable, ScrollView, Image, Linking, ActivityIndicator } from "react-native";
 import { Camera } from "react-native-vision-camera";
 import { CAMERA_FPS } from "../domain/scan";
@@ -29,14 +29,53 @@ export default function ScanScreen({
   scanLabels,
   scanMessage,
   captureUri,
+  captureSize,
   hasCapture,
   scanItems,
+  scanDetections,
   onPrimaryAction,
+  onPickPhoto,
   onBack,
   frameProcessor,
   isProcessing,
   pack
 }) {
+  const [previewLayout, setPreviewLayout] = useState({ width: 0, height: 0 });
+
+  const overlay = useMemo(() => {
+    if (!captureUri || !scanDetections?.length) return null;
+    const width = previewLayout.width;
+    const height = previewLayout.height;
+    if (!width || !height) return null;
+    const sourceWidth = captureSize?.width || 0;
+    const sourceHeight = captureSize?.height || 0;
+    if (!sourceWidth || !sourceHeight) return null;
+
+    const scale = Math.min(width / sourceWidth, height / sourceHeight);
+    const imageWidth = sourceWidth * scale;
+    const imageHeight = sourceHeight * scale;
+    const offsetX = (width - imageWidth) / 2;
+    const offsetY = (height - imageHeight) / 2;
+
+    return scanDetections.map((det, idx) => {
+      const box = det.box;
+      if (!box) return null;
+      const left = offsetX + box.x1 * imageWidth;
+      const top = offsetY + box.y1 * imageHeight;
+      const boxWidth = (box.x2 - box.x1) * imageWidth;
+      const boxHeight = (box.y2 - box.y1) * imageHeight;
+      if (boxWidth <= 2 || boxHeight <= 2) return null;
+      const label = `${det.name} ${(det.score * 100).toFixed(1)}%`;
+      return (
+        <View key={`${det.name}-${idx}`} style={{ position: "absolute", left, top, width: boxWidth, height: boxHeight, borderWidth: 2, borderColor: colors.coral }}>
+          <View style={{ position: "absolute", top: -18, left: 0, backgroundColor: "rgba(0,0,0,0.7)", paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}>
+            <Text style={{ color: colors.white, fontSize: 10 }}>{label}</Text>
+          </View>
+        </View>
+      );
+    });
+  }, [captureUri, scanDetections, previewLayout, captureSize]);
+
   return (
     <View style={{ flex: 1, gap: spacing.lg }}>
       <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
@@ -46,7 +85,13 @@ export default function ScanScreen({
         </Pressable>
       </View>
 
-      <View style={{ flex: 1, borderRadius: radius.lg, overflow: "hidden", borderWidth: 1, borderColor: colors.cloud, backgroundColor: colors.charcoal }}>
+      <View
+        style={{ flex: 1, borderRadius: radius.lg, overflow: "hidden", borderWidth: 1, borderColor: colors.cloud, backgroundColor: colors.charcoal }}
+        onLayout={(event) => {
+          const { width, height } = event.nativeEvent.layout;
+          setPreviewLayout({ width, height });
+        }}
+      >
         {device ? (
           <Camera
             ref={cameraRef}
@@ -65,8 +110,9 @@ export default function ScanScreen({
           </View>
         )}
         {captureUri ? (
-          <Image source={{ uri: captureUri }} style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }} resizeMode="cover" />
+          <Image source={{ uri: captureUri }} style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }} resizeMode="contain" />
         ) : null}
+        {overlay}
       </View>
 
       {isProcessing ? (
@@ -92,6 +138,9 @@ export default function ScanScreen({
               {isProcessing ? "Processing..." : hasCapture ? "Retake" : "Capture"}
             </Text>
           </View>
+        </Pressable>
+        <Pressable onPress={onPickPhoto} style={{ padding: spacing.md, backgroundColor: colors.cloud, borderRadius: radius.md }} disabled={isProcessing}>
+          <Text style={{ color: colors.ink, fontWeight: "600" }}>Pick photo</Text>
         </Pressable>
         <Text style={{ fontSize: 12, color: colors.mist }}>Pinch to zoom</Text>
       </View>

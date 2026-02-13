@@ -30,6 +30,11 @@ def parse_args():
     parser.add_argument("--fraction", type=float, default=None, help="Dataset fraction for int8")
     parser.add_argument("--device", default=None, help="Export device (e.g. cpu, mps)")
     parser.add_argument(
+        "--classes",
+        default=None,
+        help="Path to a JSON or newline-delimited text file of class labels",
+    )
+    parser.add_argument(
         "--out-dir",
         default=os.path.join("assets", "models"),
         help="Output directory for yolov8.tflite and labels",
@@ -44,10 +49,32 @@ def main():
 
     cwd = os.getcwd()
     out_dir = os.path.abspath(args.out_dir)
+    classes_path = os.path.abspath(args.classes) if args.classes else None
     with tempfile.TemporaryDirectory(prefix="repath-yolo-") as tmpdir:
         os.chdir(tmpdir)
         try:
+            class_list = None
+            if classes_path:
+                with open(classes_path, "r", encoding="utf-8") as handle:
+                    raw = handle.read().strip()
+                if raw:
+                    if args.classes.endswith(".json"):
+                        data = json.loads(raw)
+                        if isinstance(data, list):
+                            class_list = [str(item).strip() for item in data if str(item).strip()]
+                        elif isinstance(data, dict) and isinstance(data.get("classes"), list):
+                            class_list = [str(item).strip() for item in data["classes"] if str(item).strip()]
+                        else:
+                            raise SystemExit("--classes JSON must be an array or {\"classes\": [...]}")
+                    else:
+                        class_list = [line.strip() for line in raw.splitlines() if line.strip()]
+
             model = YOLO(args.model)
+            if class_list:
+                if hasattr(model, "set_classes"):
+                    model.set_classes(class_list)
+                else:
+                    print("Warning: model does not support set_classes; ignoring --classes.")
 
             export_kwargs = {
                 "format": "tflite",
@@ -77,11 +104,14 @@ def main():
             tflite_out = os.path.join(out_dir, "yolov8.tflite")
             shutil.copy2(export_path, tflite_out)
 
-            labels = model.names if hasattr(model, "names") else {}
-            if isinstance(labels, dict):
-                label_list = [labels[i] for i in sorted(labels.keys())]
+            if class_list:
+                label_list = class_list
             else:
-                label_list = list(labels)
+                labels = model.names if hasattr(model, "names") else {}
+                if isinstance(labels, dict):
+                    label_list = [labels[i] for i in sorted(labels.keys())]
+                else:
+                    label_list = list(labels)
 
             labels_out = os.path.join(out_dir, "yolov8.labels.json")
             with open(labels_out, "w", encoding="utf-8") as handle:
