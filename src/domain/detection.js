@@ -42,7 +42,7 @@ export function runDetectionWithBestPreset({
   scoreThreshold,
   inputSize
 }) {
-  const inputMeta = model.inputs?.[0] || {};
+  const inputMeta = (model.inputs && model.inputs[0]) || {};
   const expectsFloat = String(inputMeta.dataType || inputMeta.type || "uint8").toLowerCase().includes("float");
   const presets = expectsFloat ? INPUT_PRESETS : [{ name: "uint8", scale: 1, offset: 0, swapRB: false }];
 
@@ -52,10 +52,12 @@ export function runDetectionWithBestPreset({
     const input = buildModelInput(rgb, expectsFloat, preset);
     const outputs = model.runSync([input]);
     const detections = decodeModelOutputs(outputs, labels, inputSize);
-    if (!bestDetections.length || (detections[0]?.score || 0) > (bestDetections[0]?.score || 0)) {
+    const topScore = getTopScore(detections);
+    const bestTopScore = getTopScore(bestDetections);
+    if (!bestDetections.length || topScore > bestTopScore) {
       bestDetections = detections;
     }
-    if ((detections[0]?.score || 0) >= scoreThreshold) {
+    if (topScore >= scoreThreshold) {
       break;
     }
   }
@@ -152,4 +154,11 @@ function normalizeBox(rawBox, inputSize) {
 
 function clamp(value) {
   return Math.max(0, Math.min(1, value));
+}
+
+function getTopScore(detections) {
+  if (!Array.isArray(detections) || detections.length === 0) return 0;
+  const top = detections[0];
+  if (!top || typeof top.score !== "number") return 0;
+  return top.score;
 }

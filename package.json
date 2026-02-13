@@ -15,7 +15,7 @@
     "prebuild": "npx expo prebuild",
     "postprebuild": "node scripts/patch-expo-prebuild.js",
     "clean": "rm -rf node_modules android ios",
-    "test": "node --test test/*.test.cjs"
+    "test": "node test/run-tests.cjs"
   },
   "dependencies": {
     "buffer": "^6.0.3",

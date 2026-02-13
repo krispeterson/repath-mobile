@@ -2,8 +2,8 @@ import searchIndex from "../../assets/packs/search.json";
 import modelLabelMap from "../../assets/models/poc-curbside.label-map.json";
 import { mapLabelsToItemsFromIndex, resolveItemFromIndex } from "./search-core";
 
-const mappedPackId = String(modelLabelMap?.pack_id || "");
-const mappedLabelToItemId = buildMappedLabelIndex(modelLabelMap?.labels_to_item_ids || {});
+const mappedPackId = String((modelLabelMap && modelLabelMap.pack_id) || "");
+const mappedLabelToItemId = buildMappedLabelIndex((modelLabelMap && modelLabelMap.labels_to_item_ids) || {});
 
 export function resolveItem(pack, packId, text) {
   return resolveItemFromIndex(searchIndex, pack, packId, text);

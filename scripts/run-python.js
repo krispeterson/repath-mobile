@@ -68,4 +68,11 @@ function main() {
   process.exit(child.status == null ? 1 : child.status);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  existsExecutable,
+  resolvePython
+};

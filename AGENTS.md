@@ -6,6 +6,8 @@ This repo is a small Expo prototype that consumes bundled RePath packs.
 - Keep pack assets in sync with `repath-core` outputs.
 - Prefer small, readable scripts under `scripts/` over new dependencies.
 - Object detection uses VisionCamera + YOLOv8 TFLite; keep inference on-device.
+- Classes, functions, methods, statements, etc should all be human readable and maintainable, short and concise to the point of essentially self-documented, and be documented and/or commented when necessary.
+- Unit, integration, and acceptance tests will be written in that priority order that ensure functional intent and prevent bug regression.
 
 ## Common tasks
 ```bash
