@@ -54,6 +54,14 @@ Optional quantization:
 
 ## Helper script (recommended)
 
+Python requirement:
+- Python 3.11 is required for the export toolchain (`ultralytics[export]`, TensorFlow, onnx2tf).
+- `npm` model scripts auto-detect Python in this order: `$PYTHON`, `./.venv/bin/python`, `python3`, `python`, `py -3`.
+- Set `PYTHON` if you need to force a specific interpreter:
+  ```bash
+  export PYTHON=/absolute/path/to/python3.11
+  ```
+
 Default model (YOLOv8n):
 ```bash
 npm run fetch:model -- --imgsz 640 --nms --out-dir assets/models
@@ -61,7 +69,7 @@ npm run fetch:model -- --imgsz 640 --nms --out-dir assets/models
 
 Custom model:
 ```bash
-python3 scripts/fetch-yolov8n-tflite.py \
+node scripts/run-python.js scripts/fetch-yolov8n-tflite.py \
   --model /path/to/yolov8.pt \
   --imgsz 640 \
   --nms \
@@ -120,6 +128,32 @@ npm run extract:classes -- \
 
 You can edit `assets/models/common-classes.txt` to adjust the vocabulary.
 
+## Fort Collins curbside POC subset (40 classes)
+
+Generate a deterministic curbside-only class list and label map from the bundled
+Fort Collins pack:
+```bash
+npm run build:poc:curbside
+```
+
+Outputs:
+- `assets/models/poc-curbside.classes.json`
+- `assets/models/poc-curbside.classes.txt`
+- `assets/models/poc-curbside.label-map.json`
+
+Export a YOLO-World model against this subset:
+```bash
+npm run fetch:model -- \
+  --model yolov8s-worldv2.pt \
+  --classes assets/models/poc-curbside.classes.json \
+  --imgsz 640 \
+  --nms \
+  --out-dir assets/models
+```
+
+The app uses `poc-curbside.label-map.json` to map detected labels directly to
+Fort Collins item IDs before token heuristics.
+
 ## Using a custom class list with YOLO-World
 
 If you are using YOLO-World (exportable v2 variants), you can embed a fixed class
@@ -154,3 +188,15 @@ Always regenerate `yolov8.labels.json` with the same export script that produced
     export SSL_CERT_FILE=$(python3 -c "import certifi; print(certifi.where())")
     ```
   - Then re-run the export command.
+
+## Benchmarking model swaps
+
+Run a fixed benchmark manifest (public images, expected labels, and negatives):
+```bash
+npm run benchmark:model
+```
+
+This writes detailed results to `test/benchmarks/latest-results.json` and prints:
+- micro precision/recall
+- positive-case hit rate (`any_hit_rate`)
+- negative clean rate (`negative_clean_rate`)

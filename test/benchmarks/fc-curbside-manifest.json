@@ -1,0 +1,40 @@
+{
+  "name": "fort-collins-curbside-poc-v1",
+  "images": [
+    {
+      "name": "plastic_bottle",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/File:Plastic%20bottle.jpg",
+      "expected_any": ["Plastic Jug", "Vitamin or Prescription Bottle", "Nalgene Bottle"]
+    },
+    {
+      "name": "aluminum_can",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/File:Aluminium-can-white.jpg",
+      "expected_any": ["Aluminum Can", "Tin Can"]
+    },
+    {
+      "name": "beer_can",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/File:Beer%20can.jpg",
+      "expected_any": ["Aluminum Can", "Tin Can"]
+    },
+    {
+      "name": "tin_cans",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/File:Tin%20cans.jpg",
+      "expected_any": ["Tin Can", "Aluminum Can"]
+    },
+    {
+      "name": "cardboard_box",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/File:Cardboard%20box.jpg",
+      "expected_any": ["Cardboard", "Paperboard", "Pizza Box", "Paper Egg Carton"]
+    },
+    {
+      "name": "bus_negative",
+      "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
+      "expected_any": []
+    },
+    {
+      "name": "zidane_negative",
+      "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/zidane.jpg",
+      "expected_any": []
+    }
+  ]
+}

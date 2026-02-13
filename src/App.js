@@ -8,8 +8,7 @@ import yoloLabels from "../assets/models/yolov8.labels.json";
 import { OnboardScreen, ZipScreen } from "./components";
 import { colors, spacing } from "./ui/theme";
 import { HomeScreen, ScanScreen } from "./screens";
-import { getBundledPack, resolvePackFromZip, mapLabelsToItems, resolveItem, YOLO_SCORE_THRESHOLD, YOLO_INPUT } from "./domain";
-import useScanProcessor from "./hooks/useScanProcessor";
+import { getBundledPack, resolvePackFromZip, mapModelLabelsToItems, resolveItem, YOLO_SCORE_THRESHOLD, YOLO_INPUT } from "./domain";
 import * as ImagePicker from "expo-image-picker";
 import * as ImageManipulator from "expo-image-manipulator";
 import jpeg from "jpeg-js";
@@ -28,7 +27,6 @@ export default function App() {
   const [scanLabels, setScanLabels] = useState([]);
   const [scanDetections, setScanDetections] = useState([]);
   const [scanActive, setScanActive] = useState(false);
-  const [scanMode, setScanMode] = useState("idle");
   const [scanItems, setScanItems] = useState([]);
   const [scanMessage, setScanMessage] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -36,7 +34,7 @@ export default function App() {
   const [captureSize, setCaptureSize] = useState(null);
   const [hasCapture, setHasCapture] = useState(false);
   const [isCapturing, setIsCapturing] = useState(false);
-  const MIN_DETECTION_SCORE = 0.05;
+  const MIN_DETECTION_SCORE = YOLO_SCORE_THRESHOLD;
 
   const { hasPermission, requestPermission } = useCameraPermission();
   const device = useCameraDevice("back");
@@ -162,7 +160,6 @@ export default function App() {
     }
     debugLogModel();
 
-    setScanMode("idle");
     setScanActive(true);
     setStep("scan");
   }
@@ -183,26 +180,19 @@ export default function App() {
     const uniqueLabels = Array.from(new Set(labels)).slice(0, 5);
     setScanLabels(uniqueLabels);
     setScanDetections(filtered);
-    const items = mapLabelsToItems(uniqueLabels, packId, pack);
+    const items = mapModelLabelsToItems(uniqueLabels, packId, pack);
     setScanItems(items);
     if (!uniqueLabels.length) {
-      setScanMessage("No objects detected. Try better lighting or move closer.");
+      setScanMessage("No objects detected. Can you or someone else reuse it or compost it? If not, put it in the trash.");
     } else if (!items.length) {
-      setScanMessage("Detected objects, but no matching items in this pack.");
+      setScanMessage("We couldn't match this confidently. Can you or someone else reuse it or compost it? If not, put it in the trash.");
     } else {
       setScanMessage(null);
     }
   };
 
-  function finalizeCapture() {
-    setIsProcessing(false);
-    setScanActive(false);
-    setScanMode("idle");
-  }
-
   function retakeScan() {
     setScanActive(true);
-    setScanMode("idle");
     setScanLabels([]);
     setScanDetections([]);
     setScanItems([]);
@@ -217,7 +207,6 @@ export default function App() {
   async function triggerScanOnce() {
     if (isCapturing) return;
     setIsCapturing(true);
-    setScanMode("idle");
     setScanActive(true);
     setScanMessage(null);
     setCaptureUri(null);
@@ -228,14 +217,15 @@ export default function App() {
       if (cameraRef.current) {
         const photo = await cameraRef.current.takePhoto();
         if (photo?.path) {
-          setCaptureUri(`file://${photo.path}`);
+          const uri = `file://${photo.path}`;
+          setCaptureUri(uri);
           if (photo.width && photo.height) {
             setCaptureSize({ width: photo.width, height: photo.height });
           }
           setScanMessage(null);
           setHasCapture(true);
-          setScanMode("capture");
-          setScanActive(true);
+          setScanActive(false);
+          await runDetectionOnImage(uri);
         }
       }
     } catch (error) {
@@ -343,11 +333,48 @@ export default function App() {
       const inputMeta = model.model.inputs?.[0] || {};
       const dataType = inputMeta.dataType || inputMeta.type || "uint8";
       const expectsFloat = String(dataType).toLowerCase().includes("float");
-      const input = expectsFloat ? Float32Array.from(rgb, (v) => v / 255) : rgb;
+      const presets = expectsFloat
+        ? [
+            { name: "rgb_0_1", scale: 1 / 255, offset: 0, swapRB: false },
+            { name: "rgb_0_255", scale: 1, offset: 0, swapRB: false },
+            { name: "bgr_0_1", scale: 1 / 255, offset: 0, swapRB: true }
+          ]
+        : [{ name: "uint8", scale: 1, offset: 0, swapRB: false }];
 
-      const outputs = model.model.runSync([input]);
+      let outputs = null;
+      let bestDetections = [];
+      for (let i = 0; i < presets.length; i += 1) {
+        const preset = presets[i];
+        let input = rgb;
+        if (expectsFloat) {
+          const floatInput = new Float32Array(rgb.length);
+          for (let j = 0; j < rgb.length; j += 3) {
+            let r = rgb[j];
+            const g = rgb[j + 1];
+            let b = rgb[j + 2];
+            if (preset.swapRB) {
+              const tmp = r;
+              r = b;
+              b = tmp;
+            }
+            floatInput[j] = r * preset.scale + preset.offset;
+            floatInput[j + 1] = g * preset.scale + preset.offset;
+            floatInput[j + 2] = b * preset.scale + preset.offset;
+          }
+          input = floatInput;
+        }
+        outputs = model.model.runSync([input]);
+        const trial = decodeModelOutputs(outputs, Array.isArray(yoloLabels) ? yoloLabels : []);
+        if (!bestDetections.length || (trial[0]?.score || 0) > (bestDetections[0]?.score || 0)) {
+          bestDetections = trial;
+        }
+        if ((trial[0]?.score || 0) >= YOLO_SCORE_THRESHOLD) {
+          break;
+        }
+      }
+
       const names = Array.isArray(yoloLabels) ? yoloLabels : [];
-      const detections = decodeModelOutputs(outputs, names).slice(0, 10);
+      const detections = (bestDetections.length ? bestDetections : decodeModelOutputs(outputs, names)).slice(0, 10);
       handleDetections(detections);
     } catch (error) {
       setScanMessage("Photo processing failed. Try another image.");
@@ -372,7 +399,6 @@ export default function App() {
     if (!asset?.uri) return;
 
     setScanActive(false);
-    setScanMode("capture");
     setCaptureUri(asset.uri);
     if (asset.width && asset.height) {
       setCaptureSize({ width: asset.width, height: asset.height });
@@ -384,15 +410,6 @@ export default function App() {
     setScanMessage(null);
     await runDetectionOnImage(asset.uri);
   }
-
-  const frameProcessor = useScanProcessor({
-    model,
-    labelNames: yoloLabels,
-    scanActive,
-    scanMode,
-    onDetections: handleDetections,
-    onFinalize: finalizeCapture
-  });
 
   return (
     <SafeAreaProvider>
@@ -451,7 +468,7 @@ export default function App() {
             setScanActive(false);
             setStep("home");
           }}
-          frameProcessor={frameProcessor}
+          frameProcessor={undefined}
         />
       )}
 

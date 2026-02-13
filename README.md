@@ -56,7 +56,7 @@ Install guidance (network required):
 
 ## Development setup (macOS)
 
-1) Ensure **Python 3.11** is installed and **`python3` points to 3.11**.
+1) Ensure **Python 3.11** is installed.
    - Reason: Ultralytics TFLite export depends on TensorFlow + onnx2tf, and those packages
      currently do not provide compatible wheels for Python 3.12+ or 3.14.
    - Verify:
@@ -64,8 +64,17 @@ Install guidance (network required):
      python3 --version
      which python3
      ```
-   - If this does not show `Python 3.11.x`, update your PATH or version manager so `python3`
-     resolves to 3.11.
+   - If this does not show `Python 3.11.x`, update your PATH or version manager.
+   - Python script commands in `package.json` auto-detect in this order:
+     - `$PYTHON` (if set)
+     - `./.venv/bin/python`
+     - `python3`
+     - `python`
+     - `py -3` (Windows launcher)
+   - You can pin the interpreter explicitly:
+     ```bash
+     export PYTHON=/absolute/path/to/python3.11
+     ```
 2) Create and activate a virtual environment (recommended to isolate deps):
    ```bash
    python3 -m venv .venv
@@ -132,7 +141,11 @@ Notes:
   - Restart Metro after adding the model so it gets bundled.
 
 - **`python3` still points to Python 3.9**
-  - Update your PATH or version manager so `python3` resolves to Python 3.11.
+  - Set `PYTHON` to a Python 3.11 binary:
+    ```bash
+    export PYTHON=/absolute/path/to/python3.11
+    ```
+  - Or update your PATH/version manager so `python3` resolves to Python 3.11.
   - Verify with `which python3` and `python3 --version`.
 
 - **`ultralytics[export]` install fails**

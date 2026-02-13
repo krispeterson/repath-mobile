@@ -6,7 +6,9 @@
   "scripts": {
     "start": "npx expo start",
     "smoke": "node scripts/smoke.js",
-    "fetch:model": "python3 scripts/fetch-yolov8n-tflite.py",
+    "fetch:model": "node scripts/run-python.js scripts/fetch-yolov8n-tflite.py",
+    "build:poc:curbside": "node scripts/build-poc-curbside-assets.js",
+    "benchmark:model": "node scripts/run-python.js scripts/benchmark-model.py --manifest test/benchmarks/fc-curbside-manifest.json",
     "extract:classes": "node scripts/extract-class-list.js",
     "android": "expo run:android",
     "ios": "expo run:ios",
