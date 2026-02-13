@@ -1,6 +1,6 @@
 import searchIndex from "../../assets/packs/search.json";
 import modelLabelMap from "../../assets/models/poc-curbside.label-map.json";
-import { mapLabelsToItemsFromIndex, resolveItemFromIndex } from "./search-core";
+import { mapLabelsToItemsFromIndex, resolveItemFromIndex } from "./search-core.js";
 
 const mappedPackId = String((modelLabelMap && modelLabelMap.pack_id) || "");
 const mappedLabelToItemId = buildMappedLabelIndex((modelLabelMap && modelLabelMap.labels_to_item_ids) || {});

@@ -1,0 +1,47 @@
+name: Tests And Coverage
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test-and-coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ordered tests
+        run: npm test
+
+      - name: Generate coverage report
+        run: |
+          npm run test:coverage
+          node -e "const fs=require('fs');const p='coverage/coverage-summary.json';const s=JSON.parse(fs.readFileSync(p,'utf8')).total;console.log('Lines:',s.lines.pct+'%');console.log('Functions:',s.functions.pct+'%');console.log('Branches:',s.branches.pct+'%');console.log('Statements:',s.statements.pct+'%');" | tee coverage/summary.txt
+
+      - name: Publish coverage summary
+        run: |
+          echo '## Coverage Summary' >> "$GITHUB_STEP_SUMMARY"
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          cat coverage/summary.txt >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload coverage artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: |
+            coverage/lcov.info
+            coverage/coverage-summary.json
+            coverage/summary.txt

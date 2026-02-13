@@ -2,7 +2,11 @@ const path = require("path");
 
 const suites = [
   { name: "unit", file: "./unit/run-python.unit.cjs" },
+  { name: "unit", file: "./unit/text.unit.cjs" },
+  { name: "unit", file: "./unit/scan.unit.cjs" },
+  { name: "unit", file: "./unit/search-core.unit.cjs" },
   { name: "integration", file: "./integration/curbside-data.integration.cjs" },
+  { name: "integration", file: "./integration/search-resolution.integration.cjs" },
   { name: "acceptance", file: "./acceptance/curbside-assets.acceptance.cjs" }
 ];
 

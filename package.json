@@ -15,7 +15,8 @@
     "prebuild": "npx expo prebuild",
     "postprebuild": "node scripts/patch-expo-prebuild.js",
     "clean": "rm -rf node_modules android ios",
-    "test": "node test/run-tests.cjs"
+    "test": "node test/run-tests.cjs",
+    "test:coverage": "npx --yes c8 --all --include='src/domain/**/*.js' --include='scripts/**/*.js' --reporter=text-summary --reporter=lcov --reporter=json-summary node test/run-tests.cjs"
   },
   "dependencies": {
     "buffer": "^6.0.3",
