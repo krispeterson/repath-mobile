@@ -6,6 +6,10 @@ on:
       - main
   pull_request:
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   test-and-coverage:
     runs-on: ubuntu-latest
@@ -30,6 +34,7 @@ jobs:
         run: |
           npm run test:coverage
           node -e "const fs=require('fs');const p='coverage/coverage-summary.json';const s=JSON.parse(fs.readFileSync(p,'utf8')).total;console.log('Lines:',s.lines.pct+'%');console.log('Functions:',s.functions.pct+'%');console.log('Branches:',s.branches.pct+'%');console.log('Statements:',s.statements.pct+'%');" | tee coverage/summary.txt
+          cp coverage/coverage-summary.json coverage/current-summary.json
 
       - name: Publish coverage summary
         run: |
@@ -37,11 +42,87 @@ jobs:
           echo '' >> "$GITHUB_STEP_SUMMARY"
           cat coverage/summary.txt >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Generate base-branch coverage (PR only)
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git worktree add ../base-coverage "$BASE_SHA"
+          cd ../base-coverage
+          npm ci
+          npm run test:coverage
+          cp coverage/coverage-summary.json "$GITHUB_WORKSPACE/coverage/base-summary.json"
+
+      - name: Build coverage delta report (PR only)
+        if: github.event_name == 'pull_request'
+        run: |
+          node - <<'JS'
+          const fs = require('fs');
+          const current = JSON.parse(fs.readFileSync('coverage/current-summary.json', 'utf8')).total;
+          const base = JSON.parse(fs.readFileSync('coverage/base-summary.json', 'utf8')).total;
+          const metrics = ['lines', 'functions', 'branches', 'statements'];
+          const rows = metrics.map((m) => {
+            const before = Number(base[m].pct || 0);
+            const after = Number(current[m].pct || 0);
+            const delta = (after - before).toFixed(2);
+            const sign = after - before >= 0 ? '+' : '';
+            return `| ${m} | ${before.toFixed(2)}% | ${after.toFixed(2)}% | ${sign}${delta}% |`;
+          });
+          const md = [
+            '## Coverage Delta',
+            '',
+            '| Metric | Base | PR | Delta |',
+            '|---|---:|---:|---:|',
+            ...rows
+          ].join('\n');
+          fs.writeFileSync('coverage/delta.md', md + '\n');
+          console.log(md);
+          JS
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          cat coverage/delta.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Comment coverage delta on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const marker = '<!-- repath-coverage-delta -->';
+            const body = `${marker}\n${fs.readFileSync('coverage/delta.md', 'utf8')}`;
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100
+            });
+            const existing = comments.find((c) => c.user.type === 'Bot' && c.body && c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: existing.id,
+                body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number,
+                body
+              });
+            }
+
       - name: Upload coverage artifacts
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
+          if-no-files-found: warn
           path: |
             coverage/lcov.info
             coverage/coverage-summary.json
             coverage/summary.txt
+            coverage/current-summary.json
+            coverage/base-summary.json
+            coverage/delta.md
