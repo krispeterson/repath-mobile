@@ -19,3 +19,13 @@ Record significant decisions and rationale here.
 ## 2026-02-04 - Default model: yolov8n.pt
 - Start with `yolov8n.pt` for best real-time performance on mobile.
 - Revisit `yolov8s.pt` if accuracy is insufficient.
+
+## 2026-02-13 - Auto-discovered test suites with ordered execution
+- `npm test` uses `test/run-tests.cjs` to auto-discover tests by suffix and directory.
+- Execution order is fixed to: unit, then integration, then acceptance.
+- Old root `test/domain-*.test.cjs` tests were migrated/removed to avoid dead or duplicate test coverage.
+
+## 2026-02-13 - Domain modules must remain compatible with test runtime
+- The custom Node test runner imports `src/domain/**` modules directly.
+- Keep syntax in those modules compatible with the project's Node runtime baseline used by CI/local test commands.
+- Prefer explicit property access patterns if newer syntax support is uncertain in the active runtime.

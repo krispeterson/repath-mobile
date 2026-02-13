@@ -37,6 +37,23 @@ Minimal React Native (Expo) prototype that:
 
 This is a thin proof-of-concept. Replace bundled packs with remote manifest + cached downloads.
 
+## Testing
+
+Run tests locally:
+```bash
+npm test
+npm run test:coverage
+```
+
+`npm test` discovers suites in this order:
+- `test/unit/**/*.unit.cjs`
+- `test/integration/**/*.integration.cjs`
+- `test/acceptance/**/*.acceptance.cjs`
+
+Notes:
+- Root-level `test/*.test.cjs` files are not executed by the current runner.
+- For pull requests, CI publishes coverage summary/artifacts and posts coverage delta comments.
+
 ## Object detection
 The scan flow uses VisionCamera frame processors with a YOLOv8 TFLite model for single-shot detection (POC), then maps
 labels to pack items via the bundled search index.
