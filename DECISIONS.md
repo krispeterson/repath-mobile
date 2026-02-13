@@ -25,6 +25,11 @@ Record significant decisions and rationale here.
 - Execution order is fixed to: unit, then integration, then acceptance.
 - Old root `test/domain-*.test.cjs` tests were migrated/removed to avoid dead or duplicate test coverage.
 
+## 2026-02-13 - Test harness uses CommonJS; app/domain remains ESM
+- The custom Node test runner and test files use `*.cjs` for deterministic direct Node execution without adding Babel/Jest.
+- This avoids module-system conflicts with Expo/Metro and `package.json` module-type settings.
+- Scope is test infrastructure only; `src/**` app/domain modules remain ESM-style modules.
+
 ## 2026-02-13 - Domain modules must remain compatible with test runtime
 - The custom Node test runner imports `src/domain/**` modules directly.
 - Keep syntax in those modules compatible with the project's Node runtime baseline used by CI/local test commands.
