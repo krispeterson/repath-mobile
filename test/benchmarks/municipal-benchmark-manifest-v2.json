@@ -8,39 +8,39 @@
   "images": [
     {
       "name": "todo_6-pack-holder",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/6-Pack-Chicken-Eggs.jpg",
       "expected_any": [
         "6-Pack Holder"
       ],
       "expected_all": [],
       "item_id": "6-pack-holder",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_air-conditioner",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Air%20conditioner%202.jpg",
       "expected_any": [
         "Air Conditioner"
       ],
       "expected_all": [],
       "item_id": "air-conditioner",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_aluminum",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aluminium%20bar%20surface%20etched.jpg",
       "expected_any": [
         "Aluminum"
       ],
       "expected_all": [],
       "item_id": "aluminum",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "aluminum_can",
@@ -107,27 +107,27 @@
     },
     {
       "name": "todo_aluminum-take-out-container",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Westland%20Lysander%20IIIa%20-%20DPLA%20-%20e2c9a9e5d83809ee1b46421d877ae4a4%20(page%209).jpg",
       "expected_any": [
         "Aluminum Take-Out Container"
       ],
       "expected_all": [],
       "item_id": "aluminum-take-out-container",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_amazon-mailers",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RMS%20Amazon.png",
       "expected_any": [
         "Amazon Mailers"
       ],
       "expected_all": [],
       "item_id": "amazon-mailers",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_ammunition-explosives",
@@ -167,63 +167,63 @@
     },
     {
       "name": "todo_art-supplies",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Art%20supplies%20in%20a%20table.jpg",
       "expected_any": [
         "Art Supplies"
       ],
       "expected_all": [],
       "item_id": "art-supplies",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_asphalt",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/McKittrick%20Tar%20Seep%20North%20of%20Highway%2058.jpg",
       "expected_any": [
         "Asphalt"
       ],
       "expected_all": [],
       "item_id": "asphalt",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_auto-part-car-part",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20view%20of%20part%20of%20the%20car%20show%20--%20a%20small%20part!%20(32464025).jpg",
       "expected_any": [
         "Auto Part (Car Part)"
       ],
       "expected_all": [],
       "item_id": "auto-part-car-part",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_auto-truck-tire",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Auto-ongelukken%2C%20SFA001021604.jpg",
       "expected_any": [
         "Auto/Truck Tire"
       ],
       "expected_all": [],
       "item_id": "auto-truck-tire",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_automobile-car-or-truck",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lincoln%20Mark%20LT%20long%20bed.jpg",
       "expected_any": [
         "Automobile (Car or Truck)"
       ],
       "expected_all": [],
       "item_id": "automobile-car-or-truck",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_automotive-battery",
@@ -251,27 +251,27 @@
     },
     {
       "name": "todo_baking-glassware",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Claesz%20-%20Ontbijt%20of%20silver%20and%20glassware%20on%20a%20draped%20table%2C%20with%20vines%2C%20fruits%20and%20baked%20goods%202021%20CKS%2020053%200023(082406).jpg",
       "expected_any": [
         "Baking Glassware"
       ],
       "expected_all": [],
       "item_id": "baking-glassware",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_baling-twine",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue%20baling-twine.jpg",
       "expected_any": [
         "Baling Twine"
       ],
       "expected_all": [],
       "item_id": "baling-twine",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_battery-alkaline",
@@ -335,147 +335,147 @@
     },
     {
       "name": "todo_bbq-grill-charcoal",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Charcoal%20BBQ.jpg",
       "expected_any": [
         "BBQ Grill, Charcoal"
       ],
       "expected_all": [],
       "item_id": "bbq-grill-charcoal",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_bbq-grill-gas",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mexican%20BBQ%20gas%20tank%20grill.jpg",
       "expected_any": [
         "BBQ Grill, Gas"
       ],
       "expected_all": [],
       "item_id": "bbq-grill-gas",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_bicycle",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parked%20bicycle%20with%20graffitied%20building%20facade%20and%20doors%20in%20Amsterdam.jpg",
       "expected_any": [
         "Bicycle"
       ],
       "expected_all": [],
       "item_id": "bicycle",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_bicycle-tire",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Michelin%20Lithion%202.jpg",
       "expected_any": [
         "Bicycle Tire"
       ],
       "expected_all": [],
       "item_id": "bicycle-tire",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_bicycle-tube",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fahrradschlaeuche.jpg",
       "expected_any": [
         "Bicycle Tube"
       ],
       "expected_all": [],
       "item_id": "bicycle-tube",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_binder",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Compare%20SpineLess%20ringless%20binder%20with%20comparable%20Ring%20binder%20dimensions.jpg",
       "expected_any": [
         "Binder"
       ],
       "expected_all": [],
       "item_id": "binder",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_blister-packs-packaging",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blister%20Pack.jpg",
       "expected_any": [
         "Blister Packs / Packaging"
       ],
       "expected_all": [],
       "item_id": "blister-packs-packaging",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_blueprint",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Original%20Blueprint%20of%20United%20States%20National%20Agricultural%20Library.jpg",
       "expected_any": [
         "Blueprint"
       ],
       "expected_all": [],
       "item_id": "blueprint",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_book-hardcover",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Latin%20dictionary.jpg",
       "expected_any": [
         "Book, Hardcover"
       ],
       "expected_all": [],
       "item_id": "book-hardcover",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_book-paperback",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stripped%20paperback.jpg",
       "expected_any": [
         "Book, Paperback"
       ],
       "expected_all": [],
       "item_id": "book-paperback",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_branches",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Branches%20of%20a%20Ficus%20kurzii%20reflecting%20in%20the%20water%20at%20Singapore%20Botanic%20Gardens.jpg",
       "expected_any": [
         "Branches"
       ],
       "expected_all": [],
       "item_id": "branches",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_brick-and-pavers",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brick%20pavers%203070.jpg",
       "expected_any": [
         "Brick and Pavers"
       ],
       "expected_all": [],
       "item_id": "brick-and-pavers",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_bubble-wrap-air-pillows",
@@ -503,27 +503,27 @@
     },
     {
       "name": "todo_camera-or-camcorder",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2023%20Kamkorder%20Samsung%20VP-M50.jpg",
       "expected_any": [
         "Camera or Camcorder"
       ],
       "expected_all": [],
       "item_id": "camera-or-camcorder",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_candy-or-food-wrapper",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/US-Smarties-Candy-wWrapper.jpg",
       "expected_any": [
         "Candy or Food Wrapper"
       ],
       "expected_all": [],
       "item_id": "candy-or-food-wrapper",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_car-seat",

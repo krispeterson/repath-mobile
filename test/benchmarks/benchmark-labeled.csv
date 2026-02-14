@@ -4,46 +4,240 @@ beer_can_2,test/benchmarks/images/beer-can-2.png,tin-can,Aluminum Can,kaggle_hou
 cardboard_box,test/benchmarks/images/cardboard-box.png,paperboard,Cardboard,kaggle_household_waste_images,folder=cardboard_boxes
 plastic_bottle,test/benchmarks/images/plastic-bottle.png,plastic-jug,Plastic Jug,kaggle_household_waste_images,folder=plastic_detergent_bottles
 tin_cans_3,test/benchmarks/images/tin-cans-3.png,tin-can,Tin Can,kaggle_household_waste_images,folder=steel_food_cans
+todo_6-pack-holder,https://commons.wikimedia.org/wiki/Special:FilePath/6-Pack-Chicken-Eggs.jpg,6-pack-holder,6-Pack Holder,wikimedia_commons_search,title=File:6-Pack-Chicken-Eggs.jpg
+todo_air-conditioner,https://commons.wikimedia.org/wiki/Special:FilePath/Air%20conditioner%202.jpg,air-conditioner,Air Conditioner,wikimedia_commons_search,title=File:Air conditioner 2.jpg
+todo_aluminum,https://commons.wikimedia.org/wiki/Special:FilePath/Aluminium%20bar%20surface%20etched.jpg,aluminum,Aluminum,wikimedia_commons_search,title=File:Aluminium bar surface etched.jpg
 todo_aluminum-foil,https://commons.wikimedia.org/wiki/Special:FilePath/140531%20Forellen%20auf%20dem%20Grill.jpg,aluminum-foil,Aluminum Foil,wikimedia_commons_search,title=File:140531 Forellen auf dem Grill.jpg
+todo_aluminum-pie-pan-baking-tray,,aluminum-pie-pan-baking-tray,Aluminum Pie Pan / Baking Tray,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_aluminum-take-out-container,https://commons.wikimedia.org/wiki/Special:FilePath/Westland%20Lysander%20IIIa%20-%20DPLA%20-%20e2c9a9e5d83809ee1b46421d877ae4a4%20(page%209).jpg,aluminum-take-out-container,Aluminum Take-Out Container,wikimedia_commons_search,title=File:Westland Lysander IIIa - DPLA - e2c9a9e5d83809ee1b46421d877ae4a4 (page 9).jpg
+todo_amazon-mailers,https://commons.wikimedia.org/wiki/Special:FilePath/RMS%20Amazon.png,amazon-mailers,Amazon Mailers,wikimedia_commons_search,title=File:RMS Amazon.png
 todo_ammunition-explosives,https://commons.wikimedia.org/wiki/Special:FilePath/Map%20of%20No2%20Explosives%20%26%20Filling%20Factory%2C%20Salisbury%2C%20South%20Australia.tif,ammunition-and-explosives,Ammunition & Explosives,wikimedia_commons_search,"title=File:Map of No2 Explosives & Filling Factory, Salisbury, South Australia.tif"
 todo_antifreeze,https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9%20%D0%B0%D0%BD%D1%82%D0%B8%D1%84%D1%80%D0%B8%D0%B7.%20%D0%A4%D0%BE%D1%82%D0%BE%20%D0%90.%20%D0%A9%D0%B5%D0%BA%D0%B8%D0%BD%D0%BE%D0%B2%D0%B0.jpg,antifreeze,Antifreeze,wikimedia_commons_search,title=File:Красный антифриз. Фото А. Щекинова.jpg
 todo_antifreeze-bottle,https://commons.wikimedia.org/wiki/Special:FilePath/Antifreeze.jpg,antifreeze-bottle,Antifreeze Bottle,wikimedia_commons_search,title=File:Antifreeze.jpg
+todo_art-supplies,https://commons.wikimedia.org/wiki/Special:FilePath/Art%20supplies%20in%20a%20table.jpg,art-supplies,Art Supplies,wikimedia_commons_search,title=File:Art supplies in a table.jpg
+todo_asphalt,https://commons.wikimedia.org/wiki/Special:FilePath/McKittrick%20Tar%20Seep%20North%20of%20Highway%2058.jpg,asphalt,Asphalt,wikimedia_commons_search,title=File:McKittrick Tar Seep North of Highway 58.jpg
+todo_auto-part-car-part,https://commons.wikimedia.org/wiki/Special:FilePath/A%20view%20of%20part%20of%20the%20car%20show%20--%20a%20small%20part!%20(32464025).jpg,auto-part-car-part,Auto Part (Car Part),wikimedia_commons_search,title=File:A view of part of the car show -- a small part! (32464025).jpg
+todo_auto-truck-tire,https://commons.wikimedia.org/wiki/Special:FilePath/Auto-ongelukken%2C%20SFA001021604.jpg,auto-truck-tire,Auto/Truck Tire,wikimedia_commons_search,"title=File:Auto-ongelukken, SFA001021604.jpg"
+todo_automobile-car-or-truck,https://commons.wikimedia.org/wiki/Special:FilePath/Lincoln%20Mark%20LT%20long%20bed.jpg,automobile-car-or-truck,Automobile (Car or Truck),wikimedia_commons_search,title=File:Lincoln Mark LT long bed.jpg
 todo_automotive-battery,https://commons.wikimedia.org/wiki/Special:FilePath/Remy%20charg-o-matic%20car%20battery.jpg,automotive-battery,Automotive Battery,wikimedia_commons_search,title=File:Remy charg-o-matic car battery.jpg
-todo_automotive-fluids-other-than-motor-oil-antifreeze,,automotive-fluids-other-than-motor-oil-and-antifreeze,Automotive Fluids (other than motor oil & antifreeze),urgent,74
+todo_automotive-fluids-other-than-motor-oil-antifreeze,,automotive-fluids-other-than-motor-oil-and-antifreeze,Automotive Fluids (other than motor oil & antifreeze),urgent,74; coverage-expansion target=3 needed=3
+todo_baking-glassware,https://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Claesz%20-%20Ontbijt%20of%20silver%20and%20glassware%20on%20a%20draped%20table%2C%20with%20vines%2C%20fruits%20and%20baked%20goods%202021%20CKS%2020053%200023(082406).jpg,baking-glassware,Baking Glassware,wikimedia_commons_search,"title=File:Pieter Claesz - Ontbijt of silver and glassware on a draped table, with vines, fruits and baked goods 2021 CKS 20053 0023(082406).jpg"
+todo_baling-twine,https://commons.wikimedia.org/wiki/Special:FilePath/Blue%20baling-twine.jpg,baling-twine,Baling Twine,wikimedia_commons_search,title=File:Blue baling-twine.jpg
 todo_battery-alkaline,https://commons.wikimedia.org/wiki/Special:FilePath/Alkaline%20Battery%20Leakage%20Inside%20a%20Product.png,battery-alkaline,"Battery, Alkaline",wikimedia_commons_search,title=File:Alkaline Battery Leakage Inside a Product.png
 todo_battery-button,https://commons.wikimedia.org/wiki/Special:FilePath/LR44%20button%20cell%20battery-0147.jpg,battery-button,"Battery, Button",wikimedia_commons_search,title=File:LR44 button cell battery-0147.jpg
 todo_battery-lithium-ion,https://commons.wikimedia.org/wiki/Special:FilePath/Panasonic%20LITHIUM-ION%20CR2032%20BATTERY%20CHINA%20VERSION.jpg,battery-lithium-ion,"Battery, Lithium-Ion",wikimedia_commons_search,title=File:Panasonic LITHIUM-ION CR2032 BATTERY CHINA VERSION.jpg
 todo_battery-other,https://commons.wikimedia.org/wiki/Special:FilePath/Val%20Verde%20Battery%2C%20C.S.A.jpg,battery-other,"Battery, Other",wikimedia_commons_search,"title=File:Val Verde Battery, C.S.A.jpg"
 todo_battery-rechargeable,https://commons.wikimedia.org/wiki/Special:FilePath/Rechargeable%20alkaline%20battery.jpg,battery-rechargeable,"Battery, Rechargeable",wikimedia_commons_search,title=File:Rechargeable alkaline battery.jpg
+todo_bbq-grill-charcoal,https://commons.wikimedia.org/wiki/Special:FilePath/Charcoal%20BBQ.jpg,bbq-grill-charcoal,"BBQ Grill, Charcoal",wikimedia_commons_search,title=File:Charcoal BBQ.jpg
+todo_bbq-grill-gas,https://commons.wikimedia.org/wiki/Special:FilePath/Mexican%20BBQ%20gas%20tank%20grill.jpg,bbq-grill-gas,"BBQ Grill, Gas",wikimedia_commons_search,title=File:Mexican BBQ gas tank grill.jpg
+todo_bicycle,https://commons.wikimedia.org/wiki/Special:FilePath/Parked%20bicycle%20with%20graffitied%20building%20facade%20and%20doors%20in%20Amsterdam.jpg,bicycle,Bicycle,wikimedia_commons_search,title=File:Parked bicycle with graffitied building facade and doors in Amsterdam.jpg
+todo_bicycle-tire,https://commons.wikimedia.org/wiki/Special:FilePath/Michelin%20Lithion%202.jpg,bicycle-tire,Bicycle Tire,wikimedia_commons_search,title=File:Michelin Lithion 2.jpg
+todo_bicycle-tube,https://commons.wikimedia.org/wiki/Special:FilePath/Fahrradschlaeuche.jpg,bicycle-tube,Bicycle Tube,wikimedia_commons_search,title=File:Fahrradschlaeuche.jpg
+todo_binder,https://commons.wikimedia.org/wiki/Special:FilePath/Compare%20SpineLess%20ringless%20binder%20with%20comparable%20Ring%20binder%20dimensions.jpg,binder,Binder,wikimedia_commons_search,title=File:Compare SpineLess ringless binder with comparable Ring binder dimensions.jpg
+todo_blister-packs-packaging,https://commons.wikimedia.org/wiki/Special:FilePath/Blister%20Pack.jpg,blister-packs-packaging,Blister Packs / Packaging,wikimedia_commons_search,title=File:Blister Pack.jpg
+todo_blueprint,https://commons.wikimedia.org/wiki/Special:FilePath/Original%20Blueprint%20of%20United%20States%20National%20Agricultural%20Library.jpg,blueprint,Blueprint,wikimedia_commons_search,title=File:Original Blueprint of United States National Agricultural Library.jpg
+todo_book-hardcover,https://commons.wikimedia.org/wiki/Special:FilePath/Latin%20dictionary.jpg,book-hardcover,"Book, Hardcover",wikimedia_commons_search,title=File:Latin dictionary.jpg
+todo_book-paperback,https://commons.wikimedia.org/wiki/Special:FilePath/Stripped%20paperback.jpg,book-paperback,"Book, Paperback",wikimedia_commons_search,title=File:Stripped paperback.jpg
+todo_branches,https://commons.wikimedia.org/wiki/Special:FilePath/Branches%20of%20a%20Ficus%20kurzii%20reflecting%20in%20the%20water%20at%20Singapore%20Botanic%20Gardens.jpg,branches,Branches,wikimedia_commons_search,title=File:Branches of a Ficus kurzii reflecting in the water at Singapore Botanic Gardens.jpg
+todo_brick-and-pavers,https://commons.wikimedia.org/wiki/Special:FilePath/Brick%20pavers%203070.jpg,brick-and-pavers,Brick and Pavers,wikimedia_commons_search,title=File:Brick pavers 3070.jpg
+todo_bubble-wrap-air-pillows,,bubble-wrap-air-pillows,Bubble Wrap / Air Pillows,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_bulky-rigid-plastics,,bulky-rigid-plastics,Bulky Rigid Plastics,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_camera-or-camcorder,https://commons.wikimedia.org/wiki/Special:FilePath/2023%20Kamkorder%20Samsung%20VP-M50.jpg,camera-or-camcorder,Camera or Camcorder,wikimedia_commons_search,title=File:2023 Kamkorder Samsung VP-M50.jpg
+todo_candy-or-food-wrapper,https://commons.wikimedia.org/wiki/Special:FilePath/US-Smarties-Candy-wWrapper.jpg,candy-or-food-wrapper,Candy or Food Wrapper,wikimedia_commons_search,title=File:US-Smarties-Candy-wWrapper.jpg
+todo_car-seat,,car-seat,Car Seat,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_carpet-and-rugs,,carpet-and-rugs,Carpet and Rugs,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_carpet-padding,,carpet-padding,Carpet Padding,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_carpet-roll-tube,,carpet-roll-tube,Carpet Roll Tube,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_carton,,carton,Carton,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_cd-dvd-player,,cd-dvd-player,CD/DVD Player,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_cds-dvds,,cds-and-dvds,CDs & DVDs,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_cell-phone,,cell-phone,Cell Phone,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_ceramic-dish,,ceramic-dish,Ceramic Dish,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_cereal-liner-bag,,cereal-liner-bag,Cereal Liner Bag,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_chip-bag,,chip-bag,Chip Bag,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_chip-can,,chip-can,Chip Can,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_christmas-lights,,christmas-lights,Christmas Lights,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_christmas-tree-artificial,,christmas-tree-artificial,"Christmas Tree, Artificial",coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_christmas-tree-live,,christmas-tree-live,"Christmas Tree, Live",coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_clear-plastic-berry-and-salad-container,,clear-plastic-berry-and-salad-container,Clear Plastic Berry and Salad Container,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_clothing-and-fabric,test/benchmarks/images/todo-clothing-and-fabric.png,clothing-and-fabric,Clothing and Fabric,kaggle_household_waste_images,folder=clothing
 todo_coffee-grounds,test/benchmarks/images/todo-coffee-grounds.png,coffee-grounds,Coffee Grounds,kaggle_household_waste_images,folder=coffee_grounds
+todo_compostable-servingware-dishware,,compostable-servingware-dishware,Compostable Servingware/Dishware,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_computer-accessory,,computer-accessory,Computer Accessory,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_computer-monitor,,computer-monitor,Computer Monitor,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_computer-tower,,computer-tower,Computer Tower,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_concrete,,concrete,Concrete,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_construction-paper,,construction-paper,Construction Paper,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_cooking-oil-and-grease,https://commons.wikimedia.org/wiki/Special:FilePath/The%20Boston%20Cooking%20School%20magazine%20of%20culinary%20science%20and%20domestic%20economics%20(1905)%20(14772787712).jpg,cooking-oil-and-grease,Cooking Oil and Grease,wikimedia_commons_search,title=File:The Boston Cooking School magazine of culinary science and domestic economics (1905) (14772787712).jpg
+todo_cords-cables,,cords-and-cables,Cords & Cables,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_corrugated-plastic-election-sign,,corrugated-plastic-election-sign,Corrugated Plastic Election Sign,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_dishwasher,,dishwasher,Dishwasher,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_disinfectant-wipes,,disinfectant-wipes,Disinfectant Wipes,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_disposable-face-mask,,disposable-face-mask,Disposable Face Mask,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_disposable-gloves,,disposable-gloves,Disposable Gloves,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_electronics,https://commons.wikimedia.org/wiki/Special:FilePath/Eileen%20Collins%20(S93-E-5033%2C%201999-07-24).jpg,electronics,Electronics,wikimedia_commons_search,"title=File:Eileen Collins (S93-E-5033, 1999-07-24).jpg"
 todo_empty-aerosol-can,test/benchmarks/images/todo-empty-aerosol-can.png,empty-aerosol-can,Empty Aerosol Can,kaggle_household_waste_images,folder=aerosol_cans
+todo_envelopes-with-bubble-wrap-inside,,envelopes-with-bubble-wrap-inside,Envelopes with Bubble Wrap Inside,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_extension-cord,,extension-cord,Extension Cord,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_eyeglasses,,eyeglasses,Eyeglasses,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_fill-dirt,,fill-dirt,Fill Dirt,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_fire-extinguisher,https://commons.wikimedia.org/wiki/Special:FilePath/Hohenloher%20Freilandmuseum%20-%20Baugruppe%20M%C3%BChlental%20-%20Mahlm%C3%BChle%20aus%20Weipertshofen%20-%20Flur%20-%20blaue%20Wand%20mit%20Feuerl%C3%B6scher%20(2).jpg,fire-extinguisher,Fire Extinguisher,wikimedia_commons_search,title=File:Hohenloher Freilandmuseum - Baugruppe Mühlental - Mahlmühle aus Weipertshofen - Flur - blaue Wand mit Feuerlöscher (2).jpg
 todo_flammable-liquid,https://commons.wikimedia.org/wiki/Special:FilePath/HK%20YLD%20%E5%85%83%E6%9C%97%E5%8D%80%20Yuen%20Long%20District%20%E6%96%B0%E7%94%B0%E5%85%AC%E8%B7%AF%20San%20Tin%20Highway%20%E6%98%93%E7%87%83%E6%B6%B2%E9%AB%94%20Flammable%20liquid%20truck%20May%202024%20R12S%2003.jpg,flammable-liquid,Flammable Liquid,wikimedia_commons_search,title=File:HK YLD 元朗區 Yuen Long District 新田公路 San Tin Highway 易燃液體 Flammable liquid truck May 2024 R12S 03.jpg
+todo_foam,,foam,Foam,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_foam-packing-peanuts,,foam-packing-peanuts,Foam Packing Peanuts,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_foil-coffee-bags,,foil-coffee-bags,Foil Coffee Bags,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_food-grade-styrofoam,test/benchmarks/images/todo-food-grade-styrofoam.png,food-grade-styrofoam,Food Grade Styrofoam,kaggle_household_waste_images,folder=styrofoam_food_containers
+todo_food-scraps,,food-scraps,Food Scraps,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_food-unused,,food-unused,"Food, Unused",coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_frozen-food-box,,frozen-food-box,Frozen Food Box,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_furnace-filter,,furnace-filter,Furnace Filter,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_furniture,,furniture,Furniture,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_garden-hose,,garden-hose,Garden Hose,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_gasoline,,gasoline,Gasoline,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_glass-bottle-or-jar,test/benchmarks/images/todo-glass-bottle-or-jar.png,glass-bottle-or-jar,Glass Bottle or Jar,kaggle_household_waste_images,folder=glass_food_jars
+todo_glue,,glue,Glue,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_hearing-aid,,hearing-aid,Hearing Aid,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_helium-tank,,helium-tank,Helium Tank,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_herbicide,,herbicide,Herbicide,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_house-insulation,,house-insulation,House Insulation,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_household-cleaners,,household-cleaners,Household Cleaners,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_household-item,,household-item,Household Item,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_kitchen-cabinets-countertops,,kitchen-cabinets-countertops,"Kitchen Cabinets, Countertops",coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_kitty-litter-bucket,,kitty-litter-bucket,Kitty Litter Bucket,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_label-or-sticker,,label-or-sticker,Label or Sticker,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_large-appliance,,large-appliance,Large Appliance,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_lawnmower,,lawnmower,Lawnmower,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_light-bulb-ballast,,light-bulb-ballast,Light Bulb Ballast,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_light-bulb-compact-fluorescent-light-bulb-cfl,,light-bulb-compact-fluorescent-light-bulb-cfl,Light Bulb - Compact Fluorescent Light Bulb (CFL),coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_light-bulb-fluorescent-tube,,light-bulb-fluorescent-tube,Light Bulb - Fluorescent Tube,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_light-bulb-halogen,,light-bulb-halogen,Light Bulb - Halogen,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_light-bulb-incandescent,,light-bulb-incandescent,Light Bulb - Incandescent,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_light-bulb-led,,light-bulb-led,Light Bulb - LED,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_lighter,,lighter,Lighter,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_magazine,test/benchmarks/images/todo-magazine.png,magazine,Magazine,kaggle_household_waste_images,folder=magazines
+todo_manure,,manure,Manure,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_mattress,,mattress,Mattress,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_medical-equipment-and-supplies,,medical-equipment-and-supplies,Medical Equipment and Supplies,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_mercury-thermometer,https://commons.wikimedia.org/wiki/Special:FilePath/2023%20Rt%C4%99ciowy%20termometr%20lekarski.jpg,mercury-thermometer,Mercury Thermometer,wikimedia_commons_search,title=File:2023 Rtęciowy termometr lekarski.jpg
+todo_metal-barrel-or-drum,,metal-barrel-or-drum,Metal Barrel or Drum,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_metal-bottle-cap-or-lid,,metal-bottle-cap-or-lid,Metal Bottle Cap or Lid,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_metal-coat-hanger,,metal-coat-hanger,Metal Coat Hanger,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_metal-trash-can,,metal-trash-can,Metal Trash Can,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_microwave,,microwave,Microwave,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_microwave-popcorn-bag,,microwave-popcorn-bag,Microwave Popcorn Bag,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_mixed-paper,,mixed-paper,Mixed Paper,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_molded-paper-packaging,,molded-paper-packaging,Molded Paper Packaging,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_motor-oil,https://commons.wikimedia.org/wiki/Special:FilePath/SIGAUS%20aceite.jpg,motor-oil,Motor Oil,wikimedia_commons_search,title=File:SIGAUS aceite.jpg
 todo_motor-oil-bottle,https://commons.wikimedia.org/wiki/Special:FilePath/Motor%20oil%20bottles%20variousbrands.jpg,motor-oil-bottle,Motor Oil Bottle,wikimedia_commons_search,title=File:Motor oil bottles variousbrands.jpg
+todo_office-and-school-supplies,,office-and-school-supplies,Office and School Supplies,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_oven,,oven,Oven,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_over-the-counter-medication,https://commons.wikimedia.org/wiki/Special:FilePath/How%20to%20stop%20opiate%20withdrawals%20with%20Over-the-Counter%20medications%20-%20Part%202.jpg,over-the-counter-medication,Over the Counter Medication,wikimedia_commons_search,title=File:How to stop opiate withdrawals with Over-the-Counter medications - Part 2.jpg
 todo_packaging-styrofoam-or-polystyrene-foam,test/benchmarks/images/todo-packaging-styrofoam-or-polystyrene-foam.png,packaging-styrofoam-or-polystyrene-foam,Packaging Styrofoam or Polystyrene Foam,kaggle_household_waste_images,folder=styrofoam_food_containers
 todo_paint-latex,https://commons.wikimedia.org/wiki/Special:FilePath/Anyone%20Can%20Use%20Latex%20Paint%20Anytime%20-%20DPLA%20-%206ade953208b5f2c500128a815f88ab8b.jpg,paint-latex,Paint - Latex,wikimedia_commons_search,title=File:Anyone Can Use Latex Paint Anytime - DPLA - 6ade953208b5f2c500128a815f88ab8b.jpg
 todo_paint-oil-based-and-lacquers,https://commons.wikimedia.org/wiki/Special:FilePath/50%20shades%20of%20gray%20-%2046%20of%20them%20water%20based%20acrylics%20DSC%200743%20(15783296471).jpg,paint-oil-based-and-lacquers,Paint - Oil Based and Lacquers,wikimedia_commons_search,title=File:50 shades of gray - 46 of them water based acrylics DSC 0743 (15783296471).jpg
+todo_paper-bag,,paper-bag,Paper Bag,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_paper-cup,test/benchmarks/images/todo-paper-cup.png,paper-cup,Paper Cup,kaggle_household_waste_images,folder=paper_cups
+todo_paper-envelope,,paper-envelope,Paper Envelope,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_paper-napkin,,paper-napkin,Paper Napkin,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_paper-towel,,paper-towel,Paper Towel,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_paper-towel-or-toilet-paper-tube,https://commons.wikimedia.org/wiki/Special:FilePath/Pack%20Gong%20(3144438149).jpg,paper-towel-or-toilet-paper-tube,Paper Towel or Toilet Paper Tube,wikimedia_commons_search,title=File:Pack Gong (3144438149).jpg
+todo_paperboard-election-sign,,paperboard-election-sign,Paperboard Election Sign,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_party-try-plastic-tray,,party-try-plastic-tray,Party Try/Plastic Tray,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_personal-care-appliances,,personal-care-appliances,Personal Care Appliances,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_pesticide,https://commons.wikimedia.org/wiki/Special:FilePath/Opera%C3%A7%C3%A3o%20Dem%C3%A9ter%2C%20Bahia%20(40652662985).jpg,pesticide,Pesticide,wikimedia_commons_search,"title=File:Operação Deméter, Bahia (40652662985).jpg"
+todo_pet-food-bag,,pet-food-bag,Pet Food Bag,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_pet-waste,,pet-waste,Pet Waste,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_photo-chemical,https://commons.wikimedia.org/wiki/Special:FilePath/A%20Photo%20Report%20on%20The%20Chemical%20Massacre%20in%20Halabja%2C%20By%20Iranian%20Photographers.jpg,photo-chemical,Photo Chemical,wikimedia_commons_search,"title=File:A Photo Report on The Chemical Massacre in Halabja, By Iranian Photographers.jpg"
+todo_photograph-or-film,,photograph-or-film,Photograph or Film,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_pillow,,pillow,Pillow,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-barrel-or-drum,,plastic-barrel-or-drum,Plastic Barrel or Drum,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-bucket,,plastic-bucket,Plastic Bucket,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_plastic-caps-lids,test/benchmarks/images/todo-plastic-caps-lids.png,plastic-caps-and-lids,Plastic Caps & Lids,kaggle_household_waste_images,folder=plastic_cup_lids
+todo_plastic-cd-dvd-cases,,plastic-cd-and-dvd-cases,Plastic CD & DVD Cases,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-coat-hanger,,plastic-coat-hanger,Plastic Coat Hanger,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_plastic-container,test/benchmarks/images/todo-plastic-container.png,plastic-container,Plastic Container,kaggle_household_waste_images,folder=plastic_food_containers
+todo_plastic-cup,,plastic-cup,Plastic Cup,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-disinfectant-wipes-container,,plastic-disinfectant-wipes-container,Plastic Disinfectant Wipes Container,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-film-election-sign,,plastic-film-election-sign,Plastic Film Election Sign,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-flower-pots,,plastic-flower-pots,Plastic Flower Pots,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-grocery-bags-and-plastic-film,,plastic-grocery-bags-and-plastic-film,Plastic Grocery Bags and Plastic Film,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-halloween-pumpkin,,plastic-halloween-pumpkin,Plastic Halloween Pumpkin,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-lawn-furniture,,plastic-lawn-furniture,Plastic Lawn Furniture,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-pallet,,plastic-pallet,Plastic Pallet,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-peanut-butter-jar,,plastic-peanut-butter-jar,Plastic Peanut Butter Jar,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-pet-carrier,,plastic-pet-carrier,Plastic Pet Carrier,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-play-structure,,plastic-play-structure,Plastic Play Structure,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-take-out-container,,plastic-take-out-container,Plastic Take-Out Container,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-toy,,plastic-toy,Plastic Toy,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-tub,,plastic-tub,Plastic Tub,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_plastic-tube,,plastic-tube,Plastic Tube,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_porcelain-sinks-toilets,,porcelain-sinks-toilets,"Porcelain (Sinks, Toilets)",coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_pot-or-pan,,pot-or-pan,Pot or Pan,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_prescription-drug,,prescription-drug,Prescription Drug,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_printer-cartridge,,printer-cartridge,Printer Cartridge,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_propane-canister,https://commons.wikimedia.org/wiki/Special:FilePath/Propane%20canister%20recycling.jpg,propane-canister,Propane Canister,wikimedia_commons_search,title=File:Propane canister recycling.jpg
-todo_reflective-bubble-wrap-and-foil-bubble-mailers,,reflective-bubble-wrap-and-foil-bubble-mailers,Reflective Bubble Wrap and Foil Bubble Mailers,high,60
+todo_pumpkin,,pumpkin,Pumpkin,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_pvc-pipe,,pvc-pipe,PVC Pipe,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_receipt-paper,,receipt-paper,Receipt Paper,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_reflective-bubble-wrap-and-foil-bubble-mailers,,reflective-bubble-wrap-and-foil-bubble-mailers,Reflective Bubble Wrap and Foil Bubble Mailers,high,60; coverage-expansion target=3 needed=3
+todo_refrigerator-or-freezer,,refrigerator-or-freezer,Refrigerator or Freezer,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_renew-liner,,renew-liner,Renew Liner,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_reusable-building-supplies,,reusable-building-supplies,Reusable Building Supplies,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_ribbons-and-bows,,ribbons-and-bows,Ribbons and Bows,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_rigid-cardboard-tubes-and-corners,,rigid-cardboard-tubes-and-corners,Rigid Cardboard Tubes and Corners,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_rock-and-gravel,,rock-and-gravel,Rock and Gravel,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_rubbermaid-storage-bin,,rubbermaid-storage-bin,Rubbermaid Storage Bin,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_satellite-dish,,satellite-dish,Satellite dish,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_scrap-metal,,scrap-metal,Scrap Metal,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_seed-tray,,seed-tray,Seed Tray,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_shingles-asphalt,,shingles-asphalt,"Shingles, Asphalt",coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_shingles-wood,,shingles-wood,"Shingles, Wood",coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_shoes,,shoes,Shoes,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_shredded-brown-crinkle-paper,,shredded-brown-crinkle-paper,Shredded Brown Crinkle Paper,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_shredded-paper,,shredded-paper,Shredded Paper,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_single-serve-coffee-pods,,single-serve-coffee-pods,Single-Serve Coffee Pods,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_single-use-servingware,,single-use-servingware,Single-Use Servingware,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_small-appliance,,small-appliance,Small Appliance,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_smoke-detector-or-carbon-monoxide-detector,,smoke-detector-or-carbon-monoxide-detector,Smoke Detector or Carbon Monoxide Detector,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_snowblower,,snowblower,Snowblower,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_sod,,sod,Sod,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_solar-panels,,solar-panels,Solar Panels,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_spiral-notebook,,spiral-notebook,Spiral Notebook,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_sporting-goods,,sporting-goods,Sporting Goods,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_spray-paint,https://commons.wikimedia.org/wiki/Special:FilePath/Aerosol%20spray%20top%20luxrender%20(with%20numbers).png,spray-paint,Spray Paint,wikimedia_commons_search,title=File:Aerosol spray top luxrender (with numbers).png
+todo_stereo-sound-equipment,,stereo-sound-equipment,Stereo / Sound Equipment,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_stove,,stove,Stove,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_stroller,,stroller,Stroller,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_styrofoam-cooler-or-meal-kit-cooler,,styrofoam-cooler-or-meal-kit-cooler,Styrofoam Cooler or Meal Kit Cooler,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_sun-basket-paper-insulation,,sun-basket-paper-insulation,Sun Basket Paper Insulation,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_syringe-sharps,https://commons.wikimedia.org/wiki/Special:FilePath/Syringe%20disposal.jpg,syringe-sharps,"Syringe / ""sharps""",wikimedia_commons_search,title=File:Syringe disposal.jpg
 todo_take-out-food-container,test/benchmarks/images/todo-take-out-food-container.png,take-out-food-container,Take Out Food Container,kaggle_household_waste_images,folder=styrofoam_food_containers
+todo_telephone,,telephone,Telephone,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_telephone-book,,telephone-book,Telephone Book,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_television,,television,Television,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_tile,,tile,Tile,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_tissue-wrapping-paper,,tissue-wrapping-paper,Tissue Wrapping Paper,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_toiletries,https://commons.wikimedia.org/wiki/Special:FilePath/Bronze%20handle%20from%20a%20cista%20(toiletries%20box)%20MET%20DP20938.jpg,toiletries,Toiletries,wikimedia_commons_search,title=File:Bronze handle from a cista (toiletries box) MET DP20938.jpg
+todo_tools,,tools,Tools,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_tupperware-food-storage-container,,tupperware-food-storage-container,Tupperware Food Storage Container,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_tyvek-envelope,,tyvek-envelope,Tyvek Envelope,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_vacuum-cleaner,,vacuum-cleaner,Vacuum Cleaner,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_video-game-system,,video-game-system,Video Game System,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_videotape-or-cassette-tape,,videotape-or-cassette-tape,Videotape or Cassette Tape,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_vinyl-fencing,,vinyl-fencing,Vinyl Fencing,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_water-filter,,water-filter,Water Filter,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_water-heater,,water-heater,Water Heater,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_waxed-cardboard,test/benchmarks/images/todo-waxed-cardboard.png,waxed-cardboard,Waxed Cardboard,kaggle_household_waste_images,folder=cardboard_packaging
+todo_wheel,,wheel,Wheel,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_white-office-paper,test/benchmarks/images/todo-white-office-paper.png,white-office-paper,White Office Paper,kaggle_household_waste_images,folder=office_paper
+todo_window-glass,,window-glass,Window Glass,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_wine-cork,,wine-cork,Wine Cork,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_wire,,wire,Wire,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_wood-pallet,,wood-pallet,Wood Pallet,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
 todo_wood-treated-or-painted,https://commons.wikimedia.org/wiki/Special:FilePath/Enoch%20Wood%20Perry%2C%20Jr.%20-%20Fireside%20Stories.jpg,wood-treated-or-painted,"Wood, Treated or Painted",wikimedia_commons_search,"title=File:Enoch Wood Perry, Jr. - Fireside Stories.jpg"
+todo_wood-untreated,,wood-untreated,"Wood, Untreated",coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_wood-waste,,wood-waste,Wood Waste,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_woven-plastic-feed-bag,,woven-plastic-feed-bag,Woven Plastic Feed Bag,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_wrapping-paper,,wrapping-paper,Wrapping Paper,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_yard-trimmings-and-leaves,,yard-trimmings-and-leaves,Yard Trimmings and Leaves,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
+todo_yoga-mat,,yoga-mat,Yoga Mat,coverage_expansion_queue,coverage-expansion; coverage-expansion target=3 needed=3
