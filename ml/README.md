@@ -72,6 +72,12 @@ One-command loop for supported-model planning:
 npm run benchmark:model:resolved:plan
 ```
 
+To convert `retrain_*` rows in `benchmark-labeled.csv` into a compact training artifact:
+```bash
+npm run build:retraining:manifest
+```
+This writes `ml/artifacts/retraining/retraining-manifest.json` with positive and negative samples.
+
 ## Model And Training Helpers
 `ml/training/` and related scripts support export and model artifact preparation for mobile use.
 Typical usage is exporting YOLOv8/YOLO-World variants to TFLite and keeping labels aligned with model outputs.

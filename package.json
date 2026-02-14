@@ -7,6 +7,7 @@
     "start": "npx expo start",
     "smoke": "node scripts/smoke.js",
     "fetch:model": "node scripts/run-python.js ml/training/fetch-yolov8n-tflite.py",
+    "build:retraining:manifest": "node ml/training/build-retraining-manifest.js",
     "build:poc:curbside": "node scripts/build-poc-curbside-assets.js",
     "build:taxonomy": "node ml/data/build-taxonomy.js",
     "build:benchmark:manifest": "node ml/eval/build-benchmark-manifest.js",
