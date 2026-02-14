@@ -86,6 +86,11 @@ Then validate annotation completeness/format before training:
 ```bash
 npm run validate:annotation:bundle
 ```
+To prefill missing positive label files from model detections (optional bootstrap):
+```bash
+npm run seed:annotation:boxes
+```
+Use `--allow-fallback` if you want best-effort boxes even when class labels do not match.
 Use strict mode (non-zero exit on any issue) in pre-training checks:
 ```bash
 npm run validate:annotation:bundle:strict
@@ -109,6 +114,10 @@ This writes candidate artifacts into `ml/artifacts/models/candidates/<run-id>/`.
 To train and immediately benchmark/compare:
 ```bash
 npm run train:model:annotation:benchmark
+```
+For a fast pipeline smoke test (1 epoch, skips strict validation):
+```bash
+npm run train:model:annotation:smoke
 ```
 
 To export a candidate model vocabulary from that retraining manifest:

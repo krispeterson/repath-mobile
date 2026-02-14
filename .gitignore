@@ -36,6 +36,11 @@ __pycache__/
 .mypy_cache/
 .coverage
 
+# Local training outputs and downloaded checkpoints
+runs/
+/yolov8*.pt
+/calibration_image_sample_data_20x128x128x3_float32.npy
+
 # Local ML workspace artifacts (generated)
 ml/artifacts/
 

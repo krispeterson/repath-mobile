@@ -116,8 +116,9 @@ function writeJson(filePath, value) {
 }
 
 function buildDatasetYaml(bundleRoot, classes) {
+  const normalizedPath = path.resolve(bundleRoot).split(path.sep).join("/");
   const lines = [
-    `path: ${path.relative(bundleRoot, bundleRoot) || "."}`,
+    `path: ${normalizedPath}`,
     "train: images",
     "val: images",
     "test: images",
