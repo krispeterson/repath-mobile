@@ -1,0 +1,37 @@
+name,url,item_id,canonical_label,source,notes
+retrain_positive_tin-can_v1,,retrain-tin-can-v1,Tin Can,retraining_queue,action=collect_more_positives; priority_score=19; variant=1
+retrain_positive_tin-can_v2,,retrain-tin-can-v2,Tin Can,retraining_queue,action=collect_more_positives; priority_score=19; variant=2
+retrain_positive_tin-can_v3,,retrain-tin-can-v3,Tin Can,retraining_queue,action=collect_more_positives; priority_score=19; variant=3
+retrain_positive_aluminum-can_v1,,retrain-aluminum-can-v1,Aluminum Can,retraining_queue,action=collect_more_positives; priority_score=18; variant=1
+retrain_positive_aluminum-can_v2,,retrain-aluminum-can-v2,Aluminum Can,retraining_queue,action=collect_more_positives; priority_score=18; variant=2
+retrain_positive_aluminum-can_v3,,retrain-aluminum-can-v3,Aluminum Can,retraining_queue,action=collect_more_positives; priority_score=18; variant=3
+retrain_positive_cardboard_v1,,retrain-cardboard-v1,Cardboard,retraining_queue,action=collect_more_positives; priority_score=12; variant=1
+retrain_positive_cardboard_v2,,retrain-cardboard-v2,Cardboard,retraining_queue,action=collect_more_positives; priority_score=12; variant=2
+retrain_positive_cardboard_v3,,retrain-cardboard-v3,Cardboard,retraining_queue,action=collect_more_positives; priority_score=12; variant=3
+retrain_positive_paperboard_v1,,retrain-paperboard-v1,Paperboard,retraining_queue,action=collect_more_positives; priority_score=12; variant=1
+retrain_positive_paperboard_v2,,retrain-paperboard-v2,Paperboard,retraining_queue,action=collect_more_positives; priority_score=12; variant=2
+retrain_positive_paperboard_v3,,retrain-paperboard-v3,Paperboard,retraining_queue,action=collect_more_positives; priority_score=12; variant=3
+retrain_positive_pizza-box_v1,,retrain-pizza-box-v1,Pizza Box,retraining_queue,action=collect_more_positives; priority_score=12; variant=1
+retrain_positive_pizza-box_v2,,retrain-pizza-box-v2,Pizza Box,retraining_queue,action=collect_more_positives; priority_score=12; variant=2
+retrain_positive_pizza-box_v3,,retrain-pizza-box-v3,Pizza Box,retraining_queue,action=collect_more_positives; priority_score=12; variant=3
+retrain_positive_paper-egg-carton_v1,,retrain-paper-egg-carton-v1,Paper Egg Carton,retraining_queue,action=collect_more_positives; priority_score=12; variant=1
+retrain_positive_paper-egg-carton_v2,,retrain-paper-egg-carton-v2,Paper Egg Carton,retraining_queue,action=collect_more_positives; priority_score=12; variant=2
+retrain_positive_paper-egg-carton_v3,,retrain-paper-egg-carton-v3,Paper Egg Carton,retraining_queue,action=collect_more_positives; priority_score=12; variant=3
+retrain_positive_vitamin-or-prescription-bottle_v1,,retrain-vitamin-or-prescription-bottle-v1,Vitamin or Prescription Bottle,retraining_queue,action=collect_more_positives; priority_score=9; variant=1
+retrain_positive_vitamin-or-prescription-bottle_v2,,retrain-vitamin-or-prescription-bottle-v2,Vitamin or Prescription Bottle,retraining_queue,action=collect_more_positives; priority_score=9; variant=2
+retrain_positive_vitamin-or-prescription-bottle_v3,,retrain-vitamin-or-prescription-bottle-v3,Vitamin or Prescription Bottle,retraining_queue,action=collect_more_positives; priority_score=9; variant=3
+retrain_positive_aluminum-foil_v1,,retrain-aluminum-foil-v1,Aluminum Foil,retraining_queue,action=collect_more_positives; priority_score=3; variant=1
+retrain_positive_aluminum-foil_v2,,retrain-aluminum-foil-v2,Aluminum Foil,retraining_queue,action=collect_more_positives; priority_score=3; variant=2
+retrain_positive_aluminum-foil_v3,,retrain-aluminum-foil-v3,Aluminum Foil,retraining_queue,action=collect_more_positives; priority_score=3; variant=3
+retrain_negative_plastic-jug_v1,,retrain-negative-plastic-jug-v1,,retraining_queue_negative,target_false_positive_label=Plastic Jug; action=add_hard_negatives; priority_score=6; variant=1
+retrain_negative_plastic-jug_v2,,retrain-negative-plastic-jug-v2,,retraining_queue_negative,target_false_positive_label=Plastic Jug; action=add_hard_negatives; priority_score=6; variant=2
+retrain_negative_plastic-jug_v3,,retrain-negative-plastic-jug-v3,,retraining_queue_negative,target_false_positive_label=Plastic Jug; action=add_hard_negatives; priority_score=6; variant=3
+retrain_negative_paperboard-election-sign_v1,,retrain-negative-paperboard-election-sign-v1,,retraining_queue_negative,target_false_positive_label=Paperboard Election Sign; action=add_hard_negatives; priority_score=2; variant=1
+retrain_negative_paperboard-election-sign_v2,,retrain-negative-paperboard-election-sign-v2,,retraining_queue_negative,target_false_positive_label=Paperboard Election Sign; action=add_hard_negatives; priority_score=2; variant=2
+retrain_negative_paperboard-election-sign_v3,,retrain-negative-paperboard-election-sign-v3,,retraining_queue_negative,target_false_positive_label=Paperboard Election Sign; action=add_hard_negatives; priority_score=2; variant=3
+retrain_negative_paper-bag_v1,,retrain-negative-paper-bag-v1,,retraining_queue_negative,target_false_positive_label=Paper Bag; action=add_hard_negatives; priority_score=1; variant=1
+retrain_negative_paper-bag_v2,,retrain-negative-paper-bag-v2,,retraining_queue_negative,target_false_positive_label=Paper Bag; action=add_hard_negatives; priority_score=1; variant=2
+retrain_negative_paper-bag_v3,,retrain-negative-paper-bag-v3,,retraining_queue_negative,target_false_positive_label=Paper Bag; action=add_hard_negatives; priority_score=1; variant=3
+retrain_negative_aluminum-pie-pan-baking-tray_v1,,retrain-negative-aluminum-pie-pan-baking-tray-v1,,retraining_queue_negative,target_false_positive_label=Aluminum Pie Pan / Baking Tray; action=add_hard_negatives; priority_score=1; variant=1
+retrain_negative_aluminum-pie-pan-baking-tray_v2,,retrain-negative-aluminum-pie-pan-baking-tray-v2,,retraining_queue_negative,target_false_positive_label=Aluminum Pie Pan / Baking Tray; action=add_hard_negatives; priority_score=1; variant=2
+retrain_negative_aluminum-pie-pan-baking-tray_v3,,retrain-negative-aluminum-pie-pan-baking-tray-v3,,retraining_queue_negative,target_false_positive_label=Aluminum Pie Pan / Baking Tray; action=add_hard_negatives; priority_score=1; variant=3
