@@ -62,6 +62,8 @@ Use `analyze:benchmark:results` after a benchmark run to generate:
 - `test/benchmarks/benchmark-retraining-priority.csv` (prioritized label action list)
 - `npm run build:benchmark:retraining-queue` to convert that priority list into
   `test/benchmarks/benchmark-retraining-queue.csv` placeholders for targeted data collection.
+- `npm run merge:benchmark:retraining-queue` to preview importing retraining queue rows into
+  `test/benchmarks/benchmark-labeled.csv` (script runs in `--dry-run` mode by default).
 
 One-command loop for supported-model planning:
 ```bash
