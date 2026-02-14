@@ -3032,30 +3032,30 @@
     },
     {
       "name": "todo_negative_people_scene",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lijiang%20Yunnan%20China-Naxi-people-carrying-baskets-01.jpg",
       "expected_any": [],
       "expected_all": [],
       "required": true,
-      "status": "todo",
-      "notes": "Add cluttered scenes that should produce no detections."
+      "status": "ready",
+      "notes": "Add cluttered scenes that should produce no detections. Completed."
     },
     {
       "name": "todo_negative_street_scene",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Street-scene-1931.jpg",
       "expected_any": [],
       "expected_all": [],
       "required": true,
-      "status": "todo",
-      "notes": "Add outdoor photos with no recyclable target item."
+      "status": "ready",
+      "notes": "Add outdoor photos with no recyclable target item. Completed."
     },
     {
       "name": "todo_negative_pet_or_toy_scene",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tabby%20Cat%20with%20Toy%20Mouse.jpg",
       "expected_any": [],
       "expected_all": [],
       "required": true,
-      "status": "todo",
-      "notes": "Add household objects likely to cause false positives."
+      "status": "ready",
+      "notes": "Add household objects likely to cause false positives. Completed."
     },
     {
       "name": "todo_depth_aluminum-pie-pan-baking-tray_v2",
@@ -4856,6 +4856,159 @@
       "required": false,
       "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed."
+    },
+    {
+      "name": "todo_negative_forest-trail_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20Meadows%20(14585088049).jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=forest trail Completed."
+    },
+    {
+      "name": "todo_negative_mountain-landscape_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zagedan%20Lakes%2C%20Mountain%20cirque%2C%20Caucasus%20Mountains.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=mountain landscape Completed."
+    },
+    {
+      "name": "todo_negative_city-skyline_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lower%20Manhattan%20from%20Jersey%20City%20November%202014%20panorama%203.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=city skyline Completed."
+    },
+    {
+      "name": "todo_negative_street-traffic_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Traffic%20lights%20in%20High%20Street%20-%20geograph.org.uk%20-%202501938.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=street traffic Completed."
+    },
+    {
+      "name": "todo_negative_living-room-interior_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Barcelona)%20Dining%20Room%20by%20Pere%20Torn%C3%A9%20Esquius%20-%20Museu%20Nacional%20d'Art%20de%20Catalunya.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=living room interior Completed."
+    },
+    {
+      "name": "todo_negative_kitchen-interior_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dirck%20de%20Vries%20-%20Kitchen%20Interior%20-%20Walters%20372651.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=kitchen interior Completed."
+    },
+    {
+      "name": "todo_negative_office-workspace_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CleancubicleSouth20050109.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=office workspace Completed."
+    },
+    {
+      "name": "todo_negative_dog-park_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sentral%20Bark%20Dog%20Park%20-%20Lindsborg%20KS.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=dog park Completed."
+    },
+    {
+      "name": "todo_negative_cat-indoor_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20home-built%20cat%20enclosure.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=cat indoor Completed."
+    },
+    {
+      "name": "todo_negative_soccer-field_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Santiagobernabeupanoramav45.JPG",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=soccer field Completed."
+    },
+    {
+      "name": "todo_negative_playground_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Playground%20in%20Arnulfpark%2005.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=playground Completed."
+    },
+    {
+      "name": "todo_negative_beach-coastline_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pacific%20coastline%20as%20seen%20from%20Muir%20Beach%20Overlook%20in%20January%202020.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=beach coastline Completed."
+    },
+    {
+      "name": "todo_negative_snowy-road_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Snowy%20road%20Sosonka%202013%20G1.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=snowy road Completed."
+    },
+    {
+      "name": "todo_negative_night-city_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%C3%89difice%20Price%20at%20night%2C%20Quebec%20city%2C%20Canada.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=night city Completed."
+    },
+    {
+      "name": "todo_negative_flowers-garden_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nelumno%20nucifera%20open%20flower%20-%20botanic%20garden%20adelaide2.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=flowers garden Completed."
+    },
+    {
+      "name": "todo_negative_river-water_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandrem%20Beach%20and%20Mandrem%20River%2C%20Mandrem%2C%20Goa%2C%20India%20(edit).jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=river water Completed."
+    },
+    {
+      "name": "todo_negative_airplane-sky_1",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Airplane%20in%20sky.jpg",
+      "expected_any": [],
+      "expected_all": [],
+      "required": false,
+      "status": "ready",
+      "notes": "Negative benchmark seed. query_hint=airplane sky Completed."
     }
   ]
 }
