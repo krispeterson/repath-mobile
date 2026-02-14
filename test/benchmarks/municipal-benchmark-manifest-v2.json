@@ -95,15 +95,15 @@
     },
     {
       "name": "todo_aluminum-pie-pan-baking-tray",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baltimore%20and%20Ohio%20employees%20magazine%20(1920)%20(14781230583).jpg",
       "expected_any": [
         "Aluminum Pie Pan / Baking Tray"
       ],
       "expected_all": [],
       "item_id": "aluminum-pie-pan-baking-tray",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_aluminum-take-out-container",
@@ -239,14 +239,14 @@
     },
     {
       "name": "todo_automotive-fluids-other-than-motor-oil-antifreeze",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Original%20Mercon%20ATF%20Ford%20Motorcraft%20%E2%80%93%20Front.jpg",
       "expected_any": [
         "Automotive Fluids (other than motor oil & antifreeze)"
       ],
       "expected_all": [],
       "item_id": "automotive-fluids-other-than-motor-oil-and-antifreeze",
       "required": true,
-      "status": "todo",
+      "status": "ready",
       "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
@@ -479,27 +479,27 @@
     },
     {
       "name": "todo_bubble-wrap-air-pillows",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Larry%20the%20cat%20laying%20with%20bubble%20wrap%20(DSCF6686).jpg",
       "expected_any": [
         "Bubble Wrap / Air Pillows"
       ],
       "expected_all": [],
       "item_id": "bubble-wrap-air-pillows",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_bulky-rigid-plastics",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plastic%20beach%20-%20geograph.org.uk%20-%20798994.jpg",
       "expected_any": [
         "Bulky Rigid Plastics"
       ],
       "expected_all": [],
       "item_id": "bulky-rigid-plastics",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_camera-or-camcorder",
@@ -650,15 +650,15 @@
     },
     {
       "name": "todo_cereal-liner-bag",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fruit%20Loops%20Sugar%20Cereal%20in%20Plastic%20Bag.jpg",
       "expected_any": [
         "Cereal Liner Bag"
       ],
       "expected_all": [],
       "item_id": "cereal-liner-bag",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_chip-bag",
@@ -722,15 +722,15 @@
     },
     {
       "name": "todo_clear-plastic-berry-and-salad-container",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CORROSION%20CARBONS%20IN%20PLASTIC%20CONTAINER%20-%20NARA%20-%2017441553.jpg",
       "expected_any": [
         "Clear Plastic Berry and Salad Container"
       ],
       "expected_all": [],
       "item_id": "clear-plastic-berry-and-salad-container",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_clothing-and-fabric",
@@ -758,15 +758,15 @@
     },
     {
       "name": "todo_compostable-servingware-dishware",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Crown%20Ducal%20tableware%20-%202023-10-30%20-%20Andy%20Mabbett%20-%2003.jpg",
       "expected_any": [
         "Compostable Servingware/Dishware"
       ],
       "expected_all": [],
       "item_id": "compostable-servingware-dishware",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_computer-accessory",
@@ -854,15 +854,15 @@
     },
     {
       "name": "todo_corrugated-plastic-election-sign",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%E7%84%A1%E3%81%98%E2%80%A6%20(5828689622).jpg",
       "expected_any": [
         "Corrugated Plastic Election Sign"
       ],
       "expected_all": [],
       "item_id": "corrugated-plastic-election-sign",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_dishwasher",
@@ -938,15 +938,15 @@
     },
     {
       "name": "todo_envelopes-with-bubble-wrap-inside",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2%20Cents%20(Postage%20Due)%20Revenue%20stamp%20-%20French%20Indo-China%20(1908)%20Soundnostalgia%2002.jpg",
       "expected_any": [
         "Envelopes with Bubble Wrap Inside"
       ],
       "expected_all": [],
       "item_id": "envelopes-with-bubble-wrap-inside",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_extension-cord",
@@ -1034,15 +1034,15 @@
     },
     {
       "name": "todo_foil-coffee-bags",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Death%20Wish%20Coffee%20Bag.jpg",
       "expected_any": [
         "Foil Coffee Bags"
       ],
       "expected_all": [],
       "item_id": "foil-coffee-bags",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_food-grade-styrofoam",
@@ -1250,15 +1250,15 @@
     },
     {
       "name": "todo_kitty-litter-bucket",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Drug%20Disposal%20(5664574925).jpg",
       "expected_any": [
         "Kitty Litter Bucket"
       ],
       "expected_all": [],
       "item_id": "kitty-litter-bucket",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_label-or-sticker",
@@ -1750,27 +1750,27 @@
     },
     {
       "name": "todo_paperboard-election-sign",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/VESTA%20Luxe%20Salonkast%20cardboard%20advertising%20sign%20pic2.JPG",
       "expected_any": [
         "Paperboard Election Sign"
       ],
       "expected_all": [],
       "item_id": "paperboard-election-sign",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_party-try-plastic-tray",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/In%20preparation%20for%20the%20forthcoming%20state%20elections%2C%20the%20Labour%20Party%20is%20trying%20to%20persuade%20the%20population%20to%20vote%20for%20the%20Labour%20Party%20(FL62925531).jpg",
       "expected_any": [
         "Party Try/Plastic Tray"
       ],
       "expected_all": [],
       "item_id": "party-try-plastic-tray",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_personal-care-appliances",
@@ -1957,27 +1957,27 @@
     },
     {
       "name": "todo_plastic-disinfectant-wipes-container",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Disinfectant%20wipes.jpg",
       "expected_any": [
         "Plastic Disinfectant Wipes Container"
       ],
       "expected_all": [],
       "item_id": "plastic-disinfectant-wipes-container",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-film-election-sign",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/D%C3%BClmen%2C%20Kirchspiel%2C%20BMW%20Mini%20--%202016%20--%205129-35.jpg",
       "expected_any": [
         "Plastic Film Election Sign"
       ],
       "expected_all": [],
       "item_id": "plastic-film-election-sign",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-flower-pots",
@@ -1993,15 +1993,15 @@
     },
     {
       "name": "todo_plastic-grocery-bags-and-plastic-film",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Groninger%20flag%20plastic%20shopping%20bag%2C%20Groningen%20(2018).jpg",
       "expected_any": [
         "Plastic Grocery Bags and Plastic Film"
       ],
       "expected_all": [],
       "item_id": "plastic-grocery-bags-and-plastic-film",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-halloween-pumpkin",
@@ -2031,15 +2031,15 @@
     },
     {
       "name": "todo_plastic-lawn-furniture",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Foto%20perrona.jpg",
       "expected_any": [
         "Plastic Lawn Furniture"
       ],
       "expected_all": [],
       "item_id": "plastic-lawn-furniture",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-pallet",
@@ -2235,14 +2235,14 @@
     },
     {
       "name": "todo_reflective-bubble-wrap-and-foil-bubble-mailers",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Farmers%20and%20Merchants%20Union%20Bank%2C%20James%20Street%20and%20Dickason%20Boulevard%2C%20Columbus%2C%20WI%20-%2052808007011.jpg",
       "expected_any": [
         "Reflective Bubble Wrap and Foil Bubble Mailers"
       ],
       "expected_all": [],
       "item_id": "reflective-bubble-wrap-and-foil-bubble-mailers",
       "required": true,
-      "status": "todo",
+      "status": "ready",
       "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
@@ -2319,15 +2319,15 @@
     },
     {
       "name": "todo_rubbermaid-storage-bin",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Storage%20Bin%20-%20broken%20and%20dirty.jpg",
       "expected_any": [
         "Rubbermaid Storage Bin"
       ],
       "expected_all": [],
       "item_id": "rubbermaid-storage-bin",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_satellite-dish",
@@ -2403,15 +2403,15 @@
     },
     {
       "name": "todo_shredded-brown-crinkle-paper",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/130728-F-JL359-007%20(9442772777).jpg",
       "expected_any": [
         "Shredded Brown Crinkle Paper"
       ],
       "expected_all": [],
       "item_id": "shredded-brown-crinkle-paper",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_shredded-paper",
@@ -2439,15 +2439,15 @@
     },
     {
       "name": "todo_single-use-servingware",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fractal%20tree%20(Plate%20b%20-%203).jpg",
       "expected_any": [
         "Single-Use Servingware"
       ],
       "expected_all": [],
       "item_id": "single-use-servingware",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_small-appliance",
@@ -2583,27 +2583,27 @@
     },
     {
       "name": "todo_styrofoam-cooler-or-meal-kit-cooler",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Snapper%20in%20cooler.jpg",
       "expected_any": [
         "Styrofoam Cooler or Meal Kit Cooler"
       ],
       "expected_all": [],
       "item_id": "styrofoam-cooler-or-meal-kit-cooler",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_sun-basket-paper-insulation",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paper%203000x3000.png",
       "expected_any": [
         "Sun Basket Paper Insulation"
       ],
       "expected_all": [],
       "item_id": "sun-basket-paper-insulation",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_syringe-sharps",
@@ -2984,15 +2984,15 @@
     },
     {
       "name": "todo_woven-plastic-feed-bag",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hibler's%20Bread%20Flour%20bag%20design%2C%201926%20(MOHAI%2011699).jpg",
       "expected_any": [
         "Woven Plastic Feed Bag"
       ],
       "expected_all": [],
       "item_id": "woven-plastic-feed-bag",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_wrapping-paper",
@@ -3059,579 +3059,579 @@
     },
     {
       "name": "todo_depth_aluminum-pie-pan-baking-tray_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baltimore%20and%20Ohio%20employees%20magazine%20(1920)%20(14738674116).jpg",
       "expected_any": [
         "Aluminum Pie Pan / Baking Tray"
       ],
       "expected_all": [],
       "item_id": "aluminum-pie-pan-baking-tray",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_aluminum-pie-pan-baking-tray_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baltimore%20and%20Ohio%20employees%20magazine%20(1920)%20(14735507906).jpg",
       "expected_any": [
         "Aluminum Pie Pan / Baking Tray"
       ],
       "expected_all": [],
       "item_id": "aluminum-pie-pan-baking-tray",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_automotive-fluids-other-than-motor-oil-antifreeze_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Original%20Mercon%20ATF%20Ford%20Motorcraft%20%E2%80%93%20Rear.jpg",
       "expected_any": [
         "Automotive Fluids (other than motor oil & antifreeze)"
       ],
       "expected_all": [],
       "item_id": "automotive-fluids-other-than-motor-oil-and-antifreeze",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_automotive-fluids-other-than-motor-oil-antifreeze_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Autopar%20Dexron%20ATF%20Litre.jpg",
       "expected_any": [
         "Automotive Fluids (other than motor oil & antifreeze)"
       ],
       "expected_all": [],
       "item_id": "automotive-fluids-other-than-motor-oil-and-antifreeze",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_bubble-wrap-air-pillows_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bubble%20Wrap.jpg",
       "expected_any": [
         "Bubble Wrap / Air Pillows"
       ],
       "expected_all": [],
       "item_id": "bubble-wrap-air-pillows",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_bubble-wrap-air-pillows_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Square-shaped%20bubble%20wrap%20(126wiki).jpg",
       "expected_any": [
         "Bubble Wrap / Air Pillows"
       ],
       "expected_all": [],
       "item_id": "bubble-wrap-air-pillows",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_bulky-rigid-plastics_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Haltern%20am%20See%2C%20Sythen%2C%20Werkzeughalle%20der%20Quarzwerke%20--%202015%20--%204433.jpg",
       "expected_any": [
         "Bulky Rigid Plastics"
       ],
       "expected_all": [],
       "item_id": "bulky-rigid-plastics",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_bulky-rigid-plastics_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/EFTA00000314%20-%20Narrow%20closet%20with%20shelves%20holding%20shoeboxes%20clear%20containers%20filled%20with%20socks%20and%20other%20items%20and%20large%20plastic%20bins%20at%20the%20bottom.jpg",
       "expected_any": [
         "Bulky Rigid Plastics"
       ],
       "expected_all": [],
       "item_id": "bulky-rigid-plastics",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_cereal-liner-bag_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Box%20of%20Cereal%20%282760590601%29.jpg",
       "expected_any": [
         "Cereal Liner Bag"
       ],
       "expected_all": [],
       "item_id": "cereal-liner-bag",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_cereal-liner-bag_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puffa%20Puffa%20Rice.jpg",
       "expected_any": [
         "Cereal Liner Bag"
       ],
       "expected_all": [],
       "item_id": "cereal-liner-bag",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_clear-plastic-berry-and-salad-container_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CORROSION%20CARBONS%20IN%20PLASTIC%20CONTAINER%20-%20NARA%20-%2017441554.jpg",
       "expected_any": [
         "Clear Plastic Berry and Salad Container"
       ],
       "expected_all": [],
       "item_id": "clear-plastic-berry-and-salad-container",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_clear-plastic-berry-and-salad-container_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plastic%20urine%20diversion%20squatting%20pan%20lifted%20to%20reveal%20the%20containers%20(6876238817).jpg",
       "expected_any": [
         "Clear Plastic Berry and Salad Container"
       ],
       "expected_all": [],
       "item_id": "clear-plastic-berry-and-salad-container",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_compostable-servingware-dishware_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denby%20'Greenheat'%20tableware%20-%202024-02-06%20-%20Andy%20Mabbett%20-%2004.jpg",
       "expected_any": [
         "Compostable Servingware/Dishware"
       ],
       "expected_all": [],
       "item_id": "compostable-servingware-dishware",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_compostable-servingware-dishware_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beswick%20'Marie'%20tableware%20-%202024-02-06%20-%20Andy%20Mabbett%20-%2001.jpg",
       "expected_any": [
         "Compostable Servingware/Dishware"
       ],
       "expected_all": [],
       "item_id": "compostable-servingware-dishware",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_corrugated-plastic-election-sign_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Unmanned%20vegetable%20stall%20in%20Fujikawaguchiko%2C%20Japan.jpg",
       "expected_any": [
         "Corrugated Plastic Election Sign"
       ],
       "expected_all": [],
       "item_id": "corrugated-plastic-election-sign",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_corrugated-plastic-election-sign_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kingyo%20for%20Ornamental%20Selling%20in%20the%20green%20water%20at%20the%20Japanese%20supermarket's%20Fresh%20fish%20corner.jpg",
       "expected_any": [
         "Corrugated Plastic Election Sign"
       ],
       "expected_all": [],
       "item_id": "corrugated-plastic-election-sign",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_envelopes-with-bubble-wrap-inside_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lego%20Space%20-%20Set%20483%20Alpha-1%20Rocket%20Base%20(7539334104).jpg",
       "expected_any": [
         "Envelopes with Bubble Wrap Inside"
       ],
       "expected_all": [],
       "item_id": "envelopes-with-bubble-wrap-inside",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_envelopes-with-bubble-wrap-inside_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/5%20Cents%20(Postage%20Due)%20-%20French%20Indo-China%20(1908)%20Soundnostalgia%2002.jpg",
       "expected_any": [
         "Envelopes with Bubble Wrap Inside"
       ],
       "expected_all": [],
       "item_id": "envelopes-with-bubble-wrap-inside",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_foil-coffee-bags_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Crations.jpg",
       "expected_any": [
         "Foil Coffee Bags"
       ],
       "expected_all": [],
       "item_id": "foil-coffee-bags",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_foil-coffee-bags_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Continuous%20Band%20Sealer%20Machine.jpg",
       "expected_any": [
         "Foil Coffee Bags"
       ],
       "expected_all": [],
       "item_id": "foil-coffee-bags",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_kitty-litter-bucket_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Four%20men%20at%20the%20Bucket%20and%20Windlass%2C%20a%20prospecting%20shaft%2C%20Hard%20Cash%20Mine%2C%20Randsburg%2C%20ca.1900%20(CHS-1927).jpg",
       "expected_any": [
         "Kitty Litter Bucket"
       ],
       "expected_all": [],
       "item_id": "kitty-litter-bucket",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_kitty-litter-bucket_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manns'%20superior%20seeds%20(16202692270).jpg",
       "expected_any": [
         "Kitty Litter Bucket"
       ],
       "expected_all": [],
       "item_id": "kitty-litter-bucket",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_paperboard-election-sign_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hungry%20cardboard%20sign%20by%20Benjimin%20%26%20Deborah%20SF.JPG",
       "expected_any": [
         "Paperboard Election Sign"
       ],
       "expected_all": [],
       "item_id": "paperboard-election-sign",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_paperboard-election-sign_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/VESTA%20Luxe%20Salonkast%20cardboard%20advertising%20sign%20pic1.JPG",
       "expected_any": [
         "Paperboard Election Sign"
       ],
       "expected_all": [],
       "item_id": "paperboard-election-sign",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_party-try-plastic-tray_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/In%20preparation%20for%20the%20forthcoming%20state%20elections%2C%20the%20Labour%20Party%20is%20trying%20to%20persuade%20the%20population%20to%20vote%20for%20the%20Labour%20Party%20(FL62925526).jpg",
       "expected_any": [
         "Party Try/Plastic Tray"
       ],
       "expected_all": [],
       "item_id": "party-try-plastic-tray",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_party-try-plastic-tray_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/In%20preparation%20for%20the%20forthcoming%20state%20elections%2C%20the%20Labour%20Party%20is%20trying%20to%20persuade%20the%20population%20to%20vote%20for%20the%20Labour%20Party%20(FL62925646).jpg",
       "expected_any": [
         "Party Try/Plastic Tray"
       ],
       "expected_all": [],
       "item_id": "party-try-plastic-tray",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_plastic-disinfectant-wipes-container_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amazon%20Basics%20Disinfecting%20Wipes.jpg",
       "expected_any": [
         "Plastic Disinfectant Wipes Container"
       ],
       "expected_all": [],
       "item_id": "plastic-disinfectant-wipes-container",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_plastic-disinfectant-wipes-container_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Disinfecting%20wipes.jpg",
       "expected_any": [
         "Plastic Disinfectant Wipes Container"
       ],
       "expected_all": [],
       "item_id": "plastic-disinfectant-wipes-container",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_plastic-film-election-sign_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/D%C3%BClmen%2C%20Dernekamp%2C%20BMW%20Mini%20--%202018%20--%201545-51.jpg",
       "expected_any": [
         "Plastic Film Election Sign"
       ],
       "expected_all": [],
       "item_id": "plastic-film-election-sign",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_plastic-film-election-sign_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/D%C3%BClmen%2C%20Merfeld%2C%20Volvo%20PV%20544%20B18%20--%202021%20--%200075-9.jpg",
       "expected_any": [
         "Plastic Film Election Sign"
       ],
       "expected_all": [],
       "item_id": "plastic-film-election-sign",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_plastic-grocery-bags-and-plastic-film_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plastic%20shopping%20bag%20of%20Sakae.JPG",
       "expected_any": [
         "Plastic Grocery Bags and Plastic Film"
       ],
       "expected_all": [],
       "item_id": "plastic-grocery-bags-and-plastic-film",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_plastic-grocery-bags-and-plastic-film_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plastic%20shopping%20bag%20of%20SATY.JPG",
       "expected_any": [
         "Plastic Grocery Bags and Plastic Film"
       ],
       "expected_all": [],
       "item_id": "plastic-grocery-bags-and-plastic-film",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_plastic-lawn-furniture_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Patio%20veranda%20at%20Tygart%20Lake%20State%20Park%20lodge%2C%20West%20Virginia%20-%2020211019.jpg",
       "expected_any": [
         "Plastic Lawn Furniture"
       ],
       "expected_all": [],
       "item_id": "plastic-lawn-furniture",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_plastic-lawn-furniture_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alley.JPG",
       "expected_any": [
         "Plastic Lawn Furniture"
       ],
       "expected_all": [],
       "item_id": "plastic-lawn-furniture",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_reflective-bubble-wrap-and-foil-bubble-mailers_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/U.S.%20Army%201st%20Sgt.%20Steven%20Yeatman%20and%20Spc.%20Jose%20Capofont%2Cboth%2C%20assigned%20to%2056th%20Stryker%20Brigade%20Combat%20Team%20(SBCT)%2C%2028th%20Infantry%20Division%2C%20Pennsylvania%20National%20Guard%2C%20Multi-National%20Division%20-%20Baghdad%2C%20place%20090822-A-IZ725-155.jpg",
       "expected_any": [
         "Reflective Bubble Wrap and Foil Bubble Mailers"
       ],
       "expected_all": [],
       "item_id": "reflective-bubble-wrap-and-foil-bubble-mailers",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_reflective-bubble-wrap-and-foil-bubble-mailers_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Farmers%20and%20Merchants%20Union%20Bank%2C%20James%20Street%20and%20Dickason%20Boulevard%2C%20Columbus%2C%20WI%20-%2052808472983.jpg",
       "expected_any": [
         "Reflective Bubble Wrap and Foil Bubble Mailers"
       ],
       "expected_all": [],
       "item_id": "reflective-bubble-wrap-and-foil-bubble-mailers",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_rubbermaid-storage-bin_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clear%20plastic%20bin.jpg",
       "expected_any": [
         "Rubbermaid Storage Bin"
       ],
       "expected_all": [],
       "item_id": "rubbermaid-storage-bin",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_rubbermaid-storage-bin_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/EFTA00000991%20-%20Clear%20plastic%20storage%20bin%20holds%20several%20hard%20drives%20each%20labeled%20DATA%20100%20and%20wrapped%20in%20yellow%20caution%20tape.jpg",
       "expected_any": [
         "Rubbermaid Storage Bin"
       ],
       "expected_all": [],
       "item_id": "rubbermaid-storage-bin",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_shredded-brown-crinkle-paper_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fed-Shreds%20of%20US%20dollar%20from%20FRB%20San%20Francisco.jpg",
       "expected_any": [
         "Shredded Brown Crinkle Paper"
       ],
       "expected_all": [],
       "item_id": "shredded-brown-crinkle-paper",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_shredded-brown-crinkle-paper_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/130728-F-JL359-017%20(9415969530).jpg",
       "expected_any": [
         "Shredded Brown Crinkle Paper"
       ],
       "expected_all": [],
       "item_id": "shredded-brown-crinkle-paper",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_single-use-servingware_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piece%20of%20chocolate%20cake%20on%20a%20white%20plate%20decorated%20with%20chocolate%20sauce.jpg",
       "expected_any": [
         "Single-Use Servingware"
       ],
       "expected_all": [],
       "item_id": "single-use-servingware",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_single-use-servingware_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tectonic%20plates.png",
       "expected_any": [
         "Single-Use Servingware"
       ],
       "expected_all": [],
       "item_id": "single-use-servingware",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_styrofoam-cooler-or-meal-kit-cooler_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Crowd%20Cow%20styrofoam%20cooler%20with%20warning%20card%20about%20dry%20ice%20inside.jpg",
       "expected_any": [
         "Styrofoam Cooler or Meal Kit Cooler"
       ],
       "expected_all": [],
       "item_id": "styrofoam-cooler-or-meal-kit-cooler",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_styrofoam-cooler-or-meal-kit-cooler_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Styrofoam%20Coolers%20(9431862366).jpg",
       "expected_any": [
         "Styrofoam Cooler or Meal Kit Cooler"
       ],
       "expected_all": [],
       "item_id": "styrofoam-cooler-or-meal-kit-cooler",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_sun-basket-paper-insulation_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Papierkanten%20--%202020%20--%209535.jpg",
       "expected_any": [
         "Sun Basket Paper Insulation"
       ],
       "expected_all": [],
       "item_id": "sun-basket-paper-insulation",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_sun-basket-paper-insulation_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Scattered%20white%20paper%20(Unsplash).jpg",
       "expected_any": [
         "Sun Basket Paper Insulation"
       ],
       "expected_all": [],
       "item_id": "sun-basket-paper-insulation",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_woven-plastic-feed-bag_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Empty%20bag%20of%20Taiwan%20Fertilizer%20in%20Huwei%2020170205.jpg",
       "expected_any": [
         "Woven Plastic Feed Bag"
       ],
       "expected_all": [],
       "item_id": "woven-plastic-feed-bag",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_woven-plastic-feed-bag_v3",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Joint%2C%20bilateral%20airfield%20damage%20repair%20training%20with%20U%20S%20Marines%2C%20U%20S%20Air%20Force%2C%20during%20Resolute%20Dragon%2025%20(9396619).jpg",
       "expected_any": [
         "Woven Plastic Feed Bag"
       ],
       "expected_all": [],
       "item_id": "woven-plastic-feed-bag",
       "required": false,
-      "status": "todo",
-      "notes": "Auto-generated depth expansion placeholder."
+      "status": "ready",
+      "notes": "Auto-generated depth expansion placeholder. Completed."
     },
     {
       "name": "todo_depth_6-pack-holder_v1",
@@ -3839,14 +3839,14 @@
     },
     {
       "name": "todo_depth_antifreeze-bottle_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidewinders%20loaded%20on%20a%20Navy%20F-4.png",
       "expected_any": [
         "Antifreeze Bottle"
       ],
       "expected_all": [],
       "item_id": "antifreeze-bottle",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
@@ -4055,14 +4055,14 @@
     },
     {
       "name": "todo_depth_battery-alkaline_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alkaline%20battery%20(leaked)%201.jpg",
       "expected_any": [
         "Battery, Alkaline"
       ],
       "expected_all": [],
       "item_id": "battery-alkaline",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
@@ -4367,470 +4367,470 @@
     },
     {
       "name": "todo_depth_book-hardcover_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old%20book%20bindings.jpg",
       "expected_any": [
         "Book, Hardcover"
       ],
       "expected_all": [],
       "item_id": "book-hardcover",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_book-paperback_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paperback-stack.png",
       "expected_any": [
         "Book, Paperback"
       ],
       "expected_all": [],
       "item_id": "book-paperback",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_book-paperback_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Book%20for%20the%20pocket%20-%20Pocket%20book.jpg",
       "expected_any": [
         "Book, Paperback"
       ],
       "expected_all": [],
       "item_id": "book-paperback",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_branches_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sninsk%C3%BD%20kame%C5%88%20(v%20zime)%20001.jpg",
       "expected_any": [
         "Branches"
       ],
       "expected_all": [],
       "item_id": "branches",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_branches_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Forest%20road%20Slavne%202017%20G8.jpg",
       "expected_any": [
         "Branches"
       ],
       "expected_all": [],
       "item_id": "branches",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_brick-and-pavers_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brick%20of%20aerogel.jpg",
       "expected_any": [
         "Brick and Pavers"
       ],
       "expected_all": [],
       "item_id": "brick-and-pavers",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_brick-and-pavers_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20brick%20pavers%20ao%2016k%20(Amal%20Kumar%20via%20Poly%20Haven)%20JPG.jpg",
       "expected_any": [
         "Brick and Pavers"
       ],
       "expected_all": [],
       "item_id": "brick-and-pavers",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_camera-or-camcorder_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GE%20DV1%20Hi-Vision%20Camcorder(2).jpg",
       "expected_any": [
         "Camera or Camcorder"
       ],
       "expected_all": [],
       "item_id": "camera-or-camcorder",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_camera-or-camcorder_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sony%20Handycam%20MiniDV%20DCR-VX2000%20camcorder%20-%20Right%20side%20view.jpg",
       "expected_any": [
         "Camera or Camcorder"
       ],
       "expected_all": [],
       "item_id": "camera-or-camcorder",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_candy-or-food-wrapper_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Butterscotch-Candies.jpg",
       "expected_any": [
         "Candy or Food Wrapper"
       ],
       "expected_all": [],
       "item_id": "candy-or-food-wrapper",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_candy-or-food-wrapper_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HK%20food%20Made%20in%20Indonesia%20%E8%96%91%E7%B3%96%20Ginger%20Candy%2005-2013%20Product%20of%20Ting%20Ting%20Jahe%20SINA.jpg",
       "expected_any": [
         "Candy or Food Wrapper"
       ],
       "expected_all": [],
       "item_id": "candy-or-food-wrapper",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_car-seat_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Balaclava%20on%20the%20head%20piece%20of%20a%20car%20seat%20in%20Bad%20Salzuflen%2C%20Germany.jpg",
       "expected_any": [
         "Car Seat"
       ],
       "expected_all": [],
       "item_id": "car-seat",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_car-seat_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Balaclava%20on%20the%20head%20piece%20of%20a%20car%20seat%20in%20Bad%20Salzuflen%2C%20Germany%202.jpg",
       "expected_any": [
         "Car Seat"
       ],
       "expected_all": [],
       "item_id": "car-seat",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_carpet-and-rugs_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carpet%20Khachagorg.jpg",
       "expected_any": [
         "Carpet and Rugs"
       ],
       "expected_all": [],
       "item_id": "carpet-and-rugs",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_carpet-and-rugs_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carpets%20from%20Shushi%20Carpet%20Museum.jpg",
       "expected_any": [
         "Carpet and Rugs"
       ],
       "expected_all": [],
       "item_id": "carpet-and-rugs",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_carpet-padding_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/WLM-2014-Ukraine-Awards-48.jpg",
       "expected_any": [
         "Carpet Padding"
       ],
       "expected_all": [],
       "item_id": "carpet-padding",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_carpet-padding_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A6%D0%B5%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%96%D1%8F%20%D0%BD%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%BE%D0%B6%D1%86%D1%96%D0%B2%20%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D1%97%20%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B8%20%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81%D1%83%20%C2%AB%D0%92%D1%96%D0%BA%D1%96%20%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D1%8C%20%D0%BF%D0%B0%D0%BC%E2%80%99%D1%8F%D1%82%D0%BA%D0%B8%C2%BB%200026.jpg",
       "expected_any": [
         "Carpet Padding"
       ],
       "expected_all": [],
       "item_id": "carpet-padding",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_carpet-roll-tube_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carpet%20with%20a%20Compartment%20Design%20MET%20SC44365.jpg",
       "expected_any": [
         "Carpet Roll Tube"
       ],
       "expected_all": [],
       "item_id": "carpet-roll-tube",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_carpet-roll-tube_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carpet%20with%20a%20Compartment%20Design%20MET%20TP275E.jpg",
       "expected_any": [
         "Carpet Roll Tube"
       ],
       "expected_all": [],
       "item_id": "carpet-roll-tube",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_carton_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Evergreen%20Fresh%20Eggs%20Carton%20at%20HKCT%20Kwun%20Tong.jpg",
       "expected_any": [
         "Carton"
       ],
       "expected_all": [],
       "item_id": "carton",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_carton_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20carton%20of%20ice-fish.jpg",
       "expected_any": [
         "Carton"
       ],
       "expected_all": [],
       "item_id": "carton",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_cd-dvd-player_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cd-player.jpg",
       "expected_any": [
         "CD/DVD Player"
       ],
       "expected_all": [],
       "item_id": "cd-dvd-player",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_cd-dvd-player_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20photo%20of%20a%20Samsung%20TV%20with%20a%20LG%20DVD%20player%20playing%20a%20CD%20Audio.jpg",
       "expected_any": [
         "CD/DVD Player"
       ],
       "expected_all": [],
       "item_id": "cd-dvd-player",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_cds-dvds_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Covermount%20CDs%20and%20DVDs.jpg",
       "expected_any": [
         "CDs & DVDs"
       ],
       "expected_all": [],
       "item_id": "cds-and-dvds",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_cds-dvds_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buecher%20CDs%20Video%20DVD.jpg",
       "expected_any": [
         "CDs & DVDs"
       ],
       "expected_all": [],
       "item_id": "cds-and-dvds",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_cell-phone_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cell%20phone%20-%20METFONE.jpg",
       "expected_any": [
         "Cell Phone"
       ],
       "expected_all": [],
       "item_id": "cell-phone",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_cell-phone_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cell%20Phone%20Tower.jpg",
       "expected_any": [
         "Cell Phone"
       ],
       "expected_all": [],
       "item_id": "cell-phone",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_ceramic-dish_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dish%20with%20underglaze%20painting%20in%20blue%2C%20black%20and%20turquoise.jpg",
       "expected_any": [
         "Ceramic Dish"
       ],
       "expected_all": [],
       "item_id": "ceramic-dish",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_ceramic-dish_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Unknown%20artist%20-%20Dish%20-%20488.1915%20-%20Cleveland%20Museum%20of%20Art.jpg",
       "expected_any": [
         "Ceramic Dish"
       ],
       "expected_all": [],
       "item_id": "ceramic-dish",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_chip-bag_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20ziplock%20bag%20of%20plantain%20chips.jpg",
       "expected_any": [
         "Chip Bag"
       ],
       "expected_all": [],
       "item_id": "chip-bag",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_chip-bag_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20ziplock%20bag%20of%20circular%20plantain%20chips.jpg",
       "expected_any": [
         "Chip Bag"
       ],
       "expected_all": [],
       "item_id": "chip-bag",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_chip-can_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chip%20Zdarsky%20-%20Lucca%20Comics%20%26%20Games%202015.JPG",
       "expected_any": [
         "Chip Can"
       ],
       "expected_all": [],
       "item_id": "chip-can",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_chip-can_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1965%20-%20Goods%20Potato%20Chip%20Can%20-%20Allentown%20PA.jpg",
       "expected_any": [
         "Chip Can"
       ],
       "expected_all": [],
       "item_id": "chip-can",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_christmas-lights_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adliswil%20christmas%20lights%202%2020211213.jpg",
       "expected_any": [
         "Christmas Lights"
       ],
       "expected_all": [],
       "item_id": "christmas-lights",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_christmas-lights_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adliswil%20christmas%20lights%203%2020211213.jpg",
       "expected_any": [
         "Christmas Lights"
       ],
       "expected_all": [],
       "item_id": "christmas-lights",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_christmas-tree-artificial_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Looking%20up%20at%20a%20large%20Christmas%20tree.jpg",
       "expected_any": [
         "Christmas Tree, Artificial"
       ],
       "expected_all": [],
       "item_id": "christmas-tree-artificial",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_christmas-tree-artificial_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Detail%20of%20artificial%20Christmas%20tree%20with%20flocking.jpg",
       "expected_any": [
         "Christmas Tree, Artificial"
       ],
       "expected_all": [],
       "item_id": "christmas-tree-artificial",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_christmas-tree-live_v1",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/String%20of%20tinsel%20on%20Christmas%20tree.jpg",
       "expected_any": [
         "Christmas Tree, Live"
       ],
       "expected_all": [],
       "item_id": "christmas-tree-live",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
       "name": "todo_depth_christmas-tree-live_v2",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christmas%20tree%20in%20Tokyo%2C%20Japan.jpg",
       "expected_any": [
         "Christmas Tree, Live"
       ],
       "expected_all": [],
       "item_id": "christmas-tree-live",
       "required": false,
-      "status": "todo",
+      "status": "ready",
       "notes": "Auto-generated depth expansion placeholder. Completed. Needs unique URL (deduped)."
     },
     {
