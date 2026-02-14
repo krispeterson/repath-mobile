@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-02-14T18:12:01.191Z",
+  "baseline": "test/benchmarks/latest-results.json",
+  "candidate": "test/benchmarks/latest-results.candidate.json",
+  "comparison": {
+    "images_evaluated": {
+      "baseline": 22,
+      "candidate": 22,
+      "delta": 0
+    },
+    "micro_precision": {
+      "baseline": 0.3889,
+      "candidate": 0.3889,
+      "delta": 0
+    },
+    "micro_recall": {
+      "baseline": 0.1522,
+      "candidate": 0.1522,
+      "delta": 0
+    },
+    "any_hit_rate": {
+      "baseline": 0.1818,
+      "candidate": 0.1818,
+      "delta": 0
+    },
+    "negative_clean_rate": {
+      "baseline": 0,
+      "candidate": 0,
+      "delta": 0
+    },
+    "tp": {
+      "baseline": 7,
+      "candidate": 7,
+      "delta": 0
+    },
+    "fp": {
+      "baseline": 11,
+      "candidate": 11,
+      "delta": 0
+    },
+    "fn": {
+      "baseline": 39,
+      "candidate": 39,
+      "delta": 0
+    },
+    "skipped_unsupported_entries": {
+      "baseline": 32,
+      "candidate": 32,
+      "delta": 0
+    }
+  }
+}

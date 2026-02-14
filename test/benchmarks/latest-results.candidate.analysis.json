@@ -1,0 +1,360 @@
+{
+  "source": "test/benchmarks/latest-results.candidate.json",
+  "generated_at": "2026-02-14T18:11:29.601Z",
+  "summary": {
+    "model": "ml/artifacts/models/candidates/20260214-181017/yolov8.tflite",
+    "labels": "ml/artifacts/models/candidates/20260214-181017/yolov8.labels.json",
+    "manifest": "test/benchmarks/municipal-benchmark-manifest.resolved.json",
+    "threshold": 0.35,
+    "topk": 5,
+    "images_evaluated": 22,
+    "micro_precision": 0.3889,
+    "micro_recall": 0.1522,
+    "any_hit_rate": 0.1818,
+    "negative_clean_rate": 0,
+    "tp": 7,
+    "fp": 11,
+    "fn": 39,
+    "supported_only": true,
+    "skipped_unsupported_entries": 32
+  },
+  "counts": {
+    "result_rows": 22,
+    "expected_labels": 18,
+    "false_positive_labels": 5
+  },
+  "top_missed_labels": [
+    {
+      "label": "Aluminum Can",
+      "count": 6
+    },
+    {
+      "label": "Tin Can",
+      "count": 6
+    },
+    {
+      "label": "Cardboard",
+      "count": 4
+    },
+    {
+      "label": "Paperboard",
+      "count": 4
+    },
+    {
+      "label": "Pizza Box",
+      "count": 4
+    },
+    {
+      "label": "Paper Egg Carton",
+      "count": 4
+    },
+    {
+      "label": "Vitamin or Prescription Bottle",
+      "count": 3
+    },
+    {
+      "label": "Aluminum Foil",
+      "count": 1
+    },
+    {
+      "label": "Empty Aerosol Can",
+      "count": 1
+    },
+    {
+      "label": "Magazine",
+      "count": 1
+    },
+    {
+      "label": "Paper Towel or Toilet Paper Tube",
+      "count": 1
+    },
+    {
+      "label": "Plastic Caps & Lids",
+      "count": 1
+    },
+    {
+      "label": "Plastic Container",
+      "count": 1
+    },
+    {
+      "label": "Take Out Food Container",
+      "count": 1
+    },
+    {
+      "label": "White Office Paper",
+      "count": 1
+    }
+  ],
+  "top_false_positive_labels": [
+    {
+      "label": "Plastic Jug",
+      "count": 6
+    },
+    {
+      "label": "Paperboard Election Sign",
+      "count": 2
+    },
+    {
+      "label": "Paper Bag",
+      "count": 1
+    },
+    {
+      "label": "Tin Can",
+      "count": 1
+    },
+    {
+      "label": "Aluminum Pie Pan / Baking Tray",
+      "count": 1
+    }
+  ],
+  "top_confusion_pairs": [
+    {
+      "pair": "Aluminum Can -> Plastic Jug",
+      "count": 4
+    },
+    {
+      "pair": "Tin Can -> Plastic Jug",
+      "count": 4
+    },
+    {
+      "pair": "Glass Bottle or Jar -> Plastic Jug",
+      "count": 1
+    },
+    {
+      "pair": "Magazine -> Paperboard Election Sign",
+      "count": 1
+    },
+    {
+      "pair": "Paper Towel or Toilet Paper Tube -> Paper Bag",
+      "count": 1
+    },
+    {
+      "pair": "Plastic Caps & Lids -> Plastic Jug",
+      "count": 1
+    },
+    {
+      "pair": "Plastic Container -> Tin Can",
+      "count": 1
+    },
+    {
+      "pair": "Take Out Food Container -> Paperboard Election Sign",
+      "count": 1
+    },
+    {
+      "pair": "Take Out Food Container -> Aluminum Pie Pan / Baking Tray",
+      "count": 1
+    }
+  ],
+  "priority_table": [
+    {
+      "label": "Tin Can",
+      "priority_score": 19,
+      "expected_count": 6,
+      "miss_count": 6,
+      "hit_count": 0,
+      "false_positive_count": 1,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Aluminum Can",
+      "priority_score": 18,
+      "expected_count": 6,
+      "miss_count": 6,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Cardboard",
+      "priority_score": 12,
+      "expected_count": 4,
+      "miss_count": 4,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Paperboard",
+      "priority_score": 12,
+      "expected_count": 4,
+      "miss_count": 4,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Pizza Box",
+      "priority_score": 12,
+      "expected_count": 4,
+      "miss_count": 4,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Paper Egg Carton",
+      "priority_score": 12,
+      "expected_count": 4,
+      "miss_count": 4,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Vitamin or Prescription Bottle",
+      "priority_score": 9,
+      "expected_count": 3,
+      "miss_count": 3,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Plastic Jug",
+      "priority_score": 6,
+      "expected_count": 3,
+      "miss_count": 0,
+      "hit_count": 3,
+      "false_positive_count": 6,
+      "hit_rate": 1,
+      "recommended_action": "add_hard_negatives"
+    },
+    {
+      "label": "Aluminum Foil",
+      "priority_score": 3,
+      "expected_count": 1,
+      "miss_count": 1,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Empty Aerosol Can",
+      "priority_score": 3,
+      "expected_count": 1,
+      "miss_count": 1,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Magazine",
+      "priority_score": 3,
+      "expected_count": 1,
+      "miss_count": 1,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Paper Towel or Toilet Paper Tube",
+      "priority_score": 3,
+      "expected_count": 1,
+      "miss_count": 1,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Plastic Caps & Lids",
+      "priority_score": 3,
+      "expected_count": 1,
+      "miss_count": 1,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Plastic Container",
+      "priority_score": 3,
+      "expected_count": 1,
+      "miss_count": 1,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Take Out Food Container",
+      "priority_score": 3,
+      "expected_count": 1,
+      "miss_count": 1,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "White Office Paper",
+      "priority_score": 3,
+      "expected_count": 1,
+      "miss_count": 1,
+      "hit_count": 0,
+      "false_positive_count": 0,
+      "hit_rate": 0,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Paperboard Election Sign",
+      "priority_score": 2,
+      "expected_count": 0,
+      "miss_count": 0,
+      "hit_count": 0,
+      "false_positive_count": 2,
+      "hit_rate": 0,
+      "recommended_action": "add_hard_negatives"
+    },
+    {
+      "label": "Paper Bag",
+      "priority_score": 1,
+      "expected_count": 0,
+      "miss_count": 0,
+      "hit_count": 0,
+      "false_positive_count": 1,
+      "hit_rate": 0,
+      "recommended_action": "add_hard_negatives"
+    },
+    {
+      "label": "Aluminum Pie Pan / Baking Tray",
+      "priority_score": 1,
+      "expected_count": 0,
+      "miss_count": 0,
+      "hit_count": 0,
+      "false_positive_count": 1,
+      "hit_rate": 0,
+      "recommended_action": "add_hard_negatives"
+    },
+    {
+      "label": "Glass Bottle or Jar",
+      "priority_score": 0,
+      "expected_count": 1,
+      "miss_count": 0,
+      "hit_count": 1,
+      "false_positive_count": 0,
+      "hit_rate": 1,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Nalgene Bottle",
+      "priority_score": 0,
+      "expected_count": 3,
+      "miss_count": 0,
+      "hit_count": 3,
+      "false_positive_count": 0,
+      "hit_rate": 1,
+      "recommended_action": "collect_more_positives"
+    }
+  ]
+}
