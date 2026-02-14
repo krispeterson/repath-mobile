@@ -19,6 +19,7 @@
     "build:benchmark:template": "node ml/eval/build-benchmark-completion-template.js --out test/benchmarks/benchmark-completion-template.csv",
     "sync:benchmark:progress": "node ml/eval/sync-benchmark-progress.js",
     "audit:benchmark:dataset": "node ml/eval/audit-benchmark-dataset.js",
+    "export:benchmark:unresolved": "node ml/eval/export-unresolved-benchmark-rows.js",
     "dedupe:benchmark:manifest": "node ml/eval/dedupe-benchmark-manifest.js",
     "suggest:benchmark:kaggle": "node ml/data/suggest-benchmark-from-kaggle.js --merge-into test/benchmarks/benchmark-labeled.csv",
     "suggest:benchmark:online": "node ml/data/suggest-benchmark-online.js --merge-into test/benchmarks/benchmark-labeled.csv",

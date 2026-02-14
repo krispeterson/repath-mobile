@@ -178,7 +178,7 @@ async function findCommonsFileTitles(label, opts) {
     format: "json",
     list: "search",
     srnamespace: "6",
-    srlimit: "3",
+    srlimit: "10",
     srsearch: `${label} filetype:bitmap`
   });
   const url = `${base}?${query.toString()}`;
@@ -207,12 +207,116 @@ function unique(values) {
   return Array.from(new Set(values.filter(Boolean)));
 }
 
+function titleCaseWords(text) {
+  return String(text || "")
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((word) => {
+      if (word.length <= 2) return word.toLowerCase();
+      return word[0].toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(" ");
+}
+
+function tokenizeLabel(label) {
+  return String(label || "")
+    .replace(/[()]/g, " ")
+    .replace(/[,&]/g, " ")
+    .replace(/\bother than\b/gi, " ")
+    .replace(/\bmeal kit\b/gi, " ")
+    .replace(/\bsingle-use\b/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+const LABEL_ALIAS_MAP = {
+  "automotive fluids other than motor oil antifreeze": [
+    "automotive fluid bottle",
+    "car fluid container",
+    "vehicle fluid bottle"
+  ],
+  "bulky rigid plastics": [
+    "large plastic item",
+    "rigid plastic container",
+    "plastic storage tote"
+  ],
+  "cereal liner bag": [
+    "cereal box liner bag",
+    "plastic cereal liner",
+    "mylar cereal bag"
+  ],
+  "clear plastic berry and salad container": [
+    "clear clamshell container",
+    "plastic produce container",
+    "clear salad container"
+  ],
+  "corrugated plastic election sign": [
+    "corrugated plastic sign",
+    "yard sign plastic",
+    "political yard sign"
+  ],
+  "envelopes with bubble wrap inside": [
+    "bubble mailer envelope",
+    "padded envelope",
+    "bubble lined envelope"
+  ],
+  "kitty litter bucket": ["cat litter bucket", "plastic litter pail", "litter tub container"],
+  "plastic disinfectant wipes container": [
+    "disinfecting wipes canister",
+    "clorox wipes container",
+    "wipes plastic canister"
+  ],
+  "plastic grocery bags and plastic film": [
+    "plastic grocery bag",
+    "plastic film wrap",
+    "polyethylene bag"
+  ],
+  "plastic lawn furniture": ["plastic patio chair", "outdoor plastic furniture", "resin lawn chair"],
+  "reflective bubble wrap and foil bubble mailers": [
+    "foil bubble mailer",
+    "metalized bubble wrap",
+    "reflective bubble insulation"
+  ],
+  "rubbermaid storage bin": ["plastic storage bin", "rubbermaid tote", "storage tote container"],
+  "shredded brown crinkle paper": [
+    "shredded kraft paper",
+    "brown crinkle paper filler",
+    "packaging paper shred"
+  ],
+  "sun basket paper insulation": [
+    "paper insulation packaging",
+    "meal kit paper insulation",
+    "recycled paper insulation liner"
+  ],
+  "woven plastic feed bag": ["woven polypropylene bag", "feed sack bag", "grain feed bag woven"],
+  "foil coffee bags": ["foil coffee bag", "coffee bean bag foil", "laminated coffee pouch"],
+  "antifreeze bottle": ["antifreeze jug", "coolant bottle", "automotive coolant container"]
+};
+
+function normalizeLabelKey(label) {
+  return tokenizeLabel(label)
+    .toLowerCase()
+    .replace(/[^a-z0-9 ]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function buildQueryVariants(row) {
   const label = String(row.canonical_label || "").trim();
   const itemId = String(row.item_id || "").trim();
-  const itemFromId = itemId.replace(/[-_]+/g, " ").trim();
-  const cleanedLabel = label.replace(/[()&/]+/g, " ").replace(/\s+/g, " ").trim();
-  return unique([label, itemFromId, cleanedLabel]);
+  const itemFromId = itemId.replace(/[-_]+/g, " ").trim().replace(/\bdepth\b/gi, "").trim();
+  const cleanedLabel = tokenizeLabel(label).replace(/[\/]+/g, " ").replace(/\s+/g, " ").trim();
+  const splitParts = label
+    .split(/\/|\bor\b/gi)
+    .map((part) => tokenizeLabel(part))
+    .map((part) => part.replace(/\bplastic film election sign\b/gi, "plastic sign").trim())
+    .map((part) => part.replace(/\bpaperboard election sign\b/gi, "cardboard sign").trim())
+    .filter(Boolean);
+  const singularParts = splitParts.map((part) => part.replace(/\bbags\b/gi, "bag").replace(/\bcontainers\b/gi, "container"));
+  const genericHints = splitParts.map((part) => `${part} object`);
+  const aliases = LABEL_ALIAS_MAP[normalizeLabelKey(label)] || [];
+  const safeTitle = titleCaseWords(cleanedLabel);
+  return unique([label, itemFromId, cleanedLabel, safeTitle, ...aliases, ...splitParts, ...singularParts, ...genericHints]);
 }
 
 function isPreviousNoMatch(row) {

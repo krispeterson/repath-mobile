@@ -105,6 +105,10 @@ Kaggle dataset resolution order:
   ```
 - Validate suggested URLs/images for relevance and quality.
 - Add/correct labels for difficult classes before retraining.
+- Export unresolved rows with search links for fast manual triage:
+  ```bash
+  npm run export:benchmark:unresolved
+  ```
 - Decide when to export/swap model binaries (`assets/models/`) based on benchmark results.
 
 ## Recommended Workflow
