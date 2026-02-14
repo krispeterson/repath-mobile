@@ -527,15 +527,15 @@
     },
     {
       "name": "todo_car-seat",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colorful%20bamboo%20car%20seat%20cushions.jpg",
       "expected_any": [
         "Car Seat"
       ],
       "expected_all": [],
       "item_id": "car-seat",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "cardboard_box",
@@ -554,99 +554,99 @@
     },
     {
       "name": "todo_carpet-and-rugs",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zeikhur%20Caucasian%20rug.jpg",
       "expected_any": [
         "Carpet and Rugs"
       ],
       "expected_all": [],
       "item_id": "carpet-and-rugs",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_carpet-padding",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A6%D0%B5%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%96%D1%8F%20%D0%BD%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%BE%D0%B6%D1%86%D1%96%D0%B2%20%C2%AB%D0%92%D1%96%D0%BA%D1%96%20%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D1%8C%20%D0%BF%D0%B0%D0%BC%E2%80%99%D1%8F%D1%82%D0%BA%D0%B8%C2%BB%202014%2036.JPG",
       "expected_any": [
         "Carpet Padding"
       ],
       "expected_all": [],
       "item_id": "carpet-padding",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_carpet-roll-tube",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carpet%20with%20a%20Compartment%20Design%20MET%20AR99.jpg",
       "expected_any": [
         "Carpet Roll Tube"
       ],
       "expected_all": [],
       "item_id": "carpet-roll-tube",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_carton",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Several%20Cartons.jpg",
       "expected_any": [
         "Carton"
       ],
       "expected_all": [],
       "item_id": "carton",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_cd-dvd-player",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panasonic%20DVD%20Player%20KXL-CB35AN.jpg",
       "expected_any": [
         "CD/DVD Player"
       ],
       "expected_all": [],
       "item_id": "cd-dvd-player",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_cds-dvds",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bootleg%20CDs%20and%20DVDs%20for%20sale.jpg",
       "expected_any": [
         "CDs & DVDs"
       ],
       "expected_all": [],
       "item_id": "cds-and-dvds",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_cell-phone",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yaounde%20Cell%20Phone%20Vendor.jpg",
       "expected_any": [
         "Cell Phone"
       ],
       "expected_all": [],
       "item_id": "cell-phone",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_ceramic-dish",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dish%20(DIA%202001.72).jpg",
       "expected_any": [
         "Ceramic Dish"
       ],
       "expected_all": [],
       "item_id": "ceramic-dish",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_cereal-liner-bag",
@@ -662,63 +662,63 @@
     },
     {
       "name": "todo_chip-bag",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20Big%20Bag%20of%20Chips%20in%20Bury%20-%20geograph.org.uk%20-%20750621.jpg",
       "expected_any": [
         "Chip Bag"
       ],
       "expected_all": [],
       "item_id": "chip-bag",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_chip-can",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Silicon%20chip%20from%20a%20computer%20laser%20mouse%20under%20a%20microscope%2050%D1%85.jpg",
       "expected_any": [
         "Chip Can"
       ],
       "expected_all": [],
       "item_id": "chip-can",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_christmas-lights",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avenue%20des%20Champs-Elys%C3%A9es%2C%20Paris%2012%20December%202020.jpg",
       "expected_any": [
         "Christmas Lights"
       ],
       "expected_all": [],
       "item_id": "christmas-lights",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_christmas-tree-artificial",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christmas%20tree%20sxc%20hu.jpg",
       "expected_any": [
         "Christmas Tree, Artificial"
       ],
       "expected_all": [],
       "item_id": "christmas-tree-artificial",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_christmas-tree-live",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Live%20candles%20on%20the%20Christmas%20Tree%20and%20the%20Grail%20nativity%20set%20(8334308147).jpg",
       "expected_any": [
         "Christmas Tree, Live"
       ],
       "expected_all": [],
       "item_id": "christmas-tree-live",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_clear-plastic-berry-and-salad-container",
@@ -770,63 +770,63 @@
     },
     {
       "name": "todo_computer-accessory",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Computer%20Accessories%20for%20used%20computer.jpg",
       "expected_any": [
         "Computer Accessory"
       ],
       "expected_all": [],
       "item_id": "computer-accessory",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_computer-monitor",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amiga500%20system.jpg",
       "expected_any": [
         "Computer Monitor"
       ],
       "expected_all": [],
       "item_id": "computer-monitor",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_computer-tower",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Broadway%20tower%20edit.jpg",
       "expected_any": [
         "Computer Tower"
       ],
       "expected_all": [],
       "item_id": "computer-tower",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_concrete",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abandoned%20concrete%20factory%20mechanism.jpg",
       "expected_any": [
         "Concrete"
       ],
       "expected_all": [],
       "item_id": "concrete",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_construction-paper",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Construction%20Paper.JPG",
       "expected_any": [
         "Construction Paper"
       ],
       "expected_all": [],
       "item_id": "construction-paper",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_cooking-oil-and-grease",
@@ -842,15 +842,15 @@
     },
     {
       "name": "todo_cords-cables",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/247%20Home%20Rescue%20plug%20extension%20cable%20wires.jpg",
       "expected_any": [
         "Cords & Cables"
       ],
       "expected_all": [],
       "item_id": "cords-and-cables",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_corrugated-plastic-election-sign",
@@ -866,51 +866,51 @@
     },
     {
       "name": "todo_dishwasher",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Loading%20Dishwasher%20with%20Detergent.jpg",
       "expected_any": [
         "Dishwasher"
       ],
       "expected_all": [],
       "item_id": "dishwasher",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_disinfectant-wipes",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Purell%20Disinfectant%20Wipes%20Santa%20Cruz.jpg",
       "expected_any": [
         "Disinfectant Wipes"
       ],
       "expected_all": [],
       "item_id": "disinfectant-wipes",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_disposable-face-mask",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Disposable%20Face%20Mask%20on%20street%2C%20East%20Downtown%2C%20Vancouver%20during%20coronavirus%20pandemic%20(49732965541).jpg",
       "expected_any": [
         "Disposable Face Mask"
       ],
       "expected_all": [],
       "item_id": "disposable-face-mask",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_disposable-gloves",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Disposable%20clear%20pastic%20gloves%20for%20kids.jpg",
       "expected_any": [
         "Disposable Gloves"
       ],
       "expected_all": [],
       "item_id": "disposable-gloves",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_electronics",
@@ -950,39 +950,39 @@
     },
     {
       "name": "todo_extension-cord",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Europlug%20extension%20cord.jpg",
       "expected_any": [
         "Extension Cord"
       ],
       "expected_all": [],
       "item_id": "extension-cord",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_eyeglasses",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2023%20Okulary%20korekcyjne.jpg",
       "expected_any": [
         "Eyeglasses"
       ],
       "expected_all": [],
       "item_id": "eyeglasses",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_fill-dirt",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dam%2020%20(Getting%20Dirt%20for%20Fill)%20-%20DPLA%20-%207f6a5e8c904ac070125ed76a7da2aec8.jpg",
       "expected_any": [
         "Fill Dirt"
       ],
       "expected_all": [],
       "item_id": "fill-dirt",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_fire-extinguisher",
@@ -1010,27 +1010,27 @@
     },
     {
       "name": "todo_foam",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Foam%20-%20big.jpg",
       "expected_any": [
         "Foam"
       ],
       "expected_all": [],
       "item_id": "foam",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_foam-packing-peanuts",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peanut-Butter-Jelly-Sandwich.jpg",
       "expected_any": [
         "Foam Packing Peanuts"
       ],
       "expected_all": [],
       "item_id": "foam-packing-peanuts",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_foil-coffee-bags",
@@ -1058,15 +1058,15 @@
     },
     {
       "name": "todo_food-scraps",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Compost%20pile.JPG",
       "expected_any": [
         "Food Scraps"
       ],
       "expected_all": [],
       "item_id": "food-scraps",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_food-unused",
@@ -1466,75 +1466,75 @@
     },
     {
       "name": "todo_metal-coat-hanger",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grucce.jpg",
       "expected_any": [
         "Metal Coat Hanger"
       ],
       "expected_all": [],
       "item_id": "metal-coat-hanger",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_metal-trash-can",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Waste%20collection%20in%20Munich%2001.jpg",
       "expected_any": [
         "Metal Trash Can"
       ],
       "expected_all": [],
       "item_id": "metal-trash-can",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_microwave",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Microwave%20band.png",
       "expected_any": [
         "Microwave"
       ],
       "expected_all": [],
       "item_id": "microwave",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_microwave-popcorn-bag",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Microwave%20popcorn%20ACT%20II.jpg",
       "expected_any": [
         "Microwave Popcorn Bag"
       ],
       "expected_all": [],
       "item_id": "microwave-popcorn-bag",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_mixed-paper",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/William%20Utermohlen%20-%201967%20self%20portrait%20mixed%20media%20on%20paper.jpg",
       "expected_any": [
         "Mixed Paper"
       ],
       "expected_all": [],
       "item_id": "mixed-paper",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_molded-paper-packaging",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/American%20cookery%20(1919)%20(14793611763).jpg",
       "expected_any": [
         "Molded Paper Packaging"
       ],
       "expected_all": [],
       "item_id": "molded-paper-packaging",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_motor-oil",
@@ -1576,27 +1576,27 @@
     },
     {
       "name": "todo_office-and-school-supplies",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baier%20und%20Schneider%2001-2011.jpg",
       "expected_any": [
         "Office and School Supplies"
       ],
       "expected_all": [],
       "item_id": "office-and-school-supplies",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_oven",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio%20de%20la%20Reunificaci%C3%B3n%2C%20Ciudad%20Ho%20Chi%20Minh%2C%20Vietnam%2C%202013-08-14%2C%20DD%2028.JPG",
       "expected_any": [
         "Oven"
       ],
       "expected_all": [],
       "item_id": "oven",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_over-the-counter-medication",
@@ -1648,15 +1648,15 @@
     },
     {
       "name": "todo_paper-bag",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/India%20-%20Varanasi%20paper%20bag%20maker%20-%200078.jpg",
       "expected_any": [
         "Paper Bag"
       ],
       "expected_all": [],
       "item_id": "paper-bag",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_paper-cup",
@@ -1687,39 +1687,39 @@
     },
     {
       "name": "todo_paper-envelope",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stimmzettel-Umschlag%20f%C3%BCr%20die%20Stichwahl%20der%20Oberb%C3%BCrgermeisterin%2C%20des%20Oberb%C3%BCrgermeisters%20der%20Stadt%20K%C3%B6ln%20am%2027.09.2020.jpg",
       "expected_any": [
         "Paper Envelope"
       ],
       "expected_all": [],
       "item_id": "paper-envelope",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_paper-napkin",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Table%20utensils%20wrapped%20in%20a%20paper%20napkin%202.jpg",
       "expected_any": [
         "Paper Napkin"
       ],
       "expected_all": [],
       "item_id": "paper-napkin",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_paper-towel",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paper%20towel.png",
       "expected_any": [
         "Paper Towel"
       ],
       "expected_all": [],
       "item_id": "paper-towel",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_paper-towel-or-toilet-paper-tube",
@@ -1774,15 +1774,15 @@
     },
     {
       "name": "todo_personal-care-appliances",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20story%20of%20the%20exposition%3B%20being%20the%20official%20history%20of%20the%20international%20celebration%20held%20at%20San%20Francisco%20in%201915%20to%20commemorate%20the%20discovery%20of%20the%20Pacific%20Ocean%20and%20the%20construction%20of%20the%20(14579518280).jpg",
       "expected_any": [
         "Personal Care Appliances"
       ],
       "expected_all": [],
       "item_id": "personal-care-appliances",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_pesticide",
@@ -1798,27 +1798,27 @@
     },
     {
       "name": "todo_pet-food-bag",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Woman%20with%20a%20pet%20possum%20on%20her%20head%20-%20NMA-11728.jpg",
       "expected_any": [
         "Pet Food Bag"
       ],
       "expected_all": [],
       "item_id": "pet-food-bag",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_pet-waste",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bales%20of%20PET%20bottles%20closeup.jpg",
       "expected_any": [
         "Pet Waste"
       ],
       "expected_all": [],
       "item_id": "pet-waste",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_photo-chemical",
@@ -1834,27 +1834,27 @@
     },
     {
       "name": "todo_photograph-or-film",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sundance%20Film%20Festival%202024%20-%20Mitzi%20Akaha-104A3329.jpg",
       "expected_any": [
         "Photograph or Film"
       ],
       "expected_all": [],
       "item_id": "photograph-or-film",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_pillow",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HK%20SW%20Hollywood%20Road%20Police%20HQ%20Art%20Demo%2012-2009%20bed%20and%20pillows%20in%20white.JPG",
       "expected_any": [
         "Pillow"
       ],
       "expected_all": [],
       "item_id": "pillow",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "cardboard_box",
@@ -1873,27 +1873,27 @@
     },
     {
       "name": "todo_plastic-barrel-or-drum",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Future%20Barrel%20Racer%20(14096299828).jpg",
       "expected_any": [
         "Plastic Barrel or Drum"
       ],
       "expected_all": [],
       "item_id": "plastic-barrel-or-drum",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-bucket",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Green%20bucket%20with%20plastic%20bags%20in.jpg",
       "expected_any": [
         "Plastic Bucket"
       ],
       "expected_all": [],
       "item_id": "plastic-bucket",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-caps-lids",
@@ -1909,27 +1909,27 @@
     },
     {
       "name": "todo_plastic-cd-dvd-cases",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Computer%20lab%20tool%20kit%20phase%203%20IMG%202136%20(1)%20(26093095008).jpg",
       "expected_any": [
         "Plastic CD & DVD Cases"
       ],
       "expected_all": [],
       "item_id": "plastic-cd-and-dvd-cases",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-coat-hanger",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20hanger%20on%20the%20floor.png",
       "expected_any": [
         "Plastic Coat Hanger"
       ],
       "expected_all": [],
       "item_id": "plastic-coat-hanger",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-container",
@@ -1945,15 +1945,15 @@
     },
     {
       "name": "todo_plastic-cup",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20crow%20with%20a%20plastic%20cup%20in%20its%20beak%2C%20Lodhi%20Gardens%2C%20Delhi.jpg",
       "expected_any": [
         "Plastic Cup"
       ],
       "expected_all": [],
       "item_id": "plastic-cup",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-disinfectant-wipes-container",
@@ -1981,15 +1981,15 @@
     },
     {
       "name": "todo_plastic-flower-pots",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Many%20colorful%20flowerpots%20in%20front%20of%20Bulguksa%20temple%20in%20Gyeongju%20South%20Korea.jpg",
       "expected_any": [
         "Plastic Flower Pots"
       ],
       "expected_all": [],
       "item_id": "plastic-flower-pots",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-grocery-bags-and-plastic-film",
@@ -2005,15 +2005,15 @@
     },
     {
       "name": "todo_plastic-halloween-pumpkin",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pumpkin%20Basket%2001.jpg",
       "expected_any": [
         "Plastic Halloween Pumpkin"
       ],
       "expected_all": [],
       "item_id": "plastic-halloween-pumpkin",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "plastic_bottle",
@@ -2043,123 +2043,123 @@
     },
     {
       "name": "todo_plastic-pallet",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Three%20Plastic%20Pallets%20(Asian%2C%20Grocery%20Manufacturers%20Association%20Pallet%2C%20Auto%20Skiff).jpg",
       "expected_any": [
         "Plastic Pallet"
       ],
       "expected_all": [],
       "item_id": "plastic-pallet",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-peanut-butter-jar",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HK%20CWB%20%E9%AB%98%E5%A3%AB%E5%A8%81%E9%81%93%208%20Causeway%20Bay%20Road%20%E8%88%AA%E7%A9%BA%E5%A4%A7%E5%BB%88%20Catic%20Plaza%20shop%20%E5%83%B9%E7%9C%9F%E6%A3%A7%20Prizemart%20food%20goods%20March%202019%20SSG%2004.jpg",
       "expected_any": [
         "Plastic Peanut Butter Jar"
       ],
       "expected_all": [],
       "item_id": "plastic-peanut-butter-jar",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-pet-carrier",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dogtainers%20Pet%20Transport%20Clipper%20Cat%20Cage%20Plastic%20Travel%20Crate%20Labelled.jpg",
       "expected_any": [
         "Plastic Pet Carrier"
       ],
       "expected_all": [],
       "item_id": "plastic-pet-carrier",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-play-structure",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bandstand%20and%20dancing%20-%20Centennial%20-%20Arnegard%20North%20Dakota%20-%202013-07-06.jpg",
       "expected_any": [
         "Plastic Play Structure"
       ],
       "expected_all": [],
       "item_id": "plastic-play-structure",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-take-out-container",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Take%20Away%20Food%20Dishes%20Indian%20Curries.jpg",
       "expected_any": [
         "Plastic Take-Out Container"
       ],
       "expected_all": [],
       "item_id": "plastic-take-out-container",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-toy",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plastic%20toy%20truck%20and%20pail%20in%20sand.jpg",
       "expected_any": [
         "Plastic Toy"
       ],
       "expected_all": [],
       "item_id": "plastic-toy",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-tub",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baby%20bathing%20tub%2002.jpg",
       "expected_any": [
         "Plastic Tub"
       ],
       "expected_all": [],
       "item_id": "plastic-tub",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_plastic-tube",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boomwhaker%20diatonic.jpg",
       "expected_any": [
         "Plastic Tube"
       ],
       "expected_all": [],
       "item_id": "plastic-tube",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_porcelain-sinks-toilets",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toilet%2C%20hand%20wash%20bathroom%20porcelain%20basin%20sink%2C%20soap%20dispenser%2C%20etc.%20in%20MF%20Marstein%20car%20ferry%2C%20Hatvik%E2%80%93Venjaneset%2C%20Hordaland%2C%20Norway%202018-03-20%20B.jpg",
       "expected_any": [
         "Porcelain (Sinks, Toilets)"
       ],
       "expected_all": [],
       "item_id": "porcelain-sinks-toilets",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_pot-or-pan",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mayday%202019%20Pan%20Pot%203.jpg",
       "expected_any": [
         "Pot or Pan"
       ],
       "expected_all": [],
       "item_id": "pot-or-pan",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_prescription-drug",
@@ -2631,51 +2631,51 @@
     },
     {
       "name": "todo_telephone",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Northern%20Electric%20N415H%2002.jpg",
       "expected_any": [
         "Telephone"
       ],
       "expected_all": [],
       "item_id": "telephone",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_telephone-book",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Francisco%20and%20Bay%20counties%20telephone%20directory%20(1917)%20(14570058278).jpg",
       "expected_any": [
         "Telephone Book"
       ],
       "expected_all": [],
       "item_id": "telephone-book",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_television",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1990s%20Television%20Set.jpg",
       "expected_any": [
         "Television"
       ],
       "expected_all": [],
       "item_id": "television",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_tile",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tile%20MET%20ADA5250.jpg",
       "expected_any": [
         "Tile"
       ],
       "expected_all": [],
       "item_id": "tile",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "aluminum_can",
@@ -2718,15 +2718,15 @@
     },
     {
       "name": "todo_tissue-wrapping-paper",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wrapping%20tissue%20flowers.jpg",
       "expected_any": [
         "Tissue Wrapping Paper"
       ],
       "expected_all": [],
       "item_id": "tissue-wrapping-paper",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_toiletries",
@@ -2742,87 +2742,87 @@
     },
     {
       "name": "todo_tools",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Haltern%20am%20See%2C%20Sythen%2C%20Quarzwerke%2C%20Werkzeughalle%20--%202014%20--%204050-4.jpg",
       "expected_any": [
         "Tools"
       ],
       "expected_all": [],
       "item_id": "tools",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_tupperware-food-storage-container",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TupperwareLeftovers.jpg",
       "expected_any": [
         "Tupperware Food Storage Container"
       ],
       "expected_all": [],
       "item_id": "tupperware-food-storage-container",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_tyvek-envelope",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tyvek%201056D%20Envelope%2013032009849.jpg",
       "expected_any": [
         "Tyvek Envelope"
       ],
       "expected_all": [],
       "item_id": "tyvek-envelope",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_vacuum-cleaner",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RCA%20%E2%80%99808%E2%80%99%20Power%20Vacuum%20Tube.jpg",
       "expected_any": [
         "Vacuum Cleaner"
       ],
       "expected_all": [],
       "item_id": "vacuum-cleaner",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_video-game-system",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atari%20XEGS.jpg",
       "expected_any": [
         "Video Game System"
       ],
       "expected_all": [],
       "item_id": "video-game-system",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_videotape-or-cassette-tape",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/VHS%20videocassette%20-%20front.jpg",
       "expected_any": [
         "Videotape or Cassette Tape"
       ],
       "expected_all": [],
       "item_id": "videotape-or-cassette-tape",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_vinyl-fencing",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PVC%20Pool%20fencing%20-%20Vinyl%20swimming%20pool%20fence.jpg",
       "expected_any": [
         "Vinyl Fencing"
       ],
       "expected_all": [],
       "item_id": "vinyl-fencing",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "plastic_bottle",
@@ -2840,27 +2840,27 @@
     },
     {
       "name": "todo_water-filter",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Neutral%20density%20filter%20demonstration.jpg",
       "expected_any": [
         "Water Filter"
       ],
       "expected_all": [],
       "item_id": "water-filter",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_water-heater",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruud-Instantaneous-Water-Heater-Type-F-Size-3.jpg",
       "expected_any": [
         "Water Heater"
       ],
       "expected_all": [],
       "item_id": "water-heater",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_waxed-cardboard",
@@ -2876,15 +2876,15 @@
     },
     {
       "name": "todo_wheel",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%C5%81ukasz%20S%C3%B3wka%20wisniowy.JPG",
       "expected_any": [
         "Wheel"
       ],
       "expected_all": [],
       "item_id": "wheel",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_white-office-paper",
@@ -2900,63 +2900,63 @@
     },
     {
       "name": "todo_window-glass",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint%20Anne%20Stained%20glass%20window%20in%20the%20Saint%20Antony%20church%20in%20St.%20Ulrich%20in%20Gr%C3%B6den.jpg",
       "expected_any": [
         "Window Glass"
       ],
       "expected_all": [],
       "item_id": "window-glass",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_wine-cork",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kurzzeitfotografie%20sektkorken%2006-19-s02%202017-09-03%2001%20hinnerk-ruemenapf%20exif.jpg",
       "expected_any": [
         "Wine Cork"
       ],
       "expected_all": [],
       "item_id": "wine-cork",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_wire",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2012-11-06%2009-57-49-fort-du-mt-bart.jpg",
       "expected_any": [
         "Wire"
       ],
       "expected_all": [],
       "item_id": "wire",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_wood-pallet",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wood%20pallet%20in%20Marckworth%20State%20Forest.jpg",
       "expected_any": [
         "Wood Pallet"
       ],
       "expected_all": [],
       "item_id": "wood-pallet",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_wood-waste",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Waste%20wood%20recycled%20as%20an%20art.jpg",
       "expected_any": [
         "Wood Waste"
       ],
       "expected_all": [],
       "item_id": "wood-waste",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_wood-treated-or-painted",
@@ -2972,15 +2972,15 @@
     },
     {
       "name": "todo_wood-untreated",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PSM%20V13%20D571%20Treated%20and%20untreated%20wood%20exposed%20to%20the%20teredo.jpg",
       "expected_any": [
         "Wood, Untreated"
       ],
       "expected_all": [],
       "item_id": "wood-untreated",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_woven-plastic-feed-bag",
@@ -2996,39 +2996,39 @@
     },
     {
       "name": "todo_wrapping-paper",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Inverted%20wrapping%20paper%20-%202.jpg",
       "expected_any": [
         "Wrapping Paper"
       ],
       "expected_all": [],
       "item_id": "wrapping-paper",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_yard-trimmings-and-leaves",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Florists'%20review%20(microform)%20(16473690577).jpg",
       "expected_any": [
         "Yard Trimmings and Leaves"
       ],
       "expected_all": [],
       "item_id": "yard-trimmings-and-leaves",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_yoga-mat",
-      "url": "",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yoga%20Mat%20Made%20of%20Carpet%20Underlay.jpg",
       "expected_any": [
         "Yoga Mat"
       ],
       "expected_all": [],
       "item_id": "yoga-mat",
       "required": true,
-      "status": "todo",
-      "notes": "Add at least one representative photo for this item variation."
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
     },
     {
       "name": "todo_negative_people_scene",
