@@ -5,6 +5,8 @@ benchmark-coverage-report*.json
 benchmark-dataset-audit*.json
 benchmark-dedupe-report.json
 benchmark-priority-report.json
+benchmark-coverage-expansion-report.json
+benchmark-coverage-expansion-template.csv
 benchmark-progress-report.json
 benchmark-labeling-batches.json
 benchmark-labeling-batch-*.csv

@@ -94,6 +94,7 @@ Kaggle dataset resolution order:
 
 ## Manual Steps To Expect
 - Review and curate `test/benchmarks/benchmark-labeled.csv` entries.
+- Use `test/benchmarks/benchmark-coverage-expansion-template.csv` to fill classes below target ready-count coverage.
 - Validate suggested URLs/images for relevance and quality.
 - Add/correct labels for difficult classes before retraining.
 - Decide when to export/swap model binaries (`assets/models/`) based on benchmark results.
@@ -110,6 +111,9 @@ npm run ml:scaffold
 ```bash
 npm run ml:labeling:queue
 ```
+This also generates:
+- `test/benchmarks/benchmark-coverage-expansion-report.json`
+- `test/benchmarks/benchmark-coverage-expansion-template.csv`
 
 3. Ingest suggestions + normalize + sync progress:
 ```bash
