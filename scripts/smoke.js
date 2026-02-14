@@ -46,6 +46,14 @@ function mapLabelsToItems(labels, packId, pack, searchIndex) {
     .filter(Boolean);
 }
 
+function resolveDefaultPackId(manifest) {
+  const packIds = Object.keys((manifest && manifest.packs) || {}).sort();
+  if (!packIds.length) {
+    throw new Error('manifest.packs is empty');
+  }
+  return packIds[0];
+}
+
 function main() {
   const manifest = readJson('assets/packs/manifest.json');
   const search = readJson('assets/packs/search.json');
@@ -67,12 +75,14 @@ function main() {
     assert(search.packs[packId], `search index missing pack ${packId}`);
   });
 
-  const fortSearch = search.packs['fort-collins-co-us'];
-  assert(fortSearch, 'fort-collins-co-us missing from search index');
-  assert(fortSearch.index && fortSearch.index.wire, 'token "wire" missing from Fort Collins index');
+  const packId = resolveDefaultPackId(manifest);
+  const packSearch = search.packs[packId];
+  assert(packSearch, `${packId} missing from search index`);
+  assert(packSearch.index && packSearch.index.wire, `token "wire" missing from ${packId} index`);
 
-  const fortPack = readJson('assets/packs/fort-collins-co-us.pack.json');
-  const mapped = mapLabelsToItems(['wire'], 'fort-collins-co-us', fortPack, search);
+  const packPath = manifest.packs[packId].path;
+  const pack = readJson(packPath);
+  const mapped = mapLabelsToItems(['wire'], packId, pack, search);
   assert(mapped.length > 0, 'label mapping did not return any items');
 
   console.log('Smoke test passed');

@@ -13,7 +13,7 @@ function hasCurbsideCard(item) {
 }
 
 function testBenchmarkManifestHasPositivesAndNegatives() {
-  const manifest = readJson("test/benchmarks/fc-curbside-manifest.json");
+  const manifest = readJson("test/benchmarks/municipal-curbside-manifest.json");
   assert.ok(Array.isArray(manifest.images));
   const positives = manifest.images.filter((entry) => Array.isArray(entry.expected_any) && entry.expected_any.length > 0);
   const negatives = manifest.images.filter((entry) => Array.isArray(entry.expected_any) && entry.expected_any.length === 0);
@@ -24,9 +24,11 @@ function testBenchmarkManifestHasPositivesAndNegatives() {
 function testCurbsideLabelMapAlignsWithPackItems() {
   const classes = readJson("assets/models/poc-curbside.classes.json");
   const labelMap = readJson("assets/models/poc-curbside.label-map.json");
-  const pack = readJson("assets/packs/fort-collins-co-us.pack.json");
+  const manifest = readJson("assets/packs/manifest.json");
+  const packEntry = manifest.packs[labelMap.pack_id];
+  assert.ok(packEntry && packEntry.path, `pack not found in manifest: ${labelMap.pack_id}`);
+  const pack = readJson(packEntry.path);
 
-  assert.equal(classes.length, 40);
   assert.equal(Object.keys(labelMap.labels_to_item_ids).length, classes.length);
 
   classes.forEach((label) => {

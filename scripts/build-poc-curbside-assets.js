@@ -8,7 +8,7 @@ function usage() {
 
 function parseArgs(argv) {
   const args = {
-    pack: path.join("assets", "packs", "fort-collins-co-us.pack.json"),
+    pack: "",
     outDir: path.join("assets", "models")
   };
   for (let i = 2; i < argv.length; i += 1) {
@@ -25,6 +25,28 @@ function parseArgs(argv) {
   return args;
 }
 
+function resolveDefaultPackPath() {
+  const manifestPath = path.resolve(path.join("assets", "packs", "manifest.json"));
+  if (!fs.existsSync(manifestPath)) {
+    throw new Error(`Manifest file not found: ${manifestPath}`);
+  }
+
+  const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+  const packs = manifest && manifest.packs ? manifest.packs : {};
+  const packIds = Object.keys(packs).sort();
+  if (!packIds.length) {
+    throw new Error("No packs found in assets/packs/manifest.json");
+  }
+
+  const firstPack = packs[packIds[0]];
+  const relPath = String((firstPack && firstPack.path) || "").trim();
+  if (!relPath) {
+    throw new Error(`Pack path missing for manifest pack: ${packIds[0]}`);
+  }
+
+  return path.resolve(relPath);
+}
+
 function toLabelMap(entries) {
   const map = {};
   entries.forEach((entry) => {
@@ -35,7 +57,7 @@ function toLabelMap(entries) {
 
 function main() {
   const args = parseArgs(process.argv);
-  const packPath = path.resolve(args.pack);
+  const packPath = args.pack ? path.resolve(args.pack) : resolveDefaultPackPath();
   const outDir = path.resolve(args.outDir);
 
   if (!fs.existsSync(packPath)) {

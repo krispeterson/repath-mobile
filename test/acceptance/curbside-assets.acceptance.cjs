@@ -29,10 +29,12 @@ async function testCurbsideAssetBuilderOutputsConsistentFiles() {
 
     const classes = readJson(classesPath);
     const labelMap = readJson(mapPath);
-    const pack = readJson(path.join(projectRoot, "assets/packs/fort-collins-co-us.pack.json"));
+    const packManifest = readJson(path.join(projectRoot, "assets/packs/manifest.json"));
+    const packEntry = packManifest.packs[labelMap.pack_id];
+    assert.ok(packEntry && packEntry.path, `pack not found in manifest: ${labelMap.pack_id}`);
+    const pack = readJson(path.join(projectRoot, packEntry.path));
 
-    assert.equal(classes.length, 40);
-    assert.equal(labelMap.pack_id, "fort-collins-co-us");
+    assert.equal(labelMap.pack_id, pack.pack_id);
     assert.equal(Object.keys(labelMap.labels_to_item_ids).length, classes.length);
 
     classes.forEach((label) => {
@@ -49,7 +51,7 @@ async function testCurbsideAssetBuilderOutputsConsistentFiles() {
 
 module.exports = {
   cases: [
-  { name: "build-poc-curbside-assets generates valid class and label-map files", run: testCurbsideAssetBuilderOutputsConsistentFiles }
+    { name: "build-poc-curbside-assets generates valid class and label-map files", run: testCurbsideAssetBuilderOutputsConsistentFiles }
   ]
 };
 

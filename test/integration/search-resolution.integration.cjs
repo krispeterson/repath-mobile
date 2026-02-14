@@ -13,6 +13,24 @@ async function loadSearchCoreModule() {
   return import(url);
 }
 
+function resolvePackContext() {
+  const searchIndex = readJson("assets/packs/search.json");
+  const mapJson = readJson("assets/models/poc-curbside.label-map.json");
+  const manifest = readJson("assets/packs/manifest.json");
+  const packId = String(mapJson.pack_id || "").trim();
+  const packEntry = manifest.packs[packId];
+
+  assert.ok(packId, "poc-curbside.label-map.json is missing pack_id");
+  assert.ok(packEntry && packEntry.path, `manifest missing pack path for ${packId}`);
+
+  return {
+    packId,
+    pack: readJson(packEntry.path),
+    searchIndex,
+    mapJson
+  };
+}
+
 function buildLabelMap(mapJson) {
   const mapped = {};
   Object.keys(mapJson.labels_to_item_ids || {}).forEach((label) => {
@@ -45,16 +63,14 @@ function createResolutionCase(label, expectedItemId) {
     name: `mapped-then-indexed resolution for '${label}'`,
     async run() {
       const searchCore = await loadSearchCoreModule();
-      const pack = readJson("assets/packs/fort-collins-co-us.pack.json");
-      const searchIndex = readJson("assets/packs/search.json");
-      const mapJson = readJson("assets/models/poc-curbside.label-map.json");
+      const context = resolvePackContext();
 
       const items = resolveViaMappedThenIndexed({
         labels: [label],
-        pack,
-        packId: "fort-collins-co-us",
-        mapJson,
-        searchIndex,
+        pack: context.pack,
+        packId: context.packId,
+        mapJson: context.mapJson,
+        searchIndex: context.searchIndex,
         searchCore
       });
       assert.ok(items.length > 0);
@@ -86,15 +102,13 @@ const fallbackCases = [
     name: "falls back to index when label map has no match",
     async run() {
       const searchCore = await loadSearchCoreModule();
-      const pack = readJson("assets/packs/fort-collins-co-us.pack.json");
-      const searchIndex = readJson("assets/packs/search.json");
-      const mapJson = readJson("assets/models/poc-curbside.label-map.json");
+      const context = resolvePackContext();
       const items = resolveViaMappedThenIndexed({
         labels: ["laptop"],
-        pack,
-        packId: "fort-collins-co-us",
-        mapJson,
-        searchIndex,
+        pack: context.pack,
+        packId: context.packId,
+        mapJson: context.mapJson,
+        searchIndex: context.searchIndex,
         searchCore
       });
       assert.ok(items.length > 0);
@@ -104,15 +118,13 @@ const fallbackCases = [
     name: "deduplicates repeated labels in mapped resolution",
     async run() {
       const searchCore = await loadSearchCoreModule();
-      const pack = readJson("assets/packs/fort-collins-co-us.pack.json");
-      const searchIndex = readJson("assets/packs/search.json");
-      const mapJson = readJson("assets/models/poc-curbside.label-map.json");
+      const context = resolvePackContext();
       const items = resolveViaMappedThenIndexed({
         labels: ["Tin Can", "Tin Can", "Tin Can"],
-        pack,
-        packId: "fort-collins-co-us",
-        mapJson,
-        searchIndex,
+        pack: context.pack,
+        packId: context.packId,
+        mapJson: context.mapJson,
+        searchIndex: context.searchIndex,
         searchCore
       });
       assert.equal(items.length, 1);
