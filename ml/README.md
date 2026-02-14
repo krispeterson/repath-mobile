@@ -74,46 +74,50 @@ Common generated files include:
 
 Most generated files are ignored to keep commits clean.
 
-## Recommended Workflow
-1. Build taxonomy and benchmark scaffold:
-```bash
-npm run build:taxonomy
-npm run build:benchmark:manifest
-npm run check:benchmark:coverage
-```
-
-2. Build/refresh labeling queue:
-```bash
-npm run plan:benchmark:priority
-npm run build:benchmark:batches
-npm run build:benchmark:template
-```
-
-3. Add labeled sources, normalize paths, and sync progress:
-```bash
-npm run suggest:benchmark:kaggle
-npm run suggest:benchmark:online
-npm run normalize:benchmark:urls
-npm run sync:benchmark:progress -- --completed test/benchmarks/benchmark-labeled.csv
-```
-
-4. Build resolved local manifest and evaluate:
-```bash
-npm run build:benchmark:resolved
-npm run benchmark:model:resolved
-```
-
-5. Optional one-command pipeline:
-```bash
-npm run run:benchmark:pipeline -- --skip-benchmark
-```
-
-Pipeline note:
-- Network suggestion steps are best-effort by default.
+## Before You Start
+- Some steps depend on network access (Kaggle suggestions, Wikimedia suggestions, remote image fetches).
+- Network suggestion steps are best-effort by default in the pipeline.
 - Use `--strict-network` to fail fast on network errors.
+- If you plan to use Kaggle suggestions, either:
+  - set `KAGGLE_WASTE_DIR=/path/to/.../images/images`, or
+  - pass `--kaggle-dir` when running the pipeline script directly.
 
 Kaggle dataset resolution order:
 1. `--kaggle-dir` CLI arg
 2. `KAGGLE_WASTE_DIR` env var
 3. `ml/artifacts/datasets/kaggle-household-waste/images/images`
 4. `../Kaggle Household Waste Images/images/images` (sibling folder)
+
+## Manual Steps To Expect
+- Review and curate `test/benchmarks/benchmark-labeled.csv` entries.
+- Validate suggested URLs/images for relevance and quality.
+- Add/correct labels for difficult classes before retraining.
+- Decide when to export/swap model binaries (`assets/models/`) based on benchmark results.
+
+## Recommended Workflow
+Use these grouped pointer scripts for the common flows:
+
+1. Build taxonomy + benchmark scaffold:
+```bash
+npm run ml:scaffold
+```
+
+2. Build/refresh labeling queue:
+```bash
+npm run ml:labeling:queue
+```
+
+3. Ingest suggestions + normalize + sync progress:
+```bash
+npm run ml:labeling:ingest
+```
+
+4. Build resolved local manifest and evaluate:
+```bash
+npm run ml:evaluate
+```
+
+5. Optional all-in-one benchmark prep:
+```bash
+npm run ml:all
+```

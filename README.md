@@ -161,14 +161,14 @@ Use this only when improving model quality, benchmark coverage, or dataset/train
 
 Common advanced commands:
 ```bash
-npm run build:taxonomy
-npm run build:benchmark:manifest
-npm run benchmark:model:resolved
+npm run ml:scaffold
+npm run ml:labeling:queue
+npm run ml:evaluate
 ```
 
 One-command benchmark data prep pipeline:
 ```bash
-npm run run:benchmark:pipeline -- --skip-benchmark
+npm run ml:all
 ```
 
 Network suggestion steps are best-effort by default.
