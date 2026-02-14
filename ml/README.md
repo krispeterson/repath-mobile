@@ -95,6 +95,22 @@ This validator checks:
 - negative rows remain empty,
 - box coordinates are normalized and class IDs are valid.
 
+To train a detector candidate from the annotation bundle:
+```bash
+npm run train:model:annotation:dry-run
+```
+(`train:model:annotation:dry-run` skips strict validation so you can verify wiring before annotations are complete.)
+Then run real training/export after strict validation passes:
+```bash
+npm run train:model:annotation -- --model yolov8n.pt --epochs 40 --imgsz 640 --batch 8 --nms
+```
+This writes candidate artifacts into `ml/artifacts/models/candidates/<run-id>/`.
+
+To train and immediately benchmark/compare:
+```bash
+npm run train:model:annotation:benchmark
+```
+
 To export a candidate model vocabulary from that retraining manifest:
 ```bash
 npm run export:model:candidate -- --dry-run
@@ -117,7 +133,7 @@ Comparison output is written to `test/benchmarks/latest-results.compare.json`.
 
 Important:
 - This candidate export flow updates vocabulary from retraining priorities.
-- Full detector retraining needs box-level annotations from the annotation bundle.
+- Full detector retraining runs through `train:model:annotation` and needs completed box annotations.
 
 ## Model And Training Helpers
 `ml/training/` and related scripts support export and model artifact preparation for mobile use.
