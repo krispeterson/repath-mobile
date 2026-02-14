@@ -71,97 +71,6 @@ Dependencies used:
 - `react-native-fast-tflite`
 - `react-native-worklets-core`
 
-### ML workspace layout
-- `ml/data/` taxonomy builders + dataset suggestion tooling
-- `ml/eval/` benchmark manifests, progress sync, coverage/quality audits, benchmark runner
-- `ml/training/` model export/training helpers
-- `ml/artifacts/` local generated model/data artifacts (keep gitignored)
-
-### Municipality taxonomy + benchmark workflow
-
-Build a full municipal item taxonomy from the selected bundled pack (items + aliases):
-```bash
-npm run build:taxonomy
-```
-
-Generate an expanded benchmark manifest scaffold with one required entry per taxonomy label:
-```bash
-npm run build:benchmark:manifest
-```
-
-Check benchmark coverage against taxonomy (ready vs todo labels):
-```bash
-npm run check:benchmark:coverage
-```
-
-Generate a prioritized labeling queue for TODO benchmark entries:
-```bash
-npm run plan:benchmark:priority
-```
-
-Build CSV labeling batches from the priority queue:
-```bash
-npm run build:benchmark:batches
-```
-
-Build a completion template CSV (default: urgent + high rows):
-```bash
-npm run build:benchmark:template
-```
-
-Sync benchmark progress (promote `todo` -> `ready` from completed entries and URLs):
-```bash
-npm run sync:benchmark:progress
-```
-
-Audit dataset quality before retraining:
-```bash
-npm run audit:benchmark:dataset
-```
-
-De-duplicate repeated manifest URLs (report only):
-```bash
-npm run dedupe:benchmark:manifest -- --dry-run
-```
-
-Auto-suggest labeled rows from local Kaggle images and merge into `benchmark-labeled.csv`:
-```bash
-npm run suggest:benchmark:kaggle
-```
-If needed, set `KAGGLE_WASTE_DIR=/path/to/.../images/images` or pass `--kaggle-dir`.
-
-Auto-suggest additional rows from Wikimedia Commons search:
-```bash
-npm run suggest:benchmark:online
-```
-
-Normalize `benchmark-labeled.csv` URLs to repo-relative paths (copying external local files into cache):
-```bash
-npm run normalize:benchmark:urls
-```
-
-Build a resolved local manifest (cache/download assets, rewrite URLs to local repo-relative paths):
-```bash
-npm run build:benchmark:resolved
-```
-
-Run model benchmark against the expanded manifest:
-```bash
-npm run benchmark:model:v2
-```
-
-Run benchmark against the resolved offline manifest (recommended):
-```bash
-npm run benchmark:model:resolved
-```
-
-Run the full benchmark prep pipeline in one command:
-```bash
-npm run run:benchmark:pipeline -- --skip-benchmark
-```
-Network suggestion steps are best-effort by default (pipeline continues if Kaggle/online lookup fails).  
-Use `--strict-network` to fail fast on network errors.
-
 Install guidance (network required):
 - `npm install`
 
@@ -241,6 +150,29 @@ Notes:
   Expo/RN, re-run `npm run prebuild` and confirm the patch script still applies cleanly.
 - Model binaries in `assets/models/` are generated locally and ignored by git. See
   `assets/models/README.md` for model export details and quantization options.
+
+## Optional ML Workspace (Advanced)
+
+Most developers can skip this and focus on app behavior.
+Use this only when improving model quality, benchmark coverage, or dataset/training workflows.
+
+- ML workflows live in `ml/README.md`.
+- Model export details live in `assets/models/README.md`.
+
+Common advanced commands:
+```bash
+npm run build:taxonomy
+npm run build:benchmark:manifest
+npm run benchmark:model:resolved
+```
+
+One-command benchmark data prep pipeline:
+```bash
+npm run run:benchmark:pipeline -- --skip-benchmark
+```
+
+Network suggestion steps are best-effort by default.
+Use `--strict-network` to fail fast on network errors.
 
 ## Troubleshooting
 
