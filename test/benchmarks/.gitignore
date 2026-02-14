@@ -13,4 +13,5 @@ benchmark-labeling-batch-*.csv
 benchmark-completion-template.csv
 benchmark-labeled.kaggle.csv
 benchmark-labeled.online.csv
+benchmark-labeled.negatives.csv
 municipal-benchmark-manifest.resolved.json

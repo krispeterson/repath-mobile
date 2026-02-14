@@ -99,6 +99,10 @@ Kaggle dataset resolution order:
   ```bash
   npm run seed:benchmark:depth -- --target-ready 3 --max-new 150
   ```
+- If negatives are too low, seed additional negative placeholders:
+  ```bash
+  npm run seed:benchmark:negatives
+  ```
 - Validate suggested URLs/images for relevance and quality.
 - Add/correct labels for difficult classes before retraining.
 - Decide when to export/swap model binaries (`assets/models/`) based on benchmark results.
@@ -133,6 +137,7 @@ For a broader online sweep across unresolved rows, use:
 npm run ml:labeling:ingest:deep
 ```
 The deep sweep is adaptive and avoids re-querying rows already marked `no_match`.
+Both ingest commands also attempt to fill negative entries via Wikimedia Commons scene queries.
 
 4. Build resolved local manifest and evaluate:
 ```bash
