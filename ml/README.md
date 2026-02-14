@@ -95,6 +95,10 @@ Kaggle dataset resolution order:
 ## Manual Steps To Expect
 - Review and curate `test/benchmarks/benchmark-labeled.csv` entries.
 - Use `test/benchmarks/benchmark-coverage-expansion-template.csv` to fill classes below target ready-count coverage.
+- If class depth is too low, seed additional placeholders before ingest:
+  ```bash
+  npm run seed:benchmark:depth -- --target-ready 3 --max-new 150
+  ```
 - Validate suggested URLs/images for relevance and quality.
 - Add/correct labels for difficult classes before retraining.
 - Decide when to export/swap model binaries (`assets/models/`) based on benchmark results.
@@ -122,6 +126,7 @@ npm run ml:labeling:ingest
 ```
 This starts by merging `benchmark-coverage-expansion-template.csv` into `benchmark-labeled.csv`
 so low-coverage labels enter the active labeling queue automatically.
+It also syncs missing `todo` rows from the benchmark manifest into the labeled queue first.
 
 For a broader online sweep across unresolved rows, use:
 ```bash
