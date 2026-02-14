@@ -78,6 +78,23 @@ npm run build:retraining:manifest
 ```
 This writes `ml/artifacts/retraining/retraining-manifest.json` with positive and negative samples.
 
+To prepare an annotation-ready YOLO bundle (images, empty label files, class map, task sheet):
+```bash
+npm run build:annotation:bundle
+```
+Then validate annotation completeness/format before training:
+```bash
+npm run validate:annotation:bundle
+```
+Use strict mode (non-zero exit on any issue) in pre-training checks:
+```bash
+npm run validate:annotation:bundle:strict
+```
+This validator checks:
+- positive rows have at least one YOLO box,
+- negative rows remain empty,
+- box coordinates are normalized and class IDs are valid.
+
 To export a candidate model vocabulary from that retraining manifest:
 ```bash
 npm run export:model:candidate -- --dry-run
@@ -100,7 +117,7 @@ Comparison output is written to `test/benchmarks/latest-results.compare.json`.
 
 Important:
 - This candidate export flow updates vocabulary from retraining priorities.
-- Full detector retraining still needs box-level annotations (not just image-level labels).
+- Full detector retraining needs box-level annotations from the annotation bundle.
 
 ## Model And Training Helpers
 `ml/training/` and related scripts support export and model artifact preparation for mobile use.
