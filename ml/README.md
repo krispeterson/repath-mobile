@@ -114,6 +114,7 @@ npm run ml:labeling:queue
 This also generates:
 - `test/benchmarks/benchmark-coverage-expansion-report.json`
 - `test/benchmarks/benchmark-coverage-expansion-template.csv`
+- `test/benchmarks/benchmark-completion-template.csv`
 
 3. Ingest suggestions + normalize + sync progress:
 ```bash

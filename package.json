@@ -14,7 +14,7 @@
     "plan:benchmark:priority": "node ml/eval/plan-benchmark-priority.js",
     "plan:benchmark:coverage-expansion": "node ml/eval/plan-benchmark-coverage-expansion.js",
     "build:benchmark:batches": "node ml/eval/build-benchmark-batches.js",
-    "build:benchmark:template": "node ml/eval/build-benchmark-completion-template.js",
+    "build:benchmark:template": "node ml/eval/build-benchmark-completion-template.js --out test/benchmarks/benchmark-completion-template.csv",
     "sync:benchmark:progress": "node ml/eval/sync-benchmark-progress.js",
     "audit:benchmark:dataset": "node ml/eval/audit-benchmark-dataset.js",
     "dedupe:benchmark:manifest": "node ml/eval/dedupe-benchmark-manifest.js",

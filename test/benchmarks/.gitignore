@@ -10,6 +10,7 @@ benchmark-coverage-expansion-template.csv
 benchmark-progress-report.json
 benchmark-labeling-batches.json
 benchmark-labeling-batch-*.csv
+benchmark-completion-template.csv
 benchmark-labeled.kaggle.csv
 benchmark-labeled.online.csv
 municipal-benchmark-manifest.resolved.json

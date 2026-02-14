@@ -4,14 +4,14 @@ const path = require("path");
 
 function usage() {
   console.log(
-    "Usage: node scripts/build-benchmark-completion-template.js [--batches test/benchmarks/benchmark-labeling-batches.json] [--out test/benchmarks/benchmark-labeled.csv] [--bands urgent,high]"
+    "Usage: node scripts/build-benchmark-completion-template.js [--batches test/benchmarks/benchmark-labeling-batches.json] [--out test/benchmarks/benchmark-completion-template.csv] [--bands urgent,high]"
   );
 }
 
 function parseArgs(argv) {
   const args = {
     batches: path.join("test", "benchmarks", "benchmark-labeling-batches.json"),
-    out: path.join("test", "benchmarks", "benchmark-labeled.csv"),
+    out: path.join("test", "benchmarks", "benchmark-completion-template.csv"),
     bands: ["urgent", "high"]
   };
 
