@@ -127,6 +127,7 @@ For a broader online sweep across unresolved rows, use:
 ```bash
 npm run ml:labeling:ingest:deep
 ```
+The deep sweep is adaptive and avoids re-querying rows already marked `no_match`.
 
 4. Build resolved local manifest and evaluate:
 ```bash

@@ -5,7 +5,7 @@ const https = require("https");
 
 function usage() {
   console.log(
-    "Usage: node scripts/suggest-benchmark-online.js [--input test/benchmarks/benchmark-labeled.csv] [--out test/benchmarks/benchmark-labeled.online.csv] [--merge-into test/benchmarks/benchmark-labeled.csv] [--limit 30] [--offset 0] [--timeout-ms 15000] [--max-retries 3]"
+    "Usage: node scripts/suggest-benchmark-online.js [--input test/benchmarks/benchmark-labeled.csv] [--out test/benchmarks/benchmark-labeled.online.csv] [--merge-into test/benchmarks/benchmark-labeled.csv] [--limit 30] [--offset 0] [--timeout-ms 15000] [--max-retries 3] [--include-previous-failures]"
   );
 }
 
@@ -17,7 +17,8 @@ function parseArgs(argv) {
     limit: 30,
     offset: 0,
     timeoutMs: 15000,
-    maxRetries: 3
+    maxRetries: 3,
+    includePreviousFailures: false
   };
 
   for (let i = 2; i < argv.length; i += 1) {
@@ -36,6 +37,8 @@ function parseArgs(argv) {
       args.timeoutMs = Number(argv[++i]);
     } else if (arg === "--max-retries") {
       args.maxRetries = Number(argv[++i]);
+    } else if (arg === "--include-previous-failures") {
+      args.includePreviousFailures = true;
     } else if (arg === "--help" || arg === "-h") {
       usage();
       process.exit(0);
@@ -201,6 +204,24 @@ function toCommonsFilePathUrl(fileTitle) {
   return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(normalized)}`;
 }
 
+function unique(values) {
+  return Array.from(new Set(values.filter(Boolean)));
+}
+
+function buildQueryVariants(row) {
+  const label = String(row.canonical_label || "").trim();
+  const itemId = String(row.item_id || "").trim();
+  const itemFromId = itemId.replace(/[-_]+/g, " ").trim();
+  const cleanedLabel = label.replace(/[()&/]+/g, " ").replace(/\s+/g, " ").trim();
+  return unique([label, itemFromId, cleanedLabel]);
+}
+
+function isPreviousNoMatch(row) {
+  const source = String(row.source || "").trim().toLowerCase();
+  const notes = String(row.notes || "").toLowerCase();
+  return source === "wikimedia_commons_search" && notes.includes("no_match");
+}
+
 function mergeRows(existingRows, updates) {
   const map = new Map();
   existingRows.forEach((row) => {
@@ -223,27 +244,52 @@ async function main() {
   }
 
   const rows = readCsvRows(inPath);
-  const pool = rows.filter((row) => !row.url && row.canonical_label);
+  const unresolved = rows.filter((row) => !row.url && row.canonical_label);
+  const skippedPrevious = unresolved.filter((row) => isPreviousNoMatch(row)).length;
+  const pool = args.includePreviousFailures
+    ? unresolved
+    : unresolved.filter((row) => !isPreviousNoMatch(row));
   const targets = pool.slice(args.offset, args.offset + args.limit);
   const updates = [];
+  let noMatchCount = 0;
 
   for (let i = 0; i < targets.length; i += 1) {
     const row = targets[i];
+    const variants = buildQueryVariants(row);
     let title = null;
-    try {
-      title = await findCommonsFileTitle(row.canonical_label, {
-        timeoutMs: args.timeoutMs,
-        maxRetries: args.maxRetries
+    let matchedQuery = "";
+
+    for (let v = 0; v < variants.length; v += 1) {
+      const queryText = variants[v];
+      try {
+        title = await findCommonsFileTitle(queryText, {
+          timeoutMs: args.timeoutMs,
+          maxRetries: args.maxRetries
+        });
+      } catch (error) {
+        continue;
+      }
+      if (title) {
+        matchedQuery = queryText;
+        break;
+      }
+    }
+
+    if (title) {
+      updates.push({
+        ...row,
+        url: toCommonsFilePathUrl(title),
+        source: "wikimedia_commons_search",
+        notes: `title=${title}; query=${matchedQuery}`
       });
-    } catch (error) {
       continue;
     }
-    if (!title) continue;
+
+    noMatchCount += 1;
     updates.push({
       ...row,
-      url: toCommonsFilePathUrl(title),
       source: "wikimedia_commons_search",
-      notes: `title=${title}`
+      notes: "no_match"
     });
   }
 
@@ -265,8 +311,10 @@ async function main() {
       {
         attempted: targets.length,
         offset: args.offset,
+        skipped_previously_attempted: skippedPrevious,
         unresolved_pool: pool.length,
-        matched_rows: updates.length,
+        matched_rows: updates.filter((row) => row.url).length,
+        no_match_rows: noMatchCount,
         output: path.relative(process.cwd(), outPath),
         merged_into: args.mergeInto ? path.relative(process.cwd(), path.resolve(args.mergeInto)) : null,
         merged_row_count: mergedCount

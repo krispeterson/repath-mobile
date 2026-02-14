@@ -3,7 +3,7 @@ const { spawnSync } = require("child_process");
 
 function usage() {
   console.log(
-    "Usage: node ml/data/suggest-benchmark-online-bulk.js [--passes 4] [--limit 30] [--start-offset 0] [--timeout-ms 15000] [--max-retries 3]"
+    "Usage: node ml/data/suggest-benchmark-online-bulk.js [--passes 4] [--limit 30] [--start-offset 0] [--timeout-ms 15000] [--max-retries 3] [--disable-adaptive]"
   );
 }
 
@@ -13,7 +13,8 @@ function parseArgs(argv) {
     limit: 30,
     startOffset: 0,
     timeoutMs: 15000,
-    maxRetries: 3
+    maxRetries: 3,
+    adaptive: true
   };
 
   for (let i = 2; i < argv.length; i += 1) {
@@ -28,6 +29,8 @@ function parseArgs(argv) {
       args.timeoutMs = Number(argv[++i]);
     } else if (arg === "--max-retries") {
       args.maxRetries = Number(argv[++i]);
+    } else if (arg === "--disable-adaptive") {
+      args.adaptive = false;
     } else if (arg === "--help" || arg === "-h") {
       usage();
       process.exit(0);
@@ -76,7 +79,11 @@ function main() {
   const offsets = [];
 
   for (let i = 0; i < args.passes; i += 1) {
-    offsets.push(args.startOffset + i * args.limit);
+    if (args.adaptive) {
+      offsets.push(args.startOffset);
+    } else {
+      offsets.push(args.startOffset + i * args.limit);
+    }
   }
 
   offsets.forEach((offset, idx) => {
