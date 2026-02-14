@@ -30,6 +30,7 @@
     "sync:benchmark:labeled-from-manifest": "node ml/data/sync-labeled-from-manifest.js",
     "dedupe:benchmark:labeled": "node ml/data/dedupe-benchmark-labeled.js",
     "merge:benchmark:retraining-queue": "node ml/data/merge-retraining-queue.js --dry-run",
+    "fill:benchmark:retraining-negatives": "node ml/data/fill-retraining-negatives.js",
     "apply:benchmark:coverage-expansion": "node ml/data/merge-coverage-expansion-template.js",
     "bootstrap:dataset:kaggle": "node ml/data/bootstrap-kaggle-dataset.js",
     "normalize:benchmark:urls": "node ml/data/normalize-benchmark-labeled-urls.js",

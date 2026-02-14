@@ -64,6 +64,8 @@ Use `analyze:benchmark:results` after a benchmark run to generate:
   `test/benchmarks/benchmark-retraining-queue.csv` placeholders for targeted data collection.
 - `npm run merge:benchmark:retraining-queue` to preview importing retraining queue rows into
   `test/benchmarks/benchmark-labeled.csv` (script runs in `--dry-run` mode by default).
+- `npm run fill:benchmark:retraining-negatives` to auto-fill unresolved retraining negative rows
+  from existing curated negative URLs in the labeled dataset.
 
 One-command loop for supported-model planning:
 ```bash
