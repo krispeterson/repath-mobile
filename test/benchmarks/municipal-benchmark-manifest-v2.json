@@ -1,0 +1,3061 @@
+{
+  "name": "municipal-full-taxonomy-v2",
+  "generated_at": "2026-02-13T22:42:19.761Z",
+  "source": {
+    "taxonomy": "assets/models/municipal-taxonomy-v1.json",
+    "seed_manifest": "test/benchmarks/benchmark-manifest.seed.json"
+  },
+  "images": [
+    {
+      "name": "todo_6-pack-holder",
+      "url": "",
+      "expected_any": [
+        "6-Pack Holder"
+      ],
+      "expected_all": [],
+      "item_id": "6-pack-holder",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_air-conditioner",
+      "url": "",
+      "expected_any": [
+        "Air Conditioner"
+      ],
+      "expected_all": [],
+      "item_id": "air-conditioner",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_aluminum",
+      "url": "",
+      "expected_any": [
+        "Aluminum"
+      ],
+      "expected_all": [],
+      "item_id": "aluminum",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "aluminum_can",
+      "url": "test/benchmarks/images/aluminum-can.png",
+      "expected_any": [
+        "Aluminum Can",
+        "Tin Can"
+      ],
+      "expected_all": [],
+      "item_id": "aluminum-can",
+      "required": true,
+      "status": "ready",
+      "notes": "Seed image from v1 benchmark manifest. Completed."
+    },
+    {
+      "name": "beer_can_2",
+      "url": "test/benchmarks/images/beer-can-2.png",
+      "expected_any": [
+        "Aluminum Can",
+        "Tin Can"
+      ],
+      "expected_all": [],
+      "item_id": "aluminum-can",
+      "required": true,
+      "status": "ready",
+      "notes": "Seed image from v1 benchmark manifest. Completed."
+    },
+    {
+      "name": "tin_cans_3",
+      "url": "test/benchmarks/images/tin-cans-3.png",
+      "expected_any": [
+        "Tin Can",
+        "Aluminum Can"
+      ],
+      "expected_all": [],
+      "item_id": "aluminum-can",
+      "required": true,
+      "status": "ready",
+      "notes": "Seed image from v1 benchmark manifest. Completed."
+    },
+    {
+      "name": "todo_aluminum-foil",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/140531%20Forellen%20auf%20dem%20Grill.jpg",
+      "expected_any": [
+        "Aluminum Foil"
+      ],
+      "expected_all": [],
+      "item_id": "aluminum-foil",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_aluminum-pie-pan-baking-tray",
+      "url": "",
+      "expected_any": [
+        "Aluminum Pie Pan / Baking Tray"
+      ],
+      "expected_all": [],
+      "item_id": "aluminum-pie-pan-baking-tray",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_aluminum-take-out-container",
+      "url": "",
+      "expected_any": [
+        "Aluminum Take-Out Container"
+      ],
+      "expected_all": [],
+      "item_id": "aluminum-take-out-container",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_amazon-mailers",
+      "url": "",
+      "expected_any": [
+        "Amazon Mailers"
+      ],
+      "expected_all": [],
+      "item_id": "amazon-mailers",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_ammunition-explosives",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Map%20of%20No2%20Explosives%20%26%20Filling%20Factory%2C%20Salisbury%2C%20South%20Australia.tif",
+      "expected_any": [
+        "Ammunition & Explosives"
+      ],
+      "expected_all": [],
+      "item_id": "ammunition-and-explosives",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_antifreeze",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9%20%D0%B0%D0%BD%D1%82%D0%B8%D1%84%D1%80%D0%B8%D0%B7.%20%D0%A4%D0%BE%D1%82%D0%BE%20%D0%90.%20%D0%A9%D0%B5%D0%BA%D0%B8%D0%BD%D0%BE%D0%B2%D0%B0.jpg",
+      "expected_any": [
+        "Antifreeze"
+      ],
+      "expected_all": [],
+      "item_id": "antifreeze",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_antifreeze-bottle",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antifreeze.jpg",
+      "expected_any": [
+        "Antifreeze Bottle"
+      ],
+      "expected_all": [],
+      "item_id": "antifreeze-bottle",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_art-supplies",
+      "url": "",
+      "expected_any": [
+        "Art Supplies"
+      ],
+      "expected_all": [],
+      "item_id": "art-supplies",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_asphalt",
+      "url": "",
+      "expected_any": [
+        "Asphalt"
+      ],
+      "expected_all": [],
+      "item_id": "asphalt",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_auto-part-car-part",
+      "url": "",
+      "expected_any": [
+        "Auto Part (Car Part)"
+      ],
+      "expected_all": [],
+      "item_id": "auto-part-car-part",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_auto-truck-tire",
+      "url": "",
+      "expected_any": [
+        "Auto/Truck Tire"
+      ],
+      "expected_all": [],
+      "item_id": "auto-truck-tire",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_automobile-car-or-truck",
+      "url": "",
+      "expected_any": [
+        "Automobile (Car or Truck)"
+      ],
+      "expected_all": [],
+      "item_id": "automobile-car-or-truck",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_automotive-battery",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Remy%20charg-o-matic%20car%20battery.jpg",
+      "expected_any": [
+        "Automotive Battery"
+      ],
+      "expected_all": [],
+      "item_id": "automotive-battery",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_automotive-fluids-other-than-motor-oil-antifreeze",
+      "url": "",
+      "expected_any": [
+        "Automotive Fluids (other than motor oil & antifreeze)"
+      ],
+      "expected_all": [],
+      "item_id": "automotive-fluids-other-than-motor-oil-and-antifreeze",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_baking-glassware",
+      "url": "",
+      "expected_any": [
+        "Baking Glassware"
+      ],
+      "expected_all": [],
+      "item_id": "baking-glassware",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_baling-twine",
+      "url": "",
+      "expected_any": [
+        "Baling Twine"
+      ],
+      "expected_all": [],
+      "item_id": "baling-twine",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_battery-alkaline",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alkaline%20Battery%20Leakage%20Inside%20a%20Product.png",
+      "expected_any": [
+        "Battery, Alkaline"
+      ],
+      "expected_all": [],
+      "item_id": "battery-alkaline",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_battery-button",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LR44%20button%20cell%20battery-0147.jpg",
+      "expected_any": [
+        "Battery, Button"
+      ],
+      "expected_all": [],
+      "item_id": "battery-button",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_battery-lithium-ion",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panasonic%20LITHIUM-ION%20CR2032%20BATTERY%20CHINA%20VERSION.jpg",
+      "expected_any": [
+        "Battery, Lithium-Ion"
+      ],
+      "expected_all": [],
+      "item_id": "battery-lithium-ion",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_battery-other",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Val%20Verde%20Battery%2C%20C.S.A.jpg",
+      "expected_any": [
+        "Battery, Other"
+      ],
+      "expected_all": [],
+      "item_id": "battery-other",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_battery-rechargeable",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rechargeable%20alkaline%20battery.jpg",
+      "expected_any": [
+        "Battery, Rechargeable"
+      ],
+      "expected_all": [],
+      "item_id": "battery-rechargeable",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_bbq-grill-charcoal",
+      "url": "",
+      "expected_any": [
+        "BBQ Grill, Charcoal"
+      ],
+      "expected_all": [],
+      "item_id": "bbq-grill-charcoal",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_bbq-grill-gas",
+      "url": "",
+      "expected_any": [
+        "BBQ Grill, Gas"
+      ],
+      "expected_all": [],
+      "item_id": "bbq-grill-gas",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_bicycle",
+      "url": "",
+      "expected_any": [
+        "Bicycle"
+      ],
+      "expected_all": [],
+      "item_id": "bicycle",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_bicycle-tire",
+      "url": "",
+      "expected_any": [
+        "Bicycle Tire"
+      ],
+      "expected_all": [],
+      "item_id": "bicycle-tire",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_bicycle-tube",
+      "url": "",
+      "expected_any": [
+        "Bicycle Tube"
+      ],
+      "expected_all": [],
+      "item_id": "bicycle-tube",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_binder",
+      "url": "",
+      "expected_any": [
+        "Binder"
+      ],
+      "expected_all": [],
+      "item_id": "binder",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_blister-packs-packaging",
+      "url": "",
+      "expected_any": [
+        "Blister Packs / Packaging"
+      ],
+      "expected_all": [],
+      "item_id": "blister-packs-packaging",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_blueprint",
+      "url": "",
+      "expected_any": [
+        "Blueprint"
+      ],
+      "expected_all": [],
+      "item_id": "blueprint",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_book-hardcover",
+      "url": "",
+      "expected_any": [
+        "Book, Hardcover"
+      ],
+      "expected_all": [],
+      "item_id": "book-hardcover",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_book-paperback",
+      "url": "",
+      "expected_any": [
+        "Book, Paperback"
+      ],
+      "expected_all": [],
+      "item_id": "book-paperback",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_branches",
+      "url": "",
+      "expected_any": [
+        "Branches"
+      ],
+      "expected_all": [],
+      "item_id": "branches",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_brick-and-pavers",
+      "url": "",
+      "expected_any": [
+        "Brick and Pavers"
+      ],
+      "expected_all": [],
+      "item_id": "brick-and-pavers",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_bubble-wrap-air-pillows",
+      "url": "",
+      "expected_any": [
+        "Bubble Wrap / Air Pillows"
+      ],
+      "expected_all": [],
+      "item_id": "bubble-wrap-air-pillows",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_bulky-rigid-plastics",
+      "url": "",
+      "expected_any": [
+        "Bulky Rigid Plastics"
+      ],
+      "expected_all": [],
+      "item_id": "bulky-rigid-plastics",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_camera-or-camcorder",
+      "url": "",
+      "expected_any": [
+        "Camera or Camcorder"
+      ],
+      "expected_all": [],
+      "item_id": "camera-or-camcorder",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_candy-or-food-wrapper",
+      "url": "",
+      "expected_any": [
+        "Candy or Food Wrapper"
+      ],
+      "expected_all": [],
+      "item_id": "candy-or-food-wrapper",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_car-seat",
+      "url": "",
+      "expected_any": [
+        "Car Seat"
+      ],
+      "expected_all": [],
+      "item_id": "car-seat",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "cardboard_box",
+      "url": "test/benchmarks/images/cardboard-box.png",
+      "expected_any": [
+        "Cardboard",
+        "Paperboard",
+        "Pizza Box",
+        "Paper Egg Carton"
+      ],
+      "expected_all": [],
+      "item_id": "cardboard",
+      "required": true,
+      "status": "ready",
+      "notes": "Seed image from v1 benchmark manifest. Completed."
+    },
+    {
+      "name": "todo_carpet-and-rugs",
+      "url": "",
+      "expected_any": [
+        "Carpet and Rugs"
+      ],
+      "expected_all": [],
+      "item_id": "carpet-and-rugs",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_carpet-padding",
+      "url": "",
+      "expected_any": [
+        "Carpet Padding"
+      ],
+      "expected_all": [],
+      "item_id": "carpet-padding",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_carpet-roll-tube",
+      "url": "",
+      "expected_any": [
+        "Carpet Roll Tube"
+      ],
+      "expected_all": [],
+      "item_id": "carpet-roll-tube",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_carton",
+      "url": "",
+      "expected_any": [
+        "Carton"
+      ],
+      "expected_all": [],
+      "item_id": "carton",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_cd-dvd-player",
+      "url": "",
+      "expected_any": [
+        "CD/DVD Player"
+      ],
+      "expected_all": [],
+      "item_id": "cd-dvd-player",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_cds-dvds",
+      "url": "",
+      "expected_any": [
+        "CDs & DVDs"
+      ],
+      "expected_all": [],
+      "item_id": "cds-and-dvds",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_cell-phone",
+      "url": "",
+      "expected_any": [
+        "Cell Phone"
+      ],
+      "expected_all": [],
+      "item_id": "cell-phone",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_ceramic-dish",
+      "url": "",
+      "expected_any": [
+        "Ceramic Dish"
+      ],
+      "expected_all": [],
+      "item_id": "ceramic-dish",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_cereal-liner-bag",
+      "url": "",
+      "expected_any": [
+        "Cereal Liner Bag"
+      ],
+      "expected_all": [],
+      "item_id": "cereal-liner-bag",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_chip-bag",
+      "url": "",
+      "expected_any": [
+        "Chip Bag"
+      ],
+      "expected_all": [],
+      "item_id": "chip-bag",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_chip-can",
+      "url": "",
+      "expected_any": [
+        "Chip Can"
+      ],
+      "expected_all": [],
+      "item_id": "chip-can",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_christmas-lights",
+      "url": "",
+      "expected_any": [
+        "Christmas Lights"
+      ],
+      "expected_all": [],
+      "item_id": "christmas-lights",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_christmas-tree-artificial",
+      "url": "",
+      "expected_any": [
+        "Christmas Tree, Artificial"
+      ],
+      "expected_all": [],
+      "item_id": "christmas-tree-artificial",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_christmas-tree-live",
+      "url": "",
+      "expected_any": [
+        "Christmas Tree, Live"
+      ],
+      "expected_all": [],
+      "item_id": "christmas-tree-live",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_clear-plastic-berry-and-salad-container",
+      "url": "",
+      "expected_any": [
+        "Clear Plastic Berry and Salad Container"
+      ],
+      "expected_all": [],
+      "item_id": "clear-plastic-berry-and-salad-container",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_clothing-and-fabric",
+      "url": "test/benchmarks/images/todo-clothing-and-fabric.png",
+      "expected_any": [
+        "Clothing and Fabric"
+      ],
+      "expected_all": [],
+      "item_id": "clothing-and-fabric",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_coffee-grounds",
+      "url": "test/benchmarks/images/todo-coffee-grounds.png",
+      "expected_any": [
+        "Coffee Grounds"
+      ],
+      "expected_all": [],
+      "item_id": "coffee-grounds",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_compostable-servingware-dishware",
+      "url": "",
+      "expected_any": [
+        "Compostable Servingware/Dishware"
+      ],
+      "expected_all": [],
+      "item_id": "compostable-servingware-dishware",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_computer-accessory",
+      "url": "",
+      "expected_any": [
+        "Computer Accessory"
+      ],
+      "expected_all": [],
+      "item_id": "computer-accessory",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_computer-monitor",
+      "url": "",
+      "expected_any": [
+        "Computer Monitor"
+      ],
+      "expected_all": [],
+      "item_id": "computer-monitor",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_computer-tower",
+      "url": "",
+      "expected_any": [
+        "Computer Tower"
+      ],
+      "expected_all": [],
+      "item_id": "computer-tower",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_concrete",
+      "url": "",
+      "expected_any": [
+        "Concrete"
+      ],
+      "expected_all": [],
+      "item_id": "concrete",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_construction-paper",
+      "url": "",
+      "expected_any": [
+        "Construction Paper"
+      ],
+      "expected_all": [],
+      "item_id": "construction-paper",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_cooking-oil-and-grease",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Boston%20Cooking%20School%20magazine%20of%20culinary%20science%20and%20domestic%20economics%20(1905)%20(14772787712).jpg",
+      "expected_any": [
+        "Cooking Oil and Grease"
+      ],
+      "expected_all": [],
+      "item_id": "cooking-oil-and-grease",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_cords-cables",
+      "url": "",
+      "expected_any": [
+        "Cords & Cables"
+      ],
+      "expected_all": [],
+      "item_id": "cords-and-cables",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_corrugated-plastic-election-sign",
+      "url": "",
+      "expected_any": [
+        "Corrugated Plastic Election Sign"
+      ],
+      "expected_all": [],
+      "item_id": "corrugated-plastic-election-sign",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_dishwasher",
+      "url": "",
+      "expected_any": [
+        "Dishwasher"
+      ],
+      "expected_all": [],
+      "item_id": "dishwasher",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_disinfectant-wipes",
+      "url": "",
+      "expected_any": [
+        "Disinfectant Wipes"
+      ],
+      "expected_all": [],
+      "item_id": "disinfectant-wipes",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_disposable-face-mask",
+      "url": "",
+      "expected_any": [
+        "Disposable Face Mask"
+      ],
+      "expected_all": [],
+      "item_id": "disposable-face-mask",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_disposable-gloves",
+      "url": "",
+      "expected_any": [
+        "Disposable Gloves"
+      ],
+      "expected_all": [],
+      "item_id": "disposable-gloves",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_electronics",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eileen%20Collins%20(S93-E-5033%2C%201999-07-24).jpg",
+      "expected_any": [
+        "Electronics"
+      ],
+      "expected_all": [],
+      "item_id": "electronics",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_empty-aerosol-can",
+      "url": "test/benchmarks/images/todo-empty-aerosol-can.png",
+      "expected_any": [
+        "Empty Aerosol Can"
+      ],
+      "expected_all": [],
+      "item_id": "empty-aerosol-can",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_envelopes-with-bubble-wrap-inside",
+      "url": "",
+      "expected_any": [
+        "Envelopes with Bubble Wrap Inside"
+      ],
+      "expected_all": [],
+      "item_id": "envelopes-with-bubble-wrap-inside",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_extension-cord",
+      "url": "",
+      "expected_any": [
+        "Extension Cord"
+      ],
+      "expected_all": [],
+      "item_id": "extension-cord",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_eyeglasses",
+      "url": "",
+      "expected_any": [
+        "Eyeglasses"
+      ],
+      "expected_all": [],
+      "item_id": "eyeglasses",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_fill-dirt",
+      "url": "",
+      "expected_any": [
+        "Fill Dirt"
+      ],
+      "expected_all": [],
+      "item_id": "fill-dirt",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_fire-extinguisher",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hohenloher%20Freilandmuseum%20-%20Baugruppe%20M%C3%BChlental%20-%20Mahlm%C3%BChle%20aus%20Weipertshofen%20-%20Flur%20-%20blaue%20Wand%20mit%20Feuerl%C3%B6scher%20(2).jpg",
+      "expected_any": [
+        "Fire Extinguisher"
+      ],
+      "expected_all": [],
+      "item_id": "fire-extinguisher",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_flammable-liquid",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HK%20YLD%20%E5%85%83%E6%9C%97%E5%8D%80%20Yuen%20Long%20District%20%E6%96%B0%E7%94%B0%E5%85%AC%E8%B7%AF%20San%20Tin%20Highway%20%E6%98%93%E7%87%83%E6%B6%B2%E9%AB%94%20Flammable%20liquid%20truck%20May%202024%20R12S%2003.jpg",
+      "expected_any": [
+        "Flammable Liquid"
+      ],
+      "expected_all": [],
+      "item_id": "flammable-liquid",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_foam",
+      "url": "",
+      "expected_any": [
+        "Foam"
+      ],
+      "expected_all": [],
+      "item_id": "foam",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_foam-packing-peanuts",
+      "url": "",
+      "expected_any": [
+        "Foam Packing Peanuts"
+      ],
+      "expected_all": [],
+      "item_id": "foam-packing-peanuts",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_foil-coffee-bags",
+      "url": "",
+      "expected_any": [
+        "Foil Coffee Bags"
+      ],
+      "expected_all": [],
+      "item_id": "foil-coffee-bags",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_food-grade-styrofoam",
+      "url": "test/benchmarks/images/todo-food-grade-styrofoam.png",
+      "expected_any": [
+        "Food Grade Styrofoam"
+      ],
+      "expected_all": [],
+      "item_id": "food-grade-styrofoam",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_food-scraps",
+      "url": "",
+      "expected_any": [
+        "Food Scraps"
+      ],
+      "expected_all": [],
+      "item_id": "food-scraps",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_food-unused",
+      "url": "",
+      "expected_any": [
+        "Food, Unused"
+      ],
+      "expected_all": [],
+      "item_id": "food-unused",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_frozen-food-box",
+      "url": "",
+      "expected_any": [
+        "Frozen Food Box"
+      ],
+      "expected_all": [],
+      "item_id": "frozen-food-box",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_furnace-filter",
+      "url": "",
+      "expected_any": [
+        "Furnace Filter"
+      ],
+      "expected_all": [],
+      "item_id": "furnace-filter",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_furniture",
+      "url": "",
+      "expected_any": [
+        "Furniture"
+      ],
+      "expected_all": [],
+      "item_id": "furniture",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_garden-hose",
+      "url": "",
+      "expected_any": [
+        "Garden Hose"
+      ],
+      "expected_all": [],
+      "item_id": "garden-hose",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_gasoline",
+      "url": "",
+      "expected_any": [
+        "Gasoline"
+      ],
+      "expected_all": [],
+      "item_id": "gasoline",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_glass-bottle-or-jar",
+      "url": "test/benchmarks/images/todo-glass-bottle-or-jar.png",
+      "expected_any": [
+        "Glass Bottle or Jar"
+      ],
+      "expected_all": [],
+      "item_id": "glass-bottle-or-jar",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_glue",
+      "url": "",
+      "expected_any": [
+        "Glue"
+      ],
+      "expected_all": [],
+      "item_id": "glue",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_hearing-aid",
+      "url": "",
+      "expected_any": [
+        "Hearing Aid"
+      ],
+      "expected_all": [],
+      "item_id": "hearing-aid",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_helium-tank",
+      "url": "",
+      "expected_any": [
+        "Helium Tank"
+      ],
+      "expected_all": [],
+      "item_id": "helium-tank",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_herbicide",
+      "url": "",
+      "expected_any": [
+        "Herbicide"
+      ],
+      "expected_all": [],
+      "item_id": "herbicide",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_house-insulation",
+      "url": "",
+      "expected_any": [
+        "House Insulation"
+      ],
+      "expected_all": [],
+      "item_id": "house-insulation",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_household-cleaners",
+      "url": "",
+      "expected_any": [
+        "Household Cleaners"
+      ],
+      "expected_all": [],
+      "item_id": "household-cleaners",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_household-item",
+      "url": "",
+      "expected_any": [
+        "Household Item"
+      ],
+      "expected_all": [],
+      "item_id": "household-item",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_kitchen-cabinets-countertops",
+      "url": "",
+      "expected_any": [
+        "Kitchen Cabinets, Countertops"
+      ],
+      "expected_all": [],
+      "item_id": "kitchen-cabinets-countertops",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_kitty-litter-bucket",
+      "url": "",
+      "expected_any": [
+        "Kitty Litter Bucket"
+      ],
+      "expected_all": [],
+      "item_id": "kitty-litter-bucket",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_label-or-sticker",
+      "url": "",
+      "expected_any": [
+        "Label or Sticker"
+      ],
+      "expected_all": [],
+      "item_id": "label-or-sticker",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_large-appliance",
+      "url": "",
+      "expected_any": [
+        "Large Appliance"
+      ],
+      "expected_all": [],
+      "item_id": "large-appliance",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_lawnmower",
+      "url": "",
+      "expected_any": [
+        "Lawnmower"
+      ],
+      "expected_all": [],
+      "item_id": "lawnmower",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_light-bulb-compact-fluorescent-light-bulb-cfl",
+      "url": "",
+      "expected_any": [
+        "Light Bulb - Compact Fluorescent Light Bulb (CFL)"
+      ],
+      "expected_all": [],
+      "item_id": "light-bulb-compact-fluorescent-light-bulb-cfl",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_light-bulb-fluorescent-tube",
+      "url": "",
+      "expected_any": [
+        "Light Bulb - Fluorescent Tube"
+      ],
+      "expected_all": [],
+      "item_id": "light-bulb-fluorescent-tube",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_light-bulb-halogen",
+      "url": "",
+      "expected_any": [
+        "Light Bulb - Halogen"
+      ],
+      "expected_all": [],
+      "item_id": "light-bulb-halogen",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_light-bulb-incandescent",
+      "url": "",
+      "expected_any": [
+        "Light Bulb - Incandescent"
+      ],
+      "expected_all": [],
+      "item_id": "light-bulb-incandescent",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_light-bulb-led",
+      "url": "",
+      "expected_any": [
+        "Light Bulb - LED"
+      ],
+      "expected_all": [],
+      "item_id": "light-bulb-led",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_light-bulb-ballast",
+      "url": "",
+      "expected_any": [
+        "Light Bulb Ballast"
+      ],
+      "expected_all": [],
+      "item_id": "light-bulb-ballast",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_lighter",
+      "url": "",
+      "expected_any": [
+        "Lighter"
+      ],
+      "expected_all": [],
+      "item_id": "lighter",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_magazine",
+      "url": "test/benchmarks/images/todo-magazine.png",
+      "expected_any": [
+        "Magazine"
+      ],
+      "expected_all": [],
+      "item_id": "magazine",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_manure",
+      "url": "",
+      "expected_any": [
+        "Manure"
+      ],
+      "expected_all": [],
+      "item_id": "manure",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_mattress",
+      "url": "",
+      "expected_any": [
+        "Mattress"
+      ],
+      "expected_all": [],
+      "item_id": "mattress",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_medical-equipment-and-supplies",
+      "url": "",
+      "expected_any": [
+        "Medical Equipment and Supplies"
+      ],
+      "expected_all": [],
+      "item_id": "medical-equipment-and-supplies",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_mercury-thermometer",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2023%20Rt%C4%99ciowy%20termometr%20lekarski.jpg",
+      "expected_any": [
+        "Mercury Thermometer"
+      ],
+      "expected_all": [],
+      "item_id": "mercury-thermometer",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_metal-barrel-or-drum",
+      "url": "",
+      "expected_any": [
+        "Metal Barrel or Drum"
+      ],
+      "expected_all": [],
+      "item_id": "metal-barrel-or-drum",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_metal-bottle-cap-or-lid",
+      "url": "",
+      "expected_any": [
+        "Metal Bottle Cap or Lid"
+      ],
+      "expected_all": [],
+      "item_id": "metal-bottle-cap-or-lid",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_metal-coat-hanger",
+      "url": "",
+      "expected_any": [
+        "Metal Coat Hanger"
+      ],
+      "expected_all": [],
+      "item_id": "metal-coat-hanger",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_metal-trash-can",
+      "url": "",
+      "expected_any": [
+        "Metal Trash Can"
+      ],
+      "expected_all": [],
+      "item_id": "metal-trash-can",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_microwave",
+      "url": "",
+      "expected_any": [
+        "Microwave"
+      ],
+      "expected_all": [],
+      "item_id": "microwave",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_microwave-popcorn-bag",
+      "url": "",
+      "expected_any": [
+        "Microwave Popcorn Bag"
+      ],
+      "expected_all": [],
+      "item_id": "microwave-popcorn-bag",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_mixed-paper",
+      "url": "",
+      "expected_any": [
+        "Mixed Paper"
+      ],
+      "expected_all": [],
+      "item_id": "mixed-paper",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_molded-paper-packaging",
+      "url": "",
+      "expected_any": [
+        "Molded Paper Packaging"
+      ],
+      "expected_all": [],
+      "item_id": "molded-paper-packaging",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_motor-oil",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SIGAUS%20aceite.jpg",
+      "expected_any": [
+        "Motor Oil"
+      ],
+      "expected_all": [],
+      "item_id": "motor-oil",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_motor-oil-bottle",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Motor%20oil%20bottles%20variousbrands.jpg",
+      "expected_any": [
+        "Motor Oil Bottle"
+      ],
+      "expected_all": [],
+      "item_id": "motor-oil-bottle",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "plastic_bottle",
+      "url": "test/benchmarks/images/plastic-bottle.png",
+      "expected_any": [
+        "Plastic Jug",
+        "Vitamin or Prescription Bottle",
+        "Nalgene Bottle"
+      ],
+      "expected_all": [],
+      "item_id": "nalgene-bottle",
+      "required": true,
+      "status": "ready",
+      "notes": "Seed image from v1 benchmark manifest. Completed."
+    },
+    {
+      "name": "todo_office-and-school-supplies",
+      "url": "",
+      "expected_any": [
+        "Office and School Supplies"
+      ],
+      "expected_all": [],
+      "item_id": "office-and-school-supplies",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_oven",
+      "url": "",
+      "expected_any": [
+        "Oven"
+      ],
+      "expected_all": [],
+      "item_id": "oven",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_over-the-counter-medication",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/How%20to%20stop%20opiate%20withdrawals%20with%20Over-the-Counter%20medications%20-%20Part%202.jpg",
+      "expected_any": [
+        "Over the Counter Medication"
+      ],
+      "expected_all": [],
+      "item_id": "over-the-counter-medication",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_packaging-styrofoam-or-polystyrene-foam",
+      "url": "test/benchmarks/images/todo-packaging-styrofoam-or-polystyrene-foam.png",
+      "expected_any": [
+        "Packaging Styrofoam or Polystyrene Foam"
+      ],
+      "expected_all": [],
+      "item_id": "packaging-styrofoam-or-polystyrene-foam",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_paint-latex",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anyone%20Can%20Use%20Latex%20Paint%20Anytime%20-%20DPLA%20-%206ade953208b5f2c500128a815f88ab8b.jpg",
+      "expected_any": [
+        "Paint - Latex"
+      ],
+      "expected_all": [],
+      "item_id": "paint-latex",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_paint-oil-based-and-lacquers",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/50%20shades%20of%20gray%20-%2046%20of%20them%20water%20based%20acrylics%20DSC%200743%20(15783296471).jpg",
+      "expected_any": [
+        "Paint - Oil Based and Lacquers"
+      ],
+      "expected_all": [],
+      "item_id": "paint-oil-based-and-lacquers",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_paper-bag",
+      "url": "",
+      "expected_any": [
+        "Paper Bag"
+      ],
+      "expected_all": [],
+      "item_id": "paper-bag",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_paper-cup",
+      "url": "test/benchmarks/images/todo-paper-cup.png",
+      "expected_any": [
+        "Paper Cup"
+      ],
+      "expected_all": [],
+      "item_id": "paper-cup",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "cardboard_box",
+      "url": "test/benchmarks/images/cardboard-box.png",
+      "expected_any": [
+        "Cardboard",
+        "Paperboard",
+        "Pizza Box",
+        "Paper Egg Carton"
+      ],
+      "expected_all": [],
+      "item_id": "paper-egg-carton",
+      "required": true,
+      "status": "ready",
+      "notes": "Seed image from v1 benchmark manifest. Needs unique URL (deduped). Completed."
+    },
+    {
+      "name": "todo_paper-envelope",
+      "url": "",
+      "expected_any": [
+        "Paper Envelope"
+      ],
+      "expected_all": [],
+      "item_id": "paper-envelope",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_paper-napkin",
+      "url": "",
+      "expected_any": [
+        "Paper Napkin"
+      ],
+      "expected_all": [],
+      "item_id": "paper-napkin",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_paper-towel",
+      "url": "",
+      "expected_any": [
+        "Paper Towel"
+      ],
+      "expected_all": [],
+      "item_id": "paper-towel",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_paper-towel-or-toilet-paper-tube",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pack%20Gong%20(3144438149).jpg",
+      "expected_any": [
+        "Paper Towel or Toilet Paper Tube"
+      ],
+      "expected_all": [],
+      "item_id": "paper-towel-or-toilet-paper-tube",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "cardboard_box",
+      "url": "test/benchmarks/images/cardboard-box.png",
+      "expected_any": [
+        "Cardboard",
+        "Paperboard",
+        "Pizza Box",
+        "Paper Egg Carton"
+      ],
+      "expected_all": [],
+      "item_id": "paperboard",
+      "required": true,
+      "status": "ready",
+      "notes": "Seed image from v1 benchmark manifest. Needs unique URL (deduped). Completed."
+    },
+    {
+      "name": "todo_paperboard-election-sign",
+      "url": "",
+      "expected_any": [
+        "Paperboard Election Sign"
+      ],
+      "expected_all": [],
+      "item_id": "paperboard-election-sign",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_party-try-plastic-tray",
+      "url": "",
+      "expected_any": [
+        "Party Try/Plastic Tray"
+      ],
+      "expected_all": [],
+      "item_id": "party-try-plastic-tray",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_personal-care-appliances",
+      "url": "",
+      "expected_any": [
+        "Personal Care Appliances"
+      ],
+      "expected_all": [],
+      "item_id": "personal-care-appliances",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_pesticide",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Opera%C3%A7%C3%A3o%20Dem%C3%A9ter%2C%20Bahia%20(40652662985).jpg",
+      "expected_any": [
+        "Pesticide"
+      ],
+      "expected_all": [],
+      "item_id": "pesticide",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_pet-food-bag",
+      "url": "",
+      "expected_any": [
+        "Pet Food Bag"
+      ],
+      "expected_all": [],
+      "item_id": "pet-food-bag",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_pet-waste",
+      "url": "",
+      "expected_any": [
+        "Pet Waste"
+      ],
+      "expected_all": [],
+      "item_id": "pet-waste",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_photo-chemical",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20Photo%20Report%20on%20The%20Chemical%20Massacre%20in%20Halabja%2C%20By%20Iranian%20Photographers.jpg",
+      "expected_any": [
+        "Photo Chemical"
+      ],
+      "expected_all": [],
+      "item_id": "photo-chemical",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_photograph-or-film",
+      "url": "",
+      "expected_any": [
+        "Photograph or Film"
+      ],
+      "expected_all": [],
+      "item_id": "photograph-or-film",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_pillow",
+      "url": "",
+      "expected_any": [
+        "Pillow"
+      ],
+      "expected_all": [],
+      "item_id": "pillow",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "cardboard_box",
+      "url": "test/benchmarks/images/cardboard-box.png",
+      "expected_any": [
+        "Cardboard",
+        "Paperboard",
+        "Pizza Box",
+        "Paper Egg Carton"
+      ],
+      "expected_all": [],
+      "item_id": "pizza-box",
+      "required": true,
+      "status": "ready",
+      "notes": "Seed image from v1 benchmark manifest. Needs unique URL (deduped). Completed."
+    },
+    {
+      "name": "todo_plastic-barrel-or-drum",
+      "url": "",
+      "expected_any": [
+        "Plastic Barrel or Drum"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-barrel-or-drum",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-bucket",
+      "url": "",
+      "expected_any": [
+        "Plastic Bucket"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-bucket",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-caps-lids",
+      "url": "test/benchmarks/images/todo-plastic-caps-lids.png",
+      "expected_any": [
+        "Plastic Caps & Lids"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-caps-and-lids",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_plastic-cd-dvd-cases",
+      "url": "",
+      "expected_any": [
+        "Plastic CD & DVD Cases"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-cd-and-dvd-cases",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-coat-hanger",
+      "url": "",
+      "expected_any": [
+        "Plastic Coat Hanger"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-coat-hanger",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-container",
+      "url": "test/benchmarks/images/todo-plastic-container.png",
+      "expected_any": [
+        "Plastic Container"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-container",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_plastic-cup",
+      "url": "",
+      "expected_any": [
+        "Plastic Cup"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-cup",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-disinfectant-wipes-container",
+      "url": "",
+      "expected_any": [
+        "Plastic Disinfectant Wipes Container"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-disinfectant-wipes-container",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-film-election-sign",
+      "url": "",
+      "expected_any": [
+        "Plastic Film Election Sign"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-film-election-sign",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-flower-pots",
+      "url": "",
+      "expected_any": [
+        "Plastic Flower Pots"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-flower-pots",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-grocery-bags-and-plastic-film",
+      "url": "",
+      "expected_any": [
+        "Plastic Grocery Bags and Plastic Film"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-grocery-bags-and-plastic-film",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-halloween-pumpkin",
+      "url": "",
+      "expected_any": [
+        "Plastic Halloween Pumpkin"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-halloween-pumpkin",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "plastic_bottle",
+      "url": "test/benchmarks/images/plastic-bottle.png",
+      "expected_any": [
+        "Plastic Jug",
+        "Vitamin or Prescription Bottle",
+        "Nalgene Bottle"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-jug",
+      "required": true,
+      "status": "ready",
+      "notes": "Seed image from v1 benchmark manifest. Needs unique URL (deduped). Completed."
+    },
+    {
+      "name": "todo_plastic-lawn-furniture",
+      "url": "",
+      "expected_any": [
+        "Plastic Lawn Furniture"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-lawn-furniture",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-pallet",
+      "url": "",
+      "expected_any": [
+        "Plastic Pallet"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-pallet",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-peanut-butter-jar",
+      "url": "",
+      "expected_any": [
+        "Plastic Peanut Butter Jar"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-peanut-butter-jar",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-pet-carrier",
+      "url": "",
+      "expected_any": [
+        "Plastic Pet Carrier"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-pet-carrier",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-play-structure",
+      "url": "",
+      "expected_any": [
+        "Plastic Play Structure"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-play-structure",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-take-out-container",
+      "url": "",
+      "expected_any": [
+        "Plastic Take-Out Container"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-take-out-container",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-toy",
+      "url": "",
+      "expected_any": [
+        "Plastic Toy"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-toy",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-tub",
+      "url": "",
+      "expected_any": [
+        "Plastic Tub"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-tub",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_plastic-tube",
+      "url": "",
+      "expected_any": [
+        "Plastic Tube"
+      ],
+      "expected_all": [],
+      "item_id": "plastic-tube",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_porcelain-sinks-toilets",
+      "url": "",
+      "expected_any": [
+        "Porcelain (Sinks, Toilets)"
+      ],
+      "expected_all": [],
+      "item_id": "porcelain-sinks-toilets",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_pot-or-pan",
+      "url": "",
+      "expected_any": [
+        "Pot or Pan"
+      ],
+      "expected_all": [],
+      "item_id": "pot-or-pan",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_prescription-drug",
+      "url": "",
+      "expected_any": [
+        "Prescription Drug"
+      ],
+      "expected_all": [],
+      "item_id": "prescription-drug",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_printer-cartridge",
+      "url": "",
+      "expected_any": [
+        "Printer Cartridge"
+      ],
+      "expected_all": [],
+      "item_id": "printer-cartridge",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_propane-canister",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Propane%20canister%20recycling.jpg",
+      "expected_any": [
+        "Propane Canister"
+      ],
+      "expected_all": [],
+      "item_id": "propane-canister",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_pumpkin",
+      "url": "",
+      "expected_any": [
+        "Pumpkin"
+      ],
+      "expected_all": [],
+      "item_id": "pumpkin",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_pvc-pipe",
+      "url": "",
+      "expected_any": [
+        "PVC Pipe"
+      ],
+      "expected_all": [],
+      "item_id": "pvc-pipe",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_receipt-paper",
+      "url": "",
+      "expected_any": [
+        "Receipt Paper"
+      ],
+      "expected_all": [],
+      "item_id": "receipt-paper",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_reflective-bubble-wrap-and-foil-bubble-mailers",
+      "url": "",
+      "expected_any": [
+        "Reflective Bubble Wrap and Foil Bubble Mailers"
+      ],
+      "expected_all": [],
+      "item_id": "reflective-bubble-wrap-and-foil-bubble-mailers",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_refrigerator-or-freezer",
+      "url": "",
+      "expected_any": [
+        "Refrigerator or Freezer"
+      ],
+      "expected_all": [],
+      "item_id": "refrigerator-or-freezer",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_renew-liner",
+      "url": "",
+      "expected_any": [
+        "Renew Liner"
+      ],
+      "expected_all": [],
+      "item_id": "renew-liner",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_reusable-building-supplies",
+      "url": "",
+      "expected_any": [
+        "Reusable Building Supplies"
+      ],
+      "expected_all": [],
+      "item_id": "reusable-building-supplies",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_ribbons-and-bows",
+      "url": "",
+      "expected_any": [
+        "Ribbons and Bows"
+      ],
+      "expected_all": [],
+      "item_id": "ribbons-and-bows",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_rigid-cardboard-tubes-and-corners",
+      "url": "",
+      "expected_any": [
+        "Rigid Cardboard Tubes and Corners"
+      ],
+      "expected_all": [],
+      "item_id": "rigid-cardboard-tubes-and-corners",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_rock-and-gravel",
+      "url": "",
+      "expected_any": [
+        "Rock and Gravel"
+      ],
+      "expected_all": [],
+      "item_id": "rock-and-gravel",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_rubbermaid-storage-bin",
+      "url": "",
+      "expected_any": [
+        "Rubbermaid Storage Bin"
+      ],
+      "expected_all": [],
+      "item_id": "rubbermaid-storage-bin",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_satellite-dish",
+      "url": "",
+      "expected_any": [
+        "Satellite dish"
+      ],
+      "expected_all": [],
+      "item_id": "satellite-dish",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_scrap-metal",
+      "url": "",
+      "expected_any": [
+        "Scrap Metal"
+      ],
+      "expected_all": [],
+      "item_id": "scrap-metal",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_seed-tray",
+      "url": "",
+      "expected_any": [
+        "Seed Tray"
+      ],
+      "expected_all": [],
+      "item_id": "seed-tray",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_shingles-asphalt",
+      "url": "",
+      "expected_any": [
+        "Shingles, Asphalt"
+      ],
+      "expected_all": [],
+      "item_id": "shingles-asphalt",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_shingles-wood",
+      "url": "",
+      "expected_any": [
+        "Shingles, Wood"
+      ],
+      "expected_all": [],
+      "item_id": "shingles-wood",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_shoes",
+      "url": "",
+      "expected_any": [
+        "Shoes"
+      ],
+      "expected_all": [],
+      "item_id": "shoes",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_shredded-brown-crinkle-paper",
+      "url": "",
+      "expected_any": [
+        "Shredded Brown Crinkle Paper"
+      ],
+      "expected_all": [],
+      "item_id": "shredded-brown-crinkle-paper",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_shredded-paper",
+      "url": "",
+      "expected_any": [
+        "Shredded Paper"
+      ],
+      "expected_all": [],
+      "item_id": "shredded-paper",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_single-serve-coffee-pods",
+      "url": "",
+      "expected_any": [
+        "Single-Serve Coffee Pods"
+      ],
+      "expected_all": [],
+      "item_id": "single-serve-coffee-pods",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_single-use-servingware",
+      "url": "",
+      "expected_any": [
+        "Single-Use Servingware"
+      ],
+      "expected_all": [],
+      "item_id": "single-use-servingware",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_small-appliance",
+      "url": "",
+      "expected_any": [
+        "Small Appliance"
+      ],
+      "expected_all": [],
+      "item_id": "small-appliance",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_smoke-detector-or-carbon-monoxide-detector",
+      "url": "",
+      "expected_any": [
+        "Smoke Detector or Carbon Monoxide Detector"
+      ],
+      "expected_all": [],
+      "item_id": "smoke-detector-or-carbon-monoxide-detector",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_snowblower",
+      "url": "",
+      "expected_any": [
+        "Snowblower"
+      ],
+      "expected_all": [],
+      "item_id": "snowblower",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_sod",
+      "url": "",
+      "expected_any": [
+        "Sod"
+      ],
+      "expected_all": [],
+      "item_id": "sod",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_solar-panels",
+      "url": "",
+      "expected_any": [
+        "Solar Panels"
+      ],
+      "expected_all": [],
+      "item_id": "solar-panels",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_spiral-notebook",
+      "url": "",
+      "expected_any": [
+        "Spiral Notebook"
+      ],
+      "expected_all": [],
+      "item_id": "spiral-notebook",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_sporting-goods",
+      "url": "",
+      "expected_any": [
+        "Sporting Goods"
+      ],
+      "expected_all": [],
+      "item_id": "sporting-goods",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_spray-paint",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerosol%20spray%20top%20luxrender%20(with%20numbers).png",
+      "expected_any": [
+        "Spray Paint"
+      ],
+      "expected_all": [],
+      "item_id": "spray-paint",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_stereo-sound-equipment",
+      "url": "",
+      "expected_any": [
+        "Stereo / Sound Equipment"
+      ],
+      "expected_all": [],
+      "item_id": "stereo-sound-equipment",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_stove",
+      "url": "",
+      "expected_any": [
+        "Stove"
+      ],
+      "expected_all": [],
+      "item_id": "stove",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_stroller",
+      "url": "",
+      "expected_any": [
+        "Stroller"
+      ],
+      "expected_all": [],
+      "item_id": "stroller",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_styrofoam-cooler-or-meal-kit-cooler",
+      "url": "",
+      "expected_any": [
+        "Styrofoam Cooler or Meal Kit Cooler"
+      ],
+      "expected_all": [],
+      "item_id": "styrofoam-cooler-or-meal-kit-cooler",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_sun-basket-paper-insulation",
+      "url": "",
+      "expected_any": [
+        "Sun Basket Paper Insulation"
+      ],
+      "expected_all": [],
+      "item_id": "sun-basket-paper-insulation",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_syringe-sharps",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Syringe%20disposal.jpg",
+      "expected_any": [
+        "Syringe / \"sharps\""
+      ],
+      "expected_all": [],
+      "item_id": "syringe-sharps",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_take-out-food-container",
+      "url": "test/benchmarks/images/todo-take-out-food-container.png",
+      "expected_any": [
+        "Take Out Food Container"
+      ],
+      "expected_all": [],
+      "item_id": "take-out-food-container",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_telephone",
+      "url": "",
+      "expected_any": [
+        "Telephone"
+      ],
+      "expected_all": [],
+      "item_id": "telephone",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_telephone-book",
+      "url": "",
+      "expected_any": [
+        "Telephone Book"
+      ],
+      "expected_all": [],
+      "item_id": "telephone-book",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_television",
+      "url": "",
+      "expected_any": [
+        "Television"
+      ],
+      "expected_all": [],
+      "item_id": "television",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_tile",
+      "url": "",
+      "expected_any": [
+        "Tile"
+      ],
+      "expected_all": [],
+      "item_id": "tile",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "aluminum_can",
+      "url": "test/benchmarks/images/aluminum-can.png",
+      "expected_any": [
+        "Aluminum Can",
+        "Tin Can"
+      ],
+      "expected_all": [],
+      "item_id": "tin-can",
+      "required": true,
+      "status": "ready",
+      "notes": "Seed image from v1 benchmark manifest. Needs unique URL (deduped). Completed."
+    },
+    {
+      "name": "beer_can_2",
+      "url": "test/benchmarks/images/beer-can-2.png",
+      "expected_any": [
+        "Aluminum Can",
+        "Tin Can"
+      ],
+      "expected_all": [],
+      "item_id": "tin-can",
+      "required": true,
+      "status": "ready",
+      "notes": "Seed image from v1 benchmark manifest. Needs unique URL (deduped). Completed."
+    },
+    {
+      "name": "tin_cans_3",
+      "url": "test/benchmarks/images/tin-cans-3.png",
+      "expected_any": [
+        "Tin Can",
+        "Aluminum Can"
+      ],
+      "expected_all": [],
+      "item_id": "tin-can",
+      "required": true,
+      "status": "ready",
+      "notes": "Seed image from v1 benchmark manifest. Needs unique URL (deduped). Completed."
+    },
+    {
+      "name": "todo_tissue-wrapping-paper",
+      "url": "",
+      "expected_any": [
+        "Tissue Wrapping Paper"
+      ],
+      "expected_all": [],
+      "item_id": "tissue-wrapping-paper",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_toiletries",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bronze%20handle%20from%20a%20cista%20(toiletries%20box)%20MET%20DP20938.jpg",
+      "expected_any": [
+        "Toiletries"
+      ],
+      "expected_all": [],
+      "item_id": "toiletries",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_tools",
+      "url": "",
+      "expected_any": [
+        "Tools"
+      ],
+      "expected_all": [],
+      "item_id": "tools",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_tupperware-food-storage-container",
+      "url": "",
+      "expected_any": [
+        "Tupperware Food Storage Container"
+      ],
+      "expected_all": [],
+      "item_id": "tupperware-food-storage-container",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_tyvek-envelope",
+      "url": "",
+      "expected_any": [
+        "Tyvek Envelope"
+      ],
+      "expected_all": [],
+      "item_id": "tyvek-envelope",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_vacuum-cleaner",
+      "url": "",
+      "expected_any": [
+        "Vacuum Cleaner"
+      ],
+      "expected_all": [],
+      "item_id": "vacuum-cleaner",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_video-game-system",
+      "url": "",
+      "expected_any": [
+        "Video Game System"
+      ],
+      "expected_all": [],
+      "item_id": "video-game-system",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_videotape-or-cassette-tape",
+      "url": "",
+      "expected_any": [
+        "Videotape or Cassette Tape"
+      ],
+      "expected_all": [],
+      "item_id": "videotape-or-cassette-tape",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_vinyl-fencing",
+      "url": "",
+      "expected_any": [
+        "Vinyl Fencing"
+      ],
+      "expected_all": [],
+      "item_id": "vinyl-fencing",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "plastic_bottle",
+      "url": "test/benchmarks/images/plastic-bottle.png",
+      "expected_any": [
+        "Plastic Jug",
+        "Vitamin or Prescription Bottle",
+        "Nalgene Bottle"
+      ],
+      "expected_all": [],
+      "item_id": "vitamin-or-prescription-bottle",
+      "required": true,
+      "status": "ready",
+      "notes": "Seed image from v1 benchmark manifest. Needs unique URL (deduped). Completed."
+    },
+    {
+      "name": "todo_water-filter",
+      "url": "",
+      "expected_any": [
+        "Water Filter"
+      ],
+      "expected_all": [],
+      "item_id": "water-filter",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_water-heater",
+      "url": "",
+      "expected_any": [
+        "Water Heater"
+      ],
+      "expected_all": [],
+      "item_id": "water-heater",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_waxed-cardboard",
+      "url": "test/benchmarks/images/todo-waxed-cardboard.png",
+      "expected_any": [
+        "Waxed Cardboard"
+      ],
+      "expected_all": [],
+      "item_id": "waxed-cardboard",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_wheel",
+      "url": "",
+      "expected_any": [
+        "Wheel"
+      ],
+      "expected_all": [],
+      "item_id": "wheel",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_white-office-paper",
+      "url": "test/benchmarks/images/todo-white-office-paper.png",
+      "expected_any": [
+        "White Office Paper"
+      ],
+      "expected_all": [],
+      "item_id": "white-office-paper",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_window-glass",
+      "url": "",
+      "expected_any": [
+        "Window Glass"
+      ],
+      "expected_all": [],
+      "item_id": "window-glass",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_wine-cork",
+      "url": "",
+      "expected_any": [
+        "Wine Cork"
+      ],
+      "expected_all": [],
+      "item_id": "wine-cork",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_wire",
+      "url": "",
+      "expected_any": [
+        "Wire"
+      ],
+      "expected_all": [],
+      "item_id": "wire",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_wood-pallet",
+      "url": "",
+      "expected_any": [
+        "Wood Pallet"
+      ],
+      "expected_all": [],
+      "item_id": "wood-pallet",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_wood-waste",
+      "url": "",
+      "expected_any": [
+        "Wood Waste"
+      ],
+      "expected_all": [],
+      "item_id": "wood-waste",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_wood-treated-or-painted",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Enoch%20Wood%20Perry%2C%20Jr.%20-%20Fireside%20Stories.jpg",
+      "expected_any": [
+        "Wood, Treated or Painted"
+      ],
+      "expected_all": [],
+      "item_id": "wood-treated-or-painted",
+      "required": true,
+      "status": "ready",
+      "notes": "Add at least one representative photo for this item variation. Completed."
+    },
+    {
+      "name": "todo_wood-untreated",
+      "url": "",
+      "expected_any": [
+        "Wood, Untreated"
+      ],
+      "expected_all": [],
+      "item_id": "wood-untreated",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_woven-plastic-feed-bag",
+      "url": "",
+      "expected_any": [
+        "Woven Plastic Feed Bag"
+      ],
+      "expected_all": [],
+      "item_id": "woven-plastic-feed-bag",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_wrapping-paper",
+      "url": "",
+      "expected_any": [
+        "Wrapping Paper"
+      ],
+      "expected_all": [],
+      "item_id": "wrapping-paper",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_yard-trimmings-and-leaves",
+      "url": "",
+      "expected_any": [
+        "Yard Trimmings and Leaves"
+      ],
+      "expected_all": [],
+      "item_id": "yard-trimmings-and-leaves",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_yoga-mat",
+      "url": "",
+      "expected_any": [
+        "Yoga Mat"
+      ],
+      "expected_all": [],
+      "item_id": "yoga-mat",
+      "required": true,
+      "status": "todo",
+      "notes": "Add at least one representative photo for this item variation."
+    },
+    {
+      "name": "todo_negative_people_scene",
+      "url": "",
+      "expected_any": [],
+      "expected_all": [],
+      "required": true,
+      "status": "todo",
+      "notes": "Add cluttered scenes that should produce no detections."
+    },
+    {
+      "name": "todo_negative_street_scene",
+      "url": "",
+      "expected_any": [],
+      "expected_all": [],
+      "required": true,
+      "status": "todo",
+      "notes": "Add outdoor photos with no recyclable target item."
+    },
+    {
+      "name": "todo_negative_pet_or_toy_scene",
+      "url": "",
+      "expected_any": [],
+      "expected_all": [],
+      "required": true,
+      "status": "todo",
+      "notes": "Add household objects likely to cause false positives."
+    }
+  ]
+}

@@ -1,3 +1,12 @@
 images/
 latest-results.json
 poc-curbside40-results.json
+benchmark-coverage-report*.json
+benchmark-dataset-audit*.json
+benchmark-dedupe-report.json
+benchmark-priority-report.json
+benchmark-progress-report.json
+benchmark-labeling-batches.json
+benchmark-labeling-batch-*.csv
+benchmark-labeled.kaggle.csv
+benchmark-labeled.online.csv
