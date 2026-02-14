@@ -1,20 +1,20 @@
 {
   "summary": {
-    "model": "ml/artifacts/models/candidates/20260214-181017/yolov8.tflite",
-    "labels": "ml/artifacts/models/candidates/20260214-181017/yolov8.labels.json",
+    "model": "ml/artifacts/models/candidates/20260214-182841/yolov8.tflite",
+    "labels": "ml/artifacts/models/candidates/20260214-182841/yolov8.labels.json",
     "manifest": "test/benchmarks/municipal-benchmark-manifest.resolved.json",
     "threshold": 0.35,
     "topk": 5,
-    "images_evaluated": 22,
-    "micro_precision": 0.3889,
-    "micro_recall": 0.1522,
-    "any_hit_rate": 0.1818,
+    "images_evaluated": 14,
+    "micro_precision": 0.0,
+    "micro_recall": 0.0,
+    "any_hit_rate": 0.0,
     "negative_clean_rate": 0.0,
-    "tp": 7,
-    "fp": 11,
-    "fn": 39,
+    "tp": 0,
+    "fp": 0,
+    "fn": 32,
     "supported_only": true,
-    "skipped_unsupported_entries": 32
+    "skipped_unsupported_entries": 40
   },
   "results": [
     {
@@ -25,15 +25,8 @@
         "Tin Can"
       ],
       "expected_all": [],
-      "predicted_labels": [
-        "Plastic Jug"
-      ],
-      "detections": [
-        {
-          "label": "Plastic Jug",
-          "score": 0.5527
-        }
-      ],
+      "predicted_labels": [],
+      "detections": [],
       "precision": 0.0,
       "recall": 0.0,
       "any_hit": false
@@ -46,19 +39,8 @@
         "Tin Can"
       ],
       "expected_all": [],
-      "predicted_labels": [
-        "Plastic Jug"
-      ],
-      "detections": [
-        {
-          "label": "Plastic Jug",
-          "score": 0.5873
-        },
-        {
-          "label": "Plastic Jug",
-          "score": 0.4605
-        }
-      ],
+      "predicted_labels": [],
+      "detections": [],
       "precision": 0.0,
       "recall": 0.0,
       "any_hit": false
@@ -107,10 +89,10 @@
       "any_hit": false
     },
     {
-      "name": "todo_empty-aerosol-can",
-      "url": "test/benchmarks/images/todo-empty-aerosol-can.png",
+      "name": "plastic_bottle",
+      "url": "test/benchmarks/images/plastic-bottle.png",
       "expected_any": [
-        "Empty Aerosol Can"
+        "Vitamin or Prescription Bottle"
       ],
       "expected_all": [],
       "predicted_labels": [],
@@ -120,50 +102,49 @@
       "any_hit": false
     },
     {
-      "name": "todo_glass-bottle-or-jar",
-      "url": "test/benchmarks/images/todo-glass-bottle-or-jar.png",
+      "name": "cardboard_box",
+      "url": "test/benchmarks/images/cardboard-box.png",
       "expected_any": [
-        "Glass Bottle or Jar"
+        "Cardboard",
+        "Paperboard",
+        "Pizza Box",
+        "Paper Egg Carton"
       ],
       "expected_all": [],
-      "predicted_labels": [
-        "Glass Bottle or Jar",
-        "Plastic Jug"
-      ],
-      "detections": [
-        {
-          "label": "Glass Bottle or Jar",
-          "score": 0.7091
-        },
-        {
-          "label": "Glass Bottle or Jar",
-          "score": 0.6706
-        },
-        {
-          "label": "Plastic Jug",
-          "score": 0.4864
-        }
-      ],
-      "precision": 0.5,
-      "recall": 1.0,
-      "any_hit": true
+      "predicted_labels": [],
+      "detections": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
     },
     {
-      "name": "todo_magazine",
-      "url": "test/benchmarks/images/todo-magazine.png",
+      "name": "cardboard_box",
+      "url": "test/benchmarks/images/cardboard-box.png",
       "expected_any": [
-        "Magazine"
+        "Cardboard",
+        "Paperboard",
+        "Pizza Box",
+        "Paper Egg Carton"
       ],
       "expected_all": [],
-      "predicted_labels": [
-        "Paperboard Election Sign"
+      "predicted_labels": [],
+      "detections": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
+    },
+    {
+      "name": "cardboard_box",
+      "url": "test/benchmarks/images/cardboard-box.png",
+      "expected_any": [
+        "Cardboard",
+        "Paperboard",
+        "Pizza Box",
+        "Paper Egg Carton"
       ],
-      "detections": [
-        {
-          "label": "Paperboard Election Sign",
-          "score": 0.4559
-        }
-      ],
+      "expected_all": [],
+      "predicted_labels": [],
+      "detections": [],
       "precision": 0.0,
       "recall": 0.0,
       "any_hit": false
@@ -172,225 +153,11 @@
       "name": "plastic_bottle",
       "url": "test/benchmarks/images/plastic-bottle.png",
       "expected_any": [
-        "Plastic Jug",
-        "Vitamin or Prescription Bottle",
-        "Nalgene Bottle"
-      ],
-      "expected_all": [],
-      "predicted_labels": [
-        "Nalgene Bottle",
-        "Plastic Jug"
-      ],
-      "detections": [
-        {
-          "label": "Nalgene Bottle",
-          "score": 0.7024
-        },
-        {
-          "label": "Plastic Jug",
-          "score": 0.6358
-        },
-        {
-          "label": "Nalgene Bottle",
-          "score": 0.569
-        },
-        {
-          "label": "Nalgene Bottle",
-          "score": 0.506
-        },
-        {
-          "label": "Plastic Jug",
-          "score": 0.4363
-        }
-      ],
-      "precision": 1.0,
-      "recall": 0.6667,
-      "any_hit": true
-    },
-    {
-      "name": "cardboard_box",
-      "url": "test/benchmarks/images/cardboard-box.png",
-      "expected_any": [
-        "Cardboard",
-        "Paperboard",
-        "Pizza Box",
-        "Paper Egg Carton"
+        "Vitamin or Prescription Bottle"
       ],
       "expected_all": [],
       "predicted_labels": [],
       "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
-    },
-    {
-      "name": "todo_paper-towel-or-toilet-paper-tube",
-      "url": "test/benchmarks/images/todo-paper-towel-or-toilet-paper-tube.jpg",
-      "expected_any": [
-        "Paper Towel or Toilet Paper Tube"
-      ],
-      "expected_all": [],
-      "predicted_labels": [
-        "Paper Bag"
-      ],
-      "detections": [
-        {
-          "label": "Paper Bag",
-          "score": 0.6526
-        },
-        {
-          "label": "Paper Bag",
-          "score": 0.4556
-        }
-      ],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
-    },
-    {
-      "name": "cardboard_box",
-      "url": "test/benchmarks/images/cardboard-box.png",
-      "expected_any": [
-        "Cardboard",
-        "Paperboard",
-        "Pizza Box",
-        "Paper Egg Carton"
-      ],
-      "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
-    },
-    {
-      "name": "cardboard_box",
-      "url": "test/benchmarks/images/cardboard-box.png",
-      "expected_any": [
-        "Cardboard",
-        "Paperboard",
-        "Pizza Box",
-        "Paper Egg Carton"
-      ],
-      "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
-    },
-    {
-      "name": "todo_plastic-caps-lids",
-      "url": "test/benchmarks/images/todo-plastic-caps-lids.png",
-      "expected_any": [
-        "Plastic Caps & Lids"
-      ],
-      "expected_all": [],
-      "predicted_labels": [
-        "Plastic Jug"
-      ],
-      "detections": [
-        {
-          "label": "Plastic Jug",
-          "score": 0.5386
-        }
-      ],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
-    },
-    {
-      "name": "todo_plastic-container",
-      "url": "test/benchmarks/images/todo-plastic-container.png",
-      "expected_any": [
-        "Plastic Container"
-      ],
-      "expected_all": [],
-      "predicted_labels": [
-        "Tin Can"
-      ],
-      "detections": [
-        {
-          "label": "Tin Can",
-          "score": 0.4182
-        },
-        {
-          "label": "Tin Can",
-          "score": 0.388
-        }
-      ],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
-    },
-    {
-      "name": "plastic_bottle",
-      "url": "test/benchmarks/images/plastic-bottle.png",
-      "expected_any": [
-        "Plastic Jug",
-        "Vitamin or Prescription Bottle",
-        "Nalgene Bottle"
-      ],
-      "expected_all": [],
-      "predicted_labels": [
-        "Nalgene Bottle",
-        "Plastic Jug"
-      ],
-      "detections": [
-        {
-          "label": "Nalgene Bottle",
-          "score": 0.7024
-        },
-        {
-          "label": "Plastic Jug",
-          "score": 0.6358
-        },
-        {
-          "label": "Nalgene Bottle",
-          "score": 0.569
-        },
-        {
-          "label": "Nalgene Bottle",
-          "score": 0.506
-        },
-        {
-          "label": "Plastic Jug",
-          "score": 0.4363
-        }
-      ],
-      "precision": 1.0,
-      "recall": 0.6667,
-      "any_hit": true
-    },
-    {
-      "name": "todo_take-out-food-container",
-      "url": "test/benchmarks/images/todo-take-out-food-container.png",
-      "expected_any": [
-        "Take Out Food Container"
-      ],
-      "expected_all": [],
-      "predicted_labels": [
-        "Paperboard Election Sign",
-        "Aluminum Pie Pan / Baking Tray"
-      ],
-      "detections": [
-        {
-          "label": "Paperboard Election Sign",
-          "score": 0.9118
-        },
-        {
-          "label": "Aluminum Pie Pan / Baking Tray",
-          "score": 0.5257
-        },
-        {
-          "label": "Aluminum Pie Pan / Baking Tray",
-          "score": 0.4186
-        },
-        {
-          "label": "Aluminum Pie Pan / Baking Tray",
-          "score": 0.4005
-        }
-      ],
       "precision": 0.0,
       "recall": 0.0,
       "any_hit": false
@@ -403,15 +170,8 @@
         "Tin Can"
       ],
       "expected_all": [],
-      "predicted_labels": [
-        "Plastic Jug"
-      ],
-      "detections": [
-        {
-          "label": "Plastic Jug",
-          "score": 0.5527
-        }
-      ],
+      "predicted_labels": [],
+      "detections": [],
       "precision": 0.0,
       "recall": 0.0,
       "any_hit": false
@@ -424,19 +184,8 @@
         "Tin Can"
       ],
       "expected_all": [],
-      "predicted_labels": [
-        "Plastic Jug"
-      ],
-      "detections": [
-        {
-          "label": "Plastic Jug",
-          "score": 0.5873
-        },
-        {
-          "label": "Plastic Jug",
-          "score": 0.4605
-        }
-      ],
+      "predicted_labels": [],
+      "detections": [],
       "precision": 0.0,
       "recall": 0.0,
       "any_hit": false
@@ -459,46 +208,7 @@
       "name": "plastic_bottle",
       "url": "test/benchmarks/images/plastic-bottle.png",
       "expected_any": [
-        "Plastic Jug",
-        "Vitamin or Prescription Bottle",
-        "Nalgene Bottle"
-      ],
-      "expected_all": [],
-      "predicted_labels": [
-        "Nalgene Bottle",
-        "Plastic Jug"
-      ],
-      "detections": [
-        {
-          "label": "Nalgene Bottle",
-          "score": 0.7024
-        },
-        {
-          "label": "Plastic Jug",
-          "score": 0.6358
-        },
-        {
-          "label": "Nalgene Bottle",
-          "score": 0.569
-        },
-        {
-          "label": "Nalgene Bottle",
-          "score": 0.506
-        },
-        {
-          "label": "Plastic Jug",
-          "score": 0.4363
-        }
-      ],
-      "precision": 1.0,
-      "recall": 0.6667,
-      "any_hit": true
-    },
-    {
-      "name": "todo_white-office-paper",
-      "url": "test/benchmarks/images/todo-white-office-paper.png",
-      "expected_any": [
-        "White Office Paper"
+        "Vitamin or Prescription Bottle"
       ],
       "expected_all": [],
       "predicted_labels": [],
