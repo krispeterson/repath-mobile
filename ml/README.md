@@ -60,6 +60,13 @@ It evaluates only entries whose expected labels exist in the active model label 
 Use `analyze:benchmark:results` after a benchmark run to generate:
 - `test/benchmarks/benchmark-error-analysis.json` (miss/FP/confusion summary)
 - `test/benchmarks/benchmark-retraining-priority.csv` (prioritized label action list)
+- `npm run build:benchmark:retraining-queue` to convert that priority list into
+  `test/benchmarks/benchmark-retraining-queue.csv` placeholders for targeted data collection.
+
+One-command loop for supported-model planning:
+```bash
+npm run benchmark:model:resolved:plan
+```
 
 ## Model And Training Helpers
 `ml/training/` and related scripts support export and model artifact preparation for mobile use.
