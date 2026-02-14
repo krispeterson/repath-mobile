@@ -5,7 +5,7 @@ const https = require("https");
 
 function usage() {
   console.log(
-    "Usage: node scripts/suggest-benchmark-online.js [--input test/benchmarks/benchmark-labeled.csv] [--out test/benchmarks/benchmark-labeled.online.csv] [--merge-into test/benchmarks/benchmark-labeled.csv] [--limit 30]"
+    "Usage: node scripts/suggest-benchmark-online.js [--input test/benchmarks/benchmark-labeled.csv] [--out test/benchmarks/benchmark-labeled.online.csv] [--merge-into test/benchmarks/benchmark-labeled.csv] [--limit 30] [--timeout-ms 15000] [--max-retries 3]"
   );
 }
 
@@ -14,7 +14,9 @@ function parseArgs(argv) {
     input: path.join("test", "benchmarks", "benchmark-labeled.csv"),
     out: path.join("test", "benchmarks", "benchmark-labeled.online.csv"),
     mergeInto: null,
-    limit: 30
+    limit: 30,
+    timeoutMs: 15000,
+    maxRetries: 3
   };
 
   for (let i = 2; i < argv.length; i += 1) {
@@ -27,6 +29,10 @@ function parseArgs(argv) {
       args.mergeInto = argv[++i];
     } else if (arg === "--limit") {
       args.limit = Number(argv[++i]);
+    } else if (arg === "--timeout-ms") {
+      args.timeoutMs = Number(argv[++i]);
+    } else if (arg === "--max-retries") {
+      args.maxRetries = Number(argv[++i]);
     } else if (arg === "--help" || arg === "-h") {
       usage();
       process.exit(0);
@@ -35,6 +41,12 @@ function parseArgs(argv) {
 
   if (!Number.isFinite(args.limit) || args.limit < 1) {
     args.limit = 30;
+  }
+  if (!Number.isFinite(args.timeoutMs) || args.timeoutMs < 1000) {
+    args.timeoutMs = 15000;
+  }
+  if (!Number.isFinite(args.maxRetries) || args.maxRetries < 1) {
+    args.maxRetries = 3;
   }
 
   return args;
@@ -115,14 +127,15 @@ function toCsv(rows) {
   return `${lines.join("\n")}\n`;
 }
 
-function fetchJson(url) {
+function fetchJson(url, timeoutMs) {
   return new Promise((resolve, reject) => {
     const req = https.get(
       url,
       {
         headers: {
           "User-Agent": "repath-mobile-benchmark-bot/1.0 (local dev)"
-        }
+        },
+        timeout: timeoutMs
       },
       (res) => {
         let data = "";
@@ -142,11 +155,14 @@ function fetchJson(url) {
         });
       }
     );
+    req.setTimeout(timeoutMs, () => {
+      req.destroy(new Error("request_timeout"));
+    });
     req.on("error", reject);
   });
 }
 
-async function findCommonsFileTitle(label) {
+async function findCommonsFileTitle(label, opts) {
   const base = "https://commons.wikimedia.org/w/api.php";
   const query = new URLSearchParams({
     action: "query",
@@ -157,10 +173,21 @@ async function findCommonsFileTitle(label) {
     srsearch: `${label} filetype:bitmap`
   });
   const url = `${base}?${query.toString()}`;
-  const payload = await fetchJson(url);
-  const rows = payload && payload.query && Array.isArray(payload.query.search) ? payload.query.search : [];
-  if (!rows.length) return null;
-  return String(rows[0].title || "").trim() || null;
+  let lastError = null;
+  for (let attempt = 1; attempt <= opts.maxRetries; attempt += 1) {
+    try {
+      const payload = await fetchJson(url, opts.timeoutMs);
+      const rows = payload && payload.query && Array.isArray(payload.query.search) ? payload.query.search : [];
+      if (!rows.length) return null;
+      return String(rows[0].title || "").trim() || null;
+    } catch (error) {
+      lastError = error;
+      if (attempt < opts.maxRetries) {
+        await new Promise((resolve) => setTimeout(resolve, 300 * attempt));
+      }
+    }
+  }
+  throw lastError || new Error("request_failed");
 }
 
 function toCommonsFilePathUrl(fileTitle) {
@@ -197,7 +224,10 @@ async function main() {
     const row = targets[i];
     let title = null;
     try {
-      title = await findCommonsFileTitle(row.canonical_label);
+      title = await findCommonsFileTitle(row.canonical_label, {
+        timeoutMs: args.timeoutMs,
+        maxRetries: args.maxRetries
+      });
     } catch (error) {
       continue;
     }

@@ -159,6 +159,8 @@ Run the full benchmark prep pipeline in one command:
 ```bash
 npm run run:benchmark:pipeline -- --skip-benchmark
 ```
+Network suggestion steps are best-effort by default (pipeline continues if Kaggle/online lookup fails).  
+Use `--strict-network` to fail fast on network errors.
 
 Install guidance (network required):
 - `npm install`

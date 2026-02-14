@@ -6,6 +6,7 @@ function parseArgs(argv) {
     skipKaggle: false,
     skipOnline: false,
     skipBenchmark: false,
+    strictNetwork: false,
     onlineLimit: 40,
     kaggleDir: process.env.KAGGLE_WASTE_DIR || ""
   };
@@ -18,6 +19,8 @@ function parseArgs(argv) {
       args.skipOnline = true;
     } else if (arg === "--skip-benchmark") {
       args.skipBenchmark = true;
+    } else if (arg === "--strict-network") {
+      args.strictNetwork = true;
     } else if (arg === "--online-limit") {
       args.onlineLimit = Number(argv[++i]);
     } else if (arg === "--kaggle-dir") {
@@ -32,7 +35,7 @@ function parseArgs(argv) {
   return args;
 }
 
-function runStep(label, cmd, argv) {
+function runStep(label, cmd, argv, opts = {}) {
   console.log(`\n== ${label} ==`);
   const result = spawnSync(cmd, argv, {
     stdio: "inherit",
@@ -40,6 +43,10 @@ function runStep(label, cmd, argv) {
     env: process.env
   });
   if (result.status !== 0) {
+    if (opts.allowFailure) {
+      console.warn(`${label} failed with exit code ${result.status}; continuing.`);
+      return;
+    }
     throw new Error(`${label} failed with exit code ${result.status}`);
   }
 }
@@ -52,7 +59,7 @@ function main() {
     if (args.kaggleDir) {
       kaggleArgs.push("--kaggle-dir", args.kaggleDir);
     }
-    runStep("Suggest Kaggle", "node", kaggleArgs);
+    runStep("Suggest Kaggle", "node", kaggleArgs, { allowFailure: !args.strictNetwork });
   }
 
   if (!args.skipOnline) {
@@ -62,7 +69,7 @@ function main() {
       "test/benchmarks/benchmark-labeled.csv",
       "--limit",
       String(args.onlineLimit)
-    ]);
+    ], { allowFailure: !args.strictNetwork });
   }
 
   runStep("Normalize URLs", "node", ["ml/data/normalize-benchmark-labeled-urls.js"]);
