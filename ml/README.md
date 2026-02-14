@@ -51,7 +51,11 @@ Core commands:
 npm run build:benchmark:manifest
 npm run check:benchmark:coverage
 npm run benchmark:model:resolved
+npm run benchmark:model:resolved:supported
 ```
+
+Use `benchmark:model:resolved:supported` when your current model only covers a subset of taxonomy labels.
+It evaluates only entries whose expected labels exist in the active model label file.
 
 ## Model And Training Helpers
 `ml/training/` and related scripts support export and model artifact preparation for mobile use.

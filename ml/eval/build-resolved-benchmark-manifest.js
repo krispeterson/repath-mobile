@@ -121,9 +121,25 @@ function copyLocalToCache(localPath, outFile) {
 
 function downloadToCache(url, outFile) {
   fs.mkdirSync(path.dirname(outFile), { recursive: true });
-  execFileSync("curl", ["-L", "--retry", "3", "--retry-all-errors", "--connect-timeout", "20", url, "-o", outFile, "-sS"], {
-    stdio: "pipe"
-  });
+  execFileSync(
+    "curl",
+    [
+      "-L",
+      "--retry",
+      "3",
+      "--retry-all-errors",
+      "--connect-timeout",
+      "20",
+      "--max-time",
+      "90",
+      "--fail",
+      url,
+      "-o",
+      outFile,
+      "-sS"
+    ],
+    { stdio: "pipe" }
+  );
 }
 
 function buildCachePath(cacheDir, imageName, sourceUrl) {

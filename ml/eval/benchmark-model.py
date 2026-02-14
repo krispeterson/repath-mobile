@@ -19,6 +19,11 @@ def parse_args():
     parser.add_argument("--out", default="test/benchmarks/latest-results.json", help="Where to write benchmark results")
     parser.add_argument("--threshold", type=float, default=0.35, help="Minimum score threshold")
     parser.add_argument("--topk", type=int, default=5, help="Max labels per image")
+    parser.add_argument(
+        "--supported-only",
+        action="store_true",
+        help="Evaluate only entries whose expected labels are present in the model labels file.",
+    )
     return parser.parse_args()
 
 
@@ -126,14 +131,26 @@ def main():
     any_hits = 0
     negative_cases = 0
     negative_clean = 0
+    skipped_unsupported = 0
+    model_label_set = set(str(label).strip() for label in labels if str(label).strip())
 
     for entry in image_entries:
         name = str(entry.get("name") or "").strip()
         url = str(entry.get("url") or "").strip()
-        expected_any = [str(v).strip() for v in entry.get("expected_any", []) if str(v).strip()]
-        expected_all = [str(v).strip() for v in entry.get("expected_all", []) if str(v).strip()]
+        raw_expected_any = [str(v).strip() for v in entry.get("expected_any", []) if str(v).strip()]
+        raw_expected_all = [str(v).strip() for v in entry.get("expected_all", []) if str(v).strip()]
+        expected_any = list(raw_expected_any)
+        expected_all = list(raw_expected_all)
         if not name or not url:
             continue
+
+        if args.supported_only:
+            expected_any = [label for label in expected_any if label in model_label_set]
+            expected_all = [label for label in expected_all if label in model_label_set]
+            had_expected = bool(raw_expected_any or raw_expected_all)
+            if had_expected and not expected_any and not expected_all:
+                skipped_unsupported += 1
+                continue
 
         out_file = Path(args.cache_dir) / f"{name}.jpg"
         image_path = resolve_image_path(url, out_file)
@@ -200,6 +217,8 @@ def main():
         "tp": micro_tp,
         "fp": micro_fp,
         "fn": micro_fn,
+        "supported_only": bool(args.supported_only),
+        "skipped_unsupported_entries": skipped_unsupported,
     }
 
     payload = {"summary": summary, "results": results}

@@ -41,6 +41,7 @@
     "benchmark:model": "node scripts/run-python.js ml/eval/benchmark-model.py --manifest test/benchmarks/benchmark-manifest.seed.json",
     "benchmark:model:v2": "node scripts/run-python.js ml/eval/benchmark-model.py --manifest test/benchmarks/municipal-benchmark-manifest-v2.json",
     "benchmark:model:resolved": "node scripts/run-python.js ml/eval/benchmark-model.py --manifest test/benchmarks/municipal-benchmark-manifest.resolved.json",
+    "benchmark:model:resolved:supported": "node scripts/run-python.js ml/eval/benchmark-model.py --manifest test/benchmarks/municipal-benchmark-manifest.resolved.json --supported-only",
     "extract:classes": "node scripts/extract-class-list.js",
     "android": "expo run:android",
     "ios": "expo run:ios",
