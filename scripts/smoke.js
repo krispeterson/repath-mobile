@@ -62,10 +62,8 @@ function main() {
   assert(manifest.jurisdictions, 'manifest.jurisdictions missing');
   assert(search.packs, 'search.packs missing');
 
-  const requiredZips = ['81601', '80525'];
-  requiredZips.forEach((zip) => {
-    assert(manifest.jurisdictions[zip], `ZIP ${zip} not mapped in manifest`);
-  });
+  const zipCodes = Object.keys(manifest.jurisdictions || {});
+  assert(zipCodes.length > 0, "manifest.jurisdictions is empty");
 
   Object.keys(manifest.packs).forEach((packId) => {
     const entry = manifest.packs[packId];

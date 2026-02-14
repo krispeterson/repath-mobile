@@ -125,13 +125,14 @@ npm run extract:classes -- \
   --allowlist assets/models/common-classes.txt \
   --out-dir assets/models
 ```
+The `apps.fcgov.com` URL above is only an example source. Replace it with your municipality's index URL.
 
 You can edit `assets/models/common-classes.txt` to adjust the vocabulary.
 
-## Fort Collins curbside POC subset (40 classes)
+## Municipal curbside POC subset (40 classes)
 
 Generate a deterministic curbside-only class list and label map from the bundled
-Fort Collins pack:
+municipal pack:
 ```bash
 npm run build:poc:curbside
 ```
@@ -152,7 +153,7 @@ npm run fetch:model -- \
 ```
 
 The app uses `poc-curbside.label-map.json` to map detected labels directly to
-Fort Collins item IDs before token heuristics.
+pack item IDs before token heuristics.
 
 ## Using a custom class list with YOLO-World
 
