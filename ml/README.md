@@ -131,6 +131,8 @@ npm run ml:labeling:ingest
 This starts by merging `benchmark-coverage-expansion-template.csv` into `benchmark-labeled.csv`
 so low-coverage labels enter the active labeling queue automatically.
 It also syncs missing `todo` rows from the benchmark manifest into the labeled queue first.
+Before sync, duplicate URLs in the labeled CSV are cleared so reused images are forced back to `todo`.
+Sync runs with `--clear-empty-url`, so blank URLs in the labeled CSV clear stale manifest URLs.
 
 For a broader online sweep across unresolved rows, use:
 ```bash

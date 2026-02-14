@@ -171,7 +171,7 @@ function fetchJson(url, timeoutMs) {
   });
 }
 
-async function findCommonsFileTitle(label, opts) {
+async function findCommonsFileTitles(label, opts) {
   const base = "https://commons.wikimedia.org/w/api.php";
   const query = new URLSearchParams({
     action: "query",
@@ -187,8 +187,7 @@ async function findCommonsFileTitle(label, opts) {
     try {
       const payload = await fetchJson(url, opts.timeoutMs);
       const rows = payload && payload.query && Array.isArray(payload.query.search) ? payload.query.search : [];
-      if (!rows.length) return null;
-      return String(rows[0].title || "").trim() || null;
+      return rows.map((row) => String((row && row.title) || "").trim()).filter(Boolean);
     } catch (error) {
       lastError = error;
       if (attempt < opts.maxRetries) {
@@ -244,6 +243,8 @@ async function main() {
   }
 
   const rows = readCsvRows(inPath);
+  const existingRows = args.mergeInto ? readCsvRows(path.resolve(args.mergeInto)) : rows;
+  const usedUrls = new Set(existingRows.map((row) => String(row.url || "").trim()).filter(Boolean));
   const unresolved = rows.filter((row) => !row.url && row.canonical_label);
   const skippedPrevious = unresolved.filter((row) => isPreviousNoMatch(row)).length;
   const pool = args.includePreviousFailures
@@ -261,18 +262,25 @@ async function main() {
 
     for (let v = 0; v < variants.length; v += 1) {
       const queryText = variants[v];
+      let titles = [];
       try {
-        title = await findCommonsFileTitle(queryText, {
+        titles = await findCommonsFileTitles(queryText, {
           timeoutMs: args.timeoutMs,
           maxRetries: args.maxRetries
         });
       } catch (error) {
         continue;
       }
-      if (title) {
+      for (let t = 0; t < titles.length; t += 1) {
+        const candidateTitle = titles[t];
+        const candidateUrl = toCommonsFilePathUrl(candidateTitle);
+        if (usedUrls.has(candidateUrl)) continue;
+        title = candidateTitle;
+        usedUrls.add(candidateUrl);
         matchedQuery = queryText;
         break;
       }
+      if (title) break;
     }
 
     if (title) {

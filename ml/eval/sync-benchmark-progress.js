@@ -4,7 +4,7 @@ const path = require("path");
 
 function usage() {
   console.log(
-    "Usage: node scripts/sync-benchmark-progress.js [--manifest test/benchmarks/municipal-benchmark-manifest-v2.json] [--completed test/benchmarks/benchmark-labeled.csv] [--report test/benchmarks/benchmark-progress-report.json] [--dry-run]"
+    "Usage: node scripts/sync-benchmark-progress.js [--manifest test/benchmarks/municipal-benchmark-manifest-v2.json] [--completed test/benchmarks/benchmark-labeled.csv] [--report test/benchmarks/benchmark-progress-report.json] [--clear-empty-url] [--dry-run]"
   );
 }
 
@@ -13,6 +13,7 @@ function parseArgs(argv) {
     manifest: path.join("test", "benchmarks", "municipal-benchmark-manifest-v2.json"),
     completed: null,
     report: path.join("test", "benchmarks", "benchmark-progress-report.json"),
+    clearEmptyUrl: false,
     dryRun: false
   };
 
@@ -24,6 +25,8 @@ function parseArgs(argv) {
       args.completed = argv[++i];
     } else if (arg === "--report") {
       args.report = argv[++i];
+    } else if (arg === "--clear-empty-url") {
+      args.clearEmptyUrl = true;
     } else if (arg === "--dry-run") {
       args.dryRun = true;
     } else if (arg === "--help" || arg === "-h") {
@@ -83,7 +86,8 @@ function loadCompletedEntries(filePath) {
     return rows
       .map((row) => ({
         name: String((row && row.name) || "").trim(),
-        url: String((row && row.url) || "").trim()
+        url: String((row && row.url) || "").trim(),
+        notes: String((row && row.notes) || "").trim()
       }))
       .filter((row) => row.name);
   }
@@ -105,9 +109,10 @@ function loadCompletedEntries(filePath) {
       const cols = parseCsvLine(line).map((c) => c.trim());
       const name = String(cols[0] || "").trim();
       const url = String(cols[1] || "").trim();
-      if (name) out.push({ name, url });
+      const notes = String(cols[5] || "").trim();
+      if (name) out.push({ name, url, notes });
     } else {
-      out.push({ name: line, url: "" });
+      out.push({ name: line, url: "", notes: "" });
     }
   }
 
@@ -141,6 +146,11 @@ function maybePromoteFromUrl(entry, changes, lockedReadyNames) {
     entry.status = "todo";
     changes.push({ type: "status", name: entry.name, from: "ready", to: "todo" });
   }
+}
+
+function shouldClearUrlFromRow(row) {
+  const notes = String((row && row.notes) || "").toLowerCase();
+  return notes.includes("needs unique url");
 }
 
 function main() {
@@ -178,6 +188,10 @@ function main() {
         const oldUrl = currentUrl;
         entry.url = nextUrl;
         changes.push({ type: "url", name: row.name, from: oldUrl, to: nextUrl });
+      } else if (!nextUrl && currentUrl && (args.clearEmptyUrl || shouldClearUrlFromRow(row))) {
+        const oldUrl = currentUrl;
+        entry.url = "";
+        changes.push({ type: "url", name: row.name, from: oldUrl, to: "" });
       }
 
       const effectiveUrl = String(entry.url || "").trim();
