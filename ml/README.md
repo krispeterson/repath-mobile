@@ -119,6 +119,8 @@ This also generates:
 ```bash
 npm run ml:labeling:ingest
 ```
+This starts by merging `benchmark-coverage-expansion-template.csv` into `benchmark-labeled.csv`
+so low-coverage labels enter the active labeling queue automatically.
 
 4. Build resolved local manifest and evaluate:
 ```bash
