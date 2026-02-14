@@ -78,6 +78,30 @@ npm run build:retraining:manifest
 ```
 This writes `ml/artifacts/retraining/retraining-manifest.json` with positive and negative samples.
 
+To export a candidate model vocabulary from that retraining manifest:
+```bash
+npm run export:model:candidate -- --dry-run
+```
+Then run a real export (YOLO-World `.pt` source) when ready:
+```bash
+npm run export:model:candidate -- --model yolov8s-worldv2.pt --imgsz 640 --nms
+```
+This creates a candidate folder under `ml/artifacts/models/candidates/<run-id>/`.
+
+To benchmark the latest candidate and generate analysis artifacts:
+```bash
+npm run benchmark:model:candidate
+```
+To benchmark and then compare candidate vs current baseline:
+```bash
+npm run benchmark:model:candidate:compare
+```
+Comparison output is written to `test/benchmarks/latest-results.compare.json`.
+
+Important:
+- This candidate export flow updates vocabulary from retraining priorities.
+- Full detector retraining still needs box-level annotations (not just image-level labels).
+
 ## Model And Training Helpers
 `ml/training/` and related scripts support export and model artifact preparation for mobile use.
 Typical usage is exporting YOLOv8/YOLO-World variants to TFLite and keeping labels aligned with model outputs.
