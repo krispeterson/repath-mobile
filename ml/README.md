@@ -52,10 +52,14 @@ npm run build:benchmark:manifest
 npm run check:benchmark:coverage
 npm run benchmark:model:resolved
 npm run benchmark:model:resolved:supported
+npm run analyze:benchmark:results
 ```
 
 Use `benchmark:model:resolved:supported` when your current model only covers a subset of taxonomy labels.
 It evaluates only entries whose expected labels exist in the active model label file.
+Use `analyze:benchmark:results` after a benchmark run to generate:
+- `test/benchmarks/benchmark-error-analysis.json` (miss/FP/confusion summary)
+- `test/benchmarks/benchmark-retraining-priority.csv` (prioritized label action list)
 
 ## Model And Training Helpers
 `ml/training/` and related scripts support export and model artifact preparation for mobile use.
