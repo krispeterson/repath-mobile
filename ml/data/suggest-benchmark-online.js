@@ -5,7 +5,7 @@ const https = require("https");
 
 function usage() {
   console.log(
-    "Usage: node scripts/suggest-benchmark-online.js [--input test/benchmarks/benchmark-labeled.csv] [--out test/benchmarks/benchmark-labeled.online.csv] [--merge-into test/benchmarks/benchmark-labeled.csv] [--limit 30] [--timeout-ms 15000] [--max-retries 3]"
+    "Usage: node scripts/suggest-benchmark-online.js [--input test/benchmarks/benchmark-labeled.csv] [--out test/benchmarks/benchmark-labeled.online.csv] [--merge-into test/benchmarks/benchmark-labeled.csv] [--limit 30] [--offset 0] [--timeout-ms 15000] [--max-retries 3]"
   );
 }
 
@@ -15,6 +15,7 @@ function parseArgs(argv) {
     out: path.join("test", "benchmarks", "benchmark-labeled.online.csv"),
     mergeInto: null,
     limit: 30,
+    offset: 0,
     timeoutMs: 15000,
     maxRetries: 3
   };
@@ -29,6 +30,8 @@ function parseArgs(argv) {
       args.mergeInto = argv[++i];
     } else if (arg === "--limit") {
       args.limit = Number(argv[++i]);
+    } else if (arg === "--offset") {
+      args.offset = Number(argv[++i]);
     } else if (arg === "--timeout-ms") {
       args.timeoutMs = Number(argv[++i]);
     } else if (arg === "--max-retries") {
@@ -41,6 +44,9 @@ function parseArgs(argv) {
 
   if (!Number.isFinite(args.limit) || args.limit < 1) {
     args.limit = 30;
+  }
+  if (!Number.isFinite(args.offset) || args.offset < 0) {
+    args.offset = 0;
   }
   if (!Number.isFinite(args.timeoutMs) || args.timeoutMs < 1000) {
     args.timeoutMs = 15000;
@@ -217,7 +223,8 @@ async function main() {
   }
 
   const rows = readCsvRows(inPath);
-  const targets = rows.filter((row) => !row.url && row.canonical_label).slice(0, args.limit);
+  const pool = rows.filter((row) => !row.url && row.canonical_label);
+  const targets = pool.slice(args.offset, args.offset + args.limit);
   const updates = [];
 
   for (let i = 0; i < targets.length; i += 1) {
@@ -257,6 +264,8 @@ async function main() {
     JSON.stringify(
       {
         attempted: targets.length,
+        offset: args.offset,
+        unresolved_pool: pool.length,
         matched_rows: updates.length,
         output: path.relative(process.cwd(), outPath),
         merged_into: args.mergeInto ? path.relative(process.cwd(), path.resolve(args.mergeInto)) : null,

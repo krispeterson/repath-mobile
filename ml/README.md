@@ -123,6 +123,11 @@ npm run ml:labeling:ingest
 This starts by merging `benchmark-coverage-expansion-template.csv` into `benchmark-labeled.csv`
 so low-coverage labels enter the active labeling queue automatically.
 
+For a broader online sweep across unresolved rows, use:
+```bash
+npm run ml:labeling:ingest:deep
+```
+
 4. Build resolved local manifest and evaluate:
 ```bash
 npm run ml:evaluate
