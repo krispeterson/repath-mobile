@@ -78,6 +78,10 @@ Most generated files are ignored to keep commits clean.
 - Some steps depend on network access (Kaggle suggestions, Wikimedia suggestions, remote image fetches).
 - Network suggestion steps are best-effort by default in the pipeline.
 - Use `--strict-network` to fail fast on network errors.
+- Optional but recommended: bootstrap a stable local Kaggle dataset path once:
+  ```bash
+  npm run bootstrap:dataset:kaggle
+  ```
 - If you plan to use Kaggle suggestions, either:
   - set `KAGGLE_WASTE_DIR=/path/to/.../images/images`, or
   - pass `--kaggle-dir` when running the pipeline script directly.

@@ -161,6 +161,7 @@ Use this only when improving model quality, benchmark coverage, or dataset/train
 
 Common advanced commands:
 ```bash
+npm run bootstrap:dataset:kaggle
 npm run ml:scaffold
 npm run ml:labeling:queue
 npm run ml:evaluate

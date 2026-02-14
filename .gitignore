@@ -36,6 +36,9 @@ __pycache__/
 .mypy_cache/
 .coverage
 
+# Local ML workspace artifacts (generated)
+ml/artifacts/
+
 # Local model exports (generated)
 assets/models/*
 !assets/models/README.md
