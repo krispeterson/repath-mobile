@@ -136,6 +136,12 @@ To prefill missing positive label files from model detections (optional bootstra
 npm run seed:annotation:boxes
 ```
 Use `--allow-fallback` if you want best-effort boxes even when class labels do not match.
+If positives are still missing boxes and you need a weak-supervision fallback to unblock training,
+fill only empty positive labels with full-frame boxes:
+```bash
+npm run fill:annotation:fallback-boxes
+```
+This should be treated as a temporary bootstrap step, not a replacement for real human box annotations.
 Use strict mode (non-zero exit on any issue) in pre-training checks:
 ```bash
 npm run validate:annotation:bundle:strict

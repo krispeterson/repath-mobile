@@ -16,6 +16,7 @@
     "build:annotation:bundle": "node ml/training/build-annotation-bundle.js",
     "build:annotation:bundle:local": "node ml/training/build-annotation-bundle.js --no-download",
     "seed:annotation:boxes": "node scripts/run-python.js ml/training/seed-annotation-boxes.py",
+    "fill:annotation:fallback-boxes": "node ml/training/fill-missing-positive-boxes.js",
     "validate:annotation:bundle": "node ml/training/validate-annotation-bundle.js",
     "validate:annotation:bundle:strict": "node ml/training/validate-annotation-bundle.js --strict",
     "train:model:annotation": "node scripts/run-python.js ml/training/train-detector-from-annotation.py --nms",
