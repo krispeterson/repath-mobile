@@ -23,6 +23,8 @@
     "train:model:annotation:benchmark": "npm run train:model:annotation && npm run benchmark:model:candidate:compare",
     "train:model:annotation:smoke": "node scripts/run-python.js ml/training/train-detector-from-annotation.py --skip-validate --epochs 1 --batch 4 --imgsz 640 --nms && npm run benchmark:model:candidate:compare",
     "export:model:candidate": "node scripts/run-python.js ml/training/export-candidate-from-retraining.py --nms",
+    "promote:model:candidate": "node ml/training/promote-candidate-model.js --write-metadata",
+    "promote:model:candidate:dry-run": "node ml/training/promote-candidate-model.js --write-metadata --dry-run",
     "build:poc:curbside": "node scripts/build-poc-curbside-assets.js",
     "build:taxonomy": "node ml/data/build-taxonomy.js",
     "build:benchmark:manifest": "node ml/eval/build-benchmark-manifest.js",

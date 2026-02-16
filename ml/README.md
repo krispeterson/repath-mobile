@@ -194,6 +194,19 @@ The compare output includes both:
 - `comparison`: raw baseline vs candidate summaries (can differ in evaluated rows if label support differs).
 - `overlap.comparison`: apples-to-apples metrics on the intersection of rows evaluated by both runs.
 
+To promote the benchmarked candidate into app runtime assets (`assets/models/yolov8.tflite` + labels):
+```bash
+npm run promote:model:candidate
+```
+By default this prefers the candidate referenced by
+`test/benchmarks/latest-results.candidate.analysis.json` and falls back to the newest candidate folder.
+Use `-- --candidate-id <run-id>` (or `-- --candidate-dir <path>`) to force a specific candidate.
+Dry-run preview:
+```bash
+npm run promote:model:candidate:dry-run
+```
+Promotion also writes local metadata to `ml/artifacts/models/active-model.json`.
+
 Important:
 - This candidate export flow updates vocabulary from retraining priorities.
 - Full detector retraining runs through `train:model:annotation` and needs completed box annotations.
