@@ -1,37 +1,29 @@
 {
   "source": "test/benchmarks/latest-results.candidate.json",
-  "generated_at": "2026-02-16T06:12:51.628Z",
+  "generated_at": "2026-02-16T19:36:47.173Z",
   "summary": {
-    "model": "ml/artifacts/models/candidates/20260216-032116/yolov8.tflite",
-    "labels": "ml/artifacts/models/candidates/20260216-032116/yolov8.labels.json",
+    "model": "ml/artifacts/models/candidates/20260216-164443/yolov8.tflite",
+    "labels": "ml/artifacts/models/candidates/20260216-164443/yolov8.labels.json",
     "manifest": "test/benchmarks/municipal-benchmark-manifest.resolved.json",
     "threshold": 0.35,
     "topk": 5,
     "images_evaluated": 30,
-    "micro_precision": 0.9375,
-    "micro_recall": 0.4167,
-    "any_hit_rate": 0.5,
+    "micro_precision": 0.9091,
+    "micro_recall": 0.5556,
+    "any_hit_rate": 0.6667,
     "negative_clean_rate": 0,
-    "tp": 15,
-    "fp": 1,
-    "fn": 21,
+    "tp": 20,
+    "fp": 2,
+    "fn": 16,
     "supported_only": true,
     "skipped_unsupported_entries": 175
   },
   "counts": {
     "result_rows": 30,
     "expected_labels": 8,
-    "false_positive_labels": 1
+    "false_positive_labels": 2
   },
   "top_missed_labels": [
-    {
-      "label": "Aluminum Can",
-      "count": 4
-    },
-    {
-      "label": "Pizza Box",
-      "count": 4
-    },
     {
       "label": "Paper Egg Carton",
       "count": 4
@@ -41,15 +33,23 @@
       "count": 3
     },
     {
-      "label": "Paperboard",
-      "count": 3
+      "label": "Aluminum Can",
+      "count": 2
     },
     {
-      "label": "Cardboard",
+      "label": "Paperboard",
+      "count": 2
+    },
+    {
+      "label": "Pizza Box",
       "count": 2
     },
     {
       "label": "Vitamin or Prescription Bottle",
+      "count": 2
+    },
+    {
+      "label": "Cardboard",
       "count": 1
     }
   ],
@@ -57,35 +57,23 @@
     {
       "label": "Paperboard",
       "count": 1
+    },
+    {
+      "label": "Cardboard",
+      "count": 1
     }
   ],
   "top_confusion_pairs": [
     {
       "pair": "Cardboard -> Paperboard",
       "count": 1
+    },
+    {
+      "pair": "Paperboard -> Cardboard",
+      "count": 1
     }
   ],
   "priority_table": [
-    {
-      "label": "Aluminum Can",
-      "priority_score": 12,
-      "expected_count": 6,
-      "miss_count": 4,
-      "hit_count": 2,
-      "false_positive_count": 0,
-      "hit_rate": 0.3333,
-      "recommended_action": "collect_more_positives"
-    },
-    {
-      "label": "Pizza Box",
-      "priority_score": 12,
-      "expected_count": 4,
-      "miss_count": 4,
-      "hit_count": 0,
-      "false_positive_count": 0,
-      "hit_rate": 0,
-      "recommended_action": "collect_more_positives"
-    },
     {
       "label": "Paper Egg Carton",
       "priority_score": 12,
@@ -94,16 +82,6 @@
       "hit_count": 0,
       "false_positive_count": 0,
       "hit_rate": 0,
-      "recommended_action": "collect_more_positives"
-    },
-    {
-      "label": "Paperboard",
-      "priority_score": 10,
-      "expected_count": 4,
-      "miss_count": 3,
-      "hit_count": 1,
-      "false_positive_count": 1,
-      "hit_rate": 0.25,
       "recommended_action": "collect_more_positives"
     },
     {
@@ -117,7 +95,27 @@
       "recommended_action": "collect_more_positives"
     },
     {
-      "label": "Cardboard",
+      "label": "Paperboard",
+      "priority_score": 7,
+      "expected_count": 4,
+      "miss_count": 2,
+      "hit_count": 2,
+      "false_positive_count": 1,
+      "hit_rate": 0.5,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Aluminum Can",
+      "priority_score": 6,
+      "expected_count": 6,
+      "miss_count": 2,
+      "hit_count": 4,
+      "false_positive_count": 0,
+      "hit_rate": 0.6667,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Pizza Box",
       "priority_score": 6,
       "expected_count": 4,
       "miss_count": 2,
@@ -128,11 +126,21 @@
     },
     {
       "label": "Vitamin or Prescription Bottle",
-      "priority_score": 3,
+      "priority_score": 6,
+      "expected_count": 4,
+      "miss_count": 2,
+      "hit_count": 2,
+      "false_positive_count": 0,
+      "hit_rate": 0.5,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Cardboard",
+      "priority_score": 4,
       "expected_count": 4,
       "miss_count": 1,
       "hit_count": 3,
-      "false_positive_count": 0,
+      "false_positive_count": 1,
       "hit_rate": 0.75,
       "recommended_action": "collect_more_positives"
     },

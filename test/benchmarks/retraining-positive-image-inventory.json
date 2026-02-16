@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-02-16T03:19:42.202Z",
+  "generated_at": "2026-02-16T16:42:17.983Z",
   "source_csv": "test/benchmarks/benchmark-labeled.csv",
   "local_prefix": "test/benchmarks/images/retraining-positives/",
-  "count": 58,
+  "count": 64,
   "labels": {
-    "Aluminum Can": 8,
+    "Aluminum Can": 14,
     "Aluminum Foil": 6,
     "Cardboard": 8,
     "Paper Egg Carton": 6,
@@ -21,6 +21,46 @@
       "canonical_label": "Aluminum Can",
       "source": "kaggle_household_waste_images",
       "notes": "folder=aluminum_soda_cans/real_world; source_image=Image_11.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v1.png"
+    },
+    {
+      "name": "retrain_positive_aluminum-can_v10",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v10.png",
+      "item_id": "retrain-aluminum-can-v10",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans; source_image=Image_101.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_aluminum-can_v11",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v11.png",
+      "item_id": "retrain-aluminum-can-v11",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans; source_image=Image_102.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_aluminum-can_v12",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v12.png",
+      "item_id": "retrain-aluminum-can-v12",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans; source_image=Image_103.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_aluminum-can_v13",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v13.png",
+      "item_id": "retrain-aluminum-can-v13",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans; source_image=Image_104.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_aluminum-can_v14",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v14.png",
+      "item_id": "retrain-aluminum-can-v14",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans; source_image=Image_105.png; selected_from=retraining_priority"
     },
     {
       "name": "retrain_positive_aluminum-can_v2",
@@ -77,6 +117,14 @@
       "canonical_label": "Aluminum Can",
       "source": "kaggle_household_waste_images",
       "notes": "folder=aluminum_soda_cans; source_image=Image_10.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_aluminum-can_v9",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v9.png",
+      "item_id": "retrain-aluminum-can-v9",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans; source_image=Image_100.png; selected_from=retraining_priority"
     },
     {
       "name": "retrain_positive_aluminum-foil_v1",

@@ -1,18 +1,18 @@
 {
   "summary": {
-    "model": "ml/artifacts/models/candidates/20260216-032116/yolov8.tflite",
-    "labels": "ml/artifacts/models/candidates/20260216-032116/yolov8.labels.json",
+    "model": "ml/artifacts/models/candidates/20260216-164443/yolov8.tflite",
+    "labels": "ml/artifacts/models/candidates/20260216-164443/yolov8.labels.json",
     "manifest": "test/benchmarks/municipal-benchmark-manifest.resolved.json",
     "threshold": 0.35,
     "topk": 5,
     "images_evaluated": 30,
-    "micro_precision": 0.9375,
-    "micro_recall": 0.4167,
-    "any_hit_rate": 0.5,
+    "micro_precision": 0.9091,
+    "micro_recall": 0.5556,
+    "any_hit_rate": 0.6667,
     "negative_clean_rate": 0.0,
-    "tp": 15,
-    "fp": 1,
-    "fn": 21,
+    "tp": 20,
+    "fp": 2,
+    "fn": 16,
     "supported_only": true,
     "skipped_unsupported_entries": 175
   },
@@ -31,7 +31,7 @@
       "detections": [
         {
           "label": "Aluminum Can",
-          "score": 0.4835
+          "score": 0.9101
         }
       ],
       "precision": 1.0,
@@ -46,11 +46,22 @@
         "Tin Can"
       ],
       "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
+      "predicted_labels": [
+        "Aluminum Can"
+      ],
+      "detections": [
+        {
+          "label": "Aluminum Can",
+          "score": 0.5687
+        },
+        {
+          "label": "Aluminum Can",
+          "score": 0.5482
+        }
+      ],
+      "precision": 1.0,
+      "recall": 0.5,
+      "any_hit": true
     },
     {
       "name": "tin_cans_3",
@@ -66,11 +77,15 @@
       "detections": [
         {
           "label": "Tin Can",
-          "score": 0.8002
+          "score": 0.9416
         },
         {
           "label": "Tin Can",
-          "score": 0.6337
+          "score": 0.8779
+        },
+        {
+          "label": "Tin Can",
+          "score": 0.3771
         }
       ],
       "precision": 1.0,
@@ -90,7 +105,11 @@
       "detections": [
         {
           "label": "Aluminum Foil",
-          "score": 0.354
+          "score": 0.7436
+        },
+        {
+          "label": "Aluminum Foil",
+          "score": 0.5064
         }
       ],
       "precision": 1.0,
@@ -113,7 +132,11 @@
       "detections": [
         {
           "label": "Cardboard",
-          "score": 0.6736
+          "score": 0.863
+        },
+        {
+          "label": "Cardboard",
+          "score": 0.4927
         }
       ],
       "precision": 1.0,
@@ -146,7 +169,7 @@
       "detections": [
         {
           "label": "Aluminum Can",
-          "score": 0.4835
+          "score": 0.9101
         }
       ],
       "precision": 1.0,
@@ -160,11 +183,22 @@
         "Aluminum Can"
       ],
       "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
+      "predicted_labels": [
+        "Aluminum Can"
+      ],
+      "detections": [
+        {
+          "label": "Aluminum Can",
+          "score": 0.5687
+        },
+        {
+          "label": "Aluminum Can",
+          "score": 0.5482
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
     },
     {
       "name": "holdout_aluminum-can_kaggle_v3",
@@ -192,7 +226,11 @@
       "detections": [
         {
           "label": "Aluminum Foil",
-          "score": 0.354
+          "score": 0.7436
+        },
+        {
+          "label": "Aluminum Foil",
+          "score": 0.5064
         }
       ],
       "precision": 1.0,
@@ -212,15 +250,7 @@
       "detections": [
         {
           "label": "Aluminum Foil",
-          "score": 0.8745
-        },
-        {
-          "label": "Aluminum Foil",
-          "score": 0.6259
-        },
-        {
-          "label": "Aluminum Foil",
-          "score": 0.5224
+          "score": 0.4565
         }
       ],
       "precision": 1.0,
@@ -240,11 +270,7 @@
       "detections": [
         {
           "label": "Aluminum Foil",
-          "score": 0.7271
-        },
-        {
-          "label": "Aluminum Foil",
-          "score": 0.5575
+          "score": 0.8659
         }
       ],
       "precision": 1.0,
@@ -259,17 +285,26 @@
       ],
       "expected_all": [],
       "predicted_labels": [
-        "Paperboard"
+        "Paperboard",
+        "Cardboard"
       ],
       "detections": [
         {
           "label": "Paperboard",
-          "score": 0.8461
+          "score": 0.7856
+        },
+        {
+          "label": "Cardboard",
+          "score": 0.5229
+        },
+        {
+          "label": "Paperboard",
+          "score": 0.3813
         }
       ],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
+      "precision": 0.5,
+      "recall": 1.0,
+      "any_hit": true
     },
     {
       "name": "holdout_cardboard_kaggle_v2",
@@ -297,7 +332,11 @@
       "detections": [
         {
           "label": "Cardboard",
-          "score": 0.6736
+          "score": 0.863
+        },
+        {
+          "label": "Cardboard",
+          "score": 0.4927
         }
       ],
       "precision": 1.0,
@@ -351,15 +390,24 @@
       ],
       "expected_all": [],
       "predicted_labels": [
-        "Paperboard"
+        "Paperboard",
+        "Cardboard"
       ],
       "detections": [
         {
           "label": "Paperboard",
-          "score": 0.8461
+          "score": 0.7856
+        },
+        {
+          "label": "Cardboard",
+          "score": 0.5229
+        },
+        {
+          "label": "Paperboard",
+          "score": 0.3813
         }
       ],
-      "precision": 1.0,
+      "precision": 0.5,
       "recall": 1.0,
       "any_hit": true
     },
@@ -370,11 +418,18 @@
         "Paperboard"
       ],
       "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
+      "predicted_labels": [
+        "Paperboard"
+      ],
+      "detections": [
+        {
+          "label": "Paperboard",
+          "score": 0.3862
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
     },
     {
       "name": "holdout_paperboard_kaggle_v3",
@@ -396,11 +451,18 @@
         "Pizza Box"
       ],
       "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
+      "predicted_labels": [
+        "Pizza Box"
+      ],
+      "detections": [
+        {
+          "label": "Pizza Box",
+          "score": 0.751
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
     },
     {
       "name": "holdout_pizza-box_manual_v2",
@@ -409,11 +471,18 @@
         "Pizza Box"
       ],
       "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
+      "predicted_labels": [
+        "Pizza Box"
+      ],
+      "detections": [
+        {
+          "label": "Pizza Box",
+          "score": 0.4681
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
     },
     {
       "name": "holdout_pizza-box_manual_v3",
@@ -441,11 +510,15 @@
       "detections": [
         {
           "label": "Tin Can",
-          "score": 0.8002
+          "score": 0.9416
         },
         {
           "label": "Tin Can",
-          "score": 0.6337
+          "score": 0.8779
+        },
+        {
+          "label": "Tin Can",
+          "score": 0.3771
         }
       ],
       "precision": 1.0,
@@ -465,7 +538,7 @@
       "detections": [
         {
           "label": "Tin Can",
-          "score": 0.8917
+          "score": 0.8429
         }
       ],
       "precision": 1.0,
@@ -498,7 +571,7 @@
       "detections": [
         {
           "label": "Vitamin or Prescription Bottle",
-          "score": 0.9959
+          "score": 0.9861
         }
       ],
       "precision": 1.0,
@@ -518,11 +591,7 @@
       "detections": [
         {
           "label": "Vitamin or Prescription Bottle",
-          "score": 0.8891
-        },
-        {
-          "label": "Vitamin or Prescription Bottle",
-          "score": 0.599
+          "score": 0.6512
         }
       ],
       "precision": 1.0,
@@ -536,22 +605,11 @@
         "Vitamin or Prescription Bottle"
       ],
       "expected_all": [],
-      "predicted_labels": [
-        "Vitamin or Prescription Bottle"
-      ],
-      "detections": [
-        {
-          "label": "Vitamin or Prescription Bottle",
-          "score": 0.552
-        },
-        {
-          "label": "Vitamin or Prescription Bottle",
-          "score": 0.421
-        }
-      ],
-      "precision": 1.0,
-      "recall": 1.0,
-      "any_hit": true
+      "predicted_labels": [],
+      "detections": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
     }
   ]
 }

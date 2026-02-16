@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-16T06:12:51.843Z",
+  "generated_at": "2026-02-16T19:36:47.377Z",
   "baseline": "test/benchmarks/latest-results.json",
   "candidate": "test/benchmarks/latest-results.candidate.json",
   "comparison": {
@@ -10,18 +10,18 @@
     },
     "micro_precision": {
       "baseline": 0.2083,
-      "candidate": 0.9375,
-      "delta": 0.7292
+      "candidate": 0.9091,
+      "delta": 0.7008
     },
     "micro_recall": {
       "baseline": 0.1429,
-      "candidate": 0.4167,
-      "delta": 0.2738
+      "candidate": 0.5556,
+      "delta": 0.4127
     },
     "any_hit_rate": {
       "baseline": 0.1481,
-      "candidate": 0.5,
-      "delta": 0.3519
+      "candidate": 0.6667,
+      "delta": 0.5186
     },
     "negative_clean_rate": {
       "baseline": 0,
@@ -30,18 +30,18 @@
     },
     "tp": {
       "baseline": 5,
-      "candidate": 15,
-      "delta": 10
+      "candidate": 20,
+      "delta": 15
     },
     "fp": {
       "baseline": 19,
-      "candidate": 1,
-      "delta": -18
+      "candidate": 2,
+      "delta": -17
     },
     "fn": {
       "baseline": 30,
-      "candidate": 21,
-      "delta": -9
+      "candidate": 16,
+      "delta": -14
     },
     "skipped_unsupported_entries": {
       "baseline": 137,
@@ -64,12 +64,12 @@
     "candidate_summary": {
       "images_evaluated": 5,
       "micro_precision": 1,
-      "micro_recall": 0.3636,
-      "any_hit_rate": 0.8,
+      "micro_recall": 0.4545,
+      "any_hit_rate": 1,
       "negative_clean_rate": 0,
-      "tp": 4,
+      "tp": 5,
       "fp": 0,
-      "fn": 7
+      "fn": 6
     },
     "comparison": {
       "images_evaluated": {
@@ -84,13 +84,13 @@
       },
       "micro_recall": {
         "baseline": 0,
-        "candidate": 0.3636,
-        "delta": 0.3636
+        "candidate": 0.4545,
+        "delta": 0.4545
       },
       "any_hit_rate": {
         "baseline": 0,
-        "candidate": 0.8,
-        "delta": 0.8
+        "candidate": 1,
+        "delta": 1
       },
       "negative_clean_rate": {
         "baseline": 0,
@@ -99,8 +99,8 @@
       },
       "tp": {
         "baseline": 0,
-        "candidate": 4,
-        "delta": 4
+        "candidate": 5,
+        "delta": 5
       },
       "fp": {
         "baseline": 2,
@@ -109,8 +109,8 @@
       },
       "fn": {
         "baseline": 11,
-        "candidate": 7,
-        "delta": -4
+        "candidate": 6,
+        "delta": -5
       },
       "skipped_unsupported_entries": {
         "baseline": null,

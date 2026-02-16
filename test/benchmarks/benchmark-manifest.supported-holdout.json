@@ -1,8 +1,8 @@
 {
   "name": "municipal-supported-holdout-v1",
-  "generated_at": "2026-02-16T05:57:33.863Z",
+  "generated_at": "2026-02-16T19:36:36.302Z",
   "source": {
-    "labels": "ml/artifacts/models/candidates/20260216-032116/yolov8.labels.json",
+    "labels": "ml/artifacts/models/candidates/20260216-164443/yolov8.labels.json",
     "kaggle_dir": "ml/artifacts/datasets/kaggle-household-waste/images/images",
     "excluded_csv": "test/benchmarks/benchmark-labeled.csv",
     "manual_seed": "test/benchmarks/benchmark-supported-holdout-overrides.seed.json",
