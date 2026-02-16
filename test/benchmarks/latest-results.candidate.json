@@ -1,20 +1,20 @@
 {
   "summary": {
-    "model": "ml/artifacts/models/candidates/20260214-182841/yolov8.tflite",
-    "labels": "ml/artifacts/models/candidates/20260214-182841/yolov8.labels.json",
+    "model": "ml/artifacts/models/candidates/20260216-032116/yolov8.tflite",
+    "labels": "ml/artifacts/models/candidates/20260216-032116/yolov8.labels.json",
     "manifest": "test/benchmarks/municipal-benchmark-manifest.resolved.json",
     "threshold": 0.35,
     "topk": 5,
-    "images_evaluated": 14,
-    "micro_precision": 0.0,
-    "micro_recall": 0.0,
-    "any_hit_rate": 0.0,
+    "images_evaluated": 30,
+    "micro_precision": 0.9375,
+    "micro_recall": 0.4167,
+    "any_hit_rate": 0.5,
     "negative_clean_rate": 0.0,
-    "tp": 0,
-    "fp": 0,
-    "fn": 32,
+    "tp": 15,
+    "fp": 1,
+    "fn": 21,
     "supported_only": true,
-    "skipped_unsupported_entries": 40
+    "skipped_unsupported_entries": 175
   },
   "results": [
     {
@@ -25,11 +25,18 @@
         "Tin Can"
       ],
       "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
+      "predicted_labels": [
+        "Aluminum Can"
+      ],
+      "detections": [
+        {
+          "label": "Aluminum Can",
+          "score": 0.4835
+        }
+      ],
+      "precision": 1.0,
+      "recall": 0.5,
+      "any_hit": true
     },
     {
       "name": "beer_can_2",
@@ -53,11 +60,22 @@
         "Aluminum Can"
       ],
       "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
+      "predicted_labels": [
+        "Tin Can"
+      ],
+      "detections": [
+        {
+          "label": "Tin Can",
+          "score": 0.8002
+        },
+        {
+          "label": "Tin Can",
+          "score": 0.6337
+        }
+      ],
+      "precision": 1.0,
+      "recall": 0.5,
+      "any_hit": true
     },
     {
       "name": "todo_aluminum-foil",
@@ -66,11 +84,18 @@
         "Aluminum Foil"
       ],
       "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
+      "predicted_labels": [
+        "Aluminum Foil"
+      ],
+      "detections": [
+        {
+          "label": "Aluminum Foil",
+          "score": 0.354
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
     },
     {
       "name": "cardboard_box",
@@ -82,11 +107,18 @@
         "Paper Egg Carton"
       ],
       "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
+      "predicted_labels": [
+        "Cardboard"
+      ],
+      "detections": [
+        {
+          "label": "Cardboard",
+          "score": 0.6736
+        }
+      ],
+      "precision": 1.0,
+      "recall": 0.25,
+      "any_hit": true
     },
     {
       "name": "plastic_bottle",
@@ -102,99 +134,29 @@
       "any_hit": false
     },
     {
-      "name": "cardboard_box",
-      "url": "test/benchmarks/images/cardboard-box.png",
+      "name": "holdout_aluminum-can_kaggle_v1",
+      "url": "test/benchmarks/images/holdout-aluminum-can-kaggle-v1.png",
       "expected_any": [
-        "Cardboard",
-        "Paperboard",
-        "Pizza Box",
-        "Paper Egg Carton"
+        "Aluminum Can"
       ],
       "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
-    },
-    {
-      "name": "cardboard_box",
-      "url": "test/benchmarks/images/cardboard-box.png",
-      "expected_any": [
-        "Cardboard",
-        "Paperboard",
-        "Pizza Box",
-        "Paper Egg Carton"
+      "predicted_labels": [
+        "Aluminum Can"
       ],
-      "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
-    },
-    {
-      "name": "cardboard_box",
-      "url": "test/benchmarks/images/cardboard-box.png",
-      "expected_any": [
-        "Cardboard",
-        "Paperboard",
-        "Pizza Box",
-        "Paper Egg Carton"
+      "detections": [
+        {
+          "label": "Aluminum Can",
+          "score": 0.4835
+        }
       ],
-      "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
     },
     {
-      "name": "plastic_bottle",
-      "url": "test/benchmarks/images/plastic-bottle.png",
+      "name": "holdout_aluminum-can_kaggle_v2",
+      "url": "test/benchmarks/images/holdout-aluminum-can-kaggle-v2.png",
       "expected_any": [
-        "Vitamin or Prescription Bottle"
-      ],
-      "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
-    },
-    {
-      "name": "aluminum_can",
-      "url": "test/benchmarks/images/aluminum-can.png",
-      "expected_any": [
-        "Aluminum Can",
-        "Tin Can"
-      ],
-      "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
-    },
-    {
-      "name": "beer_can_2",
-      "url": "test/benchmarks/images/beer-can-2.png",
-      "expected_any": [
-        "Aluminum Can",
-        "Tin Can"
-      ],
-      "expected_all": [],
-      "predicted_labels": [],
-      "detections": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "any_hit": false
-    },
-    {
-      "name": "tin_cans_3",
-      "url": "test/benchmarks/images/tin-cans-3.png",
-      "expected_any": [
-        "Tin Can",
         "Aluminum Can"
       ],
       "expected_all": [],
@@ -205,10 +167,10 @@
       "any_hit": false
     },
     {
-      "name": "plastic_bottle",
-      "url": "test/benchmarks/images/plastic-bottle.png",
+      "name": "holdout_aluminum-can_kaggle_v3",
+      "url": "test/benchmarks/images/holdout-aluminum-can-kaggle-v3.png",
       "expected_any": [
-        "Vitamin or Prescription Bottle"
+        "Aluminum Can"
       ],
       "expected_all": [],
       "predicted_labels": [],
@@ -216,6 +178,380 @@
       "precision": 0.0,
       "recall": 0.0,
       "any_hit": false
+    },
+    {
+      "name": "holdout_aluminum-foil_manual_v1",
+      "url": "test/benchmarks/images/holdout-aluminum-foil-manual-v1.jpg",
+      "expected_any": [
+        "Aluminum Foil"
+      ],
+      "expected_all": [],
+      "predicted_labels": [
+        "Aluminum Foil"
+      ],
+      "detections": [
+        {
+          "label": "Aluminum Foil",
+          "score": 0.354
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
+    },
+    {
+      "name": "holdout_aluminum-foil_manual_v2",
+      "url": "test/benchmarks/images/holdout-aluminum-foil-manual-v2.jpg",
+      "expected_any": [
+        "Aluminum Foil"
+      ],
+      "expected_all": [],
+      "predicted_labels": [
+        "Aluminum Foil"
+      ],
+      "detections": [
+        {
+          "label": "Aluminum Foil",
+          "score": 0.8745
+        },
+        {
+          "label": "Aluminum Foil",
+          "score": 0.6259
+        },
+        {
+          "label": "Aluminum Foil",
+          "score": 0.5224
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
+    },
+    {
+      "name": "holdout_aluminum-foil_manual_v3",
+      "url": "test/benchmarks/images/holdout-aluminum-foil-manual-v3.jpg",
+      "expected_any": [
+        "Aluminum Foil"
+      ],
+      "expected_all": [],
+      "predicted_labels": [
+        "Aluminum Foil"
+      ],
+      "detections": [
+        {
+          "label": "Aluminum Foil",
+          "score": 0.7271
+        },
+        {
+          "label": "Aluminum Foil",
+          "score": 0.5575
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
+    },
+    {
+      "name": "holdout_cardboard_kaggle_v1",
+      "url": "test/benchmarks/images/holdout-cardboard-kaggle-v1.png",
+      "expected_any": [
+        "Cardboard"
+      ],
+      "expected_all": [],
+      "predicted_labels": [
+        "Paperboard"
+      ],
+      "detections": [
+        {
+          "label": "Paperboard",
+          "score": 0.8461
+        }
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
+    },
+    {
+      "name": "holdout_cardboard_kaggle_v2",
+      "url": "test/benchmarks/images/holdout-cardboard-kaggle-v2.png",
+      "expected_any": [
+        "Cardboard"
+      ],
+      "expected_all": [],
+      "predicted_labels": [],
+      "detections": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
+    },
+    {
+      "name": "holdout_cardboard_kaggle_v3",
+      "url": "test/benchmarks/images/holdout-cardboard-kaggle-v3.png",
+      "expected_any": [
+        "Cardboard"
+      ],
+      "expected_all": [],
+      "predicted_labels": [
+        "Cardboard"
+      ],
+      "detections": [
+        {
+          "label": "Cardboard",
+          "score": 0.6736
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
+    },
+    {
+      "name": "holdout_paper-egg-carton_manual_v1",
+      "url": "test/benchmarks/images/holdout-paper-egg-carton-manual-v1.jpg",
+      "expected_any": [
+        "Paper Egg Carton"
+      ],
+      "expected_all": [],
+      "predicted_labels": [],
+      "detections": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
+    },
+    {
+      "name": "holdout_paper-egg-carton_manual_v2",
+      "url": "test/benchmarks/images/holdout-paper-egg-carton-manual-v2.jpg",
+      "expected_any": [
+        "Paper Egg Carton"
+      ],
+      "expected_all": [],
+      "predicted_labels": [],
+      "detections": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
+    },
+    {
+      "name": "holdout_paper-egg-carton_manual_v3",
+      "url": "test/benchmarks/images/holdout-paper-egg-carton-manual-v3.jpg",
+      "expected_any": [
+        "Paper Egg Carton"
+      ],
+      "expected_all": [],
+      "predicted_labels": [],
+      "detections": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
+    },
+    {
+      "name": "holdout_paperboard_kaggle_v1",
+      "url": "test/benchmarks/images/holdout-paperboard-kaggle-v1.png",
+      "expected_any": [
+        "Paperboard"
+      ],
+      "expected_all": [],
+      "predicted_labels": [
+        "Paperboard"
+      ],
+      "detections": [
+        {
+          "label": "Paperboard",
+          "score": 0.8461
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
+    },
+    {
+      "name": "holdout_paperboard_kaggle_v2",
+      "url": "test/benchmarks/images/holdout-paperboard-kaggle-v2.png",
+      "expected_any": [
+        "Paperboard"
+      ],
+      "expected_all": [],
+      "predicted_labels": [],
+      "detections": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
+    },
+    {
+      "name": "holdout_paperboard_kaggle_v3",
+      "url": "test/benchmarks/images/holdout-paperboard-kaggle-v3.png",
+      "expected_any": [
+        "Paperboard"
+      ],
+      "expected_all": [],
+      "predicted_labels": [],
+      "detections": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
+    },
+    {
+      "name": "holdout_pizza-box_manual_v1",
+      "url": "test/benchmarks/images/holdout-pizza-box-manual-v1.jpg",
+      "expected_any": [
+        "Pizza Box"
+      ],
+      "expected_all": [],
+      "predicted_labels": [],
+      "detections": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
+    },
+    {
+      "name": "holdout_pizza-box_manual_v2",
+      "url": "test/benchmarks/images/holdout-pizza-box-manual-v2.jpg",
+      "expected_any": [
+        "Pizza Box"
+      ],
+      "expected_all": [],
+      "predicted_labels": [],
+      "detections": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
+    },
+    {
+      "name": "holdout_pizza-box_manual_v3",
+      "url": "test/benchmarks/images/holdout-pizza-box-manual-v3.jpg",
+      "expected_any": [
+        "Pizza Box"
+      ],
+      "expected_all": [],
+      "predicted_labels": [],
+      "detections": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
+    },
+    {
+      "name": "holdout_tin-can_kaggle_v1",
+      "url": "test/benchmarks/images/holdout-tin-can-kaggle-v1.png",
+      "expected_any": [
+        "Tin Can"
+      ],
+      "expected_all": [],
+      "predicted_labels": [
+        "Tin Can"
+      ],
+      "detections": [
+        {
+          "label": "Tin Can",
+          "score": 0.8002
+        },
+        {
+          "label": "Tin Can",
+          "score": 0.6337
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
+    },
+    {
+      "name": "holdout_tin-can_kaggle_v2",
+      "url": "test/benchmarks/images/holdout-tin-can-kaggle-v2.png",
+      "expected_any": [
+        "Tin Can"
+      ],
+      "expected_all": [],
+      "predicted_labels": [
+        "Tin Can"
+      ],
+      "detections": [
+        {
+          "label": "Tin Can",
+          "score": 0.8917
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
+    },
+    {
+      "name": "holdout_tin-can_kaggle_v3",
+      "url": "test/benchmarks/images/holdout-tin-can-kaggle-v3.png",
+      "expected_any": [
+        "Tin Can"
+      ],
+      "expected_all": [],
+      "predicted_labels": [],
+      "detections": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "any_hit": false
+    },
+    {
+      "name": "holdout_vitamin-or-prescription-bottle_kaggle_v1",
+      "url": "test/benchmarks/images/holdout-vitamin-or-prescription-bottle-kaggle-v1.png",
+      "expected_any": [
+        "Vitamin or Prescription Bottle"
+      ],
+      "expected_all": [],
+      "predicted_labels": [
+        "Vitamin or Prescription Bottle"
+      ],
+      "detections": [
+        {
+          "label": "Vitamin or Prescription Bottle",
+          "score": 0.9959
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
+    },
+    {
+      "name": "holdout_vitamin-or-prescription-bottle_kaggle_v2",
+      "url": "test/benchmarks/images/holdout-vitamin-or-prescription-bottle-kaggle-v2.png",
+      "expected_any": [
+        "Vitamin or Prescription Bottle"
+      ],
+      "expected_all": [],
+      "predicted_labels": [
+        "Vitamin or Prescription Bottle"
+      ],
+      "detections": [
+        {
+          "label": "Vitamin or Prescription Bottle",
+          "score": 0.8891
+        },
+        {
+          "label": "Vitamin or Prescription Bottle",
+          "score": 0.599
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
+    },
+    {
+      "name": "holdout_vitamin-or-prescription-bottle_kaggle_v3",
+      "url": "test/benchmarks/images/holdout-vitamin-or-prescription-bottle-kaggle-v3.png",
+      "expected_any": [
+        "Vitamin or Prescription Bottle"
+      ],
+      "expected_all": [],
+      "predicted_labels": [
+        "Vitamin or Prescription Bottle"
+      ],
+      "detections": [
+        {
+          "label": "Vitamin or Prescription Bottle",
+          "score": 0.552
+        },
+        {
+          "label": "Vitamin or Prescription Bottle",
+          "score": 0.421
+        }
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "any_hit": true
     }
   ]
 }

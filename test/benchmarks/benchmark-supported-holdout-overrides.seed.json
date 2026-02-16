@@ -1,0 +1,20 @@
+{
+  "generated_note": "Manual holdout source overrides for labels not covered by local Kaggle folders.",
+  "labels": {
+    "Aluminum Foil": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/140531%20Forellen%20auf%20dem%20Grill.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Aluminum%20foil%201.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Aluminum%20foil.jpg"
+    ],
+    "Paper Egg Carton": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Egg%20cartons%20with%20chicken%20eggs%2002.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Stack%20of%20egg%20cartons.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Carton%20of%20eggs.jpg"
+    ],
+    "Pizza Box": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Russian%20Pizza%20Box.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Villa%20Italian%20Kitchen%20Pizza%20Box%20%2831358708278%29.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Three%20Pizza%20Boxes.jpg"
+    ]
+  }
+}

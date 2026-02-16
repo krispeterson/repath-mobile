@@ -1,0 +1,82 @@
+{
+  "issues": [
+    {
+      "name": "retrain_positive_paper-egg-carton_v3",
+      "expected_label": "Paper Egg Carton",
+      "issue_type": "source_content_mismatch",
+      "original_problem_summary": "Source image did not contain the expected egg carton content."
+    },
+    {
+      "name": "retrain_positive_paper-egg-carton_v4",
+      "expected_label": "Paper Egg Carton",
+      "issue_type": "source_content_mismatch",
+      "original_problem_summary": "Source image contained cardboard boxes rather than an egg carton."
+    },
+    {
+      "name": "retrain_positive_paper-egg-carton_v5",
+      "expected_label": "Paper Egg Carton",
+      "issue_type": "source_content_mismatch",
+      "original_problem_summary": "Source image did not contain the expected egg carton content."
+    },
+    {
+      "name": "retrain_positive_paper-egg-carton_v6",
+      "expected_label": "Paper Egg Carton",
+      "issue_type": "source_content_mismatch",
+      "original_problem_summary": "Source image did not contain the expected egg carton content."
+    },
+    {
+      "name": "retrain_positive_paperboard_v1",
+      "expected_label": "Paperboard",
+      "issue_type": "source_content_mismatch",
+      "original_problem_summary": "Source image did not contain the expected paperboard example."
+    },
+    {
+      "name": "retrain_positive_paperboard_v2",
+      "expected_label": "Paperboard",
+      "issue_type": "source_content_mismatch",
+      "original_problem_summary": "Source image did not contain the expected paperboard example."
+    },
+    {
+      "name": "retrain_positive_paperboard_v3",
+      "expected_label": "Paperboard",
+      "issue_type": "source_content_mismatch",
+      "original_problem_summary": "Source image did not contain the expected paperboard example."
+    },
+    {
+      "name": "retrain_positive_paperboard_v4",
+      "expected_label": "Paperboard",
+      "issue_type": "source_content_mismatch",
+      "original_problem_summary": "Source image did not contain the expected paperboard example."
+    },
+    {
+      "name": "retrain_positive_paperboard_v5",
+      "expected_label": "Paperboard",
+      "issue_type": "source_content_mismatch",
+      "original_problem_summary": "Source image did not contain the expected paperboard example."
+    },
+    {
+      "name": "retrain_positive_paperboard_v6",
+      "expected_label": "Paperboard",
+      "issue_type": "source_content_mismatch",
+      "original_problem_summary": "Source image did not contain the expected paperboard example."
+    },
+    {
+      "name": "retrain_positive_tin-can_v4",
+      "expected_label": "Tin Can",
+      "issue_type": "source_content_mismatch",
+      "original_problem_summary": "Source image did not contain a tin can."
+    },
+    {
+      "name": "retrain_positive_tin-can_v5",
+      "expected_label": "Tin Can",
+      "issue_type": "source_content_mismatch",
+      "original_problem_summary": "Source image did not contain a tin can."
+    },
+    {
+      "name": "retrain_positive_tin-can_v6",
+      "expected_label": "Tin Can",
+      "issue_type": "source_content_mismatch",
+      "original_problem_summary": "Source image did not contain a tin can."
+    }
+  ]
+}

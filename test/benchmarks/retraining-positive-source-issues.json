@@ -1,0 +1,168 @@
+{
+  "generated_at": "2026-02-16T03:19:42.368Z",
+  "seed": "test/benchmarks/retraining-positive-source-issues.seed.json",
+  "source_csv": "test/benchmarks/benchmark-labeled.csv",
+  "summary": {
+    "issue_count": 13,
+    "mapped_to_replacement": 13,
+    "not_found_in_csv": 0
+  },
+  "issues": [
+    {
+      "name": "retrain_positive_paper-egg-carton_v3",
+      "status": "mapped_to_replacement",
+      "issue_type": "source_content_mismatch",
+      "expected_label": "Paper Egg Carton",
+      "original_problem_summary": "Source image did not contain the expected egg carton content.",
+      "current": {
+        "url": "test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v3.jpg",
+        "source": "wikimedia_commons_manual",
+        "notes": "title=Egg cartons with chicken eggs 03.jpg; manual_query=egg carton; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v3.jpg"
+      }
+    },
+    {
+      "name": "retrain_positive_paper-egg-carton_v4",
+      "status": "mapped_to_replacement",
+      "issue_type": "source_content_mismatch",
+      "expected_label": "Paper Egg Carton",
+      "original_problem_summary": "Source image contained cardboard boxes rather than an egg carton.",
+      "current": {
+        "url": "test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v4.jpg",
+        "source": "wikimedia_commons_manual",
+        "notes": "title=Egg cartons with chicken eggs 01.jpg; manual_query=egg carton; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v4.jpg"
+      }
+    },
+    {
+      "name": "retrain_positive_paper-egg-carton_v5",
+      "status": "mapped_to_replacement",
+      "issue_type": "source_content_mismatch",
+      "expected_label": "Paper Egg Carton",
+      "original_problem_summary": "Source image did not contain the expected egg carton content.",
+      "current": {
+        "url": "test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v5.jpg",
+        "source": "wikimedia_commons_manual",
+        "notes": "title=An egg carton.jpg; manual_query=egg carton; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v5.jpg"
+      }
+    },
+    {
+      "name": "retrain_positive_paper-egg-carton_v6",
+      "status": "mapped_to_replacement",
+      "issue_type": "source_content_mismatch",
+      "expected_label": "Paper Egg Carton",
+      "original_problem_summary": "Source image did not contain the expected egg carton content.",
+      "current": {
+        "url": "test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v6.jpg",
+        "source": "wikimedia_commons_manual",
+        "notes": "title=Fresh eggs carton and paper egg tray.jpg; manual_query=egg carton; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v6.jpg"
+      }
+    },
+    {
+      "name": "retrain_positive_paperboard_v1",
+      "status": "mapped_to_replacement",
+      "issue_type": "source_content_mismatch",
+      "expected_label": "Paperboard",
+      "original_problem_summary": "Source image did not contain the expected paperboard example.",
+      "current": {
+        "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v1.png",
+        "source": "kaggle_household_waste_images",
+        "notes": "folder=cardboard_packaging/real_world; source_image=Image_105.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v1.png"
+      }
+    },
+    {
+      "name": "retrain_positive_paperboard_v2",
+      "status": "mapped_to_replacement",
+      "issue_type": "source_content_mismatch",
+      "expected_label": "Paperboard",
+      "original_problem_summary": "Source image did not contain the expected paperboard example.",
+      "current": {
+        "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v2.png",
+        "source": "kaggle_household_waste_images",
+        "notes": "folder=cardboard_packaging/default; source_image=Image_135.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v2.png"
+      }
+    },
+    {
+      "name": "retrain_positive_paperboard_v3",
+      "status": "mapped_to_replacement",
+      "issue_type": "source_content_mismatch",
+      "expected_label": "Paperboard",
+      "original_problem_summary": "Source image did not contain the expected paperboard example.",
+      "current": {
+        "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v3.png",
+        "source": "kaggle_household_waste_images",
+        "notes": "folder=cardboard_packaging/real_world; source_image=Image_132.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v3.png"
+      }
+    },
+    {
+      "name": "retrain_positive_paperboard_v4",
+      "status": "mapped_to_replacement",
+      "issue_type": "source_content_mismatch",
+      "expected_label": "Paperboard",
+      "original_problem_summary": "Source image did not contain the expected paperboard example.",
+      "current": {
+        "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v4.png",
+        "source": "kaggle_household_waste_images",
+        "notes": "folder=cardboard_packaging/default; source_image=Image_175.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v4.png"
+      }
+    },
+    {
+      "name": "retrain_positive_paperboard_v5",
+      "status": "mapped_to_replacement",
+      "issue_type": "source_content_mismatch",
+      "expected_label": "Paperboard",
+      "original_problem_summary": "Source image did not contain the expected paperboard example.",
+      "current": {
+        "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v5.png",
+        "source": "kaggle_household_waste_images",
+        "notes": "folder=cardboard_packaging/default; source_image=Image_144.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v5.png"
+      }
+    },
+    {
+      "name": "retrain_positive_paperboard_v6",
+      "status": "mapped_to_replacement",
+      "issue_type": "source_content_mismatch",
+      "expected_label": "Paperboard",
+      "original_problem_summary": "Source image did not contain the expected paperboard example.",
+      "current": {
+        "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v6.png",
+        "source": "kaggle_household_waste_images",
+        "notes": "folder=cardboard_packaging/default; source_image=Image_155.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v6.png"
+      }
+    },
+    {
+      "name": "retrain_positive_tin-can_v4",
+      "status": "mapped_to_replacement",
+      "issue_type": "source_content_mismatch",
+      "expected_label": "Tin Can",
+      "original_problem_summary": "Source image did not contain a tin can.",
+      "current": {
+        "url": "test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v4.png",
+        "source": "kaggle_household_waste_images",
+        "notes": "folder=steel_food_cans/real_world; source_image=Image_17.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v4.png"
+      }
+    },
+    {
+      "name": "retrain_positive_tin-can_v5",
+      "status": "mapped_to_replacement",
+      "issue_type": "source_content_mismatch",
+      "expected_label": "Tin Can",
+      "original_problem_summary": "Source image did not contain a tin can.",
+      "current": {
+        "url": "test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v5.png",
+        "source": "kaggle_household_waste_images",
+        "notes": "folder=steel_food_cans/real_world; source_image=Image_120.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v5.png"
+      }
+    },
+    {
+      "name": "retrain_positive_tin-can_v6",
+      "status": "mapped_to_replacement",
+      "issue_type": "source_content_mismatch",
+      "expected_label": "Tin Can",
+      "original_problem_summary": "Source image did not contain a tin can.",
+      "current": {
+        "url": "test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v6.png",
+        "source": "kaggle_household_waste_images",
+        "notes": "folder=steel_food_cans/real_world; source_image=Image_171.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v6.png"
+      }
+    }
+  ]
+}

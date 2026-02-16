@@ -1,0 +1,310 @@
+{
+  "name": "municipal-supported-holdout-v1",
+  "generated_at": "2026-02-16T05:57:33.863Z",
+  "source": {
+    "labels": "ml/artifacts/models/candidates/20260216-032116/yolov8.labels.json",
+    "kaggle_dir": "ml/artifacts/datasets/kaggle-household-waste/images/images",
+    "excluded_csv": "test/benchmarks/benchmark-labeled.csv",
+    "manual_seed": "test/benchmarks/benchmark-supported-holdout-overrides.seed.json",
+    "retraining_manifest": "ml/artifacts/retraining/retraining-manifest.json",
+    "download_enabled": true,
+    "per_label": 3
+  },
+  "summary": {
+    "rows": 24,
+    "labels_requested": 8,
+    "labels_with_rows": 8,
+    "unsupported_labels": 0
+  },
+  "unsupported": [],
+  "images": [
+    {
+      "name": "holdout_aluminum-can_kaggle_v1",
+      "url": "test/benchmarks/images/supported-holdout/holdout_aluminum-can_kaggle_v1.png",
+      "expected_any": [
+        "Aluminum Can"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-aluminum-can-v1",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=aluminum_soda_cans/default; source_image=Image_1.png"
+    },
+    {
+      "name": "holdout_aluminum-can_kaggle_v2",
+      "url": "test/benchmarks/images/supported-holdout/holdout_aluminum-can_kaggle_v2.png",
+      "expected_any": [
+        "Aluminum Can"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-aluminum-can-v2",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=aluminum_soda_cans/default; source_image=Image_10.png"
+    },
+    {
+      "name": "holdout_aluminum-can_kaggle_v3",
+      "url": "test/benchmarks/images/supported-holdout/holdout_aluminum-can_kaggle_v3.png",
+      "expected_any": [
+        "Aluminum Can"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-aluminum-can-v3",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=aluminum_soda_cans/default; source_image=Image_100.png"
+    },
+    {
+      "name": "holdout_aluminum-foil_manual_v1",
+      "url": "test/benchmarks/images/supported-holdout/holdout_aluminum-foil_manual_v1.jpg",
+      "expected_any": [
+        "Aluminum Foil"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-aluminum-foil-manual-v1",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=manual_seed; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/140531%20Forellen%20auf%20dem%20Grill.jpg"
+    },
+    {
+      "name": "holdout_aluminum-foil_manual_v2",
+      "url": "test/benchmarks/images/supported-holdout/holdout_aluminum-foil_manual_v2.jpg",
+      "expected_any": [
+        "Aluminum Foil"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-aluminum-foil-manual-v2",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=manual_seed; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Aluminum%20foil%201.jpg"
+    },
+    {
+      "name": "holdout_aluminum-foil_manual_v3",
+      "url": "test/benchmarks/images/supported-holdout/holdout_aluminum-foil_manual_v3.jpg",
+      "expected_any": [
+        "Aluminum Foil"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-aluminum-foil-manual-v3",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=manual_seed; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Aluminum%20foil.jpg"
+    },
+    {
+      "name": "holdout_cardboard_kaggle_v1",
+      "url": "test/benchmarks/images/supported-holdout/holdout_cardboard_kaggle_v1.png",
+      "expected_any": [
+        "Cardboard"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-cardboard-v1",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=cardboard_boxes/default; source_image=Image_1.png"
+    },
+    {
+      "name": "holdout_cardboard_kaggle_v2",
+      "url": "test/benchmarks/images/supported-holdout/holdout_cardboard_kaggle_v2.png",
+      "expected_any": [
+        "Cardboard"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-cardboard-v2",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=cardboard_boxes/default; source_image=Image_10.png"
+    },
+    {
+      "name": "holdout_cardboard_kaggle_v3",
+      "url": "test/benchmarks/images/supported-holdout/holdout_cardboard_kaggle_v3.png",
+      "expected_any": [
+        "Cardboard"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-cardboard-v3",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=cardboard_boxes/default; source_image=Image_100.png"
+    },
+    {
+      "name": "holdout_paper-egg-carton_manual_v1",
+      "url": "test/benchmarks/images/supported-holdout/holdout_paper-egg-carton_manual_v1.jpg",
+      "expected_any": [
+        "Paper Egg Carton"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-paper-egg-carton-manual-v1",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=manual_seed; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Egg%20cartons%20with%20chicken%20eggs%2002.jpg"
+    },
+    {
+      "name": "holdout_paper-egg-carton_manual_v2",
+      "url": "test/benchmarks/images/supported-holdout/holdout_paper-egg-carton_manual_v2.jpg",
+      "expected_any": [
+        "Paper Egg Carton"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-paper-egg-carton-manual-v2",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=manual_seed; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Stack%20of%20egg%20cartons.jpg"
+    },
+    {
+      "name": "holdout_paper-egg-carton_manual_v3",
+      "url": "test/benchmarks/images/supported-holdout/holdout_paper-egg-carton_manual_v3.jpg",
+      "expected_any": [
+        "Paper Egg Carton"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-paper-egg-carton-manual-v3",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=manual_seed; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Carton%20of%20eggs.jpg"
+    },
+    {
+      "name": "holdout_paperboard_kaggle_v1",
+      "url": "test/benchmarks/images/supported-holdout/holdout_paperboard_kaggle_v1.png",
+      "expected_any": [
+        "Paperboard"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-paperboard-v1",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=cardboard_packaging/default; source_image=Image_1.png"
+    },
+    {
+      "name": "holdout_paperboard_kaggle_v2",
+      "url": "test/benchmarks/images/supported-holdout/holdout_paperboard_kaggle_v2.png",
+      "expected_any": [
+        "Paperboard"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-paperboard-v2",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=cardboard_packaging/default; source_image=Image_10.png"
+    },
+    {
+      "name": "holdout_paperboard_kaggle_v3",
+      "url": "test/benchmarks/images/supported-holdout/holdout_paperboard_kaggle_v3.png",
+      "expected_any": [
+        "Paperboard"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-paperboard-v3",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=cardboard_packaging/default; source_image=Image_100.png"
+    },
+    {
+      "name": "holdout_pizza-box_manual_v1",
+      "url": "test/benchmarks/images/supported-holdout/holdout_pizza-box_manual_v1.jpg",
+      "expected_any": [
+        "Pizza Box"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-pizza-box-manual-v1",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=manual_seed; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Russian%20Pizza%20Box.jpg"
+    },
+    {
+      "name": "holdout_pizza-box_manual_v2",
+      "url": "test/benchmarks/images/supported-holdout/holdout_pizza-box_manual_v2.jpg",
+      "expected_any": [
+        "Pizza Box"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-pizza-box-manual-v2",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=manual_seed; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Villa%20Italian%20Kitchen%20Pizza%20Box%20%2831358708278%29.jpg"
+    },
+    {
+      "name": "holdout_pizza-box_manual_v3",
+      "url": "test/benchmarks/images/supported-holdout/holdout_pizza-box_manual_v3.jpg",
+      "expected_any": [
+        "Pizza Box"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-pizza-box-manual-v3",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=manual_seed; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Three%20Pizza%20Boxes.jpg"
+    },
+    {
+      "name": "holdout_tin-can_kaggle_v1",
+      "url": "test/benchmarks/images/supported-holdout/holdout_tin-can_kaggle_v1.png",
+      "expected_any": [
+        "Tin Can"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-tin-can-v1",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=steel_food_cans/default; source_image=Image_1.png"
+    },
+    {
+      "name": "holdout_tin-can_kaggle_v2",
+      "url": "test/benchmarks/images/supported-holdout/holdout_tin-can_kaggle_v2.png",
+      "expected_any": [
+        "Tin Can"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-tin-can-v2",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=steel_food_cans/default; source_image=Image_10.png"
+    },
+    {
+      "name": "holdout_tin-can_kaggle_v3",
+      "url": "test/benchmarks/images/supported-holdout/holdout_tin-can_kaggle_v3.png",
+      "expected_any": [
+        "Tin Can"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-tin-can-v3",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=steel_food_cans/default; source_image=Image_100.png"
+    },
+    {
+      "name": "holdout_vitamin-or-prescription-bottle_kaggle_v1",
+      "url": "test/benchmarks/images/supported-holdout/holdout_vitamin-or-prescription-bottle_kaggle_v1.png",
+      "expected_any": [
+        "Vitamin or Prescription Bottle"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-vitamin-or-prescription-bottle-v1",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=plastic_water_bottles/default; source_image=Image_1.png"
+    },
+    {
+      "name": "holdout_vitamin-or-prescription-bottle_kaggle_v2",
+      "url": "test/benchmarks/images/supported-holdout/holdout_vitamin-or-prescription-bottle_kaggle_v2.png",
+      "expected_any": [
+        "Vitamin or Prescription Bottle"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-vitamin-or-prescription-bottle-v2",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=plastic_water_bottles/default; source_image=Image_10.png"
+    },
+    {
+      "name": "holdout_vitamin-or-prescription-bottle_kaggle_v3",
+      "url": "test/benchmarks/images/supported-holdout/holdout_vitamin-or-prescription-bottle_kaggle_v3.png",
+      "expected_any": [
+        "Vitamin or Prescription Bottle"
+      ],
+      "expected_all": [],
+      "item_id": "holdout-vitamin-or-prescription-bottle-v3",
+      "required": false,
+      "status": "ready",
+      "notes": "supported-holdout; source=kaggle_household_waste_images; folder=plastic_water_bottles/default; source_image=Image_100.png"
+    }
+  ]
+}

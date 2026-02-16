@@ -1,43 +1,31 @@
 {
   "source": "test/benchmarks/latest-results.candidate.json",
-  "generated_at": "2026-02-14T18:30:34.891Z",
+  "generated_at": "2026-02-16T06:12:51.628Z",
   "summary": {
-    "model": "ml/artifacts/models/candidates/20260214-182841/yolov8.tflite",
-    "labels": "ml/artifacts/models/candidates/20260214-182841/yolov8.labels.json",
+    "model": "ml/artifacts/models/candidates/20260216-032116/yolov8.tflite",
+    "labels": "ml/artifacts/models/candidates/20260216-032116/yolov8.labels.json",
     "manifest": "test/benchmarks/municipal-benchmark-manifest.resolved.json",
     "threshold": 0.35,
     "topk": 5,
-    "images_evaluated": 14,
-    "micro_precision": 0,
-    "micro_recall": 0,
-    "any_hit_rate": 0,
+    "images_evaluated": 30,
+    "micro_precision": 0.9375,
+    "micro_recall": 0.4167,
+    "any_hit_rate": 0.5,
     "negative_clean_rate": 0,
-    "tp": 0,
-    "fp": 0,
-    "fn": 32,
+    "tp": 15,
+    "fp": 1,
+    "fn": 21,
     "supported_only": true,
-    "skipped_unsupported_entries": 40
+    "skipped_unsupported_entries": 175
   },
   "counts": {
-    "result_rows": 14,
+    "result_rows": 30,
     "expected_labels": 8,
-    "false_positive_labels": 0
+    "false_positive_labels": 1
   },
   "top_missed_labels": [
     {
       "label": "Aluminum Can",
-      "count": 6
-    },
-    {
-      "label": "Tin Can",
-      "count": 6
-    },
-    {
-      "label": "Cardboard",
-      "count": 4
-    },
-    {
-      "label": "Paperboard",
       "count": 4
     },
     {
@@ -49,55 +37,43 @@
       "count": 4
     },
     {
-      "label": "Vitamin or Prescription Bottle",
+      "label": "Tin Can",
       "count": 3
     },
     {
-      "label": "Aluminum Foil",
-      "count": 1
-    }
-  ],
-  "top_false_positive_labels": [],
-  "top_confusion_pairs": [],
-  "priority_table": [
-    {
-      "label": "Aluminum Can",
-      "priority_score": 18,
-      "expected_count": 6,
-      "miss_count": 6,
-      "hit_count": 0,
-      "false_positive_count": 0,
-      "hit_rate": 0,
-      "recommended_action": "collect_more_positives"
-    },
-    {
-      "label": "Tin Can",
-      "priority_score": 18,
-      "expected_count": 6,
-      "miss_count": 6,
-      "hit_count": 0,
-      "false_positive_count": 0,
-      "hit_rate": 0,
-      "recommended_action": "collect_more_positives"
+      "label": "Paperboard",
+      "count": 3
     },
     {
       "label": "Cardboard",
-      "priority_score": 12,
-      "expected_count": 4,
-      "miss_count": 4,
-      "hit_count": 0,
-      "false_positive_count": 0,
-      "hit_rate": 0,
-      "recommended_action": "collect_more_positives"
+      "count": 2
     },
     {
+      "label": "Vitamin or Prescription Bottle",
+      "count": 1
+    }
+  ],
+  "top_false_positive_labels": [
+    {
       "label": "Paperboard",
+      "count": 1
+    }
+  ],
+  "top_confusion_pairs": [
+    {
+      "pair": "Cardboard -> Paperboard",
+      "count": 1
+    }
+  ],
+  "priority_table": [
+    {
+      "label": "Aluminum Can",
       "priority_score": 12,
-      "expected_count": 4,
+      "expected_count": 6,
       "miss_count": 4,
-      "hit_count": 0,
+      "hit_count": 2,
       "false_positive_count": 0,
-      "hit_rate": 0,
+      "hit_rate": 0.3333,
       "recommended_action": "collect_more_positives"
     },
     {
@@ -121,23 +97,53 @@
       "recommended_action": "collect_more_positives"
     },
     {
-      "label": "Vitamin or Prescription Bottle",
-      "priority_score": 9,
-      "expected_count": 3,
+      "label": "Paperboard",
+      "priority_score": 10,
+      "expected_count": 4,
       "miss_count": 3,
-      "hit_count": 0,
+      "hit_count": 1,
+      "false_positive_count": 1,
+      "hit_rate": 0.25,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Tin Can",
+      "priority_score": 9,
+      "expected_count": 6,
+      "miss_count": 3,
+      "hit_count": 3,
       "false_positive_count": 0,
-      "hit_rate": 0,
+      "hit_rate": 0.5,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Cardboard",
+      "priority_score": 6,
+      "expected_count": 4,
+      "miss_count": 2,
+      "hit_count": 2,
+      "false_positive_count": 0,
+      "hit_rate": 0.5,
+      "recommended_action": "collect_more_positives"
+    },
+    {
+      "label": "Vitamin or Prescription Bottle",
+      "priority_score": 3,
+      "expected_count": 4,
+      "miss_count": 1,
+      "hit_count": 3,
+      "false_positive_count": 0,
+      "hit_rate": 0.75,
       "recommended_action": "collect_more_positives"
     },
     {
       "label": "Aluminum Foil",
-      "priority_score": 3,
-      "expected_count": 1,
-      "miss_count": 1,
-      "hit_count": 0,
+      "priority_score": 0,
+      "expected_count": 4,
+      "miss_count": 0,
+      "hit_count": 4,
       "false_positive_count": 0,
-      "hit_rate": 0,
+      "hit_rate": 1,
       "recommended_action": "collect_more_positives"
     }
   ]

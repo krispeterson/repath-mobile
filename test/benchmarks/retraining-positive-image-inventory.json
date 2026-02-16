@@ -1,0 +1,482 @@
+{
+  "generated_at": "2026-02-16T03:19:42.202Z",
+  "source_csv": "test/benchmarks/benchmark-labeled.csv",
+  "local_prefix": "test/benchmarks/images/retraining-positives/",
+  "count": 58,
+  "labels": {
+    "Aluminum Can": 8,
+    "Aluminum Foil": 6,
+    "Cardboard": 8,
+    "Paper Egg Carton": 6,
+    "Paperboard": 8,
+    "Pizza Box": 6,
+    "Tin Can": 8,
+    "Vitamin or Prescription Bottle": 8
+  },
+  "rows": [
+    {
+      "name": "retrain_positive_aluminum-can_v1",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v1.png",
+      "item_id": "retrain-aluminum-can-v1",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans/real_world; source_image=Image_11.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v1.png"
+    },
+    {
+      "name": "retrain_positive_aluminum-can_v2",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v2.png",
+      "item_id": "retrain-aluminum-can-v2",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans/real_world; source_image=Image_111.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v2.png"
+    },
+    {
+      "name": "retrain_positive_aluminum-can_v3",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v3.png",
+      "item_id": "retrain-aluminum-can-v3",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans/real_world; source_image=Image_127.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v3.png"
+    },
+    {
+      "name": "retrain_positive_aluminum-can_v4",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v4.png",
+      "item_id": "retrain-aluminum-can-v4",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans/real_world; source_image=Image_144.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v4.png"
+    },
+    {
+      "name": "retrain_positive_aluminum-can_v5",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v5.png",
+      "item_id": "retrain-aluminum-can-v5",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans/real_world; source_image=Image_141.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v5.png"
+    },
+    {
+      "name": "retrain_positive_aluminum-can_v6",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v6.png",
+      "item_id": "retrain-aluminum-can-v6",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans/real_world; source_image=Image_203.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v6.png"
+    },
+    {
+      "name": "retrain_positive_aluminum-can_v7",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v7.png",
+      "item_id": "retrain-aluminum-can-v7",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans; source_image=Image_1.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_aluminum-can_v8",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-can_v8.png",
+      "item_id": "retrain-aluminum-can-v8",
+      "canonical_label": "Aluminum Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=aluminum_soda_cans; source_image=Image_10.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_aluminum-foil_v1",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-foil_v1.jpg",
+      "item_id": "retrain-aluminum-foil-v1",
+      "canonical_label": "Aluminum Foil",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:Folie 2007.jpg; query=Aluminum Foil; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Folie%202007.jpg"
+    },
+    {
+      "name": "retrain_positive_aluminum-foil_v2",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-foil_v2.png",
+      "item_id": "retrain-aluminum-foil-v2",
+      "canonical_label": "Aluminum Foil",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:Scanned Aluminum Foil.png; query=Aluminum Foil; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Scanned%20Aluminum%20Foil.png"
+    },
+    {
+      "name": "retrain_positive_aluminum-foil_v3",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-foil_v3.jpg",
+      "item_id": "retrain-aluminum-foil-v3",
+      "canonical_label": "Aluminum Foil",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:Balled up aluminum foil.jpg; query=Aluminum Foil; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Balled%20up%20aluminum%20foil.jpg"
+    },
+    {
+      "name": "retrain_positive_aluminum-foil_v4",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-foil_v4.jpg",
+      "item_id": "retrain-aluminum-foil-v4",
+      "canonical_label": "Aluminum Foil",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:Egg tart aluminum foil tray fragments.jpg; query=Aluminum Foil; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Egg%20tart%20aluminum%20foil%20tray%20fragments.jpg"
+    },
+    {
+      "name": "retrain_positive_aluminum-foil_v5",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-foil_v5.jpg",
+      "item_id": "retrain-aluminum-foil-v5",
+      "canonical_label": "Aluminum Foil",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:Crinkled Aluminum Foil (45451376615).jpg; query=Aluminum Foil; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Crinkled%20Aluminum%20Foil%20(45451376615).jpg"
+    },
+    {
+      "name": "retrain_positive_aluminum-foil_v6",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_aluminum-foil_v6.jpg",
+      "item_id": "retrain-aluminum-foil-v6",
+      "canonical_label": "Aluminum Foil",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:Aluminum foil sauna vapor barrier.jpg; query=Aluminum Foil; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Aluminum%20foil%20sauna%20vapor%20barrier.jpg"
+    },
+    {
+      "name": "retrain_positive_cardboard_v1",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v1.png",
+      "item_id": "retrain-cardboard-v1",
+      "canonical_label": "Cardboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_boxes/default; source_image=Image_136.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v1.png"
+    },
+    {
+      "name": "retrain_positive_cardboard_v2",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v2.png",
+      "item_id": "retrain-cardboard-v2",
+      "canonical_label": "Cardboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_boxes/real_world; source_image=Image_185.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v2.png"
+    },
+    {
+      "name": "retrain_positive_cardboard_v3",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v3.png",
+      "item_id": "retrain-cardboard-v3",
+      "canonical_label": "Cardboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_boxes/default; source_image=Image_46.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v3.png"
+    },
+    {
+      "name": "retrain_positive_cardboard_v4",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v4.png",
+      "item_id": "retrain-cardboard-v4",
+      "canonical_label": "Cardboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_boxes/default; source_image=Image_179.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v4.png"
+    },
+    {
+      "name": "retrain_positive_cardboard_v5",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v5.png",
+      "item_id": "retrain-cardboard-v5",
+      "canonical_label": "Cardboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_boxes/default; source_image=Image_142.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v5.png"
+    },
+    {
+      "name": "retrain_positive_cardboard_v6",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v6.png",
+      "item_id": "retrain-cardboard-v6",
+      "canonical_label": "Cardboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_boxes/default; source_image=Image_86.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v6.png"
+    },
+    {
+      "name": "retrain_positive_cardboard_v7",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v7.png",
+      "item_id": "retrain-cardboard-v7",
+      "canonical_label": "Cardboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_boxes; source_image=Image_1.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_cardboard_v8",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_cardboard_v8.png",
+      "item_id": "retrain-cardboard-v8",
+      "canonical_label": "Cardboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_boxes; source_image=Image_10.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_paper-egg-carton_v1",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v1.jpg",
+      "item_id": "retrain-paper-egg-carton-v1",
+      "canonical_label": "Paper Egg Carton",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:An egg carton.jpg; query=Paper Egg Carton; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/An%20egg%20carton.jpg"
+    },
+    {
+      "name": "retrain_positive_paper-egg-carton_v2",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v2.jpg",
+      "item_id": "retrain-paper-egg-carton-v2",
+      "canonical_label": "Paper Egg Carton",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:Fresh eggs carton and paper egg tray.jpg; query=Paper Egg Carton; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Fresh%20eggs%20carton%20and%20paper%20egg%20tray.jpg"
+    },
+    {
+      "name": "retrain_positive_paper-egg-carton_v3",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v3.jpg",
+      "item_id": "retrain-paper-egg-carton-v3",
+      "canonical_label": "Paper Egg Carton",
+      "source": "wikimedia_commons_manual",
+      "notes": "title=Egg cartons with chicken eggs 03.jpg; manual_query=egg carton; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v3.jpg"
+    },
+    {
+      "name": "retrain_positive_paper-egg-carton_v4",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v4.jpg",
+      "item_id": "retrain-paper-egg-carton-v4",
+      "canonical_label": "Paper Egg Carton",
+      "source": "wikimedia_commons_manual",
+      "notes": "title=Egg cartons with chicken eggs 01.jpg; manual_query=egg carton; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v4.jpg"
+    },
+    {
+      "name": "retrain_positive_paper-egg-carton_v5",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v5.jpg",
+      "item_id": "retrain-paper-egg-carton-v5",
+      "canonical_label": "Paper Egg Carton",
+      "source": "wikimedia_commons_manual",
+      "notes": "title=An egg carton.jpg; manual_query=egg carton; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v5.jpg"
+    },
+    {
+      "name": "retrain_positive_paper-egg-carton_v6",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v6.jpg",
+      "item_id": "retrain-paper-egg-carton-v6",
+      "canonical_label": "Paper Egg Carton",
+      "source": "wikimedia_commons_manual",
+      "notes": "title=Fresh eggs carton and paper egg tray.jpg; manual_query=egg carton; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paper-egg-carton_v6.jpg"
+    },
+    {
+      "name": "retrain_positive_paperboard_v1",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v1.png",
+      "item_id": "retrain-paperboard-v1",
+      "canonical_label": "Paperboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_packaging/real_world; source_image=Image_105.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v1.png"
+    },
+    {
+      "name": "retrain_positive_paperboard_v2",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v2.png",
+      "item_id": "retrain-paperboard-v2",
+      "canonical_label": "Paperboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_packaging/default; source_image=Image_135.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v2.png"
+    },
+    {
+      "name": "retrain_positive_paperboard_v3",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v3.png",
+      "item_id": "retrain-paperboard-v3",
+      "canonical_label": "Paperboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_packaging/real_world; source_image=Image_132.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v3.png"
+    },
+    {
+      "name": "retrain_positive_paperboard_v4",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v4.png",
+      "item_id": "retrain-paperboard-v4",
+      "canonical_label": "Paperboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_packaging/default; source_image=Image_175.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v4.png"
+    },
+    {
+      "name": "retrain_positive_paperboard_v5",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v5.png",
+      "item_id": "retrain-paperboard-v5",
+      "canonical_label": "Paperboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_packaging/default; source_image=Image_144.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v5.png"
+    },
+    {
+      "name": "retrain_positive_paperboard_v6",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v6.png",
+      "item_id": "retrain-paperboard-v6",
+      "canonical_label": "Paperboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_packaging/default; source_image=Image_155.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v6.png"
+    },
+    {
+      "name": "retrain_positive_paperboard_v7",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v7.png",
+      "item_id": "retrain-paperboard-v7",
+      "canonical_label": "Paperboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_packaging; source_image=Image_1.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_paperboard_v8",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_paperboard_v8.png",
+      "item_id": "retrain-paperboard-v8",
+      "canonical_label": "Paperboard",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=cardboard_packaging; source_image=Image_10.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_pizza-box_v1",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_pizza-box_v1.jpg",
+      "item_id": "retrain-pizza-box-v1",
+      "canonical_label": "Pizza Box",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:11 30 2022 Park Slope Pizza Boxes BPL WikiWeds Nov WMNYC.jpg; query=Pizza Box; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/11%2030%202022%20Park%20Slope%20Pizza%20Boxes%20BPL%20WikiWeds%20Nov%20WMNYC.jpg"
+    },
+    {
+      "name": "retrain_positive_pizza-box_v2",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_pizza-box_v2.jpg",
+      "item_id": "retrain-pizza-box-v2",
+      "canonical_label": "Pizza Box",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:PizzaLeah - 2021-10-23 - Sarah Stierch 07.jpg; query=Pizza Box; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/PizzaLeah%20-%202021-10-23%20-%20Sarah%20Stierch%2007.jpg"
+    },
+    {
+      "name": "retrain_positive_pizza-box_v3",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_pizza-box_v3.jpg",
+      "item_id": "retrain-pizza-box-v3",
+      "canonical_label": "Pizza Box",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:Frozen pizzas at supermarket.jpg; query=Pizza Box; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Frozen%20pizzas%20at%20supermarket.jpg"
+    },
+    {
+      "name": "retrain_positive_pizza-box_v4",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_pizza-box_v4.jpg",
+      "item_id": "retrain-pizza-box-v4",
+      "canonical_label": "Pizza Box",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:Domino's Pizza box from South Africa.jpg; query=Pizza Box; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Domino's%20Pizza%20box%20from%20South%20Africa.jpg"
+    },
+    {
+      "name": "retrain_positive_pizza-box_v5",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_pizza-box_v5.jpg",
+      "item_id": "retrain-pizza-box-v5",
+      "canonical_label": "Pizza Box",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:Pizza box at a fan convention.jpg; query=Pizza Box; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Pizza%20box%20at%20a%20fan%20convention.jpg"
+    },
+    {
+      "name": "retrain_positive_pizza-box_v6",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_pizza-box_v6.jpg",
+      "item_id": "retrain-pizza-box-v6",
+      "canonical_label": "Pizza Box",
+      "source": "wikimedia_commons_search",
+      "notes": "title=File:Pizza Box (49522718298).jpg; query=Pizza Box; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Pizza%20Box%20(49522718298).jpg"
+    },
+    {
+      "name": "retrain_positive_tin-can_v1",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v1.png",
+      "item_id": "retrain-tin-can-v1",
+      "canonical_label": "Tin Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=steel_food_cans/real_world; source_image=Image_116.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v1.png"
+    },
+    {
+      "name": "retrain_positive_tin-can_v2",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v2.png",
+      "item_id": "retrain-tin-can-v2",
+      "canonical_label": "Tin Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=steel_food_cans/real_world; source_image=Image_199.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v2.png"
+    },
+    {
+      "name": "retrain_positive_tin-can_v3",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v3.png",
+      "item_id": "retrain-tin-can-v3",
+      "canonical_label": "Tin Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=steel_food_cans/real_world; source_image=Image_184.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v3.png"
+    },
+    {
+      "name": "retrain_positive_tin-can_v4",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v4.png",
+      "item_id": "retrain-tin-can-v4",
+      "canonical_label": "Tin Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=steel_food_cans/real_world; source_image=Image_17.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v4.png"
+    },
+    {
+      "name": "retrain_positive_tin-can_v5",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v5.png",
+      "item_id": "retrain-tin-can-v5",
+      "canonical_label": "Tin Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=steel_food_cans/real_world; source_image=Image_120.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v5.png"
+    },
+    {
+      "name": "retrain_positive_tin-can_v6",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v6.png",
+      "item_id": "retrain-tin-can-v6",
+      "canonical_label": "Tin Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=steel_food_cans/real_world; source_image=Image_171.png; local_cached=test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v6.png"
+    },
+    {
+      "name": "retrain_positive_tin-can_v7",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v7.png",
+      "item_id": "retrain-tin-can-v7",
+      "canonical_label": "Tin Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=steel_food_cans; source_image=Image_1.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_tin-can_v8",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_tin-can_v8.png",
+      "item_id": "retrain-tin-can-v8",
+      "canonical_label": "Tin Can",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=steel_food_cans; source_image=Image_10.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_vitamin-or-prescription-bottle_v1",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_vitamin-or-prescription-bottle_v1.jpg",
+      "item_id": "retrain-vitamin-or-prescription-bottle-v1",
+      "canonical_label": "Vitamin or Prescription Bottle",
+      "source": "wikimedia_commons_manual",
+      "notes": "title=Walgreens Prescription Bottle.jpg; manual_query=prescription bottle; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Walgreens%20Prescription%20Bottle.jpg"
+    },
+    {
+      "name": "retrain_positive_vitamin-or-prescription-bottle_v2",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_vitamin-or-prescription-bottle_v2.jpg",
+      "item_id": "retrain-vitamin-or-prescription-bottle-v2",
+      "canonical_label": "Vitamin or Prescription Bottle",
+      "source": "wikimedia_commons_manual",
+      "notes": "title=ClearRx prescription bottles - Flickr - bartsz.jpg; manual_query=prescription bottle; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/ClearRx%20prescription%20bottles%20-%20Flickr%20-%20bartsz.jpg"
+    },
+    {
+      "name": "retrain_positive_vitamin-or-prescription-bottle_v3",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_vitamin-or-prescription-bottle_v3.jpg",
+      "item_id": "retrain-vitamin-or-prescription-bottle-v3",
+      "canonical_label": "Vitamin or Prescription Bottle",
+      "source": "wikimedia_commons_manual",
+      "notes": "title=Adderall bottle and capsules.jpg; manual_query=prescription bottle; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Adderall%20bottle%20and%20capsules.jpg"
+    },
+    {
+      "name": "retrain_positive_vitamin-or-prescription-bottle_v4",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_vitamin-or-prescription-bottle_v4.jpg",
+      "item_id": "retrain-vitamin-or-prescription-bottle-v4",
+      "canonical_label": "Vitamin or Prescription Bottle",
+      "source": "wikimedia_commons_manual",
+      "notes": "title=Truvada for PrEP HIV Prevention Prescription Pill Bottle (48610088067).jpg; manual_query=prescription bottle; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Truvada%20for%20PrEP%20HIV%20Prevention%20Prescription%20Pill%20Bottle%20(48610088067).jpg"
+    },
+    {
+      "name": "retrain_positive_vitamin-or-prescription-bottle_v5",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_vitamin-or-prescription-bottle_v5.jpg",
+      "item_id": "retrain-vitamin-or-prescription-bottle-v5",
+      "canonical_label": "Vitamin or Prescription Bottle",
+      "source": "wikimedia_commons_manual",
+      "notes": "title=Prescription bottle humor.jpg; manual_query=prescription bottle; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Prescription%20bottle%20humor.jpg"
+    },
+    {
+      "name": "retrain_positive_vitamin-or-prescription-bottle_v6",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_vitamin-or-prescription-bottle_v6.jpg",
+      "item_id": "retrain-vitamin-or-prescription-bottle-v6",
+      "canonical_label": "Vitamin or Prescription Bottle",
+      "source": "wikimedia_commons_manual",
+      "notes": "title=Clonazepam Pills and Pill Bottle.jpg; manual_query=prescription bottle; source_url=https://commons.wikimedia.org/wiki/Special:FilePath/Clonazepam%20Pills%20and%20Pill%20Bottle.jpg"
+    },
+    {
+      "name": "retrain_positive_vitamin-or-prescription-bottle_v7",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_vitamin-or-prescription-bottle_v7.png",
+      "item_id": "retrain-vitamin-or-prescription-bottle-v7",
+      "canonical_label": "Vitamin or Prescription Bottle",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=plastic_water_bottles; source_image=Image_1.png; selected_from=retraining_priority"
+    },
+    {
+      "name": "retrain_positive_vitamin-or-prescription-bottle_v8",
+      "url": "test/benchmarks/images/retraining-positives/retrain_positive_vitamin-or-prescription-bottle_v8.png",
+      "item_id": "retrain-vitamin-or-prescription-bottle-v8",
+      "canonical_label": "Vitamin or Prescription Bottle",
+      "source": "kaggle_household_waste_images",
+      "notes": "folder=plastic_water_bottles; source_image=Image_10.png; selected_from=retraining_priority"
+    }
+  ]
+}
