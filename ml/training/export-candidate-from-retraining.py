@@ -40,7 +40,12 @@ def parse_args():
     parser.add_argument("--imgsz", type=int, default=640, help="Input size for export")
     parser.add_argument("--half", action="store_true", help="Enable FP16 quantization")
     parser.add_argument("--int8", action="store_true", help="Enable INT8 quantization")
-    parser.add_argument("--nms", action="store_true", help="Enable NMS in export")
+    parser.add_argument(
+        "--nms",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Enable NMS in export (default: true). Use --no-nms to disable.",
+    )
     parser.add_argument("--data", default=None, help="Dataset yaml (required for int8)")
     parser.add_argument("--fraction", type=float, default=None, help="Dataset fraction for int8")
     parser.add_argument("--device", default=None, help="Export device (e.g. cpu, mps)")

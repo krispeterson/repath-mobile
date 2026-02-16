@@ -49,11 +49,24 @@ Run benchmarks when:
 Core commands:
 ```bash
 npm run build:benchmark:manifest
+npm run build:benchmark:supported-holdout
 npm run check:benchmark:coverage
 npm run benchmark:model:resolved
 npm run benchmark:model:resolved:supported
 npm run analyze:benchmark:results
 ```
+
+`build:benchmark:supported-holdout` generates local holdout rows for currently supported candidate labels
+using the Kaggle household-waste dataset and writes:
+- `test/benchmarks/benchmark-manifest.supported-holdout.json`
+- `test/benchmarks/images/supported-holdout/*`
+
+For labels not covered by Kaggle folders, it uses
+`test/benchmarks/benchmark-supported-holdout-overrides.seed.json` as manual URL fallbacks.
+Rows that overlap with retraining sample URLs are automatically excluded from holdout generation.
+
+`build:benchmark:resolved` now runs in `--no-download` mode by default for routine local iteration.
+It uses cached/local URLs and marks unresolved remote rows as `todo` instead of blocking on network fetches.
 
 Use `benchmark:model:resolved:supported` when your current model only covers a subset of taxonomy labels.
 It evaluates only entries whose expected labels exist in the active model label file.
@@ -77,10 +90,42 @@ To convert `retrain_*` rows in `benchmark-labeled.csv` into a compact training a
 npm run build:retraining:manifest
 ```
 This writes `ml/artifacts/retraining/retraining-manifest.json` with positive and negative samples.
+To auto-add new Kaggle-backed retraining positives for the weakest labels in
+`test/benchmarks/latest-results.candidate.priority.csv`:
+```bash
+npm run expand:retraining:positives
+```
+You can target labels explicitly:
+```bash
+npm run expand:retraining:positives -- --labels "Tin Can,Cardboard" --per-label 3
+```
+The script avoids reusing Kaggle source images already present in retraining rows
+and skips overlap with `test/benchmarks/benchmark-manifest.supported-holdout.json` when available.
+To cache remote `retrain_positive_*` URLs locally (recommended before local-only bundle builds):
+```bash
+npm run materialize:retraining:positives
+```
+This rewrites those rows to repo-relative local paths and appends `source_url=...` in notes so
+holdout generation can still exclude overlap with training sources.
+To track locally cached retraining positive images in one migration-friendly file:
+```bash
+npm run build:retraining:image-inventory
+```
+This writes `test/benchmarks/retraining-positive-image-inventory.json`.
+To keep a single audit log of known problematic retraining-positive sources and their current replacements:
+```bash
+npm run build:retraining:source-issues
+```
+This writes `test/benchmarks/retraining-positive-source-issues.json` from
+`test/benchmarks/retraining-positive-source-issues.seed.json`.
 
 To prepare an annotation-ready YOLO bundle (images, empty label files, class map, task sheet):
 ```bash
 npm run build:annotation:bundle
+```
+For a local-only bundle build that skips remote URL downloads (recommended for flaky/DNS-limited environments):
+```bash
+npm run build:annotation:bundle:local
 ```
 Then validate annotation completeness/format before training:
 ```bash
@@ -95,6 +140,11 @@ Use strict mode (non-zero exit on any issue) in pre-training checks:
 ```bash
 npm run validate:annotation:bundle:strict
 ```
+To run the common post-expansion refresh sequence in one command:
+```bash
+npm run refresh:retraining:bundle
+```
+This refresh path uses the local-only bundle build so remote-only retraining rows are skipped instead of blocking.
 This validator checks:
 - positive rows have at least one YOLO box,
 - negative rows remain empty,
@@ -134,15 +184,21 @@ To benchmark the latest candidate and generate analysis artifacts:
 ```bash
 npm run benchmark:model:candidate
 ```
+This command also refreshes the supported-holdout manifest and resolved benchmark manifest first.
 To benchmark and then compare candidate vs current baseline:
 ```bash
 npm run benchmark:model:candidate:compare
 ```
 Comparison output is written to `test/benchmarks/latest-results.compare.json`.
+The compare output includes both:
+- `comparison`: raw baseline vs candidate summaries (can differ in evaluated rows if label support differs).
+- `overlap.comparison`: apples-to-apples metrics on the intersection of rows evaluated by both runs.
 
 Important:
 - This candidate export flow updates vocabulary from retraining priorities.
 - Full detector retraining runs through `train:model:annotation` and needs completed box annotations.
+- Training/export helpers default to NMS-enabled TFLite output so benchmark/app decoders receive `[N, 6]` detections.
+- Use `--no-nms` only for advanced debugging; benchmark scripts will reject raw YOLO head outputs.
 
 ## Model And Training Helpers
 `ml/training/` and related scripts support export and model artifact preparation for mobile use.

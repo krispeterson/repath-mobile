@@ -6,7 +6,7 @@ const { fileURLToPath } = require("url");
 
 function usage() {
   console.log(
-    "Usage: node ml/training/build-annotation-bundle.js [--manifest ml/artifacts/retraining/retraining-manifest.json] [--out-dir ml/artifacts/retraining/annotation-bundle] [--run-id <id>] [--refresh] [--dry-run]"
+    "Usage: node ml/training/build-annotation-bundle.js [--manifest ml/artifacts/retraining/retraining-manifest.json] [--out-dir ml/artifacts/retraining/annotation-bundle] [--run-id <id>] [--refresh] [--no-download] [--dry-run]"
   );
 }
 
@@ -16,6 +16,7 @@ function parseArgs(argv) {
     outDir: path.join("ml", "artifacts", "retraining", "annotation-bundle"),
     runId: "",
     refresh: false,
+    download: true,
     dryRun: false
   };
 
@@ -29,6 +30,8 @@ function parseArgs(argv) {
       args.runId = argv[++i];
     } else if (arg === "--refresh") {
       args.refresh = true;
+    } else if (arg === "--no-download") {
+      args.download = false;
     } else if (arg === "--dry-run") {
       args.dryRun = true;
     } else if (arg === "--help" || arg === "-h") {
@@ -93,7 +96,7 @@ function downloadTo(source, outFile) {
   );
 }
 
-function copyOrDownload(source, outFile) {
+function copyOrDownload(source, outFile, allowDownload) {
   const localPath = resolveLocalPath(source);
   ensureDir(path.dirname(outFile));
   if (localPath && fs.existsSync(localPath)) {
@@ -101,6 +104,7 @@ function copyOrDownload(source, outFile) {
     return "copied_local";
   }
   if (isHttpUrl(source)) {
+    if (!allowDownload) return "skipped_remote";
     downloadTo(source, outFile);
     return "downloaded";
   }
@@ -189,6 +193,8 @@ function main() {
   let copiedLocal = 0;
   let downloaded = 0;
   let skippedExisting = 0;
+  let skippedRemote = 0;
+  let skippedInvalidSource = 0;
   const tasks = [];
 
   if (!args.dryRun) {
@@ -214,12 +220,21 @@ function main() {
     const classId = classLabel && classToId.has(classLabel) ? classToId.get(classLabel) : "";
 
     if (!args.dryRun) {
-      if (fs.existsSync(imageOutPath) && !args.refresh) {
-        skippedExisting += 1;
-      } else {
-        const mode = copyOrDownload(sourceImage, imageOutPath);
-        if (mode === "copied_local") copiedLocal += 1;
-        if (mode === "downloaded") downloaded += 1;
+      try {
+        if (fs.existsSync(imageOutPath) && !args.refresh) {
+          skippedExisting += 1;
+        } else {
+          const mode = copyOrDownload(sourceImage, imageOutPath, args.download);
+          if (mode === "copied_local") copiedLocal += 1;
+          if (mode === "downloaded") downloaded += 1;
+          if (mode === "skipped_remote") {
+            skippedRemote += 1;
+            continue;
+          }
+        }
+      } catch (_error) {
+        skippedInvalidSource += 1;
+        continue;
       }
       if (!fs.existsSync(labelOutPath)) {
         fs.writeFileSync(labelOutPath, "", "utf8");
@@ -297,7 +312,10 @@ function main() {
         negatives: tasks.filter((row) => row.is_negative).length,
         copied_local: copiedLocal,
         downloaded,
+        skipped_remote: skippedRemote,
+        skipped_invalid_source: skippedInvalidSource,
         skipped_existing: skippedExisting,
+        download_enabled: args.download,
         dry_run: args.dryRun
       },
       null,

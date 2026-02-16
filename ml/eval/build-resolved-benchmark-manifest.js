@@ -6,7 +6,7 @@ const { fileURLToPath } = require("url");
 
 function usage() {
   console.log(
-    "Usage: node ml/eval/build-resolved-benchmark-manifest.js [--manifest test/benchmarks/municipal-benchmark-manifest-v2.json] [--completed test/benchmarks/benchmark-labeled.csv] [--cache-dir test/benchmarks/images] [--out test/benchmarks/municipal-benchmark-manifest.resolved.json]"
+    "Usage: node ml/eval/build-resolved-benchmark-manifest.js [--manifest test/benchmarks/municipal-benchmark-manifest-v2.json] [--append-manifest test/benchmarks/benchmark-manifest.supported-holdout.json] [--completed test/benchmarks/benchmark-labeled.csv] [--cache-dir test/benchmarks/images] [--out test/benchmarks/municipal-benchmark-manifest.resolved.json]"
   );
 }
 
@@ -16,6 +16,7 @@ function parseArgs(argv) {
     completed: path.join("test", "benchmarks", "benchmark-labeled.csv"),
     cacheDir: path.join("test", "benchmarks", "images"),
     out: path.join("test", "benchmarks", "municipal-benchmark-manifest.resolved.json"),
+    appendManifests: [],
     download: true,
     copyLocal: true
   };
@@ -24,6 +25,8 @@ function parseArgs(argv) {
     const arg = argv[i];
     if (arg === "--manifest") {
       args.manifest = argv[++i];
+    } else if (arg === "--append-manifest") {
+      args.appendManifests.push(argv[++i]);
     } else if (arg === "--completed") {
       args.completed = argv[++i];
     } else if (arg === "--cache-dir") {
@@ -45,6 +48,26 @@ function parseArgs(argv) {
 
 function loadJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
+
+function loadAppendImages(paths) {
+  const images = [];
+  const loaded = [];
+  const missing = [];
+
+  (paths || []).forEach((manifestPath) => {
+    const fullPath = path.resolve(manifestPath);
+    if (!fs.existsSync(fullPath)) {
+      missing.push(path.relative(process.cwd(), fullPath));
+      return;
+    }
+    const payload = loadJson(fullPath);
+    const rows = Array.isArray(payload && payload.images) ? payload.images : [];
+    rows.forEach((row) => images.push({ ...row }));
+    loaded.push(path.relative(process.cwd(), fullPath));
+  });
+
+  return { images, loaded, missing };
 }
 
 function parseCsvLine(line) {
@@ -166,12 +189,46 @@ function toRepoRelative(targetPath) {
   return path.relative(process.cwd(), targetPath).split(path.sep).join("/");
 }
 
+function normalizeLabelList(value) {
+  if (!Array.isArray(value)) return [];
+  return value.map((entry) => String(entry || "").trim()).filter(Boolean).sort((a, b) => a.localeCompare(b));
+}
+
+function dedupeExactRows(rows) {
+  const seen = new Set();
+  const deduped = [];
+  let removed = 0;
+
+  rows.forEach((entry) => {
+    const key = JSON.stringify({
+      name: String(entry.name || "").trim(),
+      url: String(entry.url || "").trim(),
+      status: String(entry.status || "").trim(),
+      expected_any: normalizeLabelList(entry.expected_any),
+      expected_all: normalizeLabelList(entry.expected_all)
+    });
+    if (seen.has(key)) {
+      removed += 1;
+      return;
+    }
+    seen.add(key);
+    deduped.push(entry);
+  });
+
+  return { rows: deduped, removed };
+}
+
 function main() {
   const args = parseArgs(process.argv);
   const manifestPath = path.resolve(args.manifest);
   const completedPath = path.resolve(args.completed);
   const cacheDir = path.resolve(args.cacheDir);
   const outPath = path.resolve(args.out);
+  const defaultAppend = path.join("test", "benchmarks", "benchmark-manifest.supported-holdout.json");
+  const appendInput = [...args.appendManifests];
+  if (appendInput.length === 0 && fs.existsSync(path.resolve(defaultAppend))) {
+    appendInput.push(defaultAppend);
+  }
 
   if (!fs.existsSync(manifestPath)) {
     throw new Error(`Manifest not found: ${manifestPath}`);
@@ -179,7 +236,9 @@ function main() {
 
   const manifest = loadJson(manifestPath);
   const completedMap = loadCompletedMap(completedPath);
-  const images = Array.isArray(manifest.images) ? manifest.images : [];
+  const baseImages = Array.isArray(manifest.images) ? manifest.images : [];
+  const append = loadAppendImages(appendInput);
+  const images = baseImages.concat(append.images);
 
   const updated = [];
   let resolvedCount = 0;
@@ -261,15 +320,19 @@ function main() {
     updated.push(next);
   });
 
+  const dedupe = dedupeExactRows(updated);
+
   const output = {
     ...manifest,
     generated_at: new Date().toISOString(),
     source: {
       manifest: path.relative(process.cwd(), manifestPath),
+      append_manifests: append.loaded,
+      missing_append_manifests: append.missing,
       completed: fs.existsSync(completedPath) ? path.relative(process.cwd(), completedPath) : null,
       cache_dir: path.relative(process.cwd(), cacheDir)
     },
-    images: updated
+    images: dedupe.rows
   };
 
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
@@ -279,10 +342,14 @@ function main() {
   console.log(
     JSON.stringify(
       {
-        resolved: resolvedCount,
-        unresolved: unresolvedCount,
+        resolved: dedupe.rows.filter((entry) => String(entry.status || "").toLowerCase() === "ready").length,
+        unresolved: dedupe.rows.filter((entry) => String(entry.status || "").toLowerCase() !== "ready").length,
         downloaded: downloadedCount,
         copied_local: copiedCount,
+        deduped_exact_rows: dedupe.removed,
+        appended_images: append.images.length,
+        append_manifests: append.loaded,
+        missing_append_manifests: append.missing,
         output: path.relative(process.cwd(), outPath)
       },
       null,

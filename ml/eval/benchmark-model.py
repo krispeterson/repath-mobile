@@ -79,8 +79,41 @@ def infer_labels(interpreter, input_info, output_info, labels, image_path, thres
 
     interpreter.set_tensor(input_info["index"], arr)
     interpreter.invoke()
-    output = interpreter.get_tensor(output_info["index"])[0]
-    keep = output[output[:, 4] >= threshold]
+    output_tensor = np.asarray(interpreter.get_tensor(output_info["index"]))
+    if output_tensor.ndim == 3 and output_tensor.shape[0] == 1:
+        output = output_tensor[0]
+    elif output_tensor.ndim == 2:
+        output = output_tensor
+    elif output_tensor.ndim == 1 and output_tensor.size % 6 == 0:
+        output = output_tensor.reshape((-1, 6))
+    else:
+        raise ValueError(
+            f"Unsupported output tensor shape {tuple(output_tensor.shape)}. "
+            "Expected NMS detections with shape [1, N, 6] or [N, 6]."
+        )
+
+    if output.ndim != 2:
+        raise ValueError(
+            f"Unsupported output tensor rank after reshape: {output.ndim}. "
+            "Expected NMS detections with shape [N, 6]."
+        )
+
+    if output.shape[1] == 6:
+        detections_matrix = output
+    elif output.shape[0] == 6:
+        detections_matrix = output.T
+    elif output.shape[0] == 4 + len(labels):
+        raise ValueError(
+            f"Model appears to output raw YOLO head tensor {tuple(output_tensor.shape)} "
+            "(no integrated NMS). Re-export model with --nms."
+        )
+    else:
+        raise ValueError(
+            f"Unsupported detection layout {tuple(output_tensor.shape)}. "
+            "Expected NMS detections with 6 values per row: x1,y1,x2,y2,score,class_id."
+        )
+
+    keep = detections_matrix[detections_matrix[:, 4] >= threshold]
     keep = keep[np.argsort(-keep[:, 4])]
 
     detections = []

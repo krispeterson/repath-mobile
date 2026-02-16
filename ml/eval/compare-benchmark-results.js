@@ -46,6 +46,106 @@ function delta(a, b) {
   return Number((b - a).toFixed(4));
 }
 
+function normalizeLabels(value) {
+  if (!Array.isArray(value)) return [];
+  return value.map((entry) => String(entry || "").trim()).filter(Boolean).sort((a, b) => a.localeCompare(b));
+}
+
+function rowKey(row) {
+  return JSON.stringify({
+    name: String((row && row.name) || "").trim(),
+    url: String((row && row.url) || "").trim(),
+    expected_any: normalizeLabels(row && row.expected_any),
+    expected_all: normalizeLabels(row && row.expected_all)
+  });
+}
+
+function prStats(predictedLabels, expectedLabels) {
+  const pred = new Set(Array.isArray(predictedLabels) ? predictedLabels : []);
+  const exp = new Set(Array.isArray(expectedLabels) ? expectedLabels : []);
+  let tp = 0;
+  exp.forEach((label) => {
+    if (pred.has(label)) tp += 1;
+  });
+  const fp = pred.size - tp;
+  const fn = exp.size - tp;
+  return { tp, fp, fn };
+}
+
+function summarizeRows(rows) {
+  let tp = 0;
+  let fp = 0;
+  let fn = 0;
+  let anyCases = 0;
+  let anyHits = 0;
+  let negativeCases = 0;
+  let negativeClean = 0;
+
+  rows.forEach((row) => {
+    const expectedAny = normalizeLabels(row.expected_any);
+    const expectedAll = normalizeLabels(row.expected_all);
+    const predicted = normalizeLabels(row.predicted_labels);
+    const expectedSet = expectedAll.length ? expectedAll : expectedAny;
+
+    const stats = prStats(predicted, expectedSet);
+    tp += stats.tp;
+    fp += stats.fp;
+    fn += stats.fn;
+
+    if (expectedAny.length) {
+      anyCases += 1;
+      const predSet = new Set(predicted);
+      const hit = expectedAny.some((label) => predSet.has(label));
+      if (hit) anyHits += 1;
+    } else {
+      negativeCases += 1;
+      if (!predicted.length) negativeClean += 1;
+    }
+  });
+
+  const microPrecision = tp + fp > 0 ? tp / (tp + fp) : 0;
+  const microRecall = tp + fn > 0 ? tp / (tp + fn) : 0;
+  const anyHitRate = anyCases > 0 ? anyHits / anyCases : 0;
+  const negativeCleanRate = negativeCases > 0 ? negativeClean / negativeCases : 0;
+
+  return {
+    images_evaluated: rows.length,
+    micro_precision: Number(microPrecision.toFixed(4)),
+    micro_recall: Number(microRecall.toFixed(4)),
+    any_hit_rate: Number(anyHitRate.toFixed(4)),
+    negative_clean_rate: Number(negativeCleanRate.toFixed(4)),
+    tp,
+    fp,
+    fn
+  };
+}
+
+function buildComparison(beforeSummary, afterSummary) {
+  const fields = [
+    "images_evaluated",
+    "micro_precision",
+    "micro_recall",
+    "any_hit_rate",
+    "negative_clean_rate",
+    "tp",
+    "fp",
+    "fn",
+    "skipped_unsupported_entries"
+  ];
+
+  const out = {};
+  fields.forEach((field) => {
+    const before = toNumber(beforeSummary[field]);
+    const after = toNumber(afterSummary[field]);
+    out[field] = {
+      baseline: before,
+      candidate: after,
+      delta: delta(before, after)
+    };
+  });
+  return out;
+}
+
 function main() {
   const args = parseArgs(process.argv);
   const baselinePath = path.resolve(args.baseline);
@@ -64,34 +164,31 @@ function main() {
   const bs = baseline.summary || {};
   const cs = candidate.summary || {};
 
-  const fields = [
-    "images_evaluated",
-    "micro_precision",
-    "micro_recall",
-    "any_hit_rate",
-    "negative_clean_rate",
-    "tp",
-    "fp",
-    "fn",
-    "skipped_unsupported_entries"
-  ];
+  const comparison = buildComparison(bs, cs);
 
-  const comparison = {};
-  fields.forEach((field) => {
-    const before = toNumber(bs[field]);
-    const after = toNumber(cs[field]);
-    comparison[field] = {
-      baseline: before,
-      candidate: after,
-      delta: delta(before, after)
-    };
-  });
+  const baselineResults = Array.isArray(baseline.results) ? baseline.results : [];
+  const candidateResults = Array.isArray(candidate.results) ? candidate.results : [];
+  const baselineByKey = new Map(baselineResults.map((row) => [rowKey(row), row]));
+  const candidateByKey = new Map(candidateResults.map((row) => [rowKey(row), row]));
+  const overlapKeys = Array.from(baselineByKey.keys()).filter((key) => candidateByKey.has(key));
+
+  const baselineOverlapRows = overlapKeys.map((key) => baselineByKey.get(key));
+  const candidateOverlapRows = overlapKeys.map((key) => candidateByKey.get(key));
+  const baselineOverlapSummary = summarizeRows(baselineOverlapRows);
+  const candidateOverlapSummary = summarizeRows(candidateOverlapRows);
+  const overlapComparison = buildComparison(baselineOverlapSummary, candidateOverlapSummary);
 
   const out = {
     generated_at: new Date().toISOString(),
     baseline: path.relative(process.cwd(), baselinePath),
     candidate: path.relative(process.cwd(), candidatePath),
-    comparison
+    comparison,
+    overlap: {
+      rows: overlapKeys.length,
+      baseline_summary: baselineOverlapSummary,
+      candidate_summary: candidateOverlapSummary,
+      comparison: overlapComparison
+    }
   };
 
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
@@ -104,7 +201,8 @@ function main() {
         baseline: out.baseline,
         candidate: out.candidate,
         output: path.relative(process.cwd(), outPath),
-        metrics: comparison
+        metrics: comparison,
+        overlap_rows: overlapKeys.length
       },
       null,
       2

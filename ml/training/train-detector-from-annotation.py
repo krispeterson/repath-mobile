@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 import argparse
 import json
+import math
 import os
 import shutil
 import subprocess
 from datetime import datetime
+
+from PIL import Image
 
 try:
     from ultralytics import YOLO
@@ -39,7 +42,12 @@ def parse_args():
     parser.add_argument("--patience", type=int, default=20, help="Early stopping patience.")
     parser.add_argument("--project", default=os.path.join("ml", "artifacts", "training-runs"), help="Ultralytics project output root.")
     parser.add_argument("--name", default="", help="Ultralytics run name. Defaults to run-id.")
-    parser.add_argument("--nms", action="store_true", help="Enable NMS during TFLite export.")
+    parser.add_argument(
+        "--nms",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Enable NMS during TFLite export (default: true). Use --no-nms to disable.",
+    )
     parser.add_argument("--half", action="store_true", help="Enable FP16 during TFLite export.")
     parser.add_argument("--int8", action="store_true", help="Enable INT8 during TFLite export.")
     parser.add_argument("--fraction", type=float, default=None, help="Optional dataset fraction for INT8 calibration.")
@@ -50,6 +58,18 @@ def parse_args():
     )
     parser.add_argument("--run-id", default="", help="Candidate run id. Defaults to UTC timestamp.")
     parser.add_argument("--skip-validate", action="store_true", help="Skip strict annotation validation check.")
+    parser.add_argument(
+        "--max-image-pixels",
+        type=int,
+        default=8_000_000,
+        help="Downscale bundle images larger than this many pixels before training (0 disables).",
+    )
+    parser.add_argument(
+        "--max-image-dim",
+        type=int,
+        default=2048,
+        help="Downscale bundle images whose width/height exceed this size before training (0 disables).",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Emit metadata only; do not train/export.")
     return parser.parse_args()
 
@@ -105,6 +125,74 @@ def copy_file(src, dst):
     shutil.copy2(src, dst)
 
 
+def downscale_bundle_images(bundle_dir, max_pixels, max_dim):
+    images_dir = os.path.join(bundle_dir, "images")
+    summary = {
+        "enabled": bool((max_pixels and max_pixels > 0) or (max_dim and max_dim > 0)),
+        "max_image_pixels": max_pixels,
+        "max_image_dim": max_dim,
+        "images_scanned": 0,
+        "images_downscaled": 0,
+        "images_failed": 0,
+        "downscaled_examples": [],
+    }
+    if not summary["enabled"]:
+        return summary
+    if not os.path.isdir(images_dir):
+        return summary
+
+    valid_ext = {".jpg", ".jpeg", ".png", ".webp"}
+    for name in sorted(os.listdir(images_dir)):
+        image_path = os.path.join(images_dir, name)
+        if not os.path.isfile(image_path):
+            continue
+        ext = os.path.splitext(name)[1].lower()
+        if ext not in valid_ext:
+            continue
+        summary["images_scanned"] += 1
+        try:
+            with Image.open(image_path) as src:
+                width, height = src.size
+                pixels = width * height
+
+                scale = 1.0
+                if max_pixels and max_pixels > 0 and pixels > max_pixels:
+                    scale = min(scale, math.sqrt(float(max_pixels) / float(pixels)))
+                if max_dim and max_dim > 0:
+                    max_current_dim = max(width, height)
+                    if max_current_dim > max_dim:
+                        scale = min(scale, float(max_dim) / float(max_current_dim))
+
+                if scale >= 0.999:
+                    continue
+
+                new_w = max(1, int(round(width * scale)))
+                new_h = max(1, int(round(height * scale)))
+                resample_lanczos = Image.Resampling.LANCZOS if hasattr(Image, "Resampling") else Image.LANCZOS
+                resized = src.resize((new_w, new_h), resample_lanczos)
+
+                save_kwargs = {}
+                if ext in {".jpg", ".jpeg"}:
+                    save_kwargs = {"quality": 90, "optimize": True}
+                elif ext == ".png":
+                    save_kwargs = {"optimize": True}
+
+                resized.save(image_path, **save_kwargs)
+                summary["images_downscaled"] += 1
+                if len(summary["downscaled_examples"]) < 10:
+                    summary["downscaled_examples"].append(
+                        {
+                            "file": os.path.relpath(image_path, os.getcwd()),
+                            "before": [width, height],
+                            "after": [new_w, new_h],
+                        }
+                    )
+        except Exception:
+            summary["images_failed"] += 1
+
+    return summary
+
+
 def export_tflite(best_pt_path, args, dataset_yaml):
     export_model = YOLO(best_pt_path)
     export_kwargs = {
@@ -142,6 +230,20 @@ def main():
         code = run_validation(bundle_dir)
         if code != 0:
             raise SystemExit("Strict annotation validation failed. Complete labels before training or pass --skip-validate.")
+
+    preprocess_summary = downscale_bundle_images(bundle_dir, args.max_image_pixels, args.max_image_dim)
+    if preprocess_summary["enabled"]:
+        print("Bundle image preprocessing complete")
+        print(
+            json.dumps(
+                {
+                    "images_scanned": preprocess_summary["images_scanned"],
+                    "images_downscaled": preprocess_summary["images_downscaled"],
+                    "images_failed": preprocess_summary["images_failed"],
+                },
+                indent=2,
+            )
+        )
 
     run_id = args.run_id or datetime.utcnow().strftime("%Y%m%d-%H%M%S")
     candidate_dir = os.path.abspath(os.path.join(args.candidate_root, run_id))
@@ -204,6 +306,7 @@ def main():
             "dir": os.path.relpath(bundle_dir, os.getcwd()),
             "dataset_yaml": os.path.relpath(dataset_yaml, os.getcwd()),
             "class_count": len(labels),
+            "preprocessing": preprocess_summary,
         },
         "training": {
             "base_model": args.model,
