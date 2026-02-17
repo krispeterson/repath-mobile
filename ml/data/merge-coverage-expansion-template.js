@@ -3,7 +3,7 @@ const { spawnSync } = require("child_process");
 
 const result = spawnSync(
   "node",
-  ["scripts/run-python.js", "../repath-model/scripts/merge_coverage_expansion_template.py", ...process.argv.slice(2)],
+  ["scripts/run-python.js", "../repath-model/scripts/data/merge_coverage_expansion_template.py", ...process.argv.slice(2)],
   { stdio: "inherit", cwd: process.cwd(), env: process.env }
 );
 

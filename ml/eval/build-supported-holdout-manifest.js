@@ -3,7 +3,7 @@ const { spawnSync } = require("child_process");
 
 const result = spawnSync(
   "node",
-  ["scripts/run-python.js", "../repath-model/scripts/build_supported_holdout_manifest.py", ...process.argv.slice(2)],
+  ["scripts/run-python.js", "../repath-model/scripts/evaluation/build_supported_holdout_manifest.py", ...process.argv.slice(2)],
   { stdio: "inherit", cwd: process.cwd(), env: process.env }
 );
 
