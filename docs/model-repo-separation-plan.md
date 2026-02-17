@@ -12,11 +12,12 @@ It consumes versioned model releases from `repath-model` and does not run model 
 - Add an explicit handoff command (`npm run ml:workspace`) that points contributors to `repath-model`.
 - Update `README.md` and `assets/models/README.md` to reflect consumer-only behavior.
 
-## Phase 2 (next)
+## Phase 2 (implemented)
 
 - Remove legacy `ml/` training/eval/data wrapper directories from `repath-mobile`.
 - Move any remaining benchmark/training-only docs from `repath-mobile/ml/README.md` into `repath-model` docs.
-- Keep only runtime model metadata in `repath-mobile/assets/models`.
+- Keep model pull/integration docs in `repath-mobile/assets/models/README.md` and move training workflow docs to `repath-model`.
+- Remaining historical training artifacts under `repath-mobile/ml/artifacts` can be relocated in a follow-up pass.
 
 ## Phase 3 (release contract hardening)
 
