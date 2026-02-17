@@ -5,6 +5,12 @@ We run YOLOv8 in TFLite format for real-time inference. The app loads:
 - `yolo-repath.tflite` (model weights)
 - `yolo-repath.labels.json` (array of class labels matching model indices)
 
+Preferred path: pull a semantically versioned model release from `krispeterson/repath-model`:
+```bash
+npm run pull:model:release
+```
+To lock/update source version, edit `assets/models/model-release.json`.
+
 You only need to do the export steps below if you want to:
 - swap to a different YOLOv8 variant,
 - use custom classes, or

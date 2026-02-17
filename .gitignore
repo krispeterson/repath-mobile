@@ -48,6 +48,8 @@ ml/artifacts/
 assets/models/*
 !assets/models/README.md
 !assets/models/yolo-repath.labels.json
+!assets/models/model-release.json
+!assets/models/active-model.release.json
 !assets/models/poc-curbside.classes.json
 !assets/models/poc-curbside.classes.txt
 !assets/models/poc-curbside.label-map.json
