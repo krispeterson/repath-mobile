@@ -17,6 +17,12 @@ This command pulls a published GitHub release from `krispeterson/repath-model` a
 - `assets/models/yolo-repath.release-manifest.json` (if present)
 - `assets/models/active-model.release.json`
 
+By default, the pull command verifies SHA256 checksums for model and labels against the release manifest.
+If you need to pull a legacy release without a manifest, you can bypass verification:
+```bash
+npm run pull:model:release -- --skip-verify
+```
+
 ## Version pinning
 
 Configure the default source in `assets/models/model-release.json`.

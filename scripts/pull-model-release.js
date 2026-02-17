@@ -3,12 +3,13 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 const http = require("http");
+const crypto = require("crypto");
 
 const MODEL_BASENAME = "yolo-repath";
 
 function usage() {
   console.log(
-    "Usage: node scripts/pull-model-release.js [--version 1.2.3|v1.2.3|latest] [--repo krispeterson/repath-model] [--out-dir assets/models] [--config assets/models/model-release.json]"
+    "Usage: node scripts/pull-model-release.js [--version 1.2.3|v1.2.3|latest] [--repo krispeterson/repath-model] [--out-dir assets/models] [--config assets/models/model-release.json] [--skip-verify]"
   );
 }
 
@@ -18,6 +19,7 @@ function parseArgs(argv) {
     repo: "",
     outDir: path.join("assets", "models"),
     config: path.join("assets", "models", "model-release.json"),
+    skipVerify: false,
   };
 
   for (let i = 2; i < argv.length; i += 1) {
@@ -30,6 +32,8 @@ function parseArgs(argv) {
       args.outDir = argv[++i];
     } else if (arg === "--config") {
       args.config = argv[++i];
+    } else if (arg === "--skip-verify") {
+      args.skipVerify = true;
     } else if (arg === "--help" || arg === "-h") {
       usage();
       process.exit(0);
@@ -119,7 +123,7 @@ async function requestJson(url, token) {
   return JSON.parse(String(res.body));
 }
 
-async function downloadToFile(url, outPath, token) {
+async function downloadBytes(url, token) {
   const headers = {
     "User-Agent": "repath-mobile-model-puller",
     Accept: "application/octet-stream",
@@ -131,8 +135,12 @@ async function downloadToFile(url, outPath, token) {
     throw new Error(`Download failed (${res.status}) for ${url}`);
   }
 
+  return res.body;
+}
+
+function writeFile(outPath, contents) {
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
-  fs.writeFileSync(outPath, res.body);
+  fs.writeFileSync(outPath, contents);
 }
 
 function findAsset(assets, names) {
@@ -163,6 +171,50 @@ async function resolveRelease(repo, version, token) {
     }
     throw error;
   }
+}
+
+function sha256Of(buffer) {
+  return crypto.createHash("sha256").update(buffer).digest("hex");
+}
+
+function parseManifest(buffer, manifestPathForError) {
+  try {
+    return JSON.parse(String(buffer));
+  } catch (error) {
+    throw new Error(`Invalid release manifest JSON (${manifestPathForError}): ${error.message}`);
+  }
+}
+
+function normalizeHex(value) {
+  return String(value || "").trim().toLowerCase();
+}
+
+function findManifestArtifact(manifest, filename) {
+  const artifacts = Array.isArray(manifest && manifest.artifacts) ? manifest.artifacts : [];
+  return artifacts.find((artifact) => artifact && artifact.filename === filename) || null;
+}
+
+function verifyManifestChecksum(manifest, releaseAssetName, bytes, label) {
+  const artifact = findManifestArtifact(manifest, releaseAssetName);
+  if (!artifact) {
+    throw new Error(`Release manifest is missing checksum entry for ${label} asset: ${releaseAssetName}`);
+  }
+
+  const expected = normalizeHex(artifact.sha256);
+  if (!expected) {
+    throw new Error(`Release manifest checksum entry for ${releaseAssetName} is missing sha256.`);
+  }
+
+  const actual = sha256Of(bytes);
+  if (actual !== expected) {
+    throw new Error(`Checksum mismatch for ${label} asset ${releaseAssetName}. Expected ${expected}, got ${actual}.`);
+  }
+
+  return {
+    filename: releaseAssetName,
+    sha256: actual,
+    bytes: bytes.length,
+  };
 }
 
 async function main() {
@@ -199,10 +251,42 @@ async function main() {
   const manifestOut = path.join(outDir, `${MODEL_BASENAME}.release-manifest.json`);
   const metadataOut = path.join(outDir, "active-model.release.json");
 
-  await downloadToFile(modelAsset.browser_download_url, modelOut, token);
-  await downloadToFile(labelsAsset.browser_download_url, labelsOut, token);
+  const modelBytes = await downloadBytes(modelAsset.browser_download_url, token);
+  const labelsBytes = await downloadBytes(labelsAsset.browser_download_url, token);
+
+  let manifestBytes = null;
+  let manifest = null;
+  let verification = {
+    enabled: !args.skipVerify,
+    manifest_required: !args.skipVerify,
+    manifest_present: false,
+    verified: false,
+    model: null,
+    labels: null,
+  };
+
   if (manifestAsset && manifestAsset.browser_download_url) {
-    await downloadToFile(manifestAsset.browser_download_url, manifestOut, token);
+    manifestBytes = await downloadBytes(manifestAsset.browser_download_url, token);
+    verification.manifest_present = true;
+    manifest = parseManifest(manifestBytes, manifestAsset.name);
+  }
+
+  if (!args.skipVerify) {
+    if (!manifest) {
+      throw new Error(
+        `Release manifest asset is required for checksum verification. Missing in release ${tag}. Re-run with --skip-verify only if you trust this source.`
+      );
+    }
+
+    verification.model = verifyManifestChecksum(manifest, modelAsset.name, modelBytes, "model");
+    verification.labels = verifyManifestChecksum(manifest, labelsAsset.name, labelsBytes, "labels");
+    verification.verified = true;
+  }
+
+  writeFile(modelOut, modelBytes);
+  writeFile(labelsOut, labelsBytes);
+  if (manifestBytes) {
+    writeFile(manifestOut, manifestBytes);
   }
 
   const metadata = {
@@ -218,6 +302,7 @@ async function main() {
     manifest_path: fs.existsSync(manifestOut)
       ? path.relative(process.cwd(), manifestOut).split(path.sep).join("/")
       : null,
+    verification,
   };
 
   fs.writeFileSync(metadataOut, `${JSON.stringify(metadata, null, 2)}\n`, "utf8");

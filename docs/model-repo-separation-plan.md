@@ -27,6 +27,10 @@ It consumes versioned model releases from `repath-model` and does not run model 
   - optional model metadata fields.
 - Add a lightweight verification step in `repath-mobile` after pull (manifest + checksum validation).
 
+Status:
+- In progress: `repath-mobile/scripts/pull-model-release.js` now verifies model/labels checksums against the release manifest by default.
+- Next: enforce full contract consistency across all published releases and add compatibility/versioning notes for consumers.
+
 ## Phase 4 (shared consumer path)
 
 - Extract a reusable release-consumer script/library so non-RePath apps can pull model releases consistently.

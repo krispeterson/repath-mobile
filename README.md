@@ -90,6 +90,7 @@ Install guidance (network required):
    ```bash
    npm run pull:model:release
    ```
+   This verifies model checksums against the release manifest by default.
 3) Create a development build (required for VisionCamera + TFLite):
    ```bash
    npm run prebuild
