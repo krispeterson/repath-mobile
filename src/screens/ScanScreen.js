@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { View, Text, Pressable, ScrollView, Image, Linking, ActivityIndicator } from "react-native";
 import { Camera } from "react-native-vision-camera";
-import { CAMERA_FPS } from "../domain/scan";
+import { CAMERA_FPS, SHOW_DETECTION_BOXES_DEBUG } from "../domain/scan";
 import { resolveLocationDetails } from "../domain/pack";
 import { colors, spacing, radius, type } from "../ui/theme";
 
@@ -43,6 +43,7 @@ export default function ScanScreen({
   const [previewLayout, setPreviewLayout] = useState({ width: 0, height: 0 });
 
   const overlay = useMemo(() => {
+    if (!SHOW_DETECTION_BOXES_DEBUG) return null;
     if (!captureUri || !scanDetections?.length) return null;
     const width = previewLayout.width;
     const height = previewLayout.height;
@@ -92,27 +93,27 @@ export default function ScanScreen({
           setPreviewLayout({ width, height });
         }}
       >
-        {device ? (
+        {device && !captureUri ? (
           <Camera
             ref={cameraRef}
             style={{ flex: 1 }}
             device={device}
-            isActive={scanActive}
+            isActive={scanActive && !captureUri}
             frameProcessor={frameProcessor}
             frameProcessorFps={CAMERA_FPS}
             pixelFormat="rgb"
             enableZoomGesture
             photo
           />
-        ) : (
+        ) : !captureUri ? (
           <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
             <Text style={{ color: colors.white }}>No camera available.</Text>
           </View>
-        )}
+        ) : null}
         {captureUri ? (
           <Image source={{ uri: captureUri }} style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }} resizeMode="contain" />
         ) : null}
-        {overlay}
+        {SHOW_DETECTION_BOXES_DEBUG ? overlay : null}
       </View>
 
       {isProcessing ? (

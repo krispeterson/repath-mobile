@@ -65,6 +65,8 @@ Requirements:
 - Development build (VisionCamera + TFLite are native modules; not supported in Expo Go).
 - Generate `assets/models/yolo-repath.tflite` and `assets/models/yolo-repath.labels.json` locally (see `assets/models/README.md`).
   - For YOLO-World custom vocab, see the class list extraction + export steps in `assets/models/README.md`.
+- Detection boxes are hidden by default. For local debugging, set:
+  - `EXPO_PUBLIC_SHOW_DETECTION_BOXES=1`
 
 Dependencies used:
 - `react-native-vision-camera`

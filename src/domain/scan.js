@@ -1,6 +1,7 @@
 export const CAMERA_FPS = 1;
 export const YOLO_INPUT = 640;
 export const YOLO_SCORE_THRESHOLD = 0.35;
+export const SHOW_DETECTION_BOXES_DEBUG = process.env.EXPO_PUBLIC_SHOW_DETECTION_BOXES === "1";
 
 export function resizeFrameToRgb(frame, targetWidth, targetHeight, swapRB) {
   "worklet";
