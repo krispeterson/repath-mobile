@@ -248,7 +248,7 @@ def main():
     run_id = args.run_id or datetime.utcnow().strftime("%Y%m%d-%H%M%S")
     candidate_dir = os.path.abspath(os.path.join(args.candidate_root, run_id))
     labels = load_classes(bundle_dir)
-    labels_path = os.path.join(candidate_dir, "yolov8.labels.json")
+    labels_path = os.path.join(candidate_dir, "yolo-repath.labels.json")
     metadata_path = os.path.join(candidate_dir, "metadata.json")
 
     os.makedirs(candidate_dir, exist_ok=True)
@@ -292,7 +292,7 @@ def main():
                 raise SystemExit("Training finished but no weights found.")
 
         exported = export_tflite(trained_best_pt, args, dataset_yaml)
-        tflite_path = os.path.join(candidate_dir, "yolov8.tflite")
+        tflite_path = os.path.join(candidate_dir, "yolo-repath.tflite")
         copy_file(exported, tflite_path)
         copy_file(trained_best_pt, os.path.join(candidate_dir, "model.best.pt"))
         if os.path.exists(trained_last_pt):

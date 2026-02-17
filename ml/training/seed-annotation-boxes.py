@@ -24,8 +24,16 @@ def parse_args():
         default=os.path.join("ml", "artifacts", "retraining", "annotation-bundle"),
         help="Root folder containing bundle runs.",
     )
-    parser.add_argument("--model", default=os.path.join("assets", "models", "yolov8.tflite"), help="TFLite model path.")
-    parser.add_argument("--labels", default=os.path.join("assets", "models", "yolov8.labels.json"), help="Model label JSON array.")
+    parser.add_argument(
+        "--model",
+        default=os.path.join("assets", "models", "yolo-repath.tflite"),
+        help="TFLite model path.",
+    )
+    parser.add_argument(
+        "--labels",
+        default=os.path.join("assets", "models", "yolo-repath.labels.json"),
+        help="Model label JSON array.",
+    )
     parser.add_argument("--threshold", type=float, default=0.30, help="Detection confidence threshold.")
     parser.add_argument("--topk", type=int, default=10, help="Top detections to inspect per image.")
     parser.add_argument("--overwrite", action="store_true", help="Overwrite existing positive label files.")
@@ -167,6 +175,14 @@ def main():
 
     model_path = os.path.abspath(args.model)
     labels_path = os.path.abspath(args.labels)
+    if not os.path.exists(model_path) and model_path.endswith("yolo-repath.tflite"):
+        legacy_model = model_path.replace("yolo-repath.tflite", "yolov8.tflite")
+        if os.path.exists(legacy_model):
+            model_path = legacy_model
+    if not os.path.exists(labels_path) and labels_path.endswith("yolo-repath.labels.json"):
+        legacy_labels = labels_path.replace("yolo-repath.labels.json", "yolov8.labels.json")
+        if os.path.exists(legacy_labels):
+            labels_path = legacy_labels
     if not os.path.exists(model_path):
         raise SystemExit(f"Model not found: {model_path}")
     if not os.path.exists(labels_path):

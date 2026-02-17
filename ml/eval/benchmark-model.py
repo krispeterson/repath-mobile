@@ -12,8 +12,8 @@ import tensorflow as tf
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Benchmark a TFLite detection model against a fixed image manifest.")
-    parser.add_argument("--model", default="assets/models/yolov8.tflite", help="Path to .tflite model")
-    parser.add_argument("--labels", default="assets/models/yolov8.labels.json", help="Path to label JSON array")
+    parser.add_argument("--model", default="assets/models/yolo-repath.tflite", help="Path to .tflite model")
+    parser.add_argument("--labels", default="assets/models/yolo-repath.labels.json", help="Path to label JSON array")
     parser.add_argument("--manifest", default="test/benchmarks/benchmark-manifest.seed.json", help="Benchmark manifest JSON")
     parser.add_argument("--cache-dir", default="test/benchmarks/images", help="Where benchmark images are cached")
     parser.add_argument("--out", default="test/benchmarks/latest-results.json", help="Where to write benchmark results")
@@ -146,6 +146,15 @@ def pr_stats(predicted_labels, expected_labels):
 
 def main():
     args = parse_args()
+    if not Path(args.model).exists() and str(args.model).endswith("yolo-repath.tflite"):
+        legacy_model = str(args.model).replace("yolo-repath.tflite", "yolov8.tflite")
+        if Path(legacy_model).exists():
+            args.model = legacy_model
+    if not Path(args.labels).exists() and str(args.labels).endswith("yolo-repath.labels.json"):
+        legacy_labels = str(args.labels).replace("yolo-repath.labels.json", "yolov8.labels.json")
+        if Path(legacy_labels).exists():
+            args.labels = legacy_labels
+
     labels = json.loads(Path(args.labels).read_text(encoding="utf-8"))
     if not isinstance(labels, list):
         raise ValueError("Labels file must be a JSON array.")

@@ -4,7 +4,7 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import * as Location from "expo-location";
 import { useCameraDevice, useCameraPermission } from "react-native-vision-camera";
 import { useTensorflowModel } from "react-native-fast-tflite";
-import yoloLabels from "../assets/models/yolov8.labels.json";
+import yoloLabels from "../assets/models/yolo-repath.labels.json";
 import { OnboardScreen, ZipScreen } from "./components";
 import { colors, spacing } from "./ui/theme";
 import { HomeScreen, ScanScreen } from "./screens";
@@ -48,7 +48,7 @@ export default function App() {
   const { hasPermission, requestPermission } = useCameraPermission();
   const device = useCameraDevice("back");
   const cameraRef = useRef(null);
-  const model = useTensorflowModel(require("../assets/models/yolov8.tflite"));
+  const model = useTensorflowModel(require("../assets/models/yolo-repath.tflite"));
 
   useEffect(() => {
     if (model.state === "loaded") {
@@ -156,7 +156,7 @@ export default function App() {
     }
 
     if (model.state !== "loaded") {
-      setScanError("Model not loaded. Ensure yolov8.tflite is bundled.");
+      setScanError("Model not loaded. Ensure yolo-repath.tflite is bundled.");
       return;
     }
     debugLogModel();
@@ -231,7 +231,7 @@ export default function App() {
 
   async function runDetectionOnImage(uri) {
     if (!model || model.state !== "loaded" || !model.model) {
-      setScanError("Model not loaded. Ensure yolov8.tflite is bundled.");
+      setScanError("Model not loaded. Ensure yolo-repath.tflite is bundled.");
       return;
     }
     setIsProcessing(true);

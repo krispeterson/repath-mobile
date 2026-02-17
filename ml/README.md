@@ -200,7 +200,7 @@ The compare output includes both:
 - `comparison`: raw baseline vs candidate summaries (can differ in evaluated rows if label support differs).
 - `overlap.comparison`: apples-to-apples metrics on the intersection of rows evaluated by both runs.
 
-To promote the benchmarked candidate into app runtime assets (`assets/models/yolov8.tflite` + labels):
+To promote the benchmarked candidate into app runtime assets (`assets/models/yolo-repath.tflite` + labels):
 ```bash
 npm run promote:model:candidate
 ```

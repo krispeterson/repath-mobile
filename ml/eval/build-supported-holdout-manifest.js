@@ -4,7 +4,7 @@ const path = require("path");
 
 function usage() {
   console.log(
-    "Usage: node ml/eval/build-supported-holdout-manifest.js [--labels ml/artifacts/models/candidates/<run-id>/yolov8.labels.json] [--candidates-root ml/artifacts/models/candidates] [--kaggle-dir /path/to/kaggle/images/images] [--input-csv test/benchmarks/benchmark-labeled.csv] [--manual-seed test/benchmarks/benchmark-supported-holdout-overrides.seed.json] [--retraining-manifest ml/artifacts/retraining/retraining-manifest.json] [--cache-dir test/benchmarks/images/supported-holdout] [--per-label 3] [--no-download] [--out test/benchmarks/benchmark-manifest.supported-holdout.json]"
+    "Usage: node ml/eval/build-supported-holdout-manifest.js [--labels ml/artifacts/models/candidates/<run-id>/yolo-repath.labels.json] [--candidates-root ml/artifacts/models/candidates] [--kaggle-dir /path/to/kaggle/images/images] [--input-csv test/benchmarks/benchmark-labeled.csv] [--manual-seed test/benchmarks/benchmark-supported-holdout-overrides.seed.json] [--retraining-manifest ml/artifacts/retraining/retraining-manifest.json] [--cache-dir test/benchmarks/images/supported-holdout] [--per-label 3] [--no-download] [--out test/benchmarks/benchmark-manifest.supported-holdout.json]"
   );
 }
 
@@ -86,8 +86,10 @@ function resolveLatestCandidateLabels(candidatesRoot) {
     .sort((a, b) => fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs);
 
   for (const dir of dirs) {
-    const labelsPath = path.join(dir, "yolov8.labels.json");
-    if (fs.existsSync(labelsPath)) return labelsPath;
+    const preferred = path.join(dir, "yolo-repath.labels.json");
+    const legacy = path.join(dir, "yolov8.labels.json");
+    if (fs.existsSync(preferred)) return preferred;
+    if (fs.existsSync(legacy)) return legacy;
   }
   return "";
 }

@@ -47,7 +47,7 @@ ml/artifacts/
 # Local model exports (generated)
 assets/models/*
 !assets/models/README.md
-!assets/models/yolov8.labels.json
+!assets/models/yolo-repath.labels.json
 !assets/models/poc-curbside.classes.json
 !assets/models/poc-curbside.classes.txt
 !assets/models/poc-curbside.label-map.json

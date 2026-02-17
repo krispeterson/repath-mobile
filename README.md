@@ -63,7 +63,7 @@ labels to pack items via the bundled search index.
 
 Requirements:
 - Development build (VisionCamera + TFLite are native modules; not supported in Expo Go).
-- Generate `assets/models/yolov8.tflite` and `assets/models/yolov8.labels.json` locally (see `assets/models/README.md`).
+- Generate `assets/models/yolo-repath.tflite` and `assets/models/yolo-repath.labels.json` locally (see `assets/models/README.md`).
   - For YOLO-World custom vocab, see the class list extraction + export steps in `assets/models/README.md`.
 
 Dependencies used:
@@ -181,7 +181,7 @@ Use `--strict-network` to fail fast on network errors.
   - Use a development build; VisionCamera + TFLite are native modules and do not run in Expo Go.
 
 - **`Model not loaded` error**
-  - Ensure `assets/models/yolov8.tflite` exists and is not empty.
+  - Ensure `assets/models/yolo-repath.tflite` exists and is not empty.
   - Restart Metro after adding the model so it gets bundled.
 
 - **`python3` still points to Python 3.9**
@@ -196,7 +196,7 @@ Use `--strict-network` to fail fast on network errors.
   - Confirm you are using Python 3.11 inside the venv.
 
 - **Poor detection accuracy**
-  - Confirm your labels in `yolov8.labels.json` match the model classes.
+  - Confirm your labels in `yolo-repath.labels.json` match the model classes.
   - Verify the model input size in `src/App.js` matches your exported model size.
 
 - **Metro doesn't bundle .tflite**

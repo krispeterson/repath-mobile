@@ -37,7 +37,7 @@ def parse_args():
     parser.add_argument(
         "--out-dir",
         default=os.path.join("assets", "models"),
-        help="Output directory for yolov8.tflite and labels",
+        help="Output directory for yolo-repath.tflite and labels",
     )
     return parser.parse_args()
 
@@ -101,7 +101,7 @@ def main():
                 raise SystemExit("Export failed or output not found.")
 
             os.makedirs(out_dir, exist_ok=True)
-            tflite_out = os.path.join(out_dir, "yolov8.tflite")
+            tflite_out = os.path.join(out_dir, "yolo-repath.tflite")
             shutil.copy2(export_path, tflite_out)
 
             if class_list:
@@ -113,7 +113,7 @@ def main():
                 else:
                     label_list = list(labels)
 
-            labels_out = os.path.join(out_dir, "yolov8.labels.json")
+            labels_out = os.path.join(out_dir, "yolo-repath.labels.json")
             with open(labels_out, "w", encoding="utf-8") as handle:
                 json.dump(label_list, handle, indent=2)
                 handle.write("\n")

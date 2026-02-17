@@ -2,8 +2,8 @@
 
 This folder holds the on-device model assets used by the camera scan flow.
 We run YOLOv8 in TFLite format for real-time inference. The app loads:
-- `yolov8.tflite` (model weights)
-- `yolov8.labels.json` (array of class labels matching model indices)
+- `yolo-repath.tflite` (model weights)
+- `yolo-repath.labels.json` (array of class labels matching model indices)
 
 You only need to do the export steps below if you want to:
 - swap to a different YOLOv8 variant,
@@ -76,8 +76,8 @@ node scripts/run-python.js scripts/fetch-yolov8n-tflite.py \
   --out-dir assets/models
 ```
 
-The helper script copies the exported `.tflite` into `assets/models/yolov8.tflite` and
-writes `assets/models/yolov8.labels.json`. Manual copy is not required if you use the helper.
+The helper script copies the exported `.tflite` into `assets/models/yolo-repath.tflite` and
+writes `assets/models/yolo-repath.labels.json`. Manual copy is not required if you use the helper.
 
 Notes:
 - The app assumes a 640x640 input. If you export with a different size, update `src/domain/scan.js`.
@@ -170,13 +170,13 @@ npm run fetch:model -- \
   --out-dir assets/models
 ```
 
-The `--classes` file is also used to write `assets/models/yolov8.labels.json`, so
+The `--classes` file is also used to write `assets/models/yolo-repath.labels.json`, so
 label ordering stays in sync.
 
 ## Label alignment
 This app assumes the model uses the standard COCO-80 label order (the default for Ultralytics `yolov8n.pt`).
 If labels and model are out of sync, detections will look confident but wrong.
-Always regenerate `yolov8.labels.json` with the same export script that produced `yolov8.tflite`.
+Always regenerate `yolo-repath.labels.json` with the same export script that produced `yolo-repath.tflite`.
 
 ## Troubleshooting
 

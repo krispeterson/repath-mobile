@@ -68,6 +68,14 @@ function runStep(label, cmd, args) {
   }
 }
 
+function resolveCandidateArtifact(candidateDir, names) {
+  for (const name of names) {
+    const fullPath = path.join(candidateDir, name);
+    if (fs.existsSync(fullPath)) return fullPath;
+  }
+  return "";
+}
+
 function main() {
   const args = parseArgs(process.argv);
   const candidateDir = args.candidateDir
@@ -78,17 +86,19 @@ function main() {
     throw new Error("Candidate directory not found. Run export candidate model first.");
   }
 
-  const modelPath = path.join(candidateDir, "yolov8.tflite");
-  const labelsPath = path.join(candidateDir, "yolov8.labels.json");
+  const modelPath = resolveCandidateArtifact(candidateDir, ["yolo-repath.tflite", "yolov8.tflite"]);
+  const labelsPath = resolveCandidateArtifact(candidateDir, ["yolo-repath.labels.json", "yolov8.labels.json"]);
   const outPath = path.resolve(args.out);
   const analysisOut = outPath.replace(/\.json$/i, ".analysis.json");
   const priorityCsvOut = outPath.replace(/\.json$/i, ".priority.csv");
 
-  if (!fs.existsSync(modelPath)) {
-    throw new Error(`Candidate model not found: ${modelPath}`);
+  if (!modelPath) {
+    throw new Error(`Candidate model not found in ${candidateDir} (expected yolo-repath.tflite or yolov8.tflite).`);
   }
-  if (!fs.existsSync(labelsPath)) {
-    throw new Error(`Candidate labels not found: ${labelsPath}`);
+  if (!labelsPath) {
+    throw new Error(
+      `Candidate labels not found in ${candidateDir} (expected yolo-repath.labels.json or yolov8.labels.json).`
+    );
   }
 
   const benchmarkArgs = [

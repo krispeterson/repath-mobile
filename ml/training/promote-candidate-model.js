@@ -4,7 +4,7 @@ const path = require("path");
 
 function usage() {
   console.log(
-    "Usage: node ml/training/promote-candidate-model.js [--candidate-dir ml/artifacts/models/candidates/<run-id>] [--candidate-id <run-id>] [--from-analysis test/benchmarks/latest-results.candidate.analysis.json] [--candidates-root ml/artifacts/models/candidates] [--assets-dir assets/models] [--prefix yolov8] [--write-metadata] [--metadata-path ml/artifacts/models/active-model.json] [--dry-run]"
+    "Usage: node ml/training/promote-candidate-model.js [--candidate-dir ml/artifacts/models/candidates/<run-id>] [--candidate-id <run-id>] [--from-analysis test/benchmarks/latest-results.candidate.analysis.json] [--candidates-root ml/artifacts/models/candidates] [--assets-dir assets/models] [--prefix yolo-repath] [--write-metadata] [--metadata-path ml/artifacts/models/active-model.json] [--dry-run]"
   );
 }
 
@@ -15,7 +15,7 @@ function parseArgs(argv) {
     fromAnalysis: "",
     candidatesRoot: path.join("ml", "artifacts", "models", "candidates"),
     assetsDir: path.join("assets", "models"),
-    prefix: "yolov8",
+    prefix: "yolo-repath",
     writeMetadata: false,
     metadataPath: path.join("ml", "artifacts", "models", "active-model.json"),
     dryRun: false,
@@ -115,6 +115,14 @@ function fileSizeIfExists(filePath) {
   }
 }
 
+function resolveCandidateArtifact(candidateDir, names) {
+  for (const name of names) {
+    const fullPath = path.join(candidateDir, name);
+    if (fs.existsSync(fullPath)) return fullPath;
+  }
+  return "";
+}
+
 function main() {
   const args = parseArgs(process.argv);
   const candidatesRoot = path.resolve(args.candidatesRoot);
@@ -137,8 +145,17 @@ function main() {
     throw new Error("Candidate directory not found. Provide --candidate-dir or create candidate artifacts first.");
   }
 
-  const modelSrc = path.join(candidateDir, "yolov8.tflite");
-  const labelsSrc = path.join(candidateDir, "yolov8.labels.json");
+  const modelSrc = resolveCandidateArtifact(candidateDir, ["yolo-repath.tflite", "yolov8.tflite"]);
+  const labelsSrc = resolveCandidateArtifact(candidateDir, ["yolo-repath.labels.json", "yolov8.labels.json"]);
+
+  if (!modelSrc) {
+    throw new Error(`Candidate model not found in ${candidateDir} (expected yolo-repath.tflite or yolov8.tflite).`);
+  }
+  if (!labelsSrc) {
+    throw new Error(
+      `Candidate labels not found in ${candidateDir} (expected yolo-repath.labels.json or yolov8.labels.json).`
+    );
+  }
 
   const assetsDir = path.resolve(args.assetsDir);
   const modelDst = path.join(assetsDir, `${args.prefix}.tflite`);

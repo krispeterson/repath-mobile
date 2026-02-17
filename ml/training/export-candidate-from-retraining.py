@@ -23,7 +23,7 @@ def parse_args():
     )
     parser.add_argument(
         "--base-labels",
-        default=os.path.join("assets", "models", "yolov8.labels.json"),
+        default=os.path.join("assets", "models", "yolo-repath.labels.json"),
         help="Existing model labels to merge with retraining labels",
     )
     parser.add_argument(
@@ -110,7 +110,12 @@ def load_retraining_labels(manifest_path):
 def build_candidate_labels(args, retraining_labels):
     if args.label_mode == "retraining-only":
         return retraining_labels
-    base_labels = load_json_list(args.base_labels)
+    base_labels_path = args.base_labels
+    if (not base_labels_path or not os.path.exists(base_labels_path)) and os.path.exists(
+        os.path.join("assets", "models", "yolov8.labels.json")
+    ):
+        base_labels_path = os.path.join("assets", "models", "yolov8.labels.json")
+    base_labels = load_json_list(base_labels_path)
     return unique_in_order(base_labels + retraining_labels)
 
 
@@ -155,7 +160,7 @@ def export_model(args, class_list, out_dir):
                 raise SystemExit("Export failed or output not found.")
 
             os.makedirs(out_dir, exist_ok=True)
-            out_model_path = os.path.join(out_dir, "yolov8.tflite")
+            out_model_path = os.path.join(out_dir, "yolo-repath.tflite")
             shutil.copy2(export_path, out_model_path)
             return out_model_path
         finally:
@@ -181,7 +186,7 @@ def main():
         raise SystemExit("Candidate class list is empty.")
 
     os.makedirs(out_dir, exist_ok=True)
-    labels_out = os.path.join(out_dir, "yolov8.labels.json")
+    labels_out = os.path.join(out_dir, "yolo-repath.labels.json")
     with open(labels_out, "w", encoding="utf-8") as handle:
         json.dump(class_list, handle, indent=2)
         handle.write("\n")
