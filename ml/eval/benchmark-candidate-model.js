@@ -103,7 +103,7 @@ function main() {
 
   const benchmarkArgs = [
     "scripts/run-python.js",
-    "ml/eval/benchmark-model.py",
+    "../repath-model/scripts/benchmark_model.py",
     "--manifest",
     args.manifest,
     "--model",

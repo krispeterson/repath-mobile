@@ -92,7 +92,7 @@ function main() {
   ]);
 
   if (!args.skipBenchmark) {
-    runStep("Benchmark (Resolved)", "node", ["scripts/run-python.js", "ml/eval/benchmark-model.py", "--manifest", "test/benchmarks/municipal-benchmark-manifest.resolved.json", "--out", "/tmp/repath-benchmark-resolved-results.json"]);
+    runStep("Benchmark (Resolved)", "node", ["scripts/run-python.js", "../repath-model/scripts/benchmark_model.py", "--manifest", "test/benchmarks/municipal-benchmark-manifest.resolved.json", "--out", "/tmp/repath-benchmark-resolved-results.json"]);
   }
 
   console.log("\nPipeline complete.");
