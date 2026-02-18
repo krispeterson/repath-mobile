@@ -1,11 +1,13 @@
 {
   "name": "repath-mobile",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "scripts": {
     "start": "npx expo start",
     "smoke": "node scripts/smoke.js",
+    "release:android:debug": "node scripts/release-android-debug.js",
+    "release:android:debug:publish": "node scripts/release-android-debug.js --publish",
     "pull:model:release": "node scripts/pull-model-release.js",
     "pull:model:release:latest": "node scripts/pull-model-release.js --version latest",
     "ml:workspace": "node scripts/ml-workspace-required.js",

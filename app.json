@@ -2,7 +2,7 @@
   "expo": {
     "name": "RePath",
     "slug": "repath",
-    "version": "0.0.1",
+    "version": "0.1.1",
     "orientation": "portrait",
     "platforms": [
       "ios",

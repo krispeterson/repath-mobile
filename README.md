@@ -57,6 +57,28 @@ Notes:
 - For pull requests, CI publishes coverage summary/artifacts and posts coverage delta comments.
 - Set `CODECOV_TOKEN` in GitHub Actions secrets (required for private repositories).
 
+## Release workflow
+
+Release notes source-of-truth:
+- `release-notes.md`
+
+Android artifact build (local):
+```bash
+npm run release:android:debug -- --tag vX.Y.Z
+```
+
+Android artifact build + GitHub release upload:
+```bash
+npm run release:android:debug:publish -- --tag vX.Y.Z
+```
+
+The release script produces:
+- `app-debug-vX.Y.Z.apk`
+- `app-debug-vX.Y.Z.apk.sha256`
+- `output-metadata-vX.Y.Z.json`
+
+See `docs/release-contract.md` for artifact contract details.
+
 ## Object detection
 The scan flow uses VisionCamera frame processors with a YOLOv8 TFLite model for single-shot detection (POC), then maps
 labels to pack items via the bundled search index.
