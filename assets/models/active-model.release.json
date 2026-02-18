@@ -1,0 +1,28 @@
+{
+  "pulled_at": "2026-02-18T02:44:52.433Z",
+  "repo": "krispeterson/repath-model",
+  "requested_version": "v0.1.0",
+  "release_tag": "v0.1.0",
+  "release_name": "RePath Model v0.1.0",
+  "model_asset": "yolo-repath-v0.1.0.tflite",
+  "labels_asset": "yolo-repath-v0.1.0.labels.json",
+  "model_path": "assets/models/yolo-repath.tflite",
+  "labels_path": "assets/models/yolo-repath.labels.json",
+  "manifest_path": "assets/models/yolo-repath.release-manifest.json",
+  "verification": {
+    "enabled": true,
+    "manifest_required": true,
+    "manifest_present": true,
+    "verified": true,
+    "model": {
+      "filename": "yolo-repath-v0.1.0.tflite",
+      "sha256": "57e50d89cb544d560b46854ed08d586c88a72575d2dd81605a50182e09bc68c8",
+      "bytes": 12344853
+    },
+    "labels": {
+      "filename": "yolo-repath-v0.1.0.labels.json",
+      "sha256": "6808db38907be5f7c145f49ff59ee996babf91c20f10b2320af226cb5a7faa4b",
+      "bytes": 157
+    }
+  }
+}
