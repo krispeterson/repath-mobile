@@ -2,13 +2,22 @@ import React from "react";
 import { View, Text, Pressable } from "react-native";
 import { colors, spacing, radius, type } from "../ui/theme";
 
-export default function OnboardScreen({ onLocation, onEnterZip, isLocating }) {
+const DEFAULT_QUICK_TIP = {
+  category: "Search",
+  text: "Use specific item names. \"Aluminum can\" works better than \"can\"."
+};
+
+export default function OnboardScreen({ onLocation, onEnterZip, isLocating, quickTip }) {
+  const tip = quickTip && typeof quickTip === "object" ? quickTip : DEFAULT_QUICK_TIP;
+  const tipCategory = String(tip.category || DEFAULT_QUICK_TIP.category);
+  const tipText = String(tip.text || DEFAULT_QUICK_TIP.text);
+
   return (
     <View style={{ gap: spacing.lg }}>
       <View style={{ gap: spacing.sm }}>
         <Text style={{ ...type.h1, color: colors.ink }}>RePath</Text>
         <Text style={{ ...type.body, color: colors.fog }}>
-          Reuse, sell, recycle, drop-off, or trash—based on local rules.
+          Reuse, repair, sell, recycle, drop-off, or trash — based on local rules and options.
         </Text>
       </View>
 
@@ -30,8 +39,9 @@ export default function OnboardScreen({ onLocation, onEnterZip, isLocating }) {
 
       <View style={{ backgroundColor: colors.mint, borderRadius: radius.lg, padding: spacing.lg }}>
         <Text style={{ ...type.h3, color: colors.white }}>Quick tip</Text>
+        <Text style={{ ...type.small, color: colors.white, fontWeight: "700" }}>{tipCategory}</Text>
         <Text style={{ ...type.body, color: colors.white }}>
-          Keep a small box for hard-to-recycle items and scan them all at once.
+          {tipText}
         </Text>
       </View>
     </View>

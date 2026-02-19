@@ -36,6 +36,7 @@ Test discovery for `npm test`:
 Notes:
 - Do not add root-level `test/*.test.cjs`; they are not executed by the current runner.
 - Changes to `src/domain/**` should include/update unit tests, plus integration tests when behavior depends on bundled pack/model data.
+- For UI-heavy changes, run and attach results from `docs/manual-qa-checklist.md`.
 
 ## Pack and model asset updates
 - Packs are bundled under `assets/packs/` and should reflect `repath-core` outputs.

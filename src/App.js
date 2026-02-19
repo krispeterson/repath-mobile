@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { BackHandler, LogBox, Modal, Pressable, Text, Vibration, View } from "react-native";
+import { BackHandler, Modal, Pressable, Text, Vibration, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import * as Location from "expo-location";
 import { useCameraDevice, useCameraPermission } from "react-native-vision-camera";
@@ -15,7 +15,10 @@ import {
   loadImageUriAsRgb,
   resolveDetectedLabelsToItems,
   resolvePackFromZip,
+  resolveRotatingQuickTip,
+  resolveScanSupportedExamples,
   runDetectionWithBestPreset,
+  shouldShowScanNotice,
   YOLO_INPUT,
   YOLO_SCORE_THRESHOLD
 } from "./domain";
@@ -61,43 +64,17 @@ export default function App() {
   const cameraRef = useRef(null);
   const model = useTensorflowModel(require("../assets/models/yolo-repath.tflite"));
   const municipalitySuggestions = useMemo(() => listBundledMunicipalities(), []);
-  const scanSupportedExamples = useMemo(() => {
-    const labels = Array.isArray(yoloLabels) ? yoloLabels : [];
-    const preferred = [
-      "Tin Can",
-      "Aluminum Can",
-      "Cardboard",
-      "Pizza Box",
-      "Paperboard",
-      "Paper Egg Carton"
-    ];
-    const availableByLower = new Map(
-      labels.map((label) => [String(label).toLowerCase(), String(label)])
-    );
-    const selected = preferred
-      .map((label) => availableByLower.get(label.toLowerCase()))
-      .filter(Boolean);
-    if (selected.length >= 4) {
-      return selected.slice(0, 4);
-    }
-    const fallback = labels
-      .map((label) => String(label))
-      .filter(Boolean)
-      .slice(0, 4);
-    return fallback;
-  }, []);
+  const scanSupportedExamples = useMemo(
+    () => resolveScanSupportedExamples(yoloLabels, 4),
+    []
+  );
+  const quickTip = useMemo(() => resolveRotatingQuickTip(new Date()), []);
 
   useEffect(() => {
     if (model.state === "loaded") {
       debugLogModel();
     }
   }, [model.state]);
-
-  useEffect(() => {
-    if (__DEV__) {
-      LogBox.ignoreAllLogs(true);
-    }
-  }, []);
 
   const goBackOneStep = useCallback(() => {
     if (step === "scan") {
@@ -397,7 +374,7 @@ export default function App() {
   }
 
   function requestScanStart() {
-    if (hasSeenScanNotice) {
+    if (!shouldShowScanNotice(hasSeenScanNotice)) {
       startScan();
       return;
     }
@@ -553,6 +530,7 @@ export default function App() {
           onLocation={requestLocation}
           isLocating={isLocating}
           onEnterZip={() => setStep("enter_zip")}
+          quickTip={quickTip}
         />
       )}
 
