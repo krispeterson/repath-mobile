@@ -1,7 +1,7 @@
 {
   "pack_id": "fort-collins-co-us",
   "pack_version": "0.2.0",
-  "pack_schema_version": "1.1.0",
+  "pack_schema_version": "1.2.0",
   "retrieved_at": "2026-02-02T00:00:00Z",
   "municipality": {
     "name": "Fort Collins",
@@ -30,6 +30,30 @@
       "country": "US",
       "hours": "Mon, Tue, Thu, Fri, Sat 8:00am–4:30pm; closed Wed.",
       "website": "https://www.larimer.gov/solidwaste/haz/household"
+    },
+    {
+      "id": "goodwill-fort-collins",
+      "name": "Goodwill Donation Center (Fort Collins)",
+      "type": "donation",
+      "address": "315 Pavilion Lane",
+      "city": "Fort Collins",
+      "region": "CO",
+      "postal_code": "80525",
+      "country": "US",
+      "website": "https://www.goodwillcolorado.org/donate/",
+      "hours": "Check website for current hours."
+    },
+    {
+      "id": "habitat-restore-fort-collins",
+      "name": "Habitat ReStore (Fort Collins)",
+      "type": "donation",
+      "address": "4001 S Taft Hill Rd",
+      "city": "Fort Collins",
+      "region": "CO",
+      "postal_code": "80526",
+      "country": "US",
+      "website": "https://fortcollinshabitat.org/restore/",
+      "hours": "Check website for current hours."
     }
   ],
   "items": [
@@ -9920,6 +9944,140 @@
           ]
         }
       ]
+    }
+  ],
+  "extends": [
+    "repath.country.us.channels.v1"
+  ],
+  "variables": {
+    "craigslistSubdomain": "fortcollins"
+  },
+  "channels": [
+    {
+      "id": "fort-collins-local-gifting",
+      "name": "Local Gifting Group",
+      "category": "giveaway",
+      "scope": "municipality",
+      "municipalityIds": [
+        "fort-collins-co-us"
+      ],
+      "urlTemplate": "https://www.facebook.com/search/groups/?q=fort%20collins%20buy%20nothing",
+      "notes": "Community gifting group placeholder."
+    }
+  ],
+  "rules": [
+    {
+      "id": "unsafe-durable-goods",
+      "priority": 1,
+      "when": {
+        "obs": {
+          "isUnsafe": true
+        },
+        "keywords": [
+          "furniture",
+          "chair",
+          "couch",
+          "sofa",
+          "clothing",
+          "fabric",
+          "shirt",
+          "shoes",
+          "appliance",
+          "microwave",
+          "toaster",
+          "blender"
+        ]
+      },
+      "then": {
+        "action": "trash",
+        "title": "Do not reuse unsafe items",
+        "rationale": "If an item is unsafe, skip reuse/sell/donate and dispose safely.",
+        "steps": [
+          "Confirm item is unsafe",
+          "Use local disposal guidance"
+        ],
+        "priority": 1
+      }
+    },
+    {
+      "id": "reuse-furniture-and-durable-goods",
+      "priority": 10,
+      "when": {
+        "keywords": [
+          "furniture",
+          "chair",
+          "couch",
+          "sofa",
+          "clothing",
+          "fabric",
+          "shirt",
+          "shoes",
+          "appliance",
+          "microwave",
+          "toaster",
+          "blender"
+        ]
+      },
+      "then": {
+        "action": "reuse",
+        "title": "Reuse, give away, or sell first",
+        "rationale": "Keep durable goods in use before recycling or trash.",
+        "steps": [
+          "Clean and photograph item",
+          "List locally for giveaway or sale"
+        ],
+        "priority": 10,
+        "channelIds": [
+          "fort-collins-local-gifting",
+          "freecycle-town-finder",
+          "trash-nothing",
+          "buy-nothing",
+          "craigslist",
+          "depop",
+          "ebay",
+          "offerup",
+          "repair-cafe-visit"
+        ]
+      }
+    },
+    {
+      "id": "donate-durable-goods",
+      "priority": 20,
+      "when": {
+        "keywords": [
+          "furniture",
+          "chair",
+          "couch",
+          "sofa",
+          "clothing",
+          "fabric",
+          "shirt",
+          "shoes",
+          "appliance",
+          "microwave",
+          "toaster",
+          "blender"
+        ]
+      },
+      "then": {
+        "action": "donate",
+        "title": "Donate usable items nearby",
+        "rationale": "Donation keeps usable items in circulation in your community.",
+        "steps": [
+          "Verify accepted items before dropping off",
+          "Drop off at donation locations"
+        ],
+        "priority": 20,
+        "locationIds": [
+          "goodwill-fort-collins",
+          "habitat-restore-fort-collins"
+        ],
+        "channelIds": [
+          "goodwill-locator",
+          "habitat-restore-finder",
+          "salvation-army-dropoff"
+        ]
+      }
     }
   ]
 }

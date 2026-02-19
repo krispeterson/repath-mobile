@@ -1,0 +1,80 @@
+{
+  "pack_id": "repath.base.channels.v1",
+  "pack_version": "0.1.0",
+  "pack_schema_version": "1.2.0",
+  "retrieved_at": "2026-02-19T00:00:00Z",
+  "jurisdiction": {
+    "name": "RePath Base Channels",
+    "country": "ZZ",
+    "kind": "global"
+  },
+  "variables": {},
+  "channels": [
+    {
+      "id": "freecycle-town-finder",
+      "name": "Freecycle (Town Finder)",
+      "category": "giveaway",
+      "scope": "global",
+      "urlTemplate": "https://www.freecycle.org/town",
+      "notes": "Open Freecycle and pick your nearest town."
+    },
+    {
+      "id": "trash-nothing",
+      "name": "Trash Nothing",
+      "category": "giveaway",
+      "scope": "global",
+      "urlTemplate": "https://trashnothing.com/",
+      "notes": "Open Trash Nothing and search for your local reuse group."
+    },
+    {
+      "id": "buy-nothing",
+      "name": "Buy Nothing",
+      "category": "giveaway",
+      "scope": "global",
+      "urlTemplate": "https://buynothingproject.org/find-a-group/",
+      "notes": "Find a local Buy Nothing group."
+    },
+    {
+      "id": "depop",
+      "name": "Depop",
+      "category": "marketplace",
+      "scope": "global",
+      "urlTemplate": "https://www.depop.com/search/?q={{query}}",
+      "requires": ["query"],
+      "notes": "Best for style/fashion items."
+    },
+    {
+      "id": "ebay",
+      "name": "eBay",
+      "category": "marketplace",
+      "scope": "global",
+      "urlTemplate": "https://www.ebay.com/sch/i.html?_nkw={{query}}",
+      "requires": ["query"]
+    },
+    {
+      "id": "repair-cafe-visit",
+      "name": "Repair Cafe (Visit)",
+      "category": "repair_directory",
+      "scope": "global",
+      "urlTemplate": "https://www.repaircafe.org/en/visit/"
+    },
+    {
+      "id": "repair-cafe-api",
+      "name": "Repair Cafe API",
+      "category": "repair_directory",
+      "scope": "global",
+      "urlTemplate": "https://www.repaircafe.org/en/api/"
+    },
+    {
+      "id": "open-repair-ords",
+      "name": "Open Repair Data Standard",
+      "category": "repair_directory",
+      "scope": "global",
+      "urlTemplate": "https://openrepair.org/open-data/",
+      "notes": "Reference directory and open data standard."
+    }
+  ],
+  "rules": [],
+  "locations": [],
+  "items": []
+}

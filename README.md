@@ -33,7 +33,11 @@ RePath is not about assigning blame. It’s about acknowledging complexity — a
 Minimal React Native (Expo) prototype that:
 - asks for location (or ZIP)
 - loads a municipality pack
-- renders up to 5 ranked Option Cards
+- renders ranked pathways (reuse/repair/donate/recycle/trash)
+- shows channel-based reuse options (marketplaces + community groups)
+- shows donation places when available in the pack
+- asks follow-up city/ZIP questions only when required to resolve top channel links
+- falls back to nationwide U.S. guidance for unknown valid ZIPs, with an in-app accuracy warning
 - uses a bundled search index (`assets/packs/search.json`) for lookup
 - supports camera detection (YOLOv8 TFLite, single-shot frame processor for POC stability)
 

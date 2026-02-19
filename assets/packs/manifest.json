@@ -1,5 +1,5 @@
 {
-  "version": "2026-02-03",
+  "version": "2026-02-19",
   "search_index": "assets/packs/search.json",
   "packs": {
     "glenwood-springs-co-us": {
@@ -9,6 +9,22 @@
     "fort-collins-co-us": {
       "bundled": true,
       "path": "assets/packs/fort-collins-co-us.pack.json"
+    },
+    "repath.base.channels.v1": {
+      "bundled": true,
+      "path": "assets/packs/repath.base.channels.v1.pack.json"
+    },
+    "repath.country.us.channels.v1": {
+      "bundled": true,
+      "path": "assets/packs/repath.country.us.channels.v1.pack.json"
+    },
+    "repath.country.us.default.v1": {
+      "bundled": true,
+      "path": "assets/packs/repath.country.us.default.v1.pack.json"
+    },
+    "repath.muni.us-co-fort-collins.v1": {
+      "bundled": true,
+      "path": "assets/packs/repath.muni.us-co-fort-collins.v1.pack.json"
     }
   },
   "jurisdictions": {

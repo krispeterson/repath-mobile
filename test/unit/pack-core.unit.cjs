@@ -41,15 +41,15 @@ function testResolveLocationDetailsReturnsNullForMissingLocation() {
   });
 }
 
-function testResolvePlacePrefersJurisdictionWhenPresent() {
+function testResolvePlacePrefersMunicipalityWhenPresent() {
   return loadPackCore().then(({ resolvePlace }) => {
     const pack = {
       jurisdiction: { name: "Metro", admin_areas: [{ code: "TX" }], country: "US" },
       municipality: { name: "City", region: "CO" }
     };
     const place = resolvePlace(pack);
-    assert.equal(place.name, "Metro");
-    assert.equal(place.region, "TX");
+    assert.equal(place.name, "City");
+    assert.equal(place.region, "CO");
   });
 }
 
@@ -64,8 +64,8 @@ module.exports = {
       run: testResolveLocationDetailsReturnsNullForMissingLocation
     },
     {
-      name: "resolvePlace prefers jurisdiction data when present",
-      run: testResolvePlacePrefersJurisdictionWhenPresent
+      name: "resolvePlace prefers municipality data when present",
+      run: testResolvePlacePrefersMunicipalityWhenPresent
     }
   ]
 };

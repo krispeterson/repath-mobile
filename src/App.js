@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Text, View } from "react-native";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { BackHandler, Text, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import * as Location from "expo-location";
 import { useCameraDevice, useCameraPermission } from "react-native-vision-camera";
@@ -9,10 +9,11 @@ import { OnboardScreen, ZipScreen } from "./components";
 import { colors, spacing } from "./ui/theme";
 import { HomeScreen, ScanScreen } from "./screens";
 import {
+  decideItem,
   getBundledPack,
+  listBundledMunicipalities,
   loadImageUriAsRgb,
   resolveDetectedLabelsToItems,
-  resolveItem,
   resolvePackFromZip,
   runDetectionWithBestPreset,
   YOLO_INPUT,
@@ -29,7 +30,10 @@ export default function App() {
   const [packId, setPackId] = useState(null);
   const [pack, setPack] = useState(null);
   const [query, setQuery] = useState("cardboard");
-  const [results, setResults] = useState([]);
+  const [decision, setDecision] = useState(null);
+  const [decisionAnswers, setDecisionAnswers] = useState({});
+  const [questionDraftAnswers, setQuestionDraftAnswers] = useState({});
+  const [packNotice, setPackNotice] = useState(null);
   const [zipError, setZipError] = useState(null);
   const [locationError, setLocationError] = useState(null);
   const [scanError, setScanError] = useState(null);
@@ -43,18 +47,55 @@ export default function App() {
   const [captureSize, setCaptureSize] = useState(null);
   const [hasCapture, setHasCapture] = useState(false);
   const [isCapturing, setIsCapturing] = useState(false);
+  const [isLocating, setIsLocating] = useState(false);
   const MIN_DETECTION_SCORE = YOLO_SCORE_THRESHOLD;
 
   const { hasPermission, requestPermission } = useCameraPermission();
   const device = useCameraDevice("back");
   const cameraRef = useRef(null);
   const model = useTensorflowModel(require("../assets/models/yolo-repath.tflite"));
+  const municipalitySuggestions = useMemo(() => listBundledMunicipalities(), []);
 
   useEffect(() => {
     if (model.state === "loaded") {
       debugLogModel();
     }
   }, [model.state]);
+
+  const goBackOneStep = useCallback(() => {
+    if (step === "scan") {
+      setScanActive(false);
+      setStep("home");
+      return true;
+    }
+    if (step === "home") {
+      setStep("enter_zip");
+      return true;
+    }
+    if (step === "enter_zip") {
+      setStep("onboard");
+      return true;
+    }
+    return false;
+  }, [step]);
+
+  useEffect(() => {
+    const subscription = BackHandler.addEventListener("hardwareBackPress", () => goBackOneStep());
+    return () => subscription.remove();
+  }, [goBackOneStep]);
+
+  const getQuestionSuggestions = useCallback((questionId, value) => {
+    if (questionId !== "city") return [];
+    const input = String(value || "").trim().toLowerCase();
+    if (!input) return municipalitySuggestions.slice(0, 6);
+    return municipalitySuggestions
+      .filter((entry) => {
+        const name = String(entry.name || "").toLowerCase();
+        const label = String(entry.label || "").toLowerCase();
+        return name.includes(input) || label.includes(input);
+      })
+      .slice(0, 6);
+  }, [municipalitySuggestions]);
 
 
   function debugLogModel() {
@@ -68,22 +109,41 @@ export default function App() {
     }
   }
 
-  async function requestLocation() {
-    setLocationError(null);
-    const { status } = await Location.requestForegroundPermissionsAsync();
-    if (status !== "granted") {
-      setLocationError("Location permission was denied.");
-      setStep("enter_zip");
-      return;
-    }
+  function extractZip(postalCode) {
+    const raw = String(postalCode || "").trim();
+    if (!raw) return "";
+    const match = raw.match(/\b(\d{5})(?:-\d{4})?\b/);
+    return match ? match[1] : "";
+  }
 
+  async function requestLocation() {
+    if (isLocating) return;
+    setIsLocating(true);
+    setLocationError(null);
     try {
-      const { coords } = await Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.Balanced });
+      const { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== "granted") {
+        setLocationError("Location permission was denied.");
+        setStep("enter_zip");
+        return;
+      }
+
+      let position = await Location.getLastKnownPositionAsync();
+      if (!position) {
+        position = await Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.Balanced });
+      }
+      if (!position || !position.coords) {
+        setLocationError("Unable to access current location.");
+        setStep("enter_zip");
+        return;
+      }
+
+      const { coords } = position;
       const [place] = await Location.reverseGeocodeAsync({
         latitude: coords.latitude,
         longitude: coords.longitude
       });
-      const postal = place && place.postalCode ? String(place.postalCode) : "";
+      const postal = extractZip(place && place.postalCode ? place.postalCode : "");
       if (!postal) {
         setLocationError("Couldn't determine your ZIP code.");
         setStep("enter_zip");
@@ -94,6 +154,8 @@ export default function App() {
     } catch (error) {
       setLocationError("Unable to access current location.");
       setStep("enter_zip");
+    } finally {
+      setIsLocating(false);
     }
   }
 
@@ -103,34 +165,82 @@ export default function App() {
       setZipError("Enter a ZIP code.");
       setPackId(null);
       setPack(null);
+      setDecision(null);
+      setDecisionAnswers({});
+      setQuestionDraftAnswers({});
+      setPackNotice(null);
       return;
     }
     if (!/^\d{5}$/.test(zipValue)) {
       setZipError("Enter a valid 5-digit ZIP.");
       setPackId(null);
       setPack(null);
+      setDecision(null);
+      setDecisionAnswers({});
+      setQuestionDraftAnswers({});
+      setPackNotice(null);
       return;
     }
 
-    const pid = resolvePackFromZip(zipValue);
+    const selection = resolvePackFromZip(zipValue);
+    const pid = selection && selection.packId ? selection.packId : null;
+
     if (!pid) {
       setZipError("No pack available for that ZIP yet.");
       setPackId(null);
       setPack(null);
+      setDecision(null);
+      setDecisionAnswers({});
+      setQuestionDraftAnswers({});
+      setPackNotice(null);
       setStep("enter_zip");
       return;
     }
 
     const p = getBundledPack(pid);
+    if (!p) {
+      setZipError("Pack configuration is unavailable right now.");
+      setPackId(null);
+      setPack(null);
+      setDecision(null);
+      setDecisionAnswers({});
+      setQuestionDraftAnswers({});
+      setPackNotice(null);
+      setStep("enter_zip");
+      return;
+    }
+
     setZipError(null);
     setPackId(pid);
     setPack(p);
-    setStep(p ? "home" : "enter_zip");
+    setDecision(null);
+    const seededAnswers = /^\d{5}$/.test(zipValue) ? { zip: zipValue } : {};
+    setDecisionAnswers(seededAnswers);
+    setQuestionDraftAnswers(seededAnswers);
+    setPackNotice(selection && selection.notice ? selection.notice : null);
+    setStep("home");
   }
 
-  function searchInSelectedPack() {
+  function runDecision(overrides) {
     if (!pack || !packId) return;
-    setResults(resolveItem(pack, packId, query));
+    const seedAnswers = /^\d{5}$/.test(zip) ? { zip } : {};
+    const nextAnswers = {
+      ...seedAnswers,
+      ...decisionAnswers,
+      ...(overrides || {})
+    };
+    if (overrides) {
+      setDecisionAnswers(nextAnswers);
+      setQuestionDraftAnswers(nextAnswers);
+    }
+    setDecision(decideItem(pack, packId, query, nextAnswers));
+  }
+
+  function handleQuestionChange(questionId, value) {
+    setQuestionDraftAnswers((prev) => ({
+      ...prev,
+      [questionId]: value
+    }));
   }
 
   async function startScan() {
@@ -306,6 +416,7 @@ export default function App() {
       {step === "onboard" && (
         <OnboardScreen
           onLocation={requestLocation}
+          isLocating={isLocating}
           onEnterZip={() => setStep("enter_zip")}
         />
       )}
@@ -321,19 +432,27 @@ export default function App() {
           }}
           onContinue={() => resolvePackForZip()}
           onLocation={requestLocation}
+          isLocating={isLocating}
         />
       )}
 
       {step === "home" && pack && (
         <HomeScreen
           pack={pack}
-          packId={packId}
           query={query}
-          onQueryChange={setQuery}
-          onSearch={searchInSelectedPack}
+          onQueryChange={(value) => {
+            setQuery(value);
+            setDecision(null);
+          }}
+          onSearch={() => runDecision(questionDraftAnswers)}
           onScan={startScan}
           onChangeArea={() => setStep("enter_zip")}
-          results={results}
+          decision={decision || decideItem(pack, packId, query, decisionAnswers)}
+          packNotice={packNotice}
+          questionAnswers={questionDraftAnswers}
+          onQuestionChange={handleQuestionChange}
+          onResolveQuestions={() => runDecision(questionDraftAnswers)}
+          getQuestionSuggestions={getQuestionSuggestions}
         />
       )}
 
@@ -353,10 +472,7 @@ export default function App() {
           pack={pack}
           onPrimaryAction={hasCapture ? retakeScan : triggerScanOnce}
           onPickPhoto={pickPhoto}
-          onBack={() => {
-            setScanActive(false);
-            setStep("home");
-          }}
+          onBack={goBackOneStep}
           frameProcessor={undefined}
         />
       )}

@@ -1,0 +1,180 @@
+{
+  "pack_id": "repath.muni.us-co-fort-collins.v1",
+  "pack_version": "0.1.0",
+  "pack_schema_version": "1.2.0",
+  "retrieved_at": "2026-02-19T00:00:00Z",
+  "extends": ["repath.country.us.channels.v1"],
+  "municipality": {
+    "name": "Fort Collins",
+    "region": "CO",
+    "country": "US"
+  },
+  "variables": {
+    "craigslistSubdomain": "fortcollins"
+  },
+  "channels": [
+    {
+      "id": "fort-collins-local-gifting",
+      "name": "Local Gifting Group",
+      "category": "giveaway",
+      "scope": "municipality",
+      "municipalityIds": ["repath.muni.us-co-fort-collins.v1"],
+      "urlTemplate": "https://www.facebook.com/search/groups/?q=fort%20collins%20buy%20nothing",
+      "notes": "Community gifting group placeholder."
+    }
+  ],
+  "locations": [
+    {
+      "id": "goodwill-fort-collins",
+      "name": "Goodwill Donation Center (Fort Collins)",
+      "type": "donation",
+      "address": "315 Pavilion Lane",
+      "city": "Fort Collins",
+      "region": "CO",
+      "postal_code": "80525",
+      "country": "US",
+      "website": "https://www.goodwillcolorado.org/donate/",
+      "hours": "Check website for current hours."
+    },
+    {
+      "id": "habitat-restore-fort-collins",
+      "name": "Habitat ReStore (Fort Collins)",
+      "type": "donation",
+      "address": "4001 S Taft Hill Rd",
+      "city": "Fort Collins",
+      "region": "CO",
+      "postal_code": "80526",
+      "country": "US",
+      "website": "https://fortcollinshabitat.org/restore/",
+      "hours": "Check website for current hours."
+    }
+  ],
+  "items": [
+    {
+      "id": "chair",
+      "name": "Chair",
+      "keywords": ["furniture"],
+      "option_cards": [
+        {
+          "id": "chair-trash",
+          "kind": "trash",
+          "title": "Trash (last resort)",
+          "priority": 900,
+          "confidence": 0.8,
+          "actions": [
+            {
+              "type": "copy_text",
+              "label": "Info",
+              "text": "Only trash items that are unsafe or cannot be repaired, reused, or donated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clothing",
+      "name": "Clothing",
+      "keywords": ["shirt", "pants", "jacket", "fabric"],
+      "option_cards": [
+        {
+          "id": "clothing-trash",
+          "kind": "trash",
+          "title": "Trash (last resort)",
+          "priority": 900,
+          "confidence": 0.8,
+          "actions": [
+            {
+              "type": "copy_text",
+              "label": "Info",
+              "text": "If torn or contaminated beyond reuse, dispose as trash."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "small-appliance",
+      "name": "Small Appliance",
+      "keywords": ["toaster", "blender", "microwave"],
+      "option_cards": [
+        {
+          "id": "small-appliance-trash",
+          "kind": "trash",
+          "title": "Trash (last resort)",
+          "priority": 900,
+          "confidence": 0.8,
+          "actions": [
+            {
+              "type": "copy_text",
+              "label": "Info",
+              "text": "If unsafe and not repairable, follow local disposal guidance."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "unsafe-durable-goods",
+      "priority": 1,
+      "when": {
+        "keywords": ["chair", "furniture", "clothing", "appliance"],
+        "obs": {
+          "isUnsafe": true
+        }
+      },
+      "then": {
+        "action": "trash",
+        "title": "Do not reuse unsafe items",
+        "rationale": "If an item is unsafe, skip reuse/sell/donate and dispose safely.",
+        "steps": ["Confirm item is unsafe", "Use local disposal guidance"],
+        "priority": 1
+      }
+    },
+    {
+      "id": "reuse-durable-goods",
+      "priority": 10,
+      "when": {
+        "keywords": ["chair", "furniture", "clothing", "appliance"]
+      },
+      "then": {
+        "action": "reuse",
+        "title": "Reuse, give away, or sell first",
+        "rationale": "Keep durable goods in use before recycling or trash.",
+        "steps": ["Clean and photograph item", "List in local/community channels"],
+        "priority": 10,
+        "channelIds": [
+          "fort-collins-local-gifting",
+          "freecycle-town-finder",
+          "trash-nothing",
+          "buy-nothing",
+          "craigslist",
+          "depop",
+          "ebay",
+          "offerup"
+        ]
+      }
+    },
+    {
+      "id": "donate-durable-goods",
+      "priority": 20,
+      "when": {
+        "keywords": ["chair", "furniture", "clothing", "appliance"]
+      },
+      "then": {
+        "action": "donate",
+        "title": "Donate if still usable",
+        "rationale": "Donation keeps useful items in circulation locally.",
+        "steps": ["Verify accepted materials", "Drop off during open hours"],
+        "priority": 20,
+        "locationTypes": ["donation"],
+        "channelIds": [
+          "goodwill-locator",
+          "habitat-restore-finder",
+          "salvation-army-dropoff"
+        ]
+      }
+    }
+  ]
+}

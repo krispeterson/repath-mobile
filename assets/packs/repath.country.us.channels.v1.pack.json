@@ -1,0 +1,63 @@
+{
+  "pack_id": "repath.country.us.channels.v1",
+  "pack_version": "0.1.0",
+  "pack_schema_version": "1.2.0",
+  "retrieved_at": "2026-02-19T00:00:00Z",
+  "extends": ["repath.base.channels.v1"],
+  "jurisdiction": {
+    "name": "United States Reuse Channels",
+    "country": "US",
+    "kind": "national"
+  },
+  "variables": {},
+  "channels": [
+    {
+      "id": "craigslist",
+      "name": "Craigslist",
+      "category": "marketplace",
+      "scope": "country",
+      "countries": ["US"],
+      "urlTemplate": "https://{{citySlug}}.craigslist.org/search/sss?query={{query}}",
+      "requires": ["query", "citySlug"],
+      "notes": "Requires city or configured Craigslist subdomain."
+    },
+    {
+      "id": "offerup",
+      "name": "OfferUp",
+      "category": "marketplace",
+      "scope": "country",
+      "countries": ["US"],
+      "urlTemplate": "https://offerup.com/",
+      "notes": "No stable search URL. Open OfferUp and search for the query."
+    },
+    {
+      "id": "goodwill-locator",
+      "name": "Goodwill Locator",
+      "category": "donation_directory",
+      "scope": "country",
+      "countries": ["US"],
+      "urlTemplate": "https://www.goodwill.org/locator/?zip={{zip}}",
+      "requires": ["zip"]
+    },
+    {
+      "id": "habitat-restore-finder",
+      "name": "Habitat ReStore Finder",
+      "category": "donation_directory",
+      "scope": "country",
+      "countries": ["US"],
+      "urlTemplate": "https://www.habitat.org/restores?zip={{zip}}",
+      "requires": ["zip"]
+    },
+    {
+      "id": "salvation-army-dropoff",
+      "name": "Salvation Army Donation Finder",
+      "category": "donation_directory",
+      "scope": "country",
+      "countries": ["US"],
+      "urlTemplate": "https://satruck.org/"
+    }
+  ],
+  "rules": [],
+  "locations": [],
+  "items": []
+}

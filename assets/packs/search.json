@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "generated_at": "2026-02-03T20:18:35.067Z",
+  "generated_at": "2026-02-19T04:25:06.132Z",
   "packs": {
     "fort-collins-co-us": {
       "pack_version": "0.2.0",
-      "pack_schema_version": "1.1.0",
-      "pack_schema_sha256": "36d8eb840c792d538cb0726668174dd4e3582ff21f3db958bfd231ad13a78005",
+      "pack_schema_version": "1.2.0",
+      "pack_schema_sha256": "190a6bdc5efbea1fc5653f80412690d9755150aefbd7b0ae474a732e68056a30",
       "retrieved_at": "2026-02-02T00:00:00Z",
       "items": {
         "6-pack-holder": "6-Pack Holder",
@@ -340,7 +340,7 @@
           "tile",
           "vacuum-cleaner"
         ],
-        "able": [
+        "abl": [
           "kitchen-cabinets-countertops"
         ],
         "about": [
@@ -356,70 +356,65 @@
           "air-conditioner"
         ],
         "accept": [
+          "aluminum-can",
+          "aluminum-foil",
+          "aluminum-pie-pan-baking-tray",
+          "auto-part-car-part",
           "automobile-car-or-truck",
           "battery-alkaline",
           "bbq-grill-charcoal",
           "bbq-grill-gas",
+          "blueprint",
+          "branches",
           "carpet-and-rugs",
           "carpet-padding",
+          "carton",
+          "cds-and-dvds",
           "clothing-and-fabric",
           "concrete",
           "cords-and-cables",
+          "empty-aerosol-can",
+          "fill-dirt",
+          "glass-bottle-or-jar",
           "light-bulb-led",
           "medical-equipment-and-supplies",
           "nalgene-bottle",
           "packaging-styrofoam-or-polystyrene-foam",
           "paper-napkin",
           "paper-towel",
-          "plastic-pet-carrier",
-          "rock-and-gravel",
-          "shredded-brown-crinkle-paper",
-          "tile",
-          "tools",
-          "wood-untreated"
-        ],
-        "accepted": [
-          "aluminum-can",
-          "aluminum-foil",
-          "aluminum-pie-pan-baking-tray",
-          "auto-part-car-part",
-          "blueprint",
-          "branches",
-          "carton",
-          "cds-and-dvds",
-          "empty-aerosol-can",
-          "fill-dirt",
-          "glass-bottle-or-jar",
           "pillow",
           "plastic-disinfectant-wipes-container",
           "plastic-jug",
           "plastic-peanut-butter-jar",
+          "plastic-pet-carrier",
           "plastic-take-out-container",
           "plastic-tub",
+          "rock-and-gravel",
+          "shredded-brown-crinkle-paper",
           "take-out-food-container",
+          "tile",
           "toiletries",
+          "tools",
           "vitamin-or-prescription-bottle",
+          "wood-untreated",
           "wood-waste"
         ],
         "accessori": [
           "computer-accessory"
         ],
-        "accessory": [
-          "computer-accessory"
-        ],
         "acid": [
           "automotive-battery"
         ],
-        "acrylic": [
+        "acryl": [
           "paint-latex"
         ],
-        "added": [
+        "ad": [
           "compostable-servingware-dishware"
         ],
-        "additional": [
+        "addit": [
           "yard-trimmings-and-leaves"
         ],
-        "addres": [
+        "addr": [
           "label-or-sticker"
         ],
         "adhesiv": [
@@ -454,7 +449,7 @@
         "alcohol": [
           "flammable-liquid"
         ],
-        "alkaline": [
+        "alkalin": [
           "battery-alkaline",
           "battery-other"
         ],
@@ -513,7 +508,7 @@
           "scrap-metal",
           "take-out-food-container"
         ],
-        "alway": [
+        "alwai": [
           "6-pack-holder",
           "battery-button",
           "battery-rechargeable"
@@ -525,7 +520,7 @@
         "ammonia": [
           "household-cleaners"
         ],
-        "ammunition": [
+        "ammunit": [
           "ammunition-and-explosives"
         ],
         "amount": [
@@ -673,27 +668,7 @@
         "android": [
           "cell-phone"
         ],
-        "animal": [
-          "antifreeze",
-          "manure",
-          "over-the-counter-medication",
-          "pet-food-bag",
-          "plastic-pet-carrier",
-          "prescription-drug",
-          "woven-plastic-feed-bag"
-        ],
-        "ant": [
-          "pesticide"
-        ],
-        "antibiotic": [
-          "prescription-drug"
-        ],
-        "antifreeze": [
-          "antifreeze",
-          "antifreeze-bottle",
-          "automotive-fluids-other-than-motor-oil-and-antifreeze"
-        ],
-        "any": [
+        "ani": [
           "ammunition-and-explosives",
           "baling-twine",
           "fire-extinguisher",
@@ -706,19 +681,27 @@
           "snowblower",
           "vacuum-cleaner"
         ],
-        "applianc": [
-          "dishwasher",
-          "large-appliance",
-          "oven",
-          "personal-care-appliances",
-          "small-appliance",
-          "stove"
+        "anim": [
+          "antifreeze",
+          "manure",
+          "over-the-counter-medication",
+          "pet-food-bag",
+          "plastic-pet-carrier",
+          "prescription-drug",
+          "woven-plastic-feed-bag"
         ],
-        "appliance": [
-          "large-appliance",
-          "small-appliance"
+        "ant": [
+          "pesticide"
         ],
-        "apply": [
+        "antibiot": [
+          "prescription-drug"
+        ],
+        "antifreez": [
+          "antifreeze",
+          "antifreeze-bottle",
+          "automotive-fluids-other-than-motor-oil-and-antifreeze"
+        ],
+        "appli": [
           "air-conditioner",
           "asphalt",
           "bicycle-tire",
@@ -753,19 +736,21 @@
           "wood-untreated",
           "yard-trimmings-and-leaves"
         ],
+        "applianc": [
+          "dishwasher",
+          "large-appliance",
+          "oven",
+          "personal-care-appliances",
+          "small-appliance",
+          "stove"
+        ],
         "april": [
           "yard-trimmings-and-leaves"
         ],
         "apron": [
           "styrofoam-cooler-or-meal-kit-cooler"
         ],
-        "arc": [
-          "book-hardcover"
-        ],
-        "architectural": [
-          "reusable-building-supplies"
-        ],
-        "are": [
+        "ar": [
           "aluminum-can",
           "amazon-mailers",
           "bbq-grill-gas",
@@ -829,6 +814,12 @@
           "vitamin-or-prescription-bottle",
           "wood-pallet"
         ],
+        "arc": [
+          "book-hardcover"
+        ],
+        "architectur": [
+          "reusable-building-supplies"
+        ],
         "area": [
           "carpet-and-rugs"
         ],
@@ -843,7 +834,7 @@
           "art-supplies",
           "wine-cork"
         ],
-        "artificial": [
+        "artifici": [
           "christmas-tree-artificial"
         ],
         "artist": [
@@ -923,7 +914,7 @@
           "wheel",
           "wire"
         ],
-        "aseptic": [
+        "asept": [
           "carton"
         ],
         "ask": [
@@ -933,10 +924,10 @@
           "asphalt",
           "shingles-asphalt"
         ],
-        "assistance": [
+        "assist": [
           "hearing-aid"
         ],
-        "associate": [
+        "associ": [
           "plastic-grocery-bags-and-plastic-film"
         ],
         "at": [
@@ -1073,7 +1064,7 @@
         "atf": [
           "automotive-fluids-other-than-motor-oil-and-antifreeze"
         ],
-        "attached": [
+        "attach": [
           "christmas-lights",
           "plastic-caps-and-lids"
         ],
@@ -1089,15 +1080,15 @@
           "automotive-battery",
           "automotive-fluids-other-than-motor-oil-and-antifreeze"
         ],
-        "automobile": [
+        "automobil": [
           "automobile-car-or-truck"
         ],
-        "automotive": [
+        "automot": [
           "auto-part-car-part",
           "automotive-battery",
           "automotive-fluids-other-than-motor-oil-and-antifreeze"
         ],
-        "available": [
+        "avail": [
           "manure"
         ],
         "avoid": [
@@ -1106,13 +1097,7 @@
           "plastic-cup",
           "plastic-take-out-container"
         ],
-        "avoiding": [
-          "clear-plastic-berry-and-salad-container",
-          "party-try-plastic-tray",
-          "plastic-cup",
-          "plastic-take-out-container"
-        ],
-        "away": [
+        "awai": [
           "6-pack-holder",
           "amazon-mailers",
           "antifreeze-bottle",
@@ -1171,13 +1156,11 @@
           "bbq-grill-charcoal",
           "bbq-grill-gas"
         ],
-        "baby": [
+        "babi": [
           "scrap-metal"
         ],
         "back": [
-          "book-hardcover"
-        ],
-        "backing": [
+          "book-hardcover",
           "label-or-sticker"
         ],
         "backyard": [
@@ -1205,22 +1188,20 @@
           "paper-bag",
           "pet-food-bag",
           "plastic-grocery-bags-and-plastic-film",
+          "shredded-brown-crinkle-paper",
           "woven-plastic-feed-bag"
         ],
-        "bagasse": [
+        "bagass": [
           "compostable-servingware-dishware"
-        ],
-        "bagged": [
-          "shredded-brown-crinkle-paper"
         ],
         "baggi": [
           "plastic-grocery-bags-and-plastic-film"
         ],
-        "bakeware": [
+        "bake": [
+          "aluminum-pie-pan-baking-tray",
           "baking-glassware"
         ],
-        "baking": [
-          "aluminum-pie-pan-baking-tray",
+        "bakewar": [
           "baking-glassware"
         ],
         "bale": [
@@ -1228,9 +1209,6 @@
           "glass-bottle-or-jar"
         ],
         "baler": [
-          "baling-twine"
-        ],
-        "baling": [
           "baling-twine"
         ],
         "ball": [
@@ -1250,7 +1228,7 @@
           "bbq-grill-gas",
           "candy-or-food-wrapper"
         ],
-        "barbecue": [
+        "barbecu": [
           "bbq-grill-charcoal",
           "bbq-grill-gas"
         ],
@@ -1273,12 +1251,8 @@
           "paint-latex",
           "paint-oil-based-and-lacquers"
         ],
-        "baseball": [
+        "basebal": [
           "sporting-goods"
-        ],
-        "based": [
-          "paint-latex",
-          "paint-oil-based-and-lacquers"
         ],
         "basket": [
           "bulky-rigid-plastics",
@@ -1290,14 +1264,6 @@
           "tile"
         ],
         "batteri": [
-          "automotive-battery",
-          "battery-alkaline",
-          "battery-button",
-          "battery-lithium-ion",
-          "battery-other",
-          "battery-rechargeable"
-        ],
-        "battery": [
           "automotive-battery",
           "battery-alkaline",
           "battery-button",
@@ -1541,19 +1507,17 @@
           "yard-trimmings-and-leaves",
           "yoga-mat"
         ],
-        "because": [
+        "becaus": [
           "carpet-roll-tube",
           "single-use-servingware"
         ],
         "bed": [
+          "clothing-and-fabric",
           "furniture",
           "pillow"
         ],
         "bedbug": [
           "mattress"
-        ],
-        "bedding": [
-          "clothing-and-fabric"
         ],
         "been": [
           "stroller"
@@ -1563,7 +1527,7 @@
           "aluminum-can",
           "metal-bottle-cap-or-lid"
         ],
-        "before": [
+        "befor": [
           "baling-twine",
           "battery-lithium-ion",
           "bbq-grill-charcoal",
@@ -1590,10 +1554,6 @@
           "telephone",
           "television",
           "video-game-system"
-        ],
-        "being": [
-          "battery-lithium-ion",
-          "single-use-servingware"
         ],
         "below": [
           "air-conditioner",
@@ -1715,16 +1675,10 @@
         "berri": [
           "clear-plastic-berry-and-salad-container"
         ],
-        "berry": [
-          "clear-plastic-berry-and-salad-container"
-        ],
         "bic": [
           "lighter"
         ],
         "bicycl": [
-          "bicycle"
-        ],
-        "bicycle": [
           "bicycle",
           "bicycle-tire",
           "bicycle-tube"
@@ -1784,7 +1738,7 @@
         "biohazard": [
           "syringe-sharps"
         ],
-        "blackberry": [
+        "blackberri": [
           "cell-phone"
         ],
         "blad": [
@@ -1807,7 +1761,7 @@
         "blood": [
           "medical-equipment-and-supplies"
         ],
-        "blouse": [
+        "blous": [
           "clothing-and-fabric"
         ],
         "blower": [
@@ -1826,7 +1780,7 @@
           "household-item",
           "wood-treated-or-painted"
         ],
-        "boardgame": [
+        "boardgam": [
           "household-item"
         ],
         "boiler": [
@@ -1848,7 +1802,7 @@
           "telephone-book",
           "videotape-or-cassette-tape"
         ],
-        "bookcase": [
+        "bookcas": [
           "furniture"
         ],
         "boombox": [
@@ -1859,15 +1813,6 @@
           "shoes"
         ],
         "bottl": [
-          "antifreeze-bottle",
-          "glass-bottle-or-jar",
-          "metal-bottle-cap-or-lid",
-          "motor-oil-bottle",
-          "nalgene-bottle",
-          "plastic-container",
-          "vitamin-or-prescription-bottle"
-        ],
-        "bottle": [
           "antifreeze-bottle",
           "bulky-rigid-plastics",
           "glass-bottle-or-jar",
@@ -1912,6 +1857,9 @@
           "sun-basket-paper-insulation",
           "waxed-cardboard"
         ],
+        "bra": [
+          "scrap-metal"
+        ],
         "brake": [
           "automotive-fluids-other-than-motor-oil-and-antifreeze"
         ],
@@ -1919,9 +1867,6 @@
           "branches",
           "wood-waste",
           "yard-trimmings-and-leaves"
-        ],
-        "bras": [
-          "scrap-metal"
         ],
         "break": [
           "compostable-servingware-dishware"
@@ -1951,7 +1896,7 @@
           "paper-bag",
           "shredded-brown-crinkle-paper"
         ],
-        "bubble": [
+        "bubbl": [
           "amazon-mailers",
           "bubble-wrap-air-pillows",
           "envelopes-with-bubble-wrap-inside",
@@ -1966,55 +1911,7 @@
           "herbicide",
           "pesticide"
         ],
-        "building": [
-          "reusable-building-supplies"
-        ],
-        "bulb": [
-          "christmas-lights",
-          "light-bulb-ballast",
-          "light-bulb-compact-fluorescent-light-bulb-cfl",
-          "light-bulb-fluorescent-tube",
-          "light-bulb-halogen",
-          "light-bulb-incandescent",
-          "light-bulb-led"
-        ],
-        "bulky": [
-          "bulky-rigid-plastics",
-          "kitty-litter-bucket",
-          "plastic-bucket",
-          "plastic-lawn-furniture",
-          "plastic-pet-carrier",
-          "rubbermaid-storage-bin"
-        ],
-        "bullet": [
-          "ammunition-and-explosives"
-        ],
-        "bundle": [
-          "wire"
-        ],
-        "burner": [
-          "stove"
-        ],
-        "busines": [
-          "battery-button",
-          "battery-lithium-ion",
-          "battery-other",
-          "battery-rechargeable",
-          "receipt-paper"
-        ],
-        "but": [
-          "glass-bottle-or-jar",
-          "shredded-brown-crinkle-paper"
-        ],
-        "butter": [
-          "frozen-food-box",
-          "plastic-peanut-butter-jar"
-        ],
-        "button": [
-          "battery-button",
-          "battery-rechargeable"
-        ],
-        "buy": [
+        "bui": [
           "amazon-mailers",
           "art-supplies",
           "baking-glassware",
@@ -2070,6 +1967,54 @@
           "wood-treated-or-painted",
           "yoga-mat"
         ],
+        "build": [
+          "reusable-building-supplies"
+        ],
+        "bulb": [
+          "christmas-lights",
+          "light-bulb-ballast",
+          "light-bulb-compact-fluorescent-light-bulb-cfl",
+          "light-bulb-fluorescent-tube",
+          "light-bulb-halogen",
+          "light-bulb-incandescent",
+          "light-bulb-led"
+        ],
+        "bulki": [
+          "bulky-rigid-plastics",
+          "kitty-litter-bucket",
+          "plastic-bucket",
+          "plastic-lawn-furniture",
+          "plastic-pet-carrier",
+          "rubbermaid-storage-bin"
+        ],
+        "bullet": [
+          "ammunition-and-explosives"
+        ],
+        "bundl": [
+          "wire"
+        ],
+        "burner": [
+          "stove"
+        ],
+        "busin": [
+          "battery-button",
+          "battery-lithium-ion",
+          "battery-other",
+          "battery-rechargeable",
+          "receipt-paper"
+        ],
+        "but": [
+          "glass-bottle-or-jar",
+          "shredded-brown-crinkle-paper"
+        ],
+        "butter": [
+          "frozen-food-box",
+          "plastic-peanut-butter-jar"
+        ],
+        "button": [
+          "battery-button",
+          "battery-rechargeable"
+        ],
         "by": [
           "clear-plastic-berry-and-salad-container",
           "coffee-grounds",
@@ -2082,20 +2027,22 @@
           "plastic-cup",
           "plastic-take-out-container"
         ],
-        "bypas": [
+        "bypa": [
           "paint-latex"
+        ],
+        "ca": [
+          "cds-and-dvds",
+          "plastic-cd-and-dvd-cases"
         ],
         "cabinet": [
           "kitchen-cabinets-countertops",
           "reusable-building-supplies"
         ],
-        "cabinetry": [
+        "cabinetri": [
           "kitchen-cabinets-countertops"
         ],
         "cabl": [
-          "cords-and-cables"
-        ],
-        "cable": [
+          "cords-and-cables",
           "extension-cord"
         ],
         "cadmium": [
@@ -2105,22 +2052,19 @@
         "call": [
           "shingles-wood"
         ],
-        "camcorder": [
+        "camcord": [
           "camera-or-camcorder"
         ],
         "camera": [
           "camera-or-camcorder"
         ],
         "camp": [
+          "flammable-liquid",
           "propane-canister"
         ],
         "campaign": [
           "paperboard-election-sign",
           "plastic-film-election-sign"
-        ],
-        "camping": [
-          "flammable-liquid",
-          "propane-canister"
         ],
         "can": [
           "6-pack-holder",
@@ -2285,14 +2229,14 @@
           "yard-trimmings-and-leaves",
           "yoga-mat"
         ],
-        "candidate": [
+        "candi": [
+          "candy-or-food-wrapper"
+        ],
+        "candid": [
           "paperboard-election-sign",
           "plastic-film-election-sign"
         ],
-        "candy": [
-          "candy-or-food-wrapper"
-        ],
-        "canister": [
+        "canist": [
           "photograph-or-film",
           "propane-canister"
         ],
@@ -2321,9 +2265,6 @@
           "wheel"
         ],
         "capsul": [
-          "single-serve-coffee-pods"
-        ],
-        "capsule": [
           "single-serve-coffee-pods"
         ],
         "car": [
@@ -2375,17 +2316,10 @@
         "cartridg": [
           "printer-cartridge"
         ],
-        "cartridge": [
-          "printer-cartridge"
-        ],
-        "cas": [
-          "cds-and-dvds",
-          "plastic-cd-and-dvd-cases"
-        ],
         "case": [
           "plastic-cd-and-dvd-cases"
         ],
-        "cassette": [
+        "cassett": [
           "cds-and-dvds",
           "videotape-or-cassette-tape"
         ],
@@ -2401,29 +2335,24 @@
           "magazine",
           "mixed-paper"
         ],
-        "category": [
+        "categori": [
           "nalgene-bottle"
         ],
-        "catering": [
+        "cater": [
           "party-try-plastic-tray"
         ],
-        "catheter": [
+        "cathet": [
           "medical-equipment-and-supplies"
         ],
-        "cause": [
+        "caus": [
+          "battery-lithium-ion",
           "bubble-wrap-air-pillows",
           "wire"
-        ],
-        "caused": [
-          "battery-lithium-ion"
         ],
         "cd": [
           "cd-dvd-player",
           "cds-and-dvds",
           "plastic-cd-and-dvd-cases"
-        ],
-        "cds": [
-          "cds-and-dvds"
         ],
         "cell": [
           "cell-phone",
@@ -2456,7 +2385,7 @@
         "centrifug": [
           "medical-equipment-and-supplies"
         ],
-        "ceramic": [
+        "ceram": [
           "ceramic-dish",
           "tile"
         ],
@@ -2496,7 +2425,7 @@
           "bbq-grill-charcoal",
           "water-filter"
         ],
-        "charge": [
+        "charg": [
           "paint-latex",
           "yard-trimmings-and-leaves"
         ],
@@ -2510,7 +2439,7 @@
         "charm": [
           "packaging-styrofoam-or-polystyrene-foam"
         ],
-        "chasing": [
+        "chase": [
           "nalgene-bottle",
           "plastic-cup"
         ],
@@ -2521,11 +2450,11 @@
           "paper-towel",
           "plastic-flower-pots"
         ],
-        "cheese": [
+        "chees": [
           "frozen-food-box",
           "plastic-tub"
         ],
-        "chemical": [
+        "chemic": [
           "automotive-fluids-other-than-motor-oil-and-antifreeze",
           "light-bulb-halogen",
           "light-bulb-incandescent",
@@ -2557,7 +2486,7 @@
         "chloroplast": [
           "corrugated-plastic-election-sign"
         ],
-        "choose": [
+        "choos": [
           "clear-plastic-berry-and-salad-container",
           "party-try-plastic-tray",
           "plastic-cup",
@@ -2571,7 +2500,7 @@
         "chunk": [
           "baling-twine"
         ],
-        "city": [
+        "citi": [
           "yard-trimmings-and-leaves"
         ],
         "clam": [
@@ -2602,7 +2531,7 @@
         "cling": [
           "plastic-grocery-bags-and-plastic-film"
         ],
-        "clipping": [
+        "clip": [
           "yard-trimmings-and-leaves"
         ],
         "clorox": [
@@ -2615,24 +2544,19 @@
           "plastic-coat-hanger",
           "wire"
         ],
-        "clothing": [
-          "clothing-and-fabric"
-        ],
         "co2": [
           "smoke-detector-or-carbon-monoxide-detector"
         ],
         "coat": [
           "clothing-and-fabric",
           "metal-coat-hanger",
-          "plastic-coat-hanger"
-        ],
-        "coated": [
+          "plastic-coat-hanger",
           "take-out-food-container"
         ],
         "code": [
           "food-scraps"
         ],
-        "coffee": [
+        "coffe": [
           "coffee-grounds",
           "foil-coffee-bags",
           "paper-cup",
@@ -2644,17 +2568,10 @@
           "medical-equipment-and-supplies"
         ],
         "collect": [
-          "metal-bottle-cap-or-lid"
-        ],
-        "collected": [
-          "coffee-grounds",
-          "food-scraps"
-        ],
-        "collecting": [
-          "metal-bottle-cap-or-lid"
-        ],
-        "collection": [
           "baling-twine",
+          "coffee-grounds",
+          "food-scraps",
+          "metal-bottle-cap-or-lid",
           "paint-latex",
           "yard-trimmings-and-leaves"
         ],
@@ -2663,24 +2580,24 @@
           "paper-cup",
           "plastic-container"
         ],
+        "color": [
+          "construction-paper",
+          "mixed-paper"
+        ],
         "colorado": [
           "paint-latex",
           "telephone"
         ],
-        "colored": [
-          "construction-paper",
-          "mixed-paper"
-        ],
         "com": [
           "reflective-bubble-wrap-and-foil-bubble-mailers"
         ],
-        "combined": [
+        "combin": [
           "frozen-food-box"
         ],
         "come": [
           "metal-bottle-cap-or-lid"
         ],
-        "commercial": [
+        "commerci": [
           "cds-and-dvds",
           "compostable-servingware-dishware",
           "paper-cup",
@@ -2689,7 +2606,7 @@
           "take-out-food-container",
           "videotape-or-cassette-tape"
         ],
-        "community": [
+        "commun": [
           "clear-plastic-berry-and-salad-container",
           "party-try-plastic-tray",
           "plastic-cup",
@@ -2699,41 +2616,22 @@
           "light-bulb-compact-fluorescent-light-bulb-cfl"
         ],
         "compani": [
+          "compostable-servingware-dishware",
           "furniture",
           "paper-napkin",
           "paper-towel",
           "pumpkin"
         ],
-        "company": [
-          "compostable-servingware-dishware",
-          "furniture"
-        ],
-        "completely": [
+        "complet": [
           "amazon-mailers"
         ],
-        "component": [
+        "compon": [
           "telephone"
         ],
         "composit": [
           "wood-untreated"
         ],
         "compost": [
-          "coffee-grounds",
-          "food-scraps",
-          "paper-napkin",
-          "paper-towel",
-          "pumpkin",
-          "sod"
-        ],
-        "compostable": [
-          "compostable-servingware-dishware",
-          "paper-cup",
-          "take-out-food-container"
-        ],
-        "compostafter": [
-          "food-scraps"
-        ],
-        "composted": [
           "coffee-grounds",
           "compostable-servingware-dishware",
           "food-scraps",
@@ -2747,33 +2645,27 @@
           "waxed-cardboard",
           "yard-trimmings-and-leaves"
         ],
-        "composting": [
-          "compostable-servingware-dishware",
-          "food-scraps",
-          "manure",
-          "paper-cup",
-          "paper-napkin",
-          "paper-towel",
-          "take-out-food-container",
-          "yard-trimmings-and-leaves"
+        "compostaft": [
+          "food-scraps"
         ],
         "compound": [
           "over-the-counter-medication",
           "prescription-drug"
         ],
-        "computer": [
+        "comput": [
           "computer-accessory",
           "computer-monitor",
           "computer-tower",
           "electronics"
         ],
-        "concrete": [
+        "concret": [
           "carpet-roll-tube",
           "concrete",
           "rigid-cardboard-tubes-and-corners"
         ],
-        "condition": [
+        "condit": [
           "art-supplies",
+          "automotive-fluids-other-than-motor-oil-and-antifreeze",
           "baking-glassware",
           "bbq-grill-charcoal",
           "bbq-grill-gas",
@@ -2800,20 +2692,17 @@
           "tupperware-food-storage-container",
           "videotape-or-cassette-tape"
         ],
-        "conditioner": [
+        "condition": [
           "air-conditioner",
           "plastic-jug",
           "refrigerator-or-freezer",
           "toiletries"
         ],
-        "conditioning": [
-          "automotive-fluids-other-than-motor-oil-and-antifreeze"
-        ],
         "confirm": [
           "medical-equipment-and-supplies",
           "shingles-wood"
         ],
-        "consider": [
+        "consid": [
           "amazon-mailers",
           "art-supplies",
           "baking-glassware",
@@ -2855,6 +2744,7 @@
           "ribbons-and-bows",
           "seed-tray",
           "shoes",
+          "small-appliance",
           "sporting-goods",
           "stroller",
           "styrofoam-cooler-or-meal-kit-cooler",
@@ -2869,14 +2759,10 @@
           "wood-treated-or-painted",
           "yoga-mat"
         ],
-        "considered": [
-          "bbq-grill-gas",
-          "small-appliance"
-        ],
-        "console": [
+        "consol": [
           "television"
         ],
-        "construction": [
+        "construct": [
           "concrete",
           "construction-paper",
           "pvc-pipe"
@@ -2941,34 +2827,29 @@
           "yard-trimmings-and-leaves"
         ],
         "contain": [
+          "aluminum",
+          "aluminum-pie-pan-baking-tray",
+          "aluminum-take-out-container",
+          "antifreeze-bottle",
           "automotive-fluids-other-than-motor-oil-and-antifreeze",
           "battery-button",
           "battery-rechargeable",
+          "chip-can",
+          "clear-plastic-berry-and-salad-container",
+          "compostable-servingware-dishware",
           "concrete",
+          "fire-extinguisher",
+          "food-grade-styrofoam",
+          "frozen-food-box",
           "light-bulb-ballast",
           "light-bulb-compact-fluorescent-light-bulb-cfl",
           "light-bulb-fluorescent-tube",
           "lighter",
           "motor-oil-bottle",
+          "nalgene-bottle",
+          "paint-latex",
           "paint-oil-based-and-lacquers",
           "photo-chemical",
-          "scrap-metal",
-          "spray-paint",
-          "telephone"
-        ],
-        "container": [
-          "aluminum",
-          "aluminum-pie-pan-baking-tray",
-          "aluminum-take-out-container",
-          "antifreeze-bottle",
-          "chip-can",
-          "clear-plastic-berry-and-salad-container",
-          "compostable-servingware-dishware",
-          "fire-extinguisher",
-          "food-grade-styrofoam",
-          "frozen-food-box",
-          "motor-oil-bottle",
-          "nalgene-bottle",
           "plastic-caps-and-lids",
           "plastic-container",
           "plastic-disinfectant-wipes-container",
@@ -2979,45 +2860,38 @@
           "scrap-metal",
           "single-serve-coffee-pods",
           "single-use-servingware",
+          "spray-paint",
           "take-out-food-container",
+          "telephone",
           "tupperware-food-storage-container"
         ],
-        "containing": [
-          "paint-latex",
-          "paint-oil-based-and-lacquers"
-        ],
-        "contaminate": [
+        "contamin": [
           "paint-latex"
         ],
-        "contracted": [
+        "contract": [
           "yard-trimmings-and-leaves"
         ],
         "control": [
-          "electronics"
-        ],
-        "controlled": [
+          "electronics",
           "food-scraps"
         ],
-        "controller": [
-          "electronics"
-        ],
-        "convection": [
+        "convect": [
           "oven"
         ],
-        "convertible": [
+        "convert": [
           "stroller"
+        ],
+        "cook": [
+          "cooking-oil-and-grease"
         ],
         "cooker": [
           "oven",
           "stove"
         ],
-        "cooking": [
-          "cooking-oil-and-grease"
-        ],
         "cooktop": [
           "stove"
         ],
-        "cookware": [
+        "cookwar": [
           "pot-or-pan"
         ],
         "coolant": [
@@ -3030,6 +2904,9 @@
           "refrigerator-or-freezer",
           "styrofoam-cooler-or-meal-kit-cooler"
         ],
+        "copi": [
+          "mixed-paper"
+        ],
         "copier": [
           "electronics",
           "mixed-paper",
@@ -3037,9 +2914,6 @@
         ],
         "copper": [
           "scrap-metal"
-        ],
-        "copy": [
-          "mixed-paper"
         ],
         "cord": [
           "computer-accessory",
@@ -3050,7 +2924,7 @@
           "snowblower",
           "vacuum-cleaner"
         ],
-        "corelle": [
+        "corel": [
           "ceramic-dish"
         ],
         "cork": [
@@ -3065,14 +2939,14 @@
         "coroplast": [
           "corrugated-plastic-election-sign"
         ],
-        "corrugated": [
+        "corrug": [
           "cardboard",
           "corrugated-plastic-election-sign"
         ],
         "cost": [
           "battery-alkaline"
         ],
-        "cottage": [
+        "cottag": [
           "plastic-tub"
         ],
         "couch": [
@@ -3086,7 +2960,7 @@
           "kitchen-cabinets-countertops",
           "reusable-building-supplies"
         ],
-        "county": [
+        "counti": [
           "battery-button",
           "battery-lithium-ion",
           "battery-other",
@@ -3097,10 +2971,8 @@
         ],
         "cover": [
           "book-hardcover",
-          "mattress"
-        ],
-        "covered": [
           "book-paperback",
+          "mattress",
           "single-use-servingware"
         ],
         "cpu": [
@@ -3182,7 +3054,7 @@
           "frozen-food-box",
           "plastic-tub"
         ],
-        "crinkle": [
+        "crinkl": [
           "shredded-brown-crinkle-paper"
         ],
         "crt": [
@@ -3201,7 +3073,7 @@
           "single-serve-coffee-pods",
           "single-use-servingware"
         ],
-        "curbside": [
+        "curbsid": [
           "aluminum",
           "aluminum-can",
           "aluminum-foil",
@@ -3260,13 +3132,13 @@
           "wire",
           "wrapping-paper"
         ],
+        "curl": [
+          "personal-care-appliances"
+        ],
         "curler": [
           "personal-care-appliances"
         ],
-        "curling": [
-          "personal-care-appliances"
-        ],
-        "currently": [
+        "current": [
           "carpet-and-rugs",
           "carpet-padding",
           "clear-plastic-berry-and-salad-container",
@@ -3285,23 +3157,21 @@
           "cardboard",
           "wood-untreated"
         ],
-        "cycle": [
+        "cycl": [
           "food-scraps"
         ],
-        "dairy": [
+        "dairi": [
           "carton"
         ],
-        "damage": [
+        "damag": [
           "bubble-wrap-air-pillows",
+          "car-seat",
           "carpet-roll-tube",
           "lawnmower",
           "scrap-metal",
           "snowblower",
           "vacuum-cleaner",
           "wire"
-        ],
-        "damaged": [
-          "car-seat"
         ],
         "dampcompost": [
           "food-scraps"
@@ -3316,7 +3186,7 @@
           "computer-accessory",
           "computer-tower"
         ],
-        "daybed": [
+        "dayb": [
           "mattress"
         ],
         "dealer": [
@@ -3328,44 +3198,44 @@
         "decal": [
           "label-or-sticker"
         ],
-        "decorative": [
+        "decor": [
           "pillow"
         ],
         "deep": [
           "cooking-oil-and-grease",
           "household-item"
         ],
-        "degreaser": [
+        "degreas": [
           "household-cleaners"
         ],
         "deli": [
           "party-try-plastic-tray",
           "plastic-take-out-container"
         ],
-        "delivered": [
+        "deliv": [
           "cardboard",
           "reflective-bubble-wrap-and-foil-bubble-mailers"
         ],
-        "demolition": [
+        "demolit": [
           "concrete"
         ],
         "dental": [
           "medical-equipment-and-supplies"
         ],
-        "depending": [
+        "depend": [
           "light-bulb-ballast"
         ],
-        "designed": [
+        "design": [
           "over-the-counter-medication",
           "prescription-drug"
         ],
         "desktop": [
           "computer-tower"
         ],
-        "destination": [
+        "destin": [
           "metal-bottle-cap-or-lid"
         ],
-        "destruction": [
+        "destruct": [
           "computer-accessory",
           "computer-tower"
         ],
@@ -3406,40 +3276,43 @@
         "detector": [
           "smoke-detector-or-carbon-monoxide-detector"
         ],
-        "detergent": [
+        "deterg": [
           "plastic-jug"
         ],
-        "device": [
+        "devic": [
           "hearing-aid"
         ],
         "dexcool": [
           "antifreeze"
         ],
-        "diameter": [
+        "diamet": [
           "yard-trimmings-and-leaves"
         ],
-        "dictionary": [
+        "dictionari": [
           "book-hardcover"
         ],
         "diesel": [
           "automotive-fluids-other-than-motor-oil-and-antifreeze"
         ],
-        "different": [
+        "differ": [
           "take-out-food-container"
         ],
-        "digital": [
+        "digit": [
           "camera-or-camcorder"
         ],
-        "dimensional": [
+        "dii": [
+          "wine-cork"
+        ],
+        "dimension": [
           "wood-untreated"
         ],
-        "dining": [
+        "dine": [
           "furniture"
         ],
         "dinner": [
           "frozen-food-box"
         ],
-        "diode": [
+        "diod": [
           "light-bulb-led"
         ],
         "direct": [
@@ -3459,47 +3332,29 @@
           "household-item",
           "satellite-dish"
         ],
-        "dishware": [
+        "dishwar": [
           "compostable-servingware-dishware"
         ],
-        "dishwasher": [
+        "dishwash": [
           "dishwasher",
           "large-appliance",
           "oven",
           "stove"
         ],
-        "disinfectant": [
+        "disinfect": [
           "disinfectant-wipes",
           "plastic-disinfectant-wipes-container"
         ],
         "disk": [
           "single-serve-coffee-pods"
         ],
-        "dispenser": [
+        "dispens": [
           "office-and-school-supplies"
         ],
-        "display": [
+        "displai": [
           "computer-monitor"
         ],
-        "disposable": [
-          "disposable-face-mask",
-          "disposable-gloves"
-        ],
-        "disposal": [
-          "battery-button",
-          "battery-lithium-ion",
-          "battery-other",
-          "battery-rechargeable",
-          "car-seat",
-          "take-out-food-container"
-        ],
-        "dispose": [
-          "battery-lithium-ion",
-          "battery-other",
-          "helium-tank",
-          "telephone"
-        ],
-        "disposed": [
+        "dispos": [
           "ammunition-and-explosives",
           "antifreeze",
           "automotive-fluids-other-than-motor-oil-and-antifreeze",
@@ -3507,12 +3362,16 @@
           "battery-lithium-ion",
           "battery-other",
           "battery-rechargeable",
+          "car-seat",
           "ceramic-dish",
           "chip-can",
+          "disposable-face-mask",
+          "disposable-gloves",
           "flammable-liquid",
           "furnace-filter",
           "gasoline",
           "glue",
+          "helium-tank",
           "herbicide",
           "household-cleaners",
           "label-or-sticker",
@@ -3545,6 +3404,8 @@
           "stroller",
           "styrofoam-cooler-or-meal-kit-cooler",
           "syringe-sharps",
+          "take-out-food-container",
+          "telephone",
           "tupperware-food-storage-container",
           "tyvek-envelope",
           "videotape-or-cassette-tape",
@@ -3554,9 +3415,6 @@
           "wine-cork",
           "wood-treated-or-painted",
           "woven-plastic-feed-bag"
-        ],
-        "diy": [
-          "wine-cork"
         ],
         "do": [
           "antifreeze",
@@ -3573,19 +3431,22 @@
           "pet-food-bag",
           "pet-waste"
         ],
-        "donated": [
+        "donat": [
           "art-supplies",
           "baking-glassware",
           "bbq-grill-charcoal",
           "bbq-grill-gas",
           "bicycle",
           "book-hardcover",
+          "camera-or-camcorder",
           "carpet-and-rugs",
           "cd-dvd-player",
           "cds-and-dvds",
           "ceramic-dish",
           "christmas-tree-artificial",
+          "clothing-and-fabric",
           "cords-and-cables",
+          "electronics",
           "eyeglasses",
           "food-unused",
           "furniture",
@@ -3597,30 +3458,19 @@
           "pillow",
           "plastic-halloween-pumpkin",
           "plastic-pet-carrier",
+          "plastic-play-structure",
           "plastic-toy",
           "pot-or-pan",
           "shoes",
           "sporting-goods",
+          "stereo-sound-equipment",
           "stroller",
+          "television",
           "tools",
           "tupperware-food-storage-container",
           "video-game-system",
           "videotape-or-cassette-tape",
           "yoga-mat"
-        ],
-        "donating": [
-          "bbq-grill-charcoal",
-          "bbq-grill-gas",
-          "camera-or-camcorder",
-          "cords-and-cables",
-          "electronics",
-          "stereo-sound-equipment",
-          "television"
-        ],
-        "donation": [
-          "carpet-and-rugs",
-          "clothing-and-fabric",
-          "plastic-play-structure"
         ],
         "door": [
           "reusable-building-supplies"
@@ -3643,7 +3493,7 @@
         "drawer": [
           "furniture"
         ],
-        "dres": [
+        "dre": [
           "clothing-and-fabric",
           "shoes"
         ],
@@ -3670,6 +3520,7 @@
           "automobile-car-or-truck",
           "automotive-battery",
           "automotive-fluids-other-than-motor-oil-and-antifreeze",
+          "baling-twine",
           "battery-alkaline",
           "battery-button",
           "battery-lithium-ion",
@@ -3700,9 +3551,11 @@
           "computer-accessory",
           "computer-monitor",
           "computer-tower",
+          "concrete",
           "construction-paper",
           "cooking-oil-and-grease",
           "cords-and-cables",
+          "corrugated-plastic-election-sign",
           "dishwasher",
           "electronics",
           "empty-aerosol-can",
@@ -3717,6 +3570,7 @@
           "light-bulb-ballast",
           "light-bulb-compact-fluorescent-light-bulb-cfl",
           "light-bulb-fluorescent-tube",
+          "light-bulb-led",
           "magazine",
           "mattress",
           "metal-barrel-or-drum",
@@ -3727,6 +3581,7 @@
           "mixed-paper",
           "molded-paper-packaging",
           "motor-oil",
+          "nalgene-bottle",
           "oven",
           "paint-latex",
           "paint-oil-based-and-lacquers",
@@ -3761,6 +3616,7 @@
           "rubbermaid-storage-bin",
           "satellite-dish",
           "scrap-metal",
+          "shingles-wood",
           "shoes",
           "shredded-brown-crinkle-paper",
           "shredded-paper",
@@ -3776,6 +3632,7 @@
           "telephone",
           "telephone-book",
           "television",
+          "tile",
           "tin-can",
           "tissue-wrapping-paper",
           "vacuum-cleaner",
@@ -3789,41 +3646,6 @@
           "wood-untreated",
           "wood-waste",
           "wrapping-paper"
-        ],
-        "dropped": [
-          "battery-lithium-ion",
-          "book-hardcover",
-          "brick-and-pavers",
-          "car-seat",
-          "corrugated-plastic-election-sign",
-          "light-bulb-led",
-          "nalgene-bottle",
-          "paint-latex",
-          "paint-oil-based-and-lacquers",
-          "plastic-flower-pots",
-          "porcelain-sinks-toilets",
-          "rock-and-gravel",
-          "tile"
-        ],
-        "dropping": [
-          "baling-twine",
-          "battery-button",
-          "battery-rechargeable",
-          "camera-or-camcorder",
-          "cd-dvd-player",
-          "cell-phone",
-          "concrete",
-          "electronics",
-          "helium-tank",
-          "light-bulb-compact-fluorescent-light-bulb-cfl",
-          "light-bulb-fluorescent-tube",
-          "metal-bottle-cap-or-lid",
-          "shingles-wood",
-          "stereo-sound-equipment",
-          "telephone",
-          "television",
-          "video-game-system",
-          "wood-pallet"
         ],
         "drug": [
           "over-the-counter-medication",
@@ -3844,7 +3666,7 @@
           "personal-care-appliances",
           "stove"
         ],
-        "drywall": [
+        "drywal": [
           "reusable-building-supplies"
         ],
         "due": [
@@ -3854,13 +3676,13 @@
           "plastic-cup",
           "plastic-take-out-container"
         ],
-        "dumped": [
+        "dump": [
           "paint-latex"
         ],
         "dung": [
           "manure"
         ],
-        "durable": [
+        "durabl": [
           "medical-equipment-and-supplies"
         ],
         "dust": [
@@ -3874,13 +3696,13 @@
         "e": [
           "plastic-flower-pots"
         ],
-        "easily": [
-          "carpet-roll-tube"
-        ],
-        "easy": [
+        "easi": [
           "food-scraps"
         ],
-        "eating": [
+        "easili": [
+          "carpet-roll-tube"
+        ],
+        "eat": [
           "manure"
         ],
         "eco": [
@@ -3889,7 +3711,7 @@
         "ecoproduct": [
           "compostable-servingware-dishware"
         ],
-        "ecoware": [
+        "ecowar": [
           "compostable-servingware-dishware"
         ],
         "effect": [
@@ -3908,16 +3730,16 @@
           "pillow",
           "water-filter"
         ],
-        "election": [
+        "elect": [
           "corrugated-plastic-election-sign",
           "paperboard-election-sign",
           "plastic-film-election-sign"
         ],
-        "electric": [
+        "electr": [
           "personal-care-appliances",
           "small-appliance"
         ],
-        "electronic": [
+        "electron": [
           "camera-or-camcorder",
           "cd-dvd-player",
           "computer-accessory",
@@ -3930,21 +3752,19 @@
         "elmer": [
           "glue"
         ],
-        "elsewhere": [
+        "elsewher": [
           "bbq-grill-gas",
           "book-hardcover"
         ],
-        "emitting": [
+        "emit": [
           "light-bulb-led"
         ],
-        "emptied": [
-          "scrap-metal"
-        ],
-        "empty": [
+        "empti": [
           "empty-aerosol-can",
           "plastic-caps-and-lids",
           "plastic-cup",
           "plastic-disinfectant-wipes-container",
+          "scrap-metal",
           "spray-paint"
         ],
         "enamel": [
@@ -3958,7 +3778,7 @@
           "battery-rechargeable",
           "furniture"
         ],
-        "engine": [
+        "engin": [
           "auto-part-car-part",
           "automotive-battery",
           "scrap-metal"
@@ -3973,7 +3793,7 @@
         "ensur": [
           "baling-twine"
         ],
-        "entire": [
+        "entir": [
           "bubble-wrap-air-pillows"
         ],
         "envelop": [
@@ -3984,13 +3804,7 @@
           "reflective-bubble-wrap-and-foil-bubble-mailers",
           "tyvek-envelope"
         ],
-        "envelope": [
-          "amazon-mailers",
-          "envelopes-with-bubble-wrap-inside",
-          "paper-envelope",
-          "tyvek-envelope"
-        ],
-        "environment": [
+        "environ": [
           "antifreeze",
           "automotive-fluids-other-than-motor-oil-and-antifreeze",
           "battery-button",
@@ -4008,15 +3822,15 @@
           "spray-paint",
           "telephone"
         ],
-        "epoxy": [
+        "ep": [
+          "foam"
+        ],
+        "epoxi": [
           "glue",
           "paint-latex",
           "paint-oil-based-and-lacquers"
         ],
-        "eps": [
-          "foam"
-        ],
-        "equipment": [
+        "equip": [
           "bubble-wrap-air-pillows",
           "carpet-roll-tube",
           "electronics",
@@ -4030,7 +3844,7 @@
           "vacuum-cleaner",
           "wire"
         ],
-        "eraser": [
+        "eras": [
           "office-and-school-supplies"
         ],
         "etc": [
@@ -4038,31 +3852,31 @@
           "medical-equipment-and-supplies",
           "plastic-flower-pots"
         ],
-        "ethylene": [
+        "ethylen": [
           "antifreeze"
         ],
         "even": [
           "christmas-lights"
         ],
-        "every": [
+        "everi": [
           "styrofoam-cooler-or-meal-kit-cooler"
         ],
-        "ewaste": [
+        "ewast": [
           "computer-monitor"
         ],
         "exam": [
           "medical-equipment-and-supplies"
         ],
-        "exercise": [
+        "exercis": [
           "sporting-goods"
         ],
-        "expired": [
+        "expir": [
           "car-seat"
         ],
         "explosiv": [
           "ammunition-and-explosives"
         ],
-        "extension": [
+        "extens": [
           "cords-and-cables",
           "extension-cord",
           "scrap-metal"
@@ -4070,7 +3884,7 @@
         "exterior": [
           "paint-latex"
         ],
-        "extinguisher": [
+        "extinguish": [
           "fire-extinguisher"
         ],
         "eyeglass": [
@@ -4083,12 +3897,10 @@
         "face": [
           "disposable-face-mask"
         ],
-        "faciliti": [
+        "facil": [
           "battery-lithium-ion",
-          "nalgene-bottle"
-        ],
-        "facility": [
           "lawnmower",
+          "nalgene-bottle",
           "paint-latex",
           "paint-oil-based-and-lacquers",
           "scrap-metal",
@@ -4099,7 +3911,7 @@
           "vacuum-cleaner",
           "wire"
         ],
-        "fairy": [
+        "fairi": [
           "christmas-lights"
         ],
         "fake": [
@@ -4110,7 +3922,7 @@
           "shredded-brown-crinkle-paper",
           "shredded-paper"
         ],
-        "family": [
+        "famili": [
           "food-scraps"
         ],
         "fax": [
@@ -4163,7 +3975,7 @@
         "feel": [
           "food-scraps"
         ],
-        "fencing": [
+        "fenc": [
           "scrap-metal",
           "vinyl-fencing"
         ],
@@ -4173,7 +3985,7 @@
         "fiber": [
           "molded-paper-packaging"
         ],
-        "fieldstone": [
+        "fieldston": [
           "brick-and-pavers"
         ],
         "filament": [
@@ -4183,10 +3995,8 @@
           "office-and-school-supplies"
         ],
         "fill": [
+          "carpet-roll-tube",
           "fill-dirt"
-        ],
-        "filled": [
-          "carpet-roll-tube"
         ],
         "filler": [
           "seed-tray"
@@ -4223,7 +4033,7 @@
         "firework": [
           "ammunition-and-explosives"
         ],
-        "fishing": [
+        "fish": [
           "bulky-rigid-plastics"
         ],
         "fit": [
@@ -4232,14 +4042,14 @@
         "five": [
           "food-scraps"
         ],
-        "fixture": [
+        "fixtur": [
           "light-bulb-ballast",
           "reusable-building-supplies"
         ],
-        "flagstone": [
+        "flagston": [
           "brick-and-pavers"
         ],
-        "flammable": [
+        "flammabl": [
           "battery-button",
           "battery-lithium-ion",
           "battery-other",
@@ -4269,13 +4079,13 @@
           "plastic-flower-pots",
           "yard-trimmings-and-leaves"
         ],
-        "fluctuation": [
+        "fluctuat": [
           "party-try-plastic-tray"
         ],
         "fluid": [
           "automotive-fluids-other-than-motor-oil-and-antifreeze"
         ],
-        "fluorescent": [
+        "fluoresc": [
           "light-bulb-ballast",
           "light-bulb-compact-fluorescent-light-bulb-cfl",
           "light-bulb-fluorescent-tube",
@@ -4301,7 +4111,7 @@
         "folder": [
           "office-and-school-supplies"
         ],
-        "following": [
+        "follow": [
           "antifreeze",
           "asphalt",
           "automotive-battery",
@@ -4337,7 +4147,7 @@
           "tupperware-food-storage-container",
           "woven-plastic-feed-bag"
         ],
-        "football": [
+        "footbal": [
           "sporting-goods"
         ],
         "footstool": [
@@ -4437,7 +4247,7 @@
           "mattress",
           "paint-latex"
         ],
-        "freecycle": [
+        "freecycl": [
           "amazon-mailers",
           "art-supplies",
           "baking-glassware",
@@ -4504,7 +4314,7 @@
           "food-unused",
           "styrofoam-cooler-or-meal-kit-cooler"
         ],
-        "fridge": [
+        "fridg": [
           "refrigerator-or-freezer"
         ],
         "from": [
@@ -4532,22 +4342,22 @@
           "clear-plastic-berry-and-salad-container",
           "waxed-cardboard"
         ],
+        "fry": [
+          "pot-or-pan"
+        ],
         "fryer": [
           "cooking-oil-and-grease",
           "household-item"
-        ],
-        "frying": [
-          "pot-or-pan"
         ],
         "fuel": [
           "gasoline",
           "propane-canister"
         ],
-        "furnace": [
+        "furnac": [
           "furnace-filter",
           "large-appliance"
         ],
-        "furniture": [
+        "furnitur": [
           "furniture",
           "household-item",
           "plastic-lawn-furniture",
@@ -4563,6 +4373,12 @@
         "g12": [
           "antifreeze"
         ],
+        "ga": [
+          "bbq-grill-gas",
+          "flammable-liquid",
+          "gasoline",
+          "helium-tank"
+        ],
         "gallon": [
           "bulky-rigid-plastics",
           "metal-barrel-or-drum",
@@ -4575,7 +4391,7 @@
           "household-item",
           "video-game-system"
         ],
-        "garbage": [
+        "garbag": [
           "metal-trash-can"
         ],
         "garden": [
@@ -4583,18 +4399,12 @@
           "garden-hose",
           "yard-trimmings-and-leaves"
         ],
-        "gas": [
-          "bbq-grill-gas",
-          "flammable-liquid",
-          "gasoline",
-          "helium-tank"
-        ],
-        "gasoline": [
+        "gasolin": [
           "automotive-fluids-other-than-motor-oil-and-antifreeze",
           "flammable-liquid",
           "gasoline"
         ],
-        "gauze": [
+        "gauz": [
           "medical-equipment-and-supplies"
         ],
         "gear": [
@@ -4603,12 +4413,12 @@
         "gel": [
           "toiletries"
         ],
-        "generally": [
+        "gener": [
           "pillow",
           "plastic-take-out-container",
           "take-out-food-container"
         ],
-        "gently": [
+        "gentli": [
           "art-supplies",
           "book-hardcover",
           "carpet-and-rugs",
@@ -4637,23 +4447,23 @@
         "girl": [
           "packaging-styrofoam-or-polystyrene-foam"
         ],
-        "glad": [
-          "tupperware-food-storage-container"
-        ],
-        "glas": [
+        "gla": [
           "art-supplies",
           "baking-glassware",
           "glass-bottle-or-jar",
           "metal-bottle-cap-or-lid",
           "window-glass"
         ],
+        "glad": [
+          "tupperware-food-storage-container"
+        ],
         "glass": [
           "eyeglasses"
         ],
-        "glassware": [
+        "glasswar": [
           "baking-glassware"
         ],
-        "glossy": [
+        "glossi": [
           "mixed-paper"
         ],
         "glov": [
@@ -4680,6 +4490,7 @@
           "clear-plastic-berry-and-salad-container",
           "compostable-servingware-dishware",
           "food-grade-styrofoam",
+          "metal-bottle-cap-or-lid",
           "nalgene-bottle",
           "paper-cup",
           "plastic-cup",
@@ -4690,9 +4501,6 @@
         "goat": [
           "manure"
         ],
-        "going": [
-          "metal-bottle-cap-or-lid"
-        ],
         "good": [
           "cardboard",
           "christmas-tree-artificial",
@@ -4702,8 +4510,12 @@
           "stroller",
           "videotape-or-cassette-tape"
         ],
-        "goodwill": [
+        "goodwil": [
           "book-hardcover"
+        ],
+        "gra": [
+          "sod",
+          "yard-trimmings-and-leaves"
         ],
         "grade": [
           "food-grade-styrofoam"
@@ -4714,14 +4526,10 @@
         "granola": [
           "candy-or-food-wrapper"
         ],
-        "gras": [
-          "sod",
-          "yard-trimmings-and-leaves"
-        ],
         "gravel": [
           "rock-and-gravel"
         ],
-        "grease": [
+        "greas": [
           "cooking-oil-and-grease"
         ],
         "green": [
@@ -4730,14 +4538,14 @@
           "packaging-styrofoam-or-polystyrene-foam",
           "yard-trimmings-and-leaves"
         ],
-        "greeting": [
+        "greet": [
           "mixed-paper",
           "paperboard"
         ],
-        "grenade": [
+        "grenad": [
           "ammunition-and-explosives"
         ],
-        "griddle": [
+        "griddl": [
           "small-appliance"
         ],
         "grill": [
@@ -4748,7 +4556,7 @@
         "grind": [
           "coffee-grounds"
         ],
-        "grocery": [
+        "groceri": [
           "paper-bag",
           "party-try-plastic-tray",
           "plastic-film-election-sign",
@@ -4814,7 +4622,7 @@
           "wood-treated-or-painted",
           "yoga-mat"
         ],
-        "guide": [
+        "guid": [
           "battery-button",
           "battery-lithium-ion",
           "battery-other",
@@ -4829,6 +4637,16 @@
           "nalgene-bottle",
           "plastic-flower-pots",
           "wood-untreated"
+        ],
+        "ha": [
+          "lawnmower",
+          "scrap-metal",
+          "snowblower",
+          "vacuum-cleaner"
+        ],
+        "hai": [
+          "baling-twine",
+          "yard-trimmings-and-leaves"
         ],
         "hair": [
           "empty-aerosol-can",
@@ -4853,9 +4671,6 @@
           "plastic-tube"
         ],
         "handl": [
-          "plastic-flower-pots"
-        ],
-        "handled": [
           "battery-button",
           "battery-lithium-ion",
           "battery-other",
@@ -4868,6 +4683,7 @@
           "paint-oil-based-and-lacquers",
           "pesticide",
           "photo-chemical",
+          "plastic-flower-pots",
           "telephone"
         ],
         "hanger": [
@@ -4875,39 +4691,31 @@
           "plastic-coat-hanger",
           "scrap-metal"
         ],
+        "har": [
+          "medical-equipment-and-supplies"
+        ],
         "hard": [
           "book-hardcover",
           "computer-accessory",
           "packaging-styrofoam-or-polystyrene-foam"
         ],
-        "hardcover": [
+        "hardcov": [
           "book-hardcover"
         ],
-        "hardware": [
+        "hardwar": [
           "wire"
         ],
         "harm": [
-          "battery-rechargeable",
-          "ribbons-and-bows"
-        ],
-        "harmful": [
           "antifreeze",
           "automotive-fluids-other-than-motor-oil-and-antifreeze",
           "battery-button",
+          "battery-rechargeable",
           "over-the-counter-medication",
           "paint-oil-based-and-lacquers",
           "prescription-drug",
+          "ribbons-and-bows",
           "spray-paint",
           "telephone"
-        ],
-        "harness": [
-          "medical-equipment-and-supplies"
-        ],
-        "has": [
-          "lawnmower",
-          "scrap-metal",
-          "snowblower",
-          "vacuum-cleaner"
         ],
         "haul": [
           "furniture"
@@ -4922,11 +4730,7 @@
           "stroller",
           "take-out-food-container"
         ],
-        "hay": [
-          "baling-twine",
-          "yard-trimmings-and-leaves"
-        ],
-        "hazardou": [
+        "hazard": [
           "ammunition-and-explosives",
           "automotive-fluids-other-than-motor-oil-and-antifreeze",
           "battery-button",
@@ -4976,13 +4780,13 @@
           "spray-paint",
           "telephone"
         ],
-        "hearing": [
+        "hear": [
           "hearing-aid"
         ],
         "heater": [
           "water-heater"
         ],
-        "heavy": [
+        "heavi": [
           "battery-button",
           "battery-rechargeable",
           "paint-latex",
@@ -5003,9 +4807,6 @@
         "herbicid": [
           "herbicide"
         ],
-        "herbicide": [
-          "herbicide"
-        ],
         "herbivor": [
           "manure"
         ],
@@ -5014,7 +4815,7 @@
           "nalgene-bottle",
           "yard-trimmings-and-leaves"
         ],
-        "highly": [
+        "highli": [
           "battery-button",
           "battery-lithium-ion",
           "battery-other",
@@ -5025,7 +4826,10 @@
           "plastic-flower-pots",
           "reusable-building-supplies"
         ],
-        "hockey": [
+        "ho": [
+          "garden-hose"
+        ],
+        "hockei": [
           "sporting-goods"
         ],
         "hold": [
@@ -5036,7 +4840,7 @@
         "holder": [
           "6-pack-holder"
         ],
-        "holiday": [
+        "holidai": [
           "christmas-lights",
           "christmas-tree-artificial",
           "christmas-tree-live"
@@ -5051,9 +4855,6 @@
         "hoover": [
           "vacuum-cleaner"
         ],
-        "hos": [
-          "garden-hose"
-        ],
         "hose": [
           "garden-hose"
         ],
@@ -5063,7 +4864,8 @@
           "personal-care-appliances",
           "water-heater"
         ],
-        "house": [
+        "hous": [
+          "food-scraps",
           "house-insulation",
           "plastic-play-structure"
         ],
@@ -5089,19 +4891,16 @@
           "spray-paint",
           "syringe-sharps"
         ],
-        "houseplant": [
+        "housepl": [
           "food-scraps"
         ],
-        "houseware": [
+        "housewar": [
           "household-item"
         ],
         "housewrap": [
           "house-insulation"
         ],
-        "housing": [
-          "food-scraps"
-        ],
-        "however": [
+        "howev": [
           "amazon-mailers"
         ],
         "hub": [
@@ -5125,14 +4924,14 @@
           "spray-paint",
           "telephone"
         ],
-        "hypodermic": [
+        "hypoderm": [
           "medical-equipment-and-supplies",
           "syringe-sharps"
         ],
-        "iced": [
+        "ic": [
           "plastic-cup"
         ],
-        "identify": [
+        "identifi": [
           "paint-latex",
           "paint-oil-based-and-lacquers"
         ],
@@ -5181,13 +4980,13 @@
           "tupperware-food-storage-container",
           "wire"
         ],
-        "illegal": [
+        "illeg": [
           "telephone"
         ],
-        "imprinted": [
+        "imprint": [
           "spiral-notebook"
         ],
-        "improve": [
+        "improv": [
           "food-scraps"
         ],
         "in": [
@@ -5344,23 +5143,13 @@
           "yard-trimmings-and-leaves",
           "yoga-mat"
         ],
-        "incandescent": [
+        "incandesc": [
           "light-bulb-incandescent"
         ],
         "inch": [
           "yard-trimmings-and-leaves"
         ],
         "includ": [
-          "compostable-servingware-dishware",
-          "paint-oil-based-and-lacquers"
-        ],
-        "include": [
-          "light-bulb-halogen",
-          "light-bulb-incandescent",
-          "shredded-brown-crinkle-paper",
-          "yard-trimmings-and-leaves"
-        ],
-        "included": [
           "battery-button",
           "battery-lithium-ion",
           "battery-other",
@@ -5370,33 +5159,35 @@
           "cardboard",
           "compostable-servingware-dishware",
           "construction-paper",
+          "disposable-gloves",
           "foam",
+          "household-cleaners",
           "lawnmower",
+          "light-bulb-halogen",
+          "light-bulb-incandescent",
           "magazine",
           "mixed-paper",
-          "paperboard",
-          "scrap-metal",
-          "snowblower",
-          "sun-basket-paper-insulation",
-          "vacuum-cleaner",
-          "white-office-paper",
-          "wire"
-        ],
-        "including": [
-          "disposable-gloves",
-          "household-cleaners",
+          "paint-oil-based-and-lacquers",
           "paper-cup",
+          "paperboard",
           "plastic-jug",
           "plastic-tub",
           "porcelain-sinks-toilets",
+          "scrap-metal",
+          "shredded-brown-crinkle-paper",
+          "snowblower",
+          "sun-basket-paper-insulation",
           "syringe-sharps",
           "take-out-food-container",
+          "vacuum-cleaner",
+          "white-office-paper",
+          "wire",
           "yard-trimmings-and-leaves"
         ],
-        "individual": [
+        "individu": [
           "plastic-pet-carrier"
         ],
-        "industrial": [
+        "industri": [
           "rigid-cardboard-tubes-and-corners"
         ],
         "infant": [
@@ -5405,22 +5196,22 @@
         "info": [
           "food-scraps"
         ],
-        "information": [
+        "inform": [
           "battery-button",
           "battery-lithium-ion",
           "battery-other",
           "battery-rechargeable"
         ],
-        "injure": [
+        "injur": [
           "baling-twine"
         ],
         "ink": [
           "printer-cartridge"
         ],
-        "innertube": [
+        "innertub": [
           "bicycle-tube"
         ],
-        "inside": [
+        "insid": [
           "amazon-mailers",
           "envelopes-with-bubble-wrap-inside",
           "foam"
@@ -5430,30 +5221,28 @@
           "snowblower",
           "vacuum-cleaner"
         ],
-        "instruction": [
+        "instruct": [
           "paint-latex",
           "paint-oil-based-and-lacquers"
         ],
         "instrument": [
           "medical-equipment-and-supplies"
         ],
-        "insulated": [
-          "scrap-metal"
-        ],
-        "insulation": [
+        "insul": [
           "house-insulation",
+          "scrap-metal",
           "sun-basket-paper-insulation"
         ],
         "insulin": [
           "syringe-sharps"
         ],
-        "intended": [
+        "intend": [
           "compostable-servingware-dishware"
         ],
         "interior": [
           "paint-latex"
         ],
-        "international": [
+        "intern": [
           "clear-plastic-berry-and-salad-container",
           "plastic-cup",
           "plastic-take-out-container"
@@ -5469,7 +5258,7 @@
           "battery-lithium-ion",
           "battery-rechargeable"
         ],
-        "iphone": [
+        "iphon": [
           "cell-phone"
         ],
         "iron": [
@@ -5477,7 +5266,7 @@
           "scrap-metal",
           "small-appliance"
         ],
-        "ironware": [
+        "ironwar": [
           "ceramic-dish"
         ],
         "is": [
@@ -5523,6 +5312,7 @@
           "metal-bottle-cap-or-lid",
           "motor-oil",
           "packaging-styrofoam-or-polystyrene-foam",
+          "plastic-container",
           "pvc-pipe",
           "receipt-paper",
           "scrap-metal",
@@ -5548,9 +5338,6 @@
           "toiletries",
           "vacuum-cleaner"
         ],
-        "its": [
-          "plastic-container"
-        ],
         "jacket": [
           "clothing-and-fabric"
         ],
@@ -5563,7 +5350,7 @@
           "cds-and-dvds",
           "plastic-cd-and-dvd-cases"
         ],
-        "jewelry": [
+        "jewelri": [
           "household-cleaners"
         ],
         "journal": [
@@ -5574,7 +5361,7 @@
           "plastic-container",
           "plastic-jug"
         ],
-        "juice": [
+        "juic": [
           "carton",
           "plastic-jug"
         ],
@@ -5595,10 +5382,10 @@
         "kept": [
           "plastic-disinfectant-wipes-container"
         ],
-        "kerosene": [
+        "kerosen": [
           "flammable-liquid"
         ],
-        "kettle": [
+        "kettl": [
           "bbq-grill-charcoal",
           "small-appliance"
         ],
@@ -5623,10 +5410,10 @@
           "kitchen-cabinets-countertops",
           "reusable-building-supplies"
         ],
-        "kitchenware": [
+        "kitchenwar": [
           "household-item"
         ],
-        "kitty": [
+        "kitti": [
           "bulky-rigid-plastics",
           "kitty-litter-bucket",
           "plastic-jug"
@@ -5644,10 +5431,8 @@
           "shredded-brown-crinkle-paper"
         ],
         "label": [
-          "label-or-sticker"
-        ],
-        "labeled": [
           "compostable-servingware-dishware",
+          "label-or-sticker",
           "light-bulb-ballast",
           "take-out-food-container"
         ],
@@ -5664,21 +5449,19 @@
         "lamp": [
           "small-appliance"
         ],
-        "landfill": [
+        "landfil": [
           "food-scraps",
-          "furniture"
-        ],
-        "landfilled": [
+          "furniture",
           "packaging-styrofoam-or-polystyrene-foam",
           "shingles-wood"
         ],
-        "landscaping": [
+        "landscap": [
           "rock-and-gravel"
         ],
         "laptop": [
           "electronics"
         ],
-        "large": [
+        "larg": [
           "bubble-wrap-air-pillows",
           "cardboard",
           "carpet-roll-tube",
@@ -5690,7 +5473,7 @@
         "larger": [
           "receipt-paper"
         ],
-        "larimer": [
+        "larim": [
           "battery-button",
           "battery-lithium-ion",
           "battery-other",
@@ -5703,7 +5486,7 @@
           "paint-latex",
           "paint-oil-based-and-lacquers"
         ],
-        "laundry": [
+        "laundri": [
           "plastic-jug"
         ],
         "lawn": [
@@ -5714,14 +5497,14 @@
           "plastic-lawn-furniture",
           "yard-trimmings-and-leaves"
         ],
-        "lawnmower": [
+        "lawnmow": [
           "lawnmower",
           "scrap-metal"
         ],
         "layer": [
           "carpet-padding"
         ],
-        "lazy": [
+        "lazi": [
           "furniture"
         ],
         "lead": [
@@ -5761,16 +5544,13 @@
         "left": [
           "food-scraps"
         ],
+        "leg": [
+          "clothing-and-fabric"
+        ],
         "legal": [
           "white-office-paper"
         ],
-        "legging": [
-          "clothing-and-fabric"
-        ],
         "len": [
-          "eyeglasses"
-        ],
-        "lens": [
           "eyeglasses"
         ],
         "letter": [
@@ -5818,7 +5598,7 @@
           "wood-waste",
           "yard-trimmings-and-leaves"
         ],
-        "limited": [
+        "limit": [
           "corrugated-plastic-election-sign"
         ],
         "liner": [
@@ -5832,7 +5612,7 @@
           "paint-latex",
           "scrap-metal"
         ],
-        "listed": [
+        "list": [
           "air-conditioner",
           "aluminum",
           "aluminum-can",
@@ -5945,7 +5725,7 @@
           "wrapping-paper",
           "yard-trimmings-and-leaves"
         ],
-        "literally": [
+        "liter": [
           "shredded-brown-crinkle-paper",
           "shredded-paper"
         ],
@@ -5993,6 +5773,7 @@
           "christmas-lights",
           "christmas-tree-artificial",
           "christmas-tree-live",
+          "clear-plastic-berry-and-salad-container",
           "clothing-and-fabric",
           "coffee-grounds",
           "cords-and-cables",
@@ -6002,6 +5783,7 @@
           "food-unused",
           "furniture",
           "garden-hose",
+          "hearing-aid",
           "household-item",
           "kitchen-cabinets-countertops",
           "lawnmower",
@@ -6011,10 +5793,12 @@
           "nalgene-bottle",
           "office-and-school-supplies",
           "over-the-counter-medication",
+          "party-try-plastic-tray",
           "pillow",
           "plastic-barrel-or-drum",
           "plastic-cd-and-dvd-cases",
           "plastic-coat-hanger",
+          "plastic-cup",
           "plastic-film-election-sign",
           "plastic-flower-pots",
           "plastic-halloween-pumpkin",
@@ -6048,17 +5832,7 @@
           "yard-trimmings-and-leaves",
           "yoga-mat"
         ],
-        "locally": [
-          "cds-and-dvds",
-          "clear-plastic-berry-and-salad-container",
-          "envelopes-with-bubble-wrap-inside",
-          "hearing-aid",
-          "kitchen-cabinets-countertops",
-          "party-try-plastic-tray",
-          "plastic-cup",
-          "styrofoam-cooler-or-meal-kit-cooler"
-        ],
-        "location": [
+        "locat": [
           "air-conditioner",
           "aluminum",
           "aluminum-can",
@@ -6213,15 +5987,13 @@
         "longmont": [
           "packaging-styrofoam-or-polystyrene-foam"
         ],
-        "loose": [
+        "loos": [
           "baling-twine",
+          "cardboard",
           "metal-bottle-cap-or-lid",
           "mixed-paper",
           "shredded-brown-crinkle-paper",
           "shredded-paper"
-        ],
-        "loosely": [
-          "cardboard"
         ],
         "loveseat": [
           "furniture"
@@ -6251,16 +6023,12 @@
         ],
         "machin": [
           "dishwasher",
+          "electronics",
           "large-appliance",
           "oven",
           "stove"
         ],
-        "machine": [
-          "dishwasher",
-          "electronics",
-          "large-appliance"
-        ],
-        "machinery": [
+        "machineri": [
           "shredded-brown-crinkle-paper",
           "shredded-paper"
         ],
@@ -6284,108 +6052,7 @@
           "magazine",
           "mixed-paper"
         ],
-        "magazine": [
-          "magazine",
-          "mixed-paper"
-        ],
-        "mail": [
-          "magazine",
-          "mixed-paper",
-          "paper-envelope"
-        ],
-        "mailer": [
-          "amazon-mailers",
-          "envelopes-with-bubble-wrap-inside",
-          "reflective-bubble-wrap-and-foil-bubble-mailers",
-          "tyvek-envelope"
-        ],
-        "mailing": [
-          "envelopes-with-bubble-wrap-inside"
-        ],
-        "maintained": [
-          "food-scraps"
-        ],
-        "make": [
-          "light-bulb-halogen",
-          "light-bulb-incandescent"
-        ],
-        "maker": [
-          "small-appliance"
-        ],
-        "makeup": [
-          "plastic-tube",
-          "toiletries"
-        ],
-        "making": [
-          "carpet-roll-tube"
-        ],
-        "manufacturer": [
-          "smoke-detector-or-carbon-monoxide-detector",
-          "water-filter"
-        ],
-        "manure": [
-          "manure"
-        ],
-        "many": [
-          "antifreeze",
-          "auto-part-car-part",
-          "automotive-battery",
-          "automotive-fluids-other-than-motor-oil-and-antifreeze",
-          "battery-alkaline",
-          "clothing-and-fabric",
-          "concrete",
-          "office-and-school-supplies",
-          "paint-latex",
-          "plastic-pet-carrier"
-        ],
-        "marked": [
-          "paper-cup"
-        ],
-        "marker": [
-          "art-supplies"
-        ],
-        "market": [
-          "clear-plastic-berry-and-salad-container",
-          "party-try-plastic-tray",
-          "plastic-cup",
-          "plastic-take-out-container",
-          "single-use-servingware"
-        ],
-        "mask": [
-          "disposable-face-mask"
-        ],
-        "mason": [
-          "glass-bottle-or-jar"
-        ],
-        "mat": [
-          "yoga-mat"
-        ],
-        "material": [
-          "amazon-mailers",
-          "bubble-wrap-air-pillows",
-          "household-cleaners",
-          "light-bulb-ballast",
-          "metal-bottle-cap-or-lid",
-          "packaging-styrofoam-or-polystyrene-foam",
-          "photo-chemical",
-          "renew-liner",
-          "reusable-building-supplies"
-        ],
-        "matter": [
-          "battery-lithium-ion",
-          "battery-other"
-        ],
-        "mattres": [
-          "foam",
-          "mattress"
-        ],
-        "mattress": [
-          "mattress"
-        ],
-        "maximum": [
-          "cardboard"
-        ],
-        "may": [
+        "mai": [
           "air-conditioner",
           "asphalt",
           "automobile-car-or-truck",
@@ -6428,6 +6095,99 @@
           "wood-untreated",
           "yard-trimmings-and-leaves"
         ],
+        "mail": [
+          "envelopes-with-bubble-wrap-inside",
+          "magazine",
+          "mixed-paper",
+          "paper-envelope"
+        ],
+        "mailer": [
+          "amazon-mailers",
+          "envelopes-with-bubble-wrap-inside",
+          "reflective-bubble-wrap-and-foil-bubble-mailers",
+          "tyvek-envelope"
+        ],
+        "maintain": [
+          "food-scraps"
+        ],
+        "make": [
+          "carpet-roll-tube",
+          "light-bulb-halogen",
+          "light-bulb-incandescent"
+        ],
+        "maker": [
+          "small-appliance"
+        ],
+        "makeup": [
+          "plastic-tube",
+          "toiletries"
+        ],
+        "mani": [
+          "antifreeze",
+          "auto-part-car-part",
+          "automotive-battery",
+          "automotive-fluids-other-than-motor-oil-and-antifreeze",
+          "battery-alkaline",
+          "clothing-and-fabric",
+          "concrete",
+          "office-and-school-supplies",
+          "paint-latex",
+          "plastic-pet-carrier"
+        ],
+        "manufactur": [
+          "smoke-detector-or-carbon-monoxide-detector",
+          "water-filter"
+        ],
+        "manur": [
+          "manure"
+        ],
+        "mark": [
+          "paper-cup"
+        ],
+        "marker": [
+          "art-supplies"
+        ],
+        "market": [
+          "clear-plastic-berry-and-salad-container",
+          "party-try-plastic-tray",
+          "plastic-cup",
+          "plastic-take-out-container",
+          "single-use-servingware"
+        ],
+        "mask": [
+          "disposable-face-mask"
+        ],
+        "mason": [
+          "glass-bottle-or-jar"
+        ],
+        "mat": [
+          "yoga-mat"
+        ],
+        "materi": [
+          "amazon-mailers",
+          "bubble-wrap-air-pillows",
+          "household-cleaners",
+          "light-bulb-ballast",
+          "metal-bottle-cap-or-lid",
+          "packaging-styrofoam-or-polystyrene-foam",
+          "photo-chemical",
+          "renew-liner",
+          "reusable-building-supplies"
+        ],
+        "matter": [
+          "battery-lithium-ion",
+          "battery-other"
+        ],
+        "mattr": [
+          "foam",
+          "mattress"
+        ],
+        "mattress": [
+          "mattress"
+        ],
+        "maximum": [
+          "cardboard"
+        ],
         "meal": [
           "reflective-bubble-wrap-and-foil-bubble-mailers",
           "renew-liner",
@@ -6444,7 +6204,7 @@
         "meat": [
           "manure"
         ],
-        "mechanic": [
+        "mechan": [
           "antifreeze"
         ],
         "med": [
@@ -6453,15 +6213,13 @@
         "media": [
           "cd-dvd-player"
         ],
-        "medical": [
+        "medic": [
           "medical-equipment-and-supplies",
+          "over-the-counter-medication",
           "styrofoam-cooler-or-meal-kit-cooler",
           "syringe-sharps"
         ],
-        "medication": [
-          "over-the-counter-medication"
-        ],
-        "medicine": [
+        "medicin": [
           "medical-equipment-and-supplies",
           "over-the-counter-medication",
           "prescription-drug",
@@ -6474,10 +6232,10 @@
           "plastic-cup",
           "plastic-take-out-container"
         ],
-        "memory": [
+        "memori": [
           "foam"
         ],
-        "mercury": [
+        "mercuri": [
           "light-bulb-compact-fluorescent-light-bulb-cfl",
           "light-bulb-fluorescent-tube",
           "mercury-thermometer"
@@ -6521,16 +6279,10 @@
           "wheel",
           "wire"
         ],
-        "metallic": [
-          "reflective-bubble-wrap-and-foil-bubble-mailers"
-        ],
         "microscop": [
           "medical-equipment-and-supplies"
         ],
         "microwav": [
-          "microwave"
-        ],
-        "microwave": [
           "microwave",
           "microwave-popcorn-bag"
         ],
@@ -6539,14 +6291,14 @@
           "carton",
           "plastic-jug"
         ],
-        "mineral": [
+        "miner": [
           "paint-latex",
           "paint-oil-based-and-lacquers"
         ],
         "mini": [
           "refrigerator-or-freezer"
         ],
-        "mixed": [
+        "mix": [
           "construction-paper",
           "metal-bottle-cap-or-lid",
           "mixed-paper",
@@ -6558,10 +6310,10 @@
           "small-appliance",
           "stereo-sound-equipment"
         ],
-        "mobile": [
+        "mobil": [
           "cell-phone"
         ],
-        "molded": [
+        "mold": [
           "molded-paper-packaging"
         ],
         "monitor": [
@@ -6570,7 +6322,7 @@
           "scrap-metal",
           "television"
         ],
-        "monoxide": [
+        "monoxid": [
           "smoke-detector-or-carbon-monoxide-detector"
         ],
         "more": [
@@ -6603,20 +6355,17 @@
           "snowblower",
           "vacuum-cleaner"
         ],
-        "motorcycle": [
+        "motorcycl": [
           "automobile-car-or-truck"
         ],
-        "mouse": [
+        "mous": [
           "computer-accessory"
+        ],
+        "move": [
+          "cardboard"
         ],
         "movi": [
           "cds-and-dvds"
-        ],
-        "movie": [
-          "cds-and-dvds"
-        ],
-        "moving": [
-          "cardboard"
         ],
         "mower": [
           "lawnmower"
@@ -6625,7 +6374,7 @@
           "wood-waste",
           "yard-trimmings-and-leaves"
         ],
-        "multiple": [
+        "multipl": [
           "battery-lithium-ion"
         ],
         "music": [
@@ -6657,7 +6406,7 @@
         "nail": [
           "scrap-metal"
         ],
-        "nalgene": [
+        "nalgen": [
           "nalgene-bottle"
         ],
         "napkin": [
@@ -6674,9 +6423,6 @@
         ],
         "needl": [
           "medical-equipment-and-supplies",
-          "syringe-sharps"
-        ],
-        "needle": [
           "syringe-sharps"
         ],
         "never": [
@@ -6696,14 +6442,14 @@
         "newer": [
           "light-bulb-ballast"
         ],
-        "newspaper": [
+        "newspap": [
           "mixed-paper",
           "plastic-grocery-bags-and-plastic-film"
         ],
         "nicad": [
           "battery-rechargeable"
         ],
-        "nitrile": [
+        "nitril": [
           "disposable-gloves"
         ],
         "no": [
@@ -6799,7 +6545,7 @@
           "vinyl-fencing",
           "wood-waste"
         ],
-        "notation": [
+        "notat": [
           "art-supplies"
         ],
         "note": [
@@ -6811,7 +6557,7 @@
           "office-and-school-supplies",
           "spiral-notebook"
         ],
-        "nothing": [
+        "noth": [
           "amazon-mailers",
           "art-supplies",
           "baking-glassware",
@@ -6867,10 +6613,10 @@
           "wood-treated-or-painted",
           "yoga-mat"
         ],
-        "november": [
+        "novemb": [
           "yard-trimmings-and-leaves"
         ],
-        "nuisance": [
+        "nuisanc": [
           "food-scraps"
         ],
         "number": [
@@ -7119,7 +6865,7 @@
           "shredded-paper",
           "yard-trimmings-and-leaves"
         ],
-        "office": [
+        "offic": [
           "mixed-paper",
           "office-and-school-supplies",
           "shredded-paper",
@@ -7150,6 +6896,7 @@
         "on": [
           "amazon-mailers",
           "art-supplies",
+          "asphalt",
           "baking-glassware",
           "battery-lithium-ion",
           "bbq-grill-charcoal",
@@ -7165,6 +6912,7 @@
           "ceramic-dish",
           "christmas-tree-artificial",
           "clothing-and-fabric",
+          "concrete",
           "cords-and-cables",
           "envelopes-with-bubble-wrap-inside",
           "foam-packing-peanuts",
@@ -7175,6 +6923,7 @@
           "kitchen-cabinets-countertops",
           "light-bulb-ballast",
           "metal-bottle-cap-or-lid",
+          "motor-oil",
           "nalgene-bottle",
           "office-and-school-supplies",
           "over-the-counter-medication",
@@ -7186,6 +6935,7 @@
           "plastic-coat-hanger",
           "plastic-disinfectant-wipes-container",
           "plastic-flower-pots",
+          "plastic-grocery-bags-and-plastic-film",
           "plastic-halloween-pumpkin",
           "plastic-pallet",
           "plastic-pet-carrier",
@@ -7212,26 +6962,15 @@
           "wire",
           "wood-pallet",
           "wood-treated-or-painted",
+          "yard-trimmings-and-leaves",
           "yoga-mat"
         ],
-        "one": [
-          "asphalt",
-          "bicycle",
-          "brick-and-pavers",
-          "concrete",
-          "foam-packing-peanuts",
-          "motor-oil",
-          "paint-latex",
-          "paint-oil-based-and-lacquers",
-          "plastic-grocery-bags-and-plastic-film",
-          "yard-trimmings-and-leaves"
-        ],
-        "only": [
+        "onli": [
           "food-scraps",
           "plastic-container",
           "window-glass"
         ],
-        "opened": [
+        "open": [
           "toiletries"
         ],
         "option": [
@@ -7402,7 +7141,7 @@
         "org": [
           "food-scraps"
         ],
-        "organization": [
+        "organ": [
           "food-unused"
         ],
         "osb": [
@@ -7501,7 +7240,7 @@
           "yard-trimmings-and-leaves",
           "yoga-mat"
         ],
-        "otherwise": [
+        "otherwis": [
           "baking-glassware",
           "ceramic-dish"
         ],
@@ -7533,7 +7272,7 @@
           "food-scraps",
           "light-bulb-halogen"
         ],
-        "outside": [
+        "outsid": [
           "amazon-mailers",
           "envelopes-with-bubble-wrap-inside"
         ],
@@ -7550,59 +7289,53 @@
         "own": [
           "food-scraps"
         ],
-        "oximeter": [
+        "oximet": [
           "medical-equipment-and-supplies"
         ],
-        "paced": [
+        "pa": [
+          "over-the-counter-medication",
+          "prescription-drug"
+        ],
+        "pace": [
           "paperboard-election-sign"
         ],
         "pack": [
           "6-pack-holder",
           "blister-packs-packaging",
-          "seed-tray"
-        ],
-        "packaged": [
-          "clear-plastic-berry-and-salad-container",
-          "party-try-plastic-tray",
-          "plastic-cup",
-          "plastic-take-out-container"
-        ],
-        "packaging": [
-          "blister-packs-packaging",
-          "chip-bag",
-          "molded-paper-packaging",
-          "packaging-styrofoam-or-polystyrene-foam",
-          "styrofoam-cooler-or-meal-kit-cooler"
-        ],
-        "packing": [
           "bubble-wrap-air-pillows",
           "foam-packing-peanuts",
           "renew-liner",
+          "seed-tray",
           "shredded-brown-crinkle-paper"
         ],
+        "packag": [
+          "blister-packs-packaging",
+          "chip-bag",
+          "clear-plastic-berry-and-salad-container",
+          "molded-paper-packaging",
+          "packaging-styrofoam-or-polystyrene-foam",
+          "party-try-plastic-tray",
+          "plastic-cup",
+          "plastic-take-out-container",
+          "styrofoam-cooler-or-meal-kit-cooler"
+        ],
         "pad": [
-          "medical-equipment-and-supplies"
-        ],
-        "padded": [
           "amazon-mailers",
-          "envelopes-with-bubble-wrap-inside"
-        ],
-        "padding": [
           "bubble-wrap-air-pillows",
-          "carpet-padding"
+          "carpet-padding",
+          "envelopes-with-bubble-wrap-inside",
+          "medical-equipment-and-supplies"
         ],
         "pain": [
           "over-the-counter-medication"
         ],
         "paint": [
+          "branches",
           "empty-aerosol-can",
           "paint-latex",
           "paint-oil-based-and-lacquers",
-          "spray-paint"
-        ],
-        "painted": [
-          "branches",
           "shingles-wood",
+          "spray-paint",
           "wood-treated-or-painted",
           "wood-waste"
         ],
@@ -7667,29 +7400,25 @@
           "automotive-fluids-other-than-motor-oil-and-antifreeze",
           "bicycle"
         ],
-        "party": [
+        "parti": [
           "art-supplies",
           "paper-cup",
           "party-try-plastic-tray",
           "plastic-cup"
         ],
-        "pas": [
-          "over-the-counter-medication",
-          "prescription-drug"
-        ],
-        "paste": [
+        "past": [
           "plastic-tube"
         ],
         "pathogen": [
           "manure"
         ],
+        "pave": [
+          "brick-and-pavers"
+        ],
         "pavement": [
           "asphalt"
         ],
         "paver": [
-          "brick-and-pavers"
-        ],
-        "paving": [
           "brick-and-pavers"
         ],
         "pcb": [
@@ -7709,24 +7438,19 @@
           "art-supplies",
           "office-and-school-supplies"
         ],
-        "peripheral": [
+        "peripher": [
           "computer-accessory"
         ],
-        "personal": [
-          "personal-care-appliances",
-          "toiletries"
-        ],
-        "personally": [
+        "person": [
           "cds-and-dvds",
+          "personal-care-appliances",
+          "toiletries",
           "videotape-or-cassette-tape"
         ],
         "pest": [
           "food-scraps"
         ],
         "pesticid": [
-          "pesticide"
-        ],
-        "pesticide": [
           "pesticide"
         ],
         "pet": [
@@ -7765,7 +7489,7 @@
           "plastic-lawn-furniture",
           "styrofoam-cooler-or-meal-kit-cooler"
         ],
-        "picture": [
+        "pictur": [
           "photograph-or-film"
         ],
         "pie": [
@@ -7793,7 +7517,7 @@
           "bubble-wrap-air-pillows",
           "pillow"
         ],
-        "pillowcase": [
+        "pillowcas": [
           "clothing-and-fabric"
         ],
         "pipe": [
@@ -7806,14 +7530,15 @@
           "pizza-box"
         ],
         "place": [
-          "shredded-brown-crinkle-paper",
-          "shredded-paper"
-        ],
-        "placed": [
           "glass-bottle-or-jar",
           "metal-bottle-cap-or-lid",
           "mixed-paper",
+          "shredded-brown-crinkle-paper",
+          "shredded-paper",
           "sun-basket-paper-insulation"
+        ],
+        "plai": [
+          "plastic-play-structure"
         ],
         "plan": [
           "blueprint"
@@ -7892,28 +7617,30 @@
         "platter": [
           "party-try-plastic-tray"
         ],
-        "play": [
-          "plastic-play-structure"
-        ],
         "player": [
           "cd-dvd-player"
         ],
-        "please": [
+        "pleas": [
           "paper-napkin",
           "paper-towel"
         ],
-        "pledge": [
+        "pledg": [
           "household-cleaners"
         ],
         "plug": [
           "cords-and-cables"
         ],
-        "plumbing": [
+        "plumb": [
           "pvc-pipe"
         ],
         "plywood": [
           "wood-treated-or-painted",
           "wood-untreated"
+        ],
+        "po": [
+          "herbicide",
+          "pesticide",
+          "receipt-paper"
         ],
         "pod": [
           "single-serve-coffee-pods"
@@ -7921,20 +7648,20 @@
         "poison": [
           "pesticide"
         ],
-        "polish": [
-          "household-cleaners"
-        ],
-        "political": [
-          "corrugated-plastic-election-sign",
-          "paperboard-election-sign",
-          "plastic-film-election-sign"
-        ],
-        "poly": [
+        "poli": [
           "baling-twine",
           "metal-barrel-or-drum",
           "plastic-barrel-or-drum"
         ],
-        "polystyrene": [
+        "polish": [
+          "household-cleaners"
+        ],
+        "polit": [
+          "corrugated-plastic-election-sign",
+          "paperboard-election-sign",
+          "plastic-film-election-sign"
+        ],
+        "polystyren": [
           "food-grade-styrofoam",
           "packaging-styrofoam-or-polystyrene-foam"
         ],
@@ -7955,11 +7682,6 @@
           "ceramic-dish",
           "porcelain-sinks-toilets"
         ],
-        "pos": [
-          "herbicide",
-          "pesticide",
-          "receipt-paper"
-        ],
         "pose": [
           "flammable-liquid",
           "gasoline",
@@ -7967,10 +7689,10 @@
           "household-cleaners",
           "photo-chemical"
         ],
-        "possible": [
+        "possibl": [
           "binder"
         ],
-        "posting": [
+        "post": [
           "amazon-mailers",
           "art-supplies",
           "baking-glassware",
@@ -8032,9 +7754,7 @@
           "small-appliance"
         ],
         "pour": [
-          "antifreeze"
-        ],
-        "poured": [
+          "antifreeze",
           "paint-latex"
         ],
         "powder": [
@@ -8048,35 +7768,33 @@
           "tools",
           "vacuum-cleaner"
         ],
-        "prescribed": [
+        "prescrib": [
           "prescription-drug"
         ],
-        "prescription": [
+        "prescript": [
           "prescription-drug",
           "vitamin-or-prescription-bottle"
         ],
-        "pressed": [
+        "press": [
           "wood-treated-or-painted"
         ],
-        "pressure": [
-          "medical-equipment-and-supplies",
-          "wood-treated-or-painted"
-        ],
-        "pressurized": [
+        "pressur": [
           "fire-extinguisher",
+          "medical-equipment-and-supplies",
           "propane-canister",
-          "scrap-metal"
+          "scrap-metal",
+          "wood-treated-or-painted"
         ],
         "prevent": [
           "food-scraps"
         ],
-        "primarily": [
-          "nalgene-bottle"
-        ],
-        "primary": [
+        "primari": [
           "plastic-container"
         ],
-        "princes": [
+        "primarili": [
+          "nalgene-bottle"
+        ],
+        "princ": [
           "telephone"
         ],
         "pringl": [
@@ -8097,7 +7815,7 @@
         "processor": [
           "small-appliance"
         ],
-        "produce": [
+        "produc": [
           "food-unused",
           "plastic-grocery-bags-and-plastic-film"
         ],
@@ -8112,7 +7830,7 @@
           "book-hardcover",
           "yard-trimmings-and-leaves"
         ],
-        "programmable": [
+        "programm": [
           "electronics"
         ],
         "project": [
@@ -8161,6 +7879,7 @@
           "sporting-goods",
           "stroller",
           "styrofoam-cooler-or-meal-kit-cooler",
+          "television",
           "toiletries",
           "tools",
           "tupperware-food-storage-container",
@@ -8172,10 +7891,7 @@
           "wood-treated-or-painted",
           "yoga-mat"
         ],
-        "projection": [
-          "television"
-        ],
-        "propane": [
+        "propan": [
           "bbq-grill-gas",
           "flammable-liquid",
           "propane-canister",
@@ -8187,7 +7903,7 @@
           "battery-other",
           "battery-rechargeable"
         ],
-        "properly": [
+        "properli": [
           "automotive-fluids-other-than-motor-oil-and-antifreeze",
           "battery-button",
           "battery-rechargeable",
@@ -8204,25 +7920,23 @@
           "spray-paint",
           "telephone"
         ],
-        "proprietary": [
+        "proprietari": [
           "nalgene-bottle"
         ],
-        "protection": [
+        "protect": [
           "rigid-cardboard-tubes-and-corners"
         ],
         "protector": [
           "rigid-cardboard-tubes-and-corners"
         ],
-        "provide": [
+        "provid": [
+          "coffee-grounds",
           "furniture"
-        ],
-        "provider": [
-          "coffee-grounds"
         ],
         "pulp": [
           "molded-paper-packaging"
         ],
-        "pulse": [
+        "puls": [
           "medical-equipment-and-supplies"
         ],
         "pump": [
@@ -8254,11 +7968,15 @@
           "bbq-grill-charcoal",
           "bbq-grill-gas"
         ],
-        "radiator": [
+        "radiat": [
           "automotive-fluids-other-than-motor-oil-and-antifreeze"
         ],
         "radio": [
           "electronics"
+        ],
+        "rai": [
+          "cd-dvd-player",
+          "medical-equipment-and-supplies"
         ],
         "raid": [
           "pesticide"
@@ -8266,16 +7984,12 @@
         "ramen": [
           "food-grade-styrofoam"
         ],
-        "range": [
+        "rang": [
           "oven",
           "stove"
         ],
         "rat": [
           "pesticide"
-        ],
-        "ray": [
-          "cd-dvd-player",
-          "medical-equipment-and-supplies"
         ],
         "razor": [
           "toiletries"
@@ -8283,21 +7997,21 @@
         "re": [
           "food-scraps"
         ],
-        "reading": [
+        "read": [
           "paint-latex",
           "paint-oil-based-and-lacquers"
         ],
-        "ready": [
+        "readi": [
           "food-scraps"
         ],
-        "reasonably": [
+        "reason": [
           "aluminum-take-out-container",
           "take-out-food-container"
         ],
         "rebar": [
           "concrete"
         ],
-        "recalled": [
+        "recal": [
           "car-seat",
           "stroller"
         ],
@@ -8307,178 +8021,20 @@
         "recent": [
           "battery-lithium-ion"
         ],
-        "rechargeable": [
+        "recharg": [
           "battery-lithium-ion",
           "battery-other",
           "battery-rechargeable"
         ],
-        "recliner": [
+        "reclin": [
           "furniture"
         ],
-        "recorded": [
+        "record": [
           "cds-and-dvds",
           "videotape-or-cassette-tape"
         ],
-        "recyclabl": [
-          "bubble-wrap-air-pillows",
-          "metal-bottle-cap-or-lid"
-        ],
-        "recyclable": [
-          "amazon-mailers",
-          "baling-twine",
-          "binder",
-          "cds-and-dvds",
-          "clear-plastic-berry-and-salad-container",
-          "compostable-servingware-dishware",
-          "disinfectant-wipes",
-          "envelopes-with-bubble-wrap-inside",
-          "foam",
-          "frozen-food-box",
-          "furnace-filter",
-          "garden-hose",
-          "kitchen-cabinets-countertops",
-          "label-or-sticker",
-          "microwave-popcorn-bag",
-          "party-try-plastic-tray",
-          "pet-food-bag",
-          "plastic-cup",
-          "plastic-disinfectant-wipes-container",
-          "pvc-pipe",
-          "reflective-bubble-wrap-and-foil-bubble-mailers",
-          "ribbons-and-bows",
-          "rigid-cardboard-tubes-and-corners",
-          "seed-tray",
-          "shredded-brown-crinkle-paper",
-          "single-use-servingware",
-          "solar-panels",
-          "styrofoam-cooler-or-meal-kit-cooler",
-          "sun-basket-paper-insulation",
-          "take-out-food-container",
-          "vinyl-fencing"
-        ],
-        "recycle": [
-          "automobile-car-or-truck",
-          "packaging-styrofoam-or-polystyrene-foam",
-          "plastic-play-structure",
-          "shredded-brown-crinkle-paper",
-          "single-use-servingware",
-          "spiral-notebook",
-          "wrapping-paper"
-        ],
-        "recycled": [
+        "recycl": [
           "air-conditioner",
-          "aluminum",
-          "aluminum-take-out-container",
-          "amazon-mailers",
-          "auto-part-car-part",
-          "auto-truck-tire",
-          "automotive-battery",
-          "automotive-fluids-other-than-motor-oil-and-antifreeze",
-          "bbq-grill-charcoal",
-          "bbq-grill-gas",
-          "bicycle",
-          "bicycle-tire",
-          "bicycle-tube",
-          "book-hardcover",
-          "book-paperback",
-          "branches",
-          "bubble-wrap-air-pillows",
-          "bulky-rigid-plastics",
-          "camera-or-camcorder",
-          "carpet-roll-tube",
-          "cd-dvd-player",
-          "cell-phone",
-          "christmas-lights",
-          "christmas-tree-live",
-          "computer-accessory",
-          "computer-monitor",
-          "computer-tower",
-          "cooking-oil-and-grease",
-          "cords-and-cables",
-          "corrugated-plastic-election-sign",
-          "dishwasher",
-          "electronics",
-          "extension-cord",
-          "helium-tank",
-          "kitty-litter-bucket",
-          "large-appliance",
-          "lawnmower",
-          "light-bulb-ballast",
-          "mattress",
-          "metal-barrel-or-drum",
-          "metal-bottle-cap-or-lid",
-          "metal-coat-hanger",
-          "metal-trash-can",
-          "microwave",
-          "molded-paper-packaging",
-          "motor-oil",
-          "motor-oil-bottle",
-          "oven",
-          "paper-bag",
-          "paper-egg-carton",
-          "paper-envelope",
-          "paper-towel-or-toilet-paper-tube",
-          "personal-care-appliances",
-          "pizza-box",
-          "plastic-bucket",
-          "plastic-caps-and-lids",
-          "plastic-container",
-          "plastic-cup",
-          "plastic-film-election-sign",
-          "plastic-grocery-bags-and-plastic-film",
-          "plastic-lawn-furniture",
-          "plastic-pet-carrier",
-          "porcelain-sinks-toilets",
-          "pot-or-pan",
-          "printer-cartridge",
-          "receipt-paper",
-          "refrigerator-or-freezer",
-          "rubbermaid-storage-bin",
-          "satellite-dish",
-          "scrap-metal",
-          "shingles-wood",
-          "shredded-brown-crinkle-paper",
-          "shredded-paper",
-          "small-appliance",
-          "snowblower",
-          "spiral-notebook",
-          "spray-paint",
-          "stereo-sound-equipment",
-          "stove",
-          "take-out-food-container",
-          "telephone",
-          "telephone-book",
-          "television",
-          "tin-can",
-          "tissue-wrapping-paper",
-          "tools",
-          "vacuum-cleaner",
-          "video-game-system",
-          "water-heater",
-          "wheel",
-          "window-glass",
-          "wire",
-          "wood-untreated",
-          "wood-waste",
-          "wrapping-paper"
-        ],
-        "recycler": [
-          "aluminum",
-          "automobile-car-or-truck",
-          "bicycle",
-          "christmas-lights",
-          "computer-accessory",
-          "computer-tower",
-          "lawnmower",
-          "metal-barrel-or-drum",
-          "metal-coat-hanger",
-          "metal-trash-can",
-          "plastic-film-election-sign",
-          "snowblower",
-          "vacuum-cleaner",
-          "wheel"
-        ],
-        "recycling": [
           "aluminum",
           "aluminum-can",
           "aluminum-foil",
@@ -8487,42 +8043,85 @@
           "amazon-mailers",
           "antifreeze",
           "asphalt",
+          "auto-part-car-part",
+          "auto-truck-tire",
+          "automobile-car-or-truck",
+          "automotive-battery",
           "automotive-fluids-other-than-motor-oil-and-antifreeze",
           "baling-twine",
           "battery-button",
           "battery-lithium-ion",
           "battery-other",
           "battery-rechargeable",
+          "bbq-grill-charcoal",
+          "bbq-grill-gas",
+          "bicycle",
+          "bicycle-tire",
+          "bicycle-tube",
           "binder",
           "blueprint",
+          "book-hardcover",
           "book-paperback",
+          "branches",
           "brick-and-pavers",
           "bubble-wrap-air-pillows",
+          "bulky-rigid-plastics",
+          "camera-or-camcorder",
           "cardboard",
           "carpet-and-rugs",
           "carpet-padding",
           "carpet-roll-tube",
           "carton",
+          "cd-dvd-player",
           "cds-and-dvds",
+          "cell-phone",
+          "christmas-lights",
+          "christmas-tree-live",
           "clear-plastic-berry-and-salad-container",
           "compostable-servingware-dishware",
+          "computer-accessory",
+          "computer-monitor",
+          "computer-tower",
           "concrete",
           "construction-paper",
+          "cooking-oil-and-grease",
+          "cords-and-cables",
           "corrugated-plastic-election-sign",
+          "dishwasher",
+          "disinfectant-wipes",
+          "electronics",
           "empty-aerosol-can",
+          "envelopes-with-bubble-wrap-inside",
+          "extension-cord",
           "foam",
+          "frozen-food-box",
           "furnace-filter",
           "garden-hose",
           "glass-bottle-or-jar",
+          "helium-tank",
+          "kitchen-cabinets-countertops",
+          "kitty-litter-bucket",
+          "label-or-sticker",
+          "large-appliance",
           "lawnmower",
+          "light-bulb-ballast",
           "light-bulb-compact-fluorescent-light-bulb-cfl",
           "light-bulb-fluorescent-tube",
           "light-bulb-led",
           "magazine",
+          "mattress",
+          "metal-barrel-or-drum",
           "metal-bottle-cap-or-lid",
+          "metal-coat-hanger",
+          "metal-trash-can",
+          "microwave",
+          "microwave-popcorn-bag",
           "mixed-paper",
           "molded-paper-packaging",
+          "motor-oil",
+          "motor-oil-bottle",
           "nalgene-bottle",
+          "oven",
           "packaging-styrofoam-or-polystyrene-foam",
           "paint-latex",
           "paper-bag",
@@ -8532,95 +8131,133 @@
           "paperboard",
           "paperboard-election-sign",
           "party-try-plastic-tray",
+          "personal-care-appliances",
+          "pet-food-bag",
           "pizza-box",
+          "plastic-bucket",
           "plastic-caps-and-lids",
+          "plastic-container",
           "plastic-cup",
           "plastic-disinfectant-wipes-container",
+          "plastic-film-election-sign",
           "plastic-flower-pots",
+          "plastic-grocery-bags-and-plastic-film",
           "plastic-jug",
+          "plastic-lawn-furniture",
           "plastic-peanut-butter-jar",
+          "plastic-pet-carrier",
+          "plastic-play-structure",
           "plastic-take-out-container",
           "plastic-tub",
+          "porcelain-sinks-toilets",
+          "pot-or-pan",
+          "printer-cartridge",
+          "pvc-pipe",
           "receipt-paper",
+          "reflective-bubble-wrap-and-foil-bubble-mailers",
+          "refrigerator-or-freezer",
           "ribbons-and-bows",
+          "rigid-cardboard-tubes-and-corners",
+          "rubbermaid-storage-bin",
+          "satellite-dish",
           "scrap-metal",
+          "seed-tray",
+          "shingles-wood",
           "shredded-brown-crinkle-paper",
           "shredded-paper",
+          "single-use-servingware",
+          "small-appliance",
           "snowblower",
+          "solar-panels",
+          "spiral-notebook",
           "spray-paint",
+          "stereo-sound-equipment",
+          "stove",
+          "styrofoam-cooler-or-meal-kit-cooler",
           "sun-basket-paper-insulation",
           "take-out-food-container",
+          "telephone",
+          "telephone-book",
+          "television",
           "tile",
+          "tin-can",
+          "tissue-wrapping-paper",
+          "tools",
           "vacuum-cleaner",
+          "video-game-system",
+          "vinyl-fencing",
           "vitamin-or-prescription-bottle",
           "water-filter",
+          "water-heater",
+          "wheel",
           "white-office-paper",
+          "window-glass",
           "wire",
-          "wood-pallet"
+          "wood-pallet",
+          "wood-untreated",
+          "wood-waste",
+          "wrapping-paper"
+        ],
+        "recyclabl": [
+          "bubble-wrap-air-pillows",
+          "metal-bottle-cap-or-lid"
         ],
         "reel": [
           "cds-and-dvds",
           "videotape-or-cassette-tape"
         ],
-        "reflective": [
+        "reflect": [
           "amazon-mailers",
           "reflective-bubble-wrap-and-foil-bubble-mailers"
         ],
-        "refrigerator": [
+        "refriger": [
           "refrigerator-or-freezer"
         ],
-        "refurbished": [
+        "refurbish": [
+          "bicycle",
           "hearing-aid"
         ],
-        "refurbishment": [
-          "bicycle"
-        ],
-        "remove": [
+        "remov": [
           "baling-twine",
+          "corrugated-plastic-election-sign",
           "over-the-counter-medication",
           "plastic-flower-pots",
           "prescription-drug"
         ],
-        "removed": [
-          "corrugated-plastic-election-sign"
-        ],
         "renew": [
           "renew-liner"
         ],
-        "renewliner": [
+        "renewlin": [
           "renew-liner"
         ],
         "repair": [
           "automotive-battery",
           "bicycle"
         ],
-        "repaired": [
-          "bicycle"
-        ],
-        "repurposed": [
+        "repurpos": [
           "kitchen-cabinets-countertops",
           "nalgene-bottle"
         ],
-        "require": [
+        "requir": [
           "light-bulb-compact-fluorescent-light-bulb-cfl",
           "light-bulb-fluorescent-tube"
         ],
-        "resale": [
+        "resal": [
           "brick-and-pavers",
           "porcelain-sinks-toilets",
           "reusable-building-supplies",
           "rock-and-gravel"
         ],
-        "rescue": [
+        "rescu": [
           "plastic-pet-carrier"
         ],
-        "resident": [
+        "resid": [
           "food-scraps"
         ],
-        "residential": [
+        "residenti": [
           "compostable-servingware-dishware"
         ],
-        "restaurant": [
+        "restaur": [
           "single-use-servingware"
         ],
         "retail": [
@@ -8628,13 +8265,60 @@
           "plastic-film-election-sign"
         ],
         "return": [
-          "food-scraps"
-        ],
-        "returned": [
+          "food-scraps",
           "smoke-detector-or-carbon-monoxide-detector",
           "water-filter"
         ],
-        "reusable": [
+        "reus": [
+          "6-pack-holder",
+          "amazon-mailers",
+          "art-supplies",
+          "baking-glassware",
+          "binder",
+          "book-hardcover",
+          "brick-and-pavers",
+          "bubble-wrap-air-pillows",
+          "cardboard",
+          "carpet-roll-tube",
+          "ceramic-dish",
+          "christmas-tree-artificial",
+          "clothing-and-fabric",
+          "envelopes-with-bubble-wrap-inside",
+          "eyeglasses",
+          "fill-dirt",
+          "foam-packing-peanuts",
+          "furniture",
+          "hearing-aid",
+          "kitchen-cabinets-countertops",
+          "label-or-sticker",
+          "manure",
+          "medical-equipment-and-supplies",
+          "office-and-school-supplies",
+          "pillow",
+          "plastic-barrel-or-drum",
+          "plastic-cd-and-dvd-cases",
+          "plastic-coat-hanger",
+          "plastic-halloween-pumpkin",
+          "plastic-pallet",
+          "plastic-pet-carrier",
+          "porcelain-sinks-toilets",
+          "pot-or-pan",
+          "reflective-bubble-wrap-and-foil-bubble-mailers",
+          "renew-liner",
+          "reusable-building-supplies",
+          "ribbons-and-bows",
+          "rock-and-gravel",
+          "seed-tray",
+          "styrofoam-cooler-or-meal-kit-cooler",
+          "tile",
+          "tupperware-food-storage-container",
+          "tyvek-envelope",
+          "vinyl-fencing",
+          "wine-cork",
+          "wood-pallet",
+          "wood-treated-or-painted"
+        ],
+        "reusabl": [
           "clear-plastic-berry-and-salad-container",
           "medical-equipment-and-supplies",
           "nalgene-bottle",
@@ -8646,59 +8330,6 @@
           "plastic-take-out-container",
           "porcelain-sinks-toilets",
           "reusable-building-supplies"
-        ],
-        "reuse": [
-          "art-supplies",
-          "book-hardcover",
-          "brick-and-pavers",
-          "christmas-tree-artificial",
-          "clothing-and-fabric",
-          "eyeglasses",
-          "fill-dirt",
-          "foam-packing-peanuts",
-          "furniture",
-          "hearing-aid",
-          "manure",
-          "medical-equipment-and-supplies",
-          "pillow",
-          "plastic-pet-carrier",
-          "porcelain-sinks-toilets",
-          "reusable-building-supplies",
-          "rock-and-gravel",
-          "tile",
-          "wood-pallet"
-        ],
-        "reused": [
-          "6-pack-holder",
-          "amazon-mailers",
-          "baking-glassware",
-          "binder",
-          "bubble-wrap-air-pillows",
-          "cardboard",
-          "carpet-roll-tube",
-          "ceramic-dish",
-          "envelopes-with-bubble-wrap-inside",
-          "foam-packing-peanuts",
-          "kitchen-cabinets-countertops",
-          "label-or-sticker",
-          "office-and-school-supplies",
-          "pillow",
-          "plastic-barrel-or-drum",
-          "plastic-cd-and-dvd-cases",
-          "plastic-coat-hanger",
-          "plastic-halloween-pumpkin",
-          "plastic-pallet",
-          "pot-or-pan",
-          "reflective-bubble-wrap-and-foil-bubble-mailers",
-          "renew-liner",
-          "ribbons-and-bows",
-          "seed-tray",
-          "styrofoam-cooler-or-meal-kit-cooler",
-          "tupperware-food-storage-container",
-          "tyvek-envelope",
-          "vinyl-fencing",
-          "wine-cork",
-          "wood-treated-or-painted"
         ],
         "ribbon": [
           "art-supplies",
@@ -8722,7 +8353,7 @@
           "6-pack-holder",
           "binder"
         ],
-        "rinsed": [
+        "rins": [
           "aluminum",
           "aluminum-take-out-container",
           "take-out-food-container"
@@ -8758,7 +8389,7 @@
         "roomba": [
           "vacuum-cleaner"
         ],
-        "rototiller": [
+        "rototil": [
           "scrap-metal"
         ],
         "round": [
@@ -8767,7 +8398,7 @@
         "roundup": [
           "herbicide"
         ],
-        "route": [
+        "rout": [
           "metal-bottle-cap-or-lid"
         ],
         "rubber": [
@@ -8799,7 +8430,7 @@
         "sack": [
           "paper-bag"
         ],
-        "safely": [
+        "safe": [
           "battery-button",
           "battery-lithium-ion",
           "battery-other",
@@ -8812,13 +8443,13 @@
           "battery-lithium-ion",
           "battery-other"
         ],
-        "safety": [
+        "safeti": [
           "battery-lithium-ion"
         ],
         "salad": [
           "clear-plastic-berry-and-salad-container"
         ],
-        "salvageable": [
+        "salvag": [
           "reusable-building-supplies"
         ],
         "samsung": [
@@ -8836,13 +8467,13 @@
         "saran": [
           "plastic-grocery-bags-and-plastic-film"
         ],
-        "satellite": [
+        "satellit": [
           "satellite-dish"
         ],
-        "savethefood": [
+        "save": [
           "food-scraps"
         ],
-        "saving": [
+        "savethefood": [
           "food-scraps"
         ],
         "saw": [
@@ -8909,21 +8540,19 @@
           "plastic-flower-pots",
           "scrap-metal"
         ],
-        "scrubbing": [
+        "scrub": [
           "household-cleaners"
         ],
         "seal": [
-          "chip-can"
-        ],
-        "sealed": [
           "antifreeze",
+          "chip-can",
           "disposable-face-mask",
           "disposable-gloves"
         ],
         "sealer": [
           "paint-oil-based-and-lacquers"
         ],
-        "seasonal": [
+        "season": [
           "yard-trimmings-and-leaves"
         ],
         "seat": [
@@ -8934,7 +8563,7 @@
         "sec": [
           "food-scraps"
         ],
-        "secure": [
+        "secur": [
           "computer-accessory",
           "computer-tower",
           "shredded-paper"
@@ -8948,44 +8577,38 @@
         "seed": [
           "seed-tray"
         ],
-        "seedling": [
+        "seedl": [
           "seed-tray"
         ],
-        "selecting": [
+        "select": [
           "clear-plastic-berry-and-salad-container",
           "party-try-plastic-tray",
           "plastic-cup",
           "plastic-take-out-container"
         ],
-        "separate": [
+        "separ": [
           "glass-bottle-or-jar",
-          "metal-bottle-cap-or-lid"
-        ],
-        "separated": [
+          "metal-bottle-cap-or-lid",
           "paperboard-election-sign",
           "plastic-film-election-sign"
         ],
         "septic": [
           "paint-latex"
         ],
-        "serve": [
+        "serv": [
+          "compostable-servingware-dishware",
+          "party-try-plastic-tray",
           "single-serve-coffee-pods"
         ],
         "servic": [
-          "shredded-paper"
-        ],
-        "service": [
           "coffee-grounds",
           "computer-accessory",
           "computer-tower",
           "food-scraps",
-          "furniture"
+          "furniture",
+          "shredded-paper"
         ],
-        "serving": [
-          "compostable-servingware-dishware",
-          "party-try-plastic-tray"
-        ],
-        "servingware": [
+        "servingwar": [
           "compostable-servingware-dishware",
           "single-use-servingware"
         ],
@@ -9009,7 +8632,7 @@
           "cardboard",
           "plastic-container"
         ],
-        "sharing": [
+        "share": [
           "amazon-mailers",
           "art-supplies",
           "baking-glassware",
@@ -9098,17 +8721,17 @@
           "shingles-asphalt",
           "shingles-wood"
         ],
+        "ship": [
+          "amazon-mailers",
+          "molded-paper-packaging",
+          "renew-liner",
+          "rigid-cardboard-tubes-and-corners"
+        ],
         "shipment": [
           "styrofoam-cooler-or-meal-kit-cooler"
         ],
         "shipper": [
           "molded-paper-packaging"
-        ],
-        "shipping": [
-          "amazon-mailers",
-          "molded-paper-packaging",
-          "renew-liner",
-          "rigid-cardboard-tubes-and-corners"
         ],
         "shirt": [
           "clothing-and-fabric",
@@ -9126,10 +8749,8 @@
           "automotive-battery",
           "bicycle",
           "cd-dvd-player",
+          "paper-bag",
           "video-game-system"
-        ],
-        "shopping": [
-          "paper-bag"
         ],
         "short": [
           "clothing-and-fabric"
@@ -9256,11 +8877,8 @@
         "shower": [
           "reusable-building-supplies"
         ],
-        "shredded": [
+        "shred": [
           "shredded-brown-crinkle-paper",
-          "shredded-paper"
-        ],
-        "shredding": [
           "shredded-paper"
         ],
         "shrink": [
@@ -9275,7 +8893,7 @@
           "plastic-film-election-sign",
           "yard-trimmings-and-leaves"
         ],
-        "significantly": [
+        "significantli": [
           "pizza-box"
         ],
         "silver": [
@@ -9283,7 +8901,7 @@
           "household-cleaners",
           "reflective-bubble-wrap-and-foil-bubble-mailers"
         ],
-        "silverware": [
+        "silverwar": [
           "compostable-servingware-dishware"
         ],
         "similar": [
@@ -9291,10 +8909,10 @@
           "chip-bag",
           "molded-paper-packaging"
         ],
-        "simple": [
+        "simpl": [
           "household-cleaners"
         ],
-        "single": [
+        "singl": [
           "food-scraps",
           "single-serve-coffee-pods",
           "single-use-servingware"
@@ -9349,7 +8967,7 @@
           "auto-truck-tire",
           "lawnmower"
         ],
-        "snowblower": [
+        "snowblow": [
           "snowblower"
         ],
         "so": [
@@ -9380,14 +8998,15 @@
         "soft": [
           "book-paperback"
         ],
+        "soi": [
+          "carton"
+        ],
         "soil": [
           "fill-dirt",
           "food-scraps",
+          "pizza-box",
           "sod",
           "yard-trimmings-and-leaves"
-        ],
-        "soiled": [
-          "pizza-box"
         ],
         "solar": [
           "solar-panels"
@@ -9411,14 +9030,12 @@
           "toiletries",
           "wood-untreated"
         ],
-        "sorted": [
-          "metal-bottle-cap-or-lid",
-          "plastic-caps-and-lids"
-        ],
-        "sorting": [
+        "sort": [
           "bubble-wrap-air-pillows",
           "carpet-roll-tube",
           "lawnmower",
+          "metal-bottle-cap-or-lid",
+          "plastic-caps-and-lids",
           "ribbons-and-bows",
           "scrap-metal",
           "shredded-brown-crinkle-paper",
@@ -9436,10 +9053,7 @@
         "sour": [
           "plastic-tub"
         ],
-        "soy": [
-          "carton"
-        ],
-        "spacechoose": [
+        "spacechoos": [
           "food-scraps"
         ],
         "speaker": [
@@ -9449,12 +9063,10 @@
         ],
         "special": [
           "light-bulb-compact-fluorescent-light-bulb-cfl",
-          "light-bulb-fluorescent-tube"
-        ],
-        "specially": [
+          "light-bulb-fluorescent-tube",
           "scrap-metal"
         ],
-        "specific": [
+        "specif": [
           "air-conditioner",
           "asphalt",
           "auto-part-car-part",
@@ -9495,7 +9107,7 @@
           "water-heater",
           "wood-untreated"
         ],
-        "specified": [
+        "specifi": [
           "christmas-tree-live",
           "satellite-dish"
         ],
@@ -9509,16 +9121,16 @@
           "paint-latex",
           "paint-oil-based-and-lacquers"
         ],
-        "sponge": [
+        "spong": [
           "food-scraps"
         ],
-        "sporting": [
+        "sport": [
           "sporting-goods"
         ],
         "spot": [
           "food-scraps"
         ],
-        "spray": [
+        "sprai": [
           "empty-aerosol-can",
           "herbicide",
           "pesticide",
@@ -9530,7 +9142,7 @@
         "sprinkler": [
           "electronics"
         ],
-        "stable": [
+        "stabl": [
           "food-unused"
         ],
         "stadium": [
@@ -9541,13 +9153,11 @@
         ],
         "stain": [
           "paint-latex",
-          "paint-oil-based-and-lacquers"
-        ],
-        "stained": [
+          "paint-oil-based-and-lacquers",
           "pillow",
           "shingles-wood"
         ],
-        "stainles": [
+        "stainl": [
           "scrap-metal"
         ],
         "stapler": [
@@ -9563,7 +9173,7 @@
           "scrap-metal",
           "tin-can"
         ],
-        "steering": [
+        "steer": [
           "automotive-fluids-other-than-motor-oil-and-antifreeze"
         ],
         "stent": [
@@ -9576,7 +9186,7 @@
           "electronics",
           "stereo-sound-equipment"
         ],
-        "stethoscope": [
+        "stethoscop": [
           "medical-equipment-and-supplies"
         ],
         "stick": [
@@ -9598,7 +9208,7 @@
           "brick-and-pavers",
           "rock-and-gravel"
         ],
-        "stoneware": [
+        "stonewar": [
           "ceramic-dish"
         ],
         "stor": [
@@ -9637,7 +9247,7 @@
           "videotape-or-cassette-tape",
           "yoga-mat"
         ],
-        "storage": [
+        "storag": [
           "battery-button",
           "battery-lithium-ion",
           "battery-other",
@@ -9663,7 +9273,7 @@
           "large-appliance",
           "stove"
         ],
-        "straightener": [
+        "straighten": [
           "personal-care-appliances"
         ],
         "strand": [
@@ -9686,16 +9296,14 @@
         "stroller": [
           "stroller"
         ],
-        "structure": [
+        "structur": [
           "plastic-play-structure"
         ],
         "stud": [
+          "auto-truck-tire",
           "wood-untreated"
         ],
-        "studded": [
-          "auto-truck-tire"
-        ],
-        "sturdy": [
+        "sturdi": [
           "plastic-cup"
         ],
         "styrofoam": [
@@ -9705,7 +9313,7 @@
           "renew-liner",
           "styrofoam-cooler-or-meal-kit-cooler"
         ],
-        "subscription": [
+        "subscript": [
           "food-scraps",
           "magazine"
         ],
@@ -9726,13 +9334,13 @@
           "small-appliance",
           "stove"
         ],
-        "suitable": [
+        "suitabl": [
           "furniture"
         ],
         "sun": [
           "sun-basket-paper-insulation"
         ],
-        "superglue": [
+        "superglu": [
           "glue"
         ],
         "suppli": [
@@ -9746,10 +9354,10 @@
           "plastic-caps-and-lids",
           "plastic-flower-pots"
         ],
-        "surgical": [
+        "surgic": [
           "medical-equipment-and-supplies"
         ],
-        "suture": [
+        "sutur": [
           "medical-equipment-and-supplies"
         ],
         "suv": [
@@ -9776,11 +9384,11 @@
           "nalgene-bottle",
           "plastic-cup"
         ],
-        "syring": [
+        "syre": [
           "medical-equipment-and-supplies",
           "syringe-sharps"
         ],
-        "syringe": [
+        "syring": [
           "medical-equipment-and-supplies",
           "syringe-sharps"
         ],
@@ -9800,9 +9408,6 @@
           "baling-twine"
         ],
         "tabl": [
-          "furniture"
-        ],
-        "table": [
           "food-scraps",
           "furniture",
           "plastic-lawn-furniture"
@@ -9810,7 +9415,7 @@
         "tablet": [
           "cell-phone"
         ],
-        "tackle": [
+        "tackl": [
           "bulky-rigid-plastics"
         ],
         "take": [
@@ -9860,20 +9465,14 @@
           "office-and-school-supplies",
           "videotape-or-cassette-tape"
         ],
-        "taped": [
-          "battery-lithium-ion"
-        ],
         "tea": [
           "small-appliance"
         ],
         "telephon": [
-          "telephone"
-        ],
-        "telephone": [
           "telephone",
           "telephone-book"
         ],
-        "television": [
+        "televis": [
           "television"
         ],
         "tetrapak": [
@@ -10130,67 +9729,7 @@
           "yard-trimmings-and-leaves",
           "yoga-mat"
         ],
-        "their": [
-          "automobile-car-or-truck",
-          "metal-bottle-cap-or-lid",
-          "paperboard-election-sign",
-          "plastic-caps-and-lids",
-          "smoke-detector-or-carbon-monoxide-detector",
-          "water-filter"
-        ],
-        "them": [
-          "battery-button",
-          "battery-rechargeable",
-          "carpet-roll-tube",
-          "clear-plastic-berry-and-salad-container",
-          "food-scraps",
-          "light-bulb-halogen",
-          "light-bulb-incandescent",
-          "light-bulb-led",
-          "party-try-plastic-tray",
-          "plastic-cup",
-          "plastic-take-out-container",
-          "rubbermaid-storage-bin",
-          "single-use-servingware"
-        ],
-        "themselv": [
-          "plastic-caps-and-lids"
-        ],
-        "there": [
-          "carpet-and-rugs",
-          "carpet-padding",
-          "paper-cup",
-          "single-use-servingware"
-        ],
-        "thermal": [
-          "receipt-paper",
-          "reflective-bubble-wrap-and-foil-bubble-mailers",
-          "renew-liner"
-        ],
-        "thermometer": [
-          "mercury-thermometer"
-        ],
-        "thermostat": [
-          "mercury-thermometer"
-        ],
-        "these": [
-          "battery-button",
-          "battery-lithium-ion",
-          "battery-rechargeable",
-          "branches",
-          "bulky-rigid-plastics",
-          "carpet-roll-tube",
-          "frozen-food-box",
-          "over-the-counter-medication",
-          "paint-latex",
-          "paint-oil-based-and-lacquers",
-          "plastic-grocery-bags-and-plastic-film",
-          "prescription-drug",
-          "shredded-paper",
-          "take-out-food-container",
-          "wood-waste"
-        ],
-        "they": [
+        "thei": [
           "amazon-mailers",
           "automotive-fluids-other-than-motor-oil-and-antifreeze",
           "baking-glassware",
@@ -10249,6 +9788,66 @@
           "tools",
           "tupperware-food-storage-container",
           "vacuum-cleaner"
+        ],
+        "their": [
+          "automobile-car-or-truck",
+          "metal-bottle-cap-or-lid",
+          "paperboard-election-sign",
+          "plastic-caps-and-lids",
+          "smoke-detector-or-carbon-monoxide-detector",
+          "water-filter"
+        ],
+        "them": [
+          "battery-button",
+          "battery-rechargeable",
+          "carpet-roll-tube",
+          "clear-plastic-berry-and-salad-container",
+          "food-scraps",
+          "light-bulb-halogen",
+          "light-bulb-incandescent",
+          "light-bulb-led",
+          "party-try-plastic-tray",
+          "plastic-cup",
+          "plastic-take-out-container",
+          "rubbermaid-storage-bin",
+          "single-use-servingware"
+        ],
+        "themselv": [
+          "plastic-caps-and-lids"
+        ],
+        "there": [
+          "carpet-and-rugs",
+          "carpet-padding",
+          "paper-cup",
+          "single-use-servingware"
+        ],
+        "thermal": [
+          "receipt-paper",
+          "reflective-bubble-wrap-and-foil-bubble-mailers",
+          "renew-liner"
+        ],
+        "thermomet": [
+          "mercury-thermometer"
+        ],
+        "thermostat": [
+          "mercury-thermometer"
+        ],
+        "these": [
+          "battery-button",
+          "battery-lithium-ion",
+          "battery-rechargeable",
+          "branches",
+          "bulky-rigid-plastics",
+          "carpet-roll-tube",
+          "frozen-food-box",
+          "over-the-counter-medication",
+          "paint-latex",
+          "paint-oil-based-and-lacquers",
+          "plastic-grocery-bags-and-plastic-film",
+          "prescription-drug",
+          "shredded-paper",
+          "take-out-food-container",
+          "wood-waste"
         ],
         "thi": [
           "compostable-servingware-dishware",
@@ -10382,7 +9981,7 @@
           "toiletries",
           "yoga-mat"
         ],
-        "tidy": [
+        "tidi": [
           "bulky-rigid-plastics"
         ],
         "tile": [
@@ -10407,7 +10006,7 @@
           "bicycle-tire",
           "wheel"
         ],
-        "tissue": [
+        "tissu": [
           "paper-towel-or-toilet-paper-tube",
           "paperboard",
           "tissue-wrapping-paper"
@@ -10522,6 +10121,12 @@
         "tofu": [
           "carton"
         ],
+        "toi": [
+          "blister-packs-packaging",
+          "bulky-rigid-plastics",
+          "household-item",
+          "plastic-toy"
+        ],
         "toilet": [
           "antifreeze",
           "household-cleaners",
@@ -10552,7 +10157,7 @@
           "personal-care-appliances",
           "toiletries"
         ],
-        "toothpaste": [
+        "toothpast": [
           "plastic-tube",
           "toiletries"
         ],
@@ -10578,22 +10183,22 @@
         "toxic": [
           "telephone"
         ],
-        "toy": [
-          "blister-packs-packaging",
-          "bulky-rigid-plastics",
-          "household-item",
-          "plastic-toy"
-        ],
         "trac": [
           "motor-oil-bottle"
         ],
-        "transmission": [
+        "trai": [
+          "aluminum-pie-pan-baking-tray",
+          "medical-equipment-and-supplies",
+          "party-try-plastic-tray",
+          "seed-tray"
+        ],
+        "transmiss": [
           "automotive-fluids-other-than-motor-oil-and-antifreeze"
         ],
         "transport": [
           "antifreeze"
         ],
-        "trapperkeeper": [
+        "trapperkeep": [
           "binder"
         ],
         "trash": [
@@ -10685,18 +10290,12 @@
           "yard-trimmings-and-leaves",
           "yoga-mat"
         ],
-        "tray": [
-          "aluminum-pie-pan-baking-tray",
-          "medical-equipment-and-supplies",
-          "party-try-plastic-tray",
-          "seed-tray"
-        ],
         "tre": [
           "christmas-tree-artificial",
           "christmas-tree-live",
           "wood-waste"
         ],
-        "treated": [
+        "treat": [
           "branches",
           "shingles-wood",
           "wood-treated-or-painted",
@@ -10714,13 +10313,13 @@
           "wood-waste",
           "yard-trimmings-and-leaves"
         ],
-        "tricycle": [
+        "tricycl": [
           "bicycle"
         ],
         "trike": [
           "bicycle"
         ],
-        "trimming": [
+        "trim": [
           "food-scraps",
           "yard-trimmings-and-leaves"
         ],
@@ -10757,7 +10356,7 @@
           "plastic-tube",
           "rigid-cardboard-tubes-and-corners"
         ],
-        "tupperware": [
+        "tupperwar": [
           "tupperware-food-storage-container"
         ],
         "tv": [
@@ -10792,7 +10391,7 @@
           "reflective-bubble-wrap-and-foil-bubble-mailers",
           "tile"
         ],
-        "typically": [
+        "typic": [
           "packaging-styrofoam-or-polystyrene-foam"
         ],
         "tyvek": [
@@ -10805,52 +10404,50 @@
         "umbrella": [
           "stroller"
         ],
-        "unable": [
+        "unabl": [
           "packaging-styrofoam-or-polystyrene-foam"
         ],
-        "unavoidable": [
+        "unavoid": [
           "food-scraps"
         ],
         "under": [
           "carpet-padding"
         ],
-        "underpadding": [
+        "underpad": [
           "carpet-padding"
         ],
-        "unicycle": [
+        "unicycl": [
           "bicycle"
         ],
-        "unopened": [
+        "unopen": [
           "toiletries"
         ],
-        "unpainted": [
+        "unpaint": [
           "shingles-wood",
           "wood-pallet"
         ],
-        "unsafe": [
+        "unsaf": [
           "light-bulb-halogen",
           "light-bulb-incandescent"
         ],
-        "unstained": [
+        "unstain": [
           "shingles-wood"
         ],
         "until": [
           "cardboard"
         ],
-        "untreated": [
+        "untreat": [
           "shingles-wood",
           "wood-pallet",
           "wood-untreated"
         ],
-        "unusable": [
+        "unus": [
           "baking-glassware",
-          "car-seat"
-        ],
-        "unused": [
+          "car-seat",
           "food-unused",
           "toiletries"
         ],
-        "unwanted": [
+        "unwant": [
           "furniture",
           "household-item"
         ],
@@ -10861,30 +10458,7 @@
           "packaging-styrofoam-or-polystyrene-foam",
           "yard-trimmings-and-leaves"
         ],
-        "usable": [
-          "baking-glassware",
-          "binder",
-          "brick-and-pavers",
-          "ceramic-dish",
-          "christmas-tree-artificial",
-          "plastic-toy",
-          "tile",
-          "tupperware-food-storage-container"
-        ],
-        "usb": [
-          "cords-and-cables"
-        ],
-        "use": [
-          "food-scraps",
-          "single-serve-coffee-pods",
-          "single-use-servingware"
-        ],
-        "useable": [
-          "book-hardcover",
-          "carpet-and-rugs",
-          "carpet-padding"
-        ],
-        "used": [
+        "us": [
           "art-supplies",
           "baling-twine",
           "bicycle",
@@ -10897,6 +10471,7 @@
           "clothing-and-fabric",
           "cooking-oil-and-grease",
           "eyeglasses",
+          "food-scraps",
           "furniture",
           "garden-hose",
           "hearing-aid",
@@ -10911,6 +10486,7 @@
           "rigid-cardboard-tubes-and-corners",
           "shoes",
           "shredded-brown-crinkle-paper",
+          "single-serve-coffee-pods",
           "single-use-servingware",
           "sporting-goods",
           "stroller",
@@ -10919,13 +10495,31 @@
           "woven-plastic-feed-bag",
           "yoga-mat"
         ],
+        "usabl": [
+          "baking-glassware",
+          "binder",
+          "brick-and-pavers",
+          "ceramic-dish",
+          "christmas-tree-artificial",
+          "plastic-toy",
+          "tile",
+          "tupperware-food-storage-container"
+        ],
+        "usb": [
+          "cords-and-cables"
+        ],
+        "useabl": [
+          "book-hardcover",
+          "carpet-and-rugs",
+          "carpet-padding"
+        ],
         "utensil": [
           "single-use-servingware"
         ],
         "vacuum": [
           "vacuum-cleaner"
         ],
-        "value": [
+        "valu": [
           "clear-plastic-berry-and-salad-container",
           "party-try-plastic-tray",
           "plastic-cup",
@@ -10935,27 +10529,30 @@
         "vapor": [
           "house-insulation"
         ],
+        "vari": [
+          "plastic-grocery-bags-and-plastic-film"
+        ],
         "varnish": [
           "paint-latex",
           "paint-oil-based-and-lacquers"
         ],
-        "vary": [
-          "plastic-grocery-bags-and-plastic-film"
-        ],
         "vcr": [
           "electronics"
+        ],
+        "veget": [
+          "cooking-oil-and-grease",
+          "food-scraps"
         ],
         "vegetabl": [
           "frozen-food-box"
         ],
-        "vegetable": [
-          "cooking-oil-and-grease",
-          "food-scraps"
-        ],
-        "vehicle": [
+        "vehicl": [
           "automobile-car-or-truck"
         ],
-        "verify": [
+        "veri": [
+          "cardboard"
+        ],
+        "verifi": [
           "bbq-grill-charcoal",
           "bbq-grill-gas",
           "bulky-rigid-plastics",
@@ -10964,19 +10561,16 @@
           "plastic-bucket",
           "tools"
         ],
-        "very": [
-          "cardboard"
-        ],
         "vest": [
           "clothing-and-fabric"
         ],
         "vet": [
           "medical-equipment-and-supplies"
         ],
-        "veterinary": [
+        "veterinari": [
           "medical-equipment-and-supplies"
         ],
-        "vhs": [
+        "vh": [
           "cd-dvd-player",
           "cds-and-dvds",
           "videotape-or-cassette-tape"
@@ -10990,9 +10584,6 @@
         "videotap": [
           "videotape-or-cassette-tape"
         ],
-        "videotape": [
-          "videotape-or-cassette-tape"
-        ],
         "view": [
           "battery-button",
           "battery-lithium-ion",
@@ -11003,7 +10594,7 @@
           "disposable-gloves",
           "vinyl-fencing"
         ],
-        "visiting": [
+        "visit": [
           "bulky-rigid-plastics",
           "kitty-litter-bucket",
           "plastic-bucket"
@@ -11017,8 +10608,17 @@
         "voter": [
           "plastic-film-election-sign"
         ],
-        "waffle": [
+        "wa": [
+          "light-bulb-ballast"
+        ],
+        "waffl": [
           "small-appliance"
+        ],
+        "wai": [
+          "paint-latex",
+          "paint-oil-based-and-lacquers",
+          "pillow",
+          "plastic-container"
         ],
         "walker": [
           "medical-equipment-and-supplies"
@@ -11029,25 +10629,17 @@
         "ware": [
           "compostable-servingware-dishware"
         ],
-        "was": [
-          "light-bulb-ballast"
-        ],
-        "washer": [
-          "automotive-fluids-other-than-motor-oil-and-antifreeze",
-          "large-appliance"
-        ],
-        "washing": [
+        "wash": [
           "dishwasher",
           "large-appliance",
           "oven",
           "stove"
         ],
-        "wast": [
-          "flammable-liquid",
-          "gasoline",
-          "glue"
+        "washer": [
+          "automotive-fluids-other-than-motor-oil-and-antifreeze",
+          "large-appliance"
         ],
-        "waste": [
+        "wast": [
           "ammunition-and-explosives",
           "automotive-fluids-other-than-motor-oil-and-antifreeze",
           "battery-button",
@@ -11076,7 +10668,7 @@
           "wood-waste",
           "yard-trimmings-and-leaves"
         ],
-        "wastewater": [
+        "wastewat": [
           "over-the-counter-medication",
           "paint-latex",
           "prescription-drug"
@@ -11088,23 +10680,15 @@
           "water-filter",
           "water-heater"
         ],
-        "waterway": [
+        "waterwai": [
           "over-the-counter-medication",
           "prescription-drug"
         ],
         "wax": [
-          "cereal-liner-bag"
-        ],
-        "waxed": [
+          "cereal-liner-bag",
           "waxed-cardboard"
         ],
-        "way": [
-          "paint-latex",
-          "paint-oil-based-and-lacquers",
-          "pillow",
-          "plastic-container"
-        ],
-        "webpage": [
+        "webpag": [
           "battery-button",
           "battery-lithium-ion",
           "battery-other",
@@ -11181,7 +10765,7 @@
           "paperboard-election-sign",
           "plastic-film-election-sign"
         ],
-        "wildlife": [
+        "wildlif": [
           "baling-twine"
         ],
         "will": [
@@ -11196,11 +10780,9 @@
           "household-cleaners"
         ],
         "window": [
+          "paper-envelope",
           "reusable-building-supplies",
           "window-glass"
-        ],
-        "windowed": [
-          "paper-envelope"
         ],
         "wine": [
           "carton",
@@ -11275,10 +10857,10 @@
           "shingles-wood",
           "wood-pallet"
         ],
-        "woody": [
+        "woodi": [
           "wood-waste"
         ],
-        "working": [
+        "work": [
           "bbq-grill-charcoal",
           "bbq-grill-gas",
           "cd-dvd-player",
@@ -11296,19 +10878,15 @@
           "bubble-wrap-air-pillows",
           "envelopes-with-bubble-wrap-inside",
           "medical-equipment-and-supplies",
+          "mixed-paper",
           "plastic-grocery-bags-and-plastic-film",
           "reflective-bubble-wrap-and-foil-bubble-mailers",
+          "tissue-wrapping-paper",
           "wrapping-paper"
         ],
         "wrapper": [
           "candy-or-food-wrapper",
           "chip-bag"
-        ],
-        "wrapping": [
-          "mixed-paper",
-          "plastic-grocery-bags-and-plastic-film",
-          "tissue-wrapping-paper",
-          "wrapping-paper"
         ],
         "wrung": [
           "food-scraps"
@@ -11388,7 +10966,7 @@
     "glenwood-springs-co-us": {
       "pack_version": "0.1.0",
       "pack_schema_version": "1.1.0",
-      "pack_schema_sha256": "36d8eb840c792d538cb0726668174dd4e3582ff21f3db958bfd231ad13a78005",
+      "pack_schema_sha256": "190a6bdc5efbea1fc5653f80412690d9755150aefbd7b0ae474a732e68056a30",
       "retrieved_at": "2026-02-02T18:14:12.306466Z",
       "items": {
         "cardboard": "Cardboard"
@@ -11397,7 +10975,7 @@
         "box": [
           "cardboard"
         ],
-        "buy": [
+        "bui": [
           "cardboard"
         ],
         "cardboard": [
@@ -11406,19 +10984,19 @@
         "clean": [
           "cardboard"
         ],
-        "consider": [
+        "consid": [
           "cardboard"
         ],
-        "contaminated": [
+        "contamin": [
           "cardboard"
         ],
-        "corrugated": [
+        "corrug": [
           "cardboard"
         ],
         "craigslist": [
           "cardboard"
         ],
-        "freecycle": [
+        "freecycl": [
           "cardboard"
         ],
         "group": [
@@ -11430,13 +11008,13 @@
         "local": [
           "cardboard"
         ],
-        "nothing": [
+        "noth": [
           "cardboard"
         ],
         "on": [
           "cardboard"
         ],
-        "only": [
+        "onli": [
           "cardboard"
         ],
         "or": [
@@ -11445,20 +11023,309 @@
         "other": [
           "cardboard"
         ],
-        "posting": [
+        "post": [
           "cardboard"
         ],
         "project": [
           "cardboard"
         ],
-        "reuse": [
+        "reus": [
           "cardboard"
         ],
-        "sharing": [
+        "share": [
           "cardboard"
         ],
         "the": [
           "cardboard"
+        ]
+      }
+    },
+    "repath.base.channels.v1": {
+      "pack_version": "0.1.0",
+      "pack_schema_version": "1.2.0",
+      "pack_schema_sha256": "190a6bdc5efbea1fc5653f80412690d9755150aefbd7b0ae474a732e68056a30",
+      "retrieved_at": "2026-02-19T00:00:00Z",
+      "items": {},
+      "index": {}
+    },
+    "repath.country.us.channels.v1": {
+      "pack_version": "0.1.0",
+      "pack_schema_version": "1.2.0",
+      "pack_schema_sha256": "190a6bdc5efbea1fc5653f80412690d9755150aefbd7b0ae474a732e68056a30",
+      "retrieved_at": "2026-02-19T00:00:00Z",
+      "items": {},
+      "index": {}
+    },
+    "repath.country.us.default.v1": {
+      "pack_version": "0.1.0",
+      "pack_schema_version": "1.2.0",
+      "pack_schema_sha256": "190a6bdc5efbea1fc5653f80412690d9755150aefbd7b0ae474a732e68056a30",
+      "retrieved_at": "2026-02-19T00:00:00Z",
+      "items": {
+        "clothing": "Clothing",
+        "furniture": "Furniture",
+        "small-appliance": "Small Appliance"
+      },
+      "index": {
+        "accept": [
+          "furniture"
+        ],
+        "and": [
+          "small-appliance"
+        ],
+        "anywher": [
+          "furniture"
+        ],
+        "applianc": [
+          "small-appliance"
+        ],
+        "beyond": [
+          "clothing"
+        ],
+        "blender": [
+          "small-appliance"
+        ],
+        "chair": [
+          "furniture"
+        ],
+        "cloth": [
+          "clothing"
+        ],
+        "contamin": [
+          "clothing"
+        ],
+        "couch": [
+          "furniture"
+        ],
+        "damag": [
+          "clothing"
+        ],
+        "desk": [
+          "furniture"
+        ],
+        "dispos": [
+          "small-appliance"
+        ],
+        "donat": [
+          "furniture"
+        ],
+        "dresser": [
+          "furniture"
+        ],
+        "fabric": [
+          "clothing"
+        ],
+        "follow": [
+          "small-appliance"
+        ],
+        "for": [
+          "furniture"
+        ],
+        "furnitur": [
+          "furniture"
+        ],
+        "guidanc": [
+          "small-appliance"
+        ],
+        "if": [
+          "clothing",
+          "furniture",
+          "small-appliance"
+        ],
+        "jacket": [
+          "clothing"
+        ],
+        "kitchen": [
+          "small-appliance"
+        ],
+        "local": [
+          "small-appliance"
+        ],
+        "microwav": [
+          "small-appliance"
+        ],
+        "not": [
+          "furniture",
+          "small-appliance"
+        ],
+        "onli": [
+          "clothing",
+          "furniture"
+        ],
+        "or": [
+          "clothing",
+          "furniture",
+          "small-appliance"
+        ],
+        "pant": [
+          "clothing"
+        ],
+        "recycl": [
+          "furniture"
+        ],
+        "repair": [
+          "small-appliance"
+        ],
+        "reus": [
+          "clothing",
+          "furniture"
+        ],
+        "reusabl": [
+          "small-appliance"
+        ],
+        "shirt": [
+          "clothing"
+        ],
+        "sho": [
+          "clothing"
+        ],
+        "small": [
+          "small-appliance"
+        ],
+        "sofa": [
+          "furniture"
+        ],
+        "tabl": [
+          "furniture"
+        ],
+        "textil": [
+          "clothing"
+        ],
+        "toaster": [
+          "small-appliance"
+        ],
+        "trash": [
+          "clothing",
+          "furniture"
+        ],
+        "unsaf": [
+          "furniture",
+          "small-appliance"
+        ]
+      }
+    },
+    "repath.muni.us-co-fort-collins.v1": {
+      "pack_version": "0.1.0",
+      "pack_schema_version": "1.2.0",
+      "pack_schema_sha256": "190a6bdc5efbea1fc5653f80412690d9755150aefbd7b0ae474a732e68056a30",
+      "retrieved_at": "2026-02-19T00:00:00Z",
+      "items": {
+        "chair": "Chair",
+        "clothing": "Clothing",
+        "small-appliance": "Small Appliance"
+      },
+      "index": {
+        "and": [
+          "small-appliance"
+        ],
+        "applianc": [
+          "small-appliance"
+        ],
+        "ar": [
+          "chair"
+        ],
+        "as": [
+          "clothing"
+        ],
+        "be": [
+          "chair"
+        ],
+        "beyond": [
+          "clothing"
+        ],
+        "blender": [
+          "small-appliance"
+        ],
+        "cannot": [
+          "chair"
+        ],
+        "chair": [
+          "chair"
+        ],
+        "cloth": [
+          "clothing"
+        ],
+        "contamin": [
+          "clothing"
+        ],
+        "dispos": [
+          "clothing",
+          "small-appliance"
+        ],
+        "donat": [
+          "chair"
+        ],
+        "fabric": [
+          "clothing"
+        ],
+        "follow": [
+          "small-appliance"
+        ],
+        "furnitur": [
+          "chair"
+        ],
+        "guidanc": [
+          "small-appliance"
+        ],
+        "if": [
+          "clothing",
+          "small-appliance"
+        ],
+        "item": [
+          "chair"
+        ],
+        "jacket": [
+          "clothing"
+        ],
+        "local": [
+          "small-appliance"
+        ],
+        "microwav": [
+          "small-appliance"
+        ],
+        "not": [
+          "small-appliance"
+        ],
+        "onli": [
+          "chair"
+        ],
+        "or": [
+          "chair",
+          "clothing"
+        ],
+        "pant": [
+          "clothing"
+        ],
+        "repair": [
+          "chair",
+          "small-appliance"
+        ],
+        "reus": [
+          "chair",
+          "clothing"
+        ],
+        "shirt": [
+          "clothing"
+        ],
+        "small": [
+          "small-appliance"
+        ],
+        "that": [
+          "chair"
+        ],
+        "toaster": [
+          "small-appliance"
+        ],
+        "torn": [
+          "clothing"
+        ],
+        "trash": [
+          "chair",
+          "clothing"
+        ],
+        "unsaf": [
+          "chair",
+          "small-appliance"
         ]
       }
     }

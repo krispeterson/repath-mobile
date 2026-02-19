@@ -1,13 +1,26 @@
 import React from "react";
-import { View, Text, TextInput, Pressable } from "react-native";
+import { View, Text, TextInput, Pressable, ScrollView } from "react-native";
 import CardList from "../components/CardList";
-import { resolveItem } from "../domain/search";
 import { resolvePlace } from "../domain/pack";
 import { colors, spacing, radius, type } from "../ui/theme";
 
-export default function HomeScreen({ pack, packId, query, onQueryChange, onSearch, onScan, onChangeArea, results }) {
+export default function HomeScreen({
+  pack,
+  query,
+  onQueryChange,
+  onSearch,
+  onScan,
+  onChangeArea,
+  decision,
+  packNotice,
+  questionAnswers,
+  onQuestionChange,
+  onResolveQuestions,
+  getQuestionSuggestions
+}) {
   const place = resolvePlace(pack);
-  const cards = results.length ? results : resolveItem(pack, packId, query);
+  const pathways = decision && Array.isArray(decision.pathways) ? decision.pathways : [];
+  const questions = decision && Array.isArray(decision.questions) ? decision.questions : [];
 
   return (
     <View style={{ flex: 1, gap: spacing.lg }}>
@@ -17,6 +30,12 @@ export default function HomeScreen({ pack, packId, query, onQueryChange, onSearc
         </Text>
         <Text style={{ ...type.small, color: colors.mist }}>Local rules, updated with your pack.</Text>
       </View>
+
+      {packNotice ? (
+        <View style={{ borderWidth: 1, borderColor: colors.sun, backgroundColor: "#FFF7E8", borderRadius: radius.md, padding: spacing.sm }}>
+          <Text style={{ color: colors.sunDark }}>{packNotice}</Text>
+        </View>
+      ) : null}
 
       <View style={{ flexDirection: "row", gap: spacing.sm, alignItems: "center" }}>
         <TextInput
@@ -35,11 +54,63 @@ export default function HomeScreen({ pack, packId, query, onQueryChange, onSearc
         <Text style={{ color: colors.white, textAlign: "center", fontWeight: "700" }}>Scan with camera</Text>
       </Pressable>
 
-      <CardList cards={cards} pack={pack} />
+      {decision && decision.item && decision.item.name ? (
+        <Text style={{ ...type.small, color: colors.mist }}>Matched item: {decision.item.name}</Text>
+      ) : null}
 
-      <Pressable onPress={onChangeArea} style={{ padding: spacing.sm }}>
-        <Text style={{ textAlign: "center", color: colors.ocean, textDecorationLine: "underline" }}>Change area</Text>
-      </Pressable>
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ gap: spacing.md, paddingBottom: spacing.lg }}>
+        {questions.length ? (
+          <View style={{ borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.md, padding: spacing.md, gap: spacing.sm, backgroundColor: colors.white }}>
+            <Text style={{ ...type.h3, color: colors.ink }}>More info needed</Text>
+            {questions.map((question) => {
+              const answerValue = String(questionAnswers[question.id] || "");
+              const isCityQuestion = question.id === "city";
+              const suggestions = getQuestionSuggestions ? getQuestionSuggestions(question.id, answerValue) : [];
+              const showUnknownCityHint = isCityQuestion && answerValue.trim().length >= 4 && suggestions.length === 0;
+
+              return (
+                <View key={question.id} style={{ gap: spacing.xs }}>
+                  <Text style={{ color: colors.fog }}>{question.prompt}</Text>
+                  <TextInput
+                    value={answerValue}
+                    onChangeText={(value) => onQuestionChange(question.id, value)}
+                    placeholder={question.label}
+                    placeholderTextColor={colors.mist}
+                    style={{ borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.md, padding: spacing.sm, color: colors.ink, backgroundColor: colors.white }}
+                  />
+                  {isCityQuestion && suggestions.length ? (
+                    <View style={{ flexDirection: "row", flexWrap: "wrap", gap: spacing.xs }}>
+                      {suggestions.map((suggestion) => (
+                        <Pressable
+                          key={`${question.id}-${suggestion.label}`}
+                          onPress={() => onQuestionChange(question.id, suggestion.value)}
+                          style={{ borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.md, backgroundColor: colors.snow, paddingVertical: 4, paddingHorizontal: spacing.sm }}
+                        >
+                          <Text style={{ color: colors.ink }}>{suggestion.label}</Text>
+                        </Pressable>
+                      ))}
+                    </View>
+                  ) : null}
+                  {showUnknownCityHint ? (
+                    <Text style={{ color: colors.fog }}>
+                      City not found in bundled municipalities. You can still continue, or provide ZIP for best results.
+                    </Text>
+                  ) : null}
+                </View>
+              );
+            })}
+            <Pressable onPress={onResolveQuestions} style={{ paddingVertical: spacing.sm, paddingHorizontal: spacing.md, borderRadius: radius.md, backgroundColor: colors.ink, alignSelf: "flex-start" }}>
+              <Text style={{ color: colors.white, fontWeight: "700" }}>Update recommendations</Text>
+            </Pressable>
+          </View>
+        ) : null}
+
+        <CardList pathways={pathways} query={decision && decision.query ? decision.query : query} />
+
+        <Pressable onPress={onChangeArea} style={{ padding: spacing.sm }}>
+          <Text style={{ textAlign: "center", color: colors.ocean, textDecorationLine: "underline" }}>Change area</Text>
+        </Pressable>
+      </ScrollView>
     </View>
   );
 }

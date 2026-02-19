@@ -5,8 +5,8 @@ export function resolvePlace(pack) {
   const adminAreaCode = adminAreas[0] && adminAreas[0].code ? adminAreas[0].code : "";
 
   return {
-    name: (jurisdiction && jurisdiction.name) || (municipality && municipality.name) || "",
-    region: adminAreaCode || (municipality && municipality.region) || (jurisdiction && jurisdiction.country) || ""
+    name: (municipality && municipality.name) || (jurisdiction && jurisdiction.name) || "",
+    region: (municipality && municipality.region) || adminAreaCode || (jurisdiction && jurisdiction.country) || ""
   };
 }
 

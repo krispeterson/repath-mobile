@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, TextInput, Pressable } from "react-native";
 import { colors, spacing, radius, type } from "../ui/theme";
 
-export default function ZipScreen({ zip, zipError, locationError, onZipChange, onContinue, onLocation }) {
+export default function ZipScreen({ zip, zipError, locationError, onZipChange, onContinue, onLocation, isLocating }) {
   return (
     <View style={{ gap: spacing.lg }}>
       <View style={{ gap: spacing.xs }}>
@@ -24,9 +24,12 @@ export default function ZipScreen({ zip, zipError, locationError, onZipChange, o
         <Pressable onPress={onContinue} style={{ padding: spacing.md, backgroundColor: colors.ink, borderRadius: radius.md }}>
           <Text style={{ color: colors.white, textAlign: "center", fontWeight: "700" }}>Continue</Text>
         </Pressable>
-        <Pressable onPress={onLocation} style={{ padding: spacing.sm }}>
-          <Text style={{ textAlign: "center", color: colors.ocean, textDecorationLine: "underline" }}>Use my location instead</Text>
+        <Pressable onPress={onLocation} disabled={isLocating} style={{ padding: spacing.sm, opacity: isLocating ? 0.7 : 1 }}>
+          <Text style={{ textAlign: "center", color: colors.ocean, textDecorationLine: "underline" }}>
+            {isLocating ? "Locating..." : "Use my location instead"}
+          </Text>
         </Pressable>
+        {isLocating ? <Text style={{ ...type.small, color: colors.fog, textAlign: "center" }}>Getting your ZIP from GPS...</Text> : null}
       </View>
 
       <Text style={{ ...type.small, color: colors.mist }}>

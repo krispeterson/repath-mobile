@@ -1,6 +1,13 @@
 # RePath Mobile Release Notes
 
 ## Upcoming (Unreleased)
+- Adds pathway-based recommendations with reusable channels and donation places:
+  - Reuse options now include online/community channels (for example: Freecycle, Buy Nothing, Craigslist, eBay, Depop).
+  - Donate pathways now show local donation places (for example: Goodwill, Habitat ReStore when present in pack data).
+  - Follow-up question prompts (city/ZIP) appear only when needed to resolve channel links.
+- Adds ZIP fallback behavior:
+  - Unknown valid U.S. ZIPs now load a nationwide fallback pack instead of hard-failing.
+  - App shows a clear warning that guidance is less accurate until a municipality-specific pack exists.
 - Adds automated Android release artifact verification:
   - checksum validation
   - embedded JS bundle validation (`assets/index.android.bundle`)

@@ -1,0 +1,142 @@
+{
+  "pack_id": "repath.country.us.default.v1",
+  "pack_version": "0.1.0",
+  "pack_schema_version": "1.2.0",
+  "retrieved_at": "2026-02-19T00:00:00Z",
+  "extends": ["repath.country.us.channels.v1"],
+  "jurisdiction": {
+    "name": "United States (Fallback Guidance)",
+    "country": "US",
+    "kind": "national"
+  },
+  "variables": {},
+  "channels": [],
+  "locations": [],
+  "items": [
+    {
+      "id": "furniture",
+      "name": "Furniture",
+      "keywords": ["chair", "couch", "sofa", "table", "desk", "dresser"],
+      "option_cards": [
+        {
+          "id": "furniture-trash",
+          "kind": "trash",
+          "title": "Trash (last resort)",
+          "priority": 900,
+          "confidence": 0.8,
+          "actions": [
+            {
+              "type": "copy_text",
+              "label": "Info",
+              "text": "Only trash if unsafe or not accepted anywhere for reuse, donation, or recycling."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clothing",
+      "name": "Clothing",
+      "keywords": ["shirt", "pants", "jacket", "shoes", "fabric", "textile"],
+      "option_cards": [
+        {
+          "id": "clothing-trash",
+          "kind": "trash",
+          "title": "Trash (last resort)",
+          "priority": 900,
+          "confidence": 0.8,
+          "actions": [
+            {
+              "type": "copy_text",
+              "label": "Info",
+              "text": "Only trash if contaminated or damaged beyond reuse."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "small-appliance",
+      "name": "Small Appliance",
+      "keywords": ["toaster", "blender", "microwave", "kitchen appliance"],
+      "option_cards": [
+        {
+          "id": "small-appliance-trash",
+          "kind": "trash",
+          "title": "Trash (last resort)",
+          "priority": 900,
+          "confidence": 0.8,
+          "actions": [
+            {
+              "type": "copy_text",
+              "label": "Info",
+              "text": "If unsafe and not repairable or reusable, follow local disposal guidance."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "unsafe-durable-goods",
+      "priority": 1,
+      "when": {
+        "keywords": ["chair", "furniture", "clothing", "appliance"],
+        "obs": {
+          "isUnsafe": true
+        }
+      },
+      "then": {
+        "action": "trash",
+        "title": "Do not reuse unsafe items",
+        "rationale": "If an item is unsafe, skip reuse/sell/donate and dispose safely.",
+        "steps": ["Confirm item is unsafe", "Use local disposal guidance"],
+        "priority": 1
+      }
+    },
+    {
+      "id": "reuse-durable-goods",
+      "priority": 10,
+      "when": {
+        "keywords": ["chair", "furniture", "clothing", "appliance"]
+      },
+      "then": {
+        "action": "reuse",
+        "title": "Reuse, give away, or sell first",
+        "rationale": "Keep durable goods in use before recycling or trash.",
+        "steps": ["Clean and photograph item", "List in local/community channels"],
+        "priority": 10,
+        "channelIds": [
+          "freecycle-town-finder",
+          "trash-nothing",
+          "buy-nothing",
+          "craigslist",
+          "depop",
+          "ebay",
+          "offerup",
+          "repair-cafe-visit"
+        ]
+      }
+    },
+    {
+      "id": "donate-durable-goods",
+      "priority": 20,
+      "when": {
+        "keywords": ["chair", "furniture", "clothing", "appliance"]
+      },
+      "then": {
+        "action": "donate",
+        "title": "Donate if still usable",
+        "rationale": "Donation keeps useful items in circulation locally.",
+        "steps": ["Verify accepted materials", "Use donation locators nearby"],
+        "priority": 20,
+        "channelIds": [
+          "goodwill-locator",
+          "habitat-restore-finder",
+          "salvation-army-dropoff"
+        ]
+      }
+    }
+  ]
+}
