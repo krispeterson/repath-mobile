@@ -1,13 +1,15 @@
 {
   "name": "repath-mobile",
   "private": true,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "index.js",
   "scripts": {
     "start": "npx expo start",
     "smoke": "node scripts/smoke.js",
     "release:android": "node scripts/release-android.js",
     "release:android:publish": "node scripts/release-android.js --publish",
+    "release:android:aab": "node scripts/release-android.js --artifact aab",
+    "release:android:aab:publish": "node scripts/release-android.js --artifact aab --publish",
     "release:android:debug": "node scripts/release-android.js --variant debug",
     "release:android:debug:publish": "node scripts/release-android.js --variant debug --publish",
     "pull:model:release": "node scripts/pull-model-release.js",

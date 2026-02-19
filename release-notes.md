@@ -1,31 +1,40 @@
 # RePath Mobile Release Notes
 
 ## Version
-- `v0.1.2`
+- `v0.1.3`
 
 ## Summary
-- Fixes Android release packaging so installable artifacts no longer depend on Metro.
-- Promotes release APK generation as the default mobile release workflow.
+- Hardens Android release builds for production signing and Play Store packaging.
+- Extends release artifacts to include both installable APK and Play-ready AAB.
 
 ## User-Facing Additions
-- GitHub release assets now target release-variant Android APKs with embedded JS bundle/assets.
-- Keeps existing camera-first scan, local routing, and bundled pack behavior unchanged.
+- Android releases now include:
+  - direct-install APK (`.apk`)
+  - Play upload bundle (`.aab`)
 
 ## Developer and Integration Additions
-- Added `npm run release:android` and `npm run release:android:publish`.
-- Existing debug flow remains available through `npm run release:android:debug`.
-- Added `scripts/release-android.js` with explicit `--variant release|debug`.
+- `scripts/release-android.js` now supports `--artifact auto|apk|aab|all`.
+- Release builds enforce signing credentials by default:
+  - `REPATH_UPLOAD_STORE_FILE`
+  - `REPATH_UPLOAD_STORE_PASSWORD`
+  - `REPATH_UPLOAD_KEY_ALIAS`
+  - `REPATH_UPLOAD_KEY_PASSWORD`
+- Local-only fallback remains available via `--allow-debug-signing`.
+- Android versioning is now injected from release tag into Gradle properties:
+  - `REPATH_ANDROID_VERSION_NAME`
+  - `REPATH_ANDROID_VERSION_CODE`
 
 ## Release Artifacts
-- Android APK: `app-release-v0.1.2.apk`
-- Android APK SHA256: `app-release-v0.1.2.apk.sha256`
-- Android output metadata: `output-metadata-release-v0.1.2.json`
+- Android APK: `app-release-v0.1.3.apk`
+- Android APK SHA256: `app-release-v0.1.3.apk.sha256`
+- Android AAB: `app-release-v0.1.3.aab`
+- Android AAB SHA256: `app-release-v0.1.3.aab.sha256`
+- Android output metadata: `output-metadata-release-v0.1.3.json`
 
 ## Validation Snapshot
 - `npm run smoke` passed.
 - `npm test` passed (`187/187`).
-- Verified release APK contains `assets/index.android.bundle`.
+- Release APK contains `assets/index.android.bundle`.
 
 ## Known Limitations
-- Release APK signing still uses the debug keystore.
-- iOS release artifact (IPA) is not yet included.
+- iOS release artifact (IPA) is not included in this release.

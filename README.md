@@ -75,11 +75,24 @@ npm run release:android:publish -- --tag vX.Y.Z
 The release script produces:
 - `app-release-vX.Y.Z.apk`
 - `app-release-vX.Y.Z.apk.sha256`
+- `app-release-vX.Y.Z.aab`
+- `app-release-vX.Y.Z.aab.sha256`
 - `output-metadata-release-vX.Y.Z.json`
 
 Debug build command is still available for local Metro-connected testing:
 ```bash
 npm run release:android:debug -- --tag vX.Y.Z
+```
+
+Production signing inputs (environment variables):
+- `REPATH_UPLOAD_STORE_FILE`
+- `REPATH_UPLOAD_STORE_PASSWORD`
+- `REPATH_UPLOAD_KEY_ALIAS`
+- `REPATH_UPLOAD_KEY_PASSWORD`
+
+For local non-production testing only, you can bypass signing enforcement with:
+```bash
+npm run release:android -- --tag vX.Y.Z --allow-debug-signing
 ```
 
 See `docs/release-contract.md` for artifact contract details.
