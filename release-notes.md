@@ -31,6 +31,10 @@
   - Adds persistent limitations copy to set expectations before scan use.
   - Shows supported scan examples (for example: Tin Can, Aluminum Can, Cardboard, Pizza Box).
   - Adds first-use confirmation modal and an in-scan `Use text search instead` fallback.
+- Adds device-driven appearance support:
+  - App now follows system light/dark mode automatically.
+  - UI colors were refactored to semantic theme tokens for improved readability and consistency.
+  - Manual QA checklist now includes explicit light/dark contrast verification.
 
 ## Version
 - `v0.1.3`

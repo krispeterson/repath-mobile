@@ -3,7 +3,7 @@ import { View, Text, Pressable, ScrollView, Image, Linking, ActivityIndicator } 
 import { Camera } from "react-native-vision-camera";
 import { CAMERA_FPS, SHOW_DETECTION_BOXES_DEBUG } from "../domain/scan";
 import { resolveLocationDetails } from "../domain/pack";
-import { colors, spacing, radius, type } from "../ui/theme";
+import { spacing, radius, type, useAppTheme } from "../ui/theme";
 
 function getLocationId(action) {
   return action?.payload?.location_id || action?.location_id || null;
@@ -40,6 +40,7 @@ export default function ScanScreen({
   isProcessing,
   pack
 }) {
+  const { colors } = useAppTheme();
   const [previewLayout, setPreviewLayout] = useState({ width: 0, height: 0 });
 
   const overlay = useMemo(() => {
@@ -68,9 +69,9 @@ export default function ScanScreen({
       if (boxWidth <= 2 || boxHeight <= 2) return null;
       const label = `${det.name} ${(det.score * 100).toFixed(1)}%`;
       return (
-        <View key={`${det.name}-${idx}`} style={{ position: "absolute", left, top, width: boxWidth, height: boxHeight, borderWidth: 2, borderColor: colors.coral }}>
-          <View style={{ position: "absolute", top: -18, left: 0, backgroundColor: "rgba(0,0,0,0.7)", paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}>
-            <Text style={{ color: colors.white, fontSize: 10 }}>{label}</Text>
+        <View key={`${det.name}-${idx}`} style={{ position: "absolute", left, top, width: boxWidth, height: boxHeight, borderWidth: 2, borderColor: colors.danger }}>
+          <View style={{ position: "absolute", top: -18, left: 0, backgroundColor: colors.overlayLabelBg, paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 }}>
+            <Text style={{ color: colors.textOnOverlay, fontSize: 10 }}>{label}</Text>
           </View>
         </View>
       );
@@ -80,14 +81,14 @@ export default function ScanScreen({
   return (
     <View style={{ flex: 1, gap: spacing.lg }}>
       <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
-        <Text style={{ ...type.h2, color: colors.ink }}>Scan items</Text>
+        <Text style={{ ...type.h2, color: colors.textPrimary }}>Scan items</Text>
         <Pressable onPress={onBack}>
-          <Text style={{ color: colors.ocean }}>Back</Text>
+          <Text style={{ color: colors.link }}>Back</Text>
         </Pressable>
       </View>
 
       <View
-        style={{ flex: 1, borderRadius: radius.lg, overflow: "hidden", borderWidth: 1, borderColor: colors.cloud, backgroundColor: colors.charcoal }}
+        style={{ flex: 1, borderRadius: radius.lg, overflow: "hidden", borderWidth: 1, borderColor: colors.border, backgroundColor: colors.previewBg }}
         onLayout={(event) => {
           const { width, height } = event.nativeEvent.layout;
           setPreviewLayout({ width, height });
@@ -107,7 +108,7 @@ export default function ScanScreen({
           />
         ) : !captureUri ? (
           <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-            <Text style={{ color: colors.white }}>No camera available.</Text>
+            <Text style={{ color: colors.textOnOverlay }}>No camera available.</Text>
           </View>
         ) : null}
         {captureUri ? (
@@ -117,8 +118,8 @@ export default function ScanScreen({
       </View>
 
       {isProcessing ? (
-        <View style={{ position: "absolute", top: 84, left: spacing.lg, paddingVertical: spacing.xs, paddingHorizontal: spacing.md, backgroundColor: "rgba(0,0,0,0.6)", borderRadius: radius.md }}>
-          <Text style={{ color: colors.white, fontSize: 12 }}>Processing…</Text>
+        <View style={{ position: "absolute", top: 84, left: spacing.lg, paddingVertical: spacing.xs, paddingHorizontal: spacing.md, backgroundColor: colors.processingPillBg, borderRadius: radius.md }}>
+          <Text style={{ color: colors.textOnOverlay, fontSize: 12 }}>Processing...</Text>
         </View>
       ) : null}
 
@@ -127,47 +128,47 @@ export default function ScanScreen({
           onPress={onPrimaryAction}
           style={{
             padding: spacing.md,
-            backgroundColor: isProcessing ? colors.fog : colors.ink,
+            backgroundColor: isProcessing ? colors.disabledBg : colors.textPrimary,
             borderRadius: radius.md,
             flex: 1
           }}
           disabled={isProcessing}
         >
           <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center", gap: spacing.xs }}>
-            {isProcessing ? <ActivityIndicator size="small" color={colors.charcoal} /> : null}
-            <Text style={{ color: isProcessing ? colors.charcoal : colors.white, fontWeight: "700", textAlign: "center" }}>
+            {isProcessing ? <ActivityIndicator size="small" color={colors.disabledText} /> : null}
+            <Text style={{ color: isProcessing ? colors.disabledText : colors.textInverse, fontWeight: "700", textAlign: "center" }}>
               {isProcessing ? "Processing..." : hasCapture ? "Retake" : "Capture"}
             </Text>
           </View>
         </Pressable>
-        <Pressable onPress={onPickPhoto} style={{ padding: spacing.md, backgroundColor: colors.cloud, borderRadius: radius.md }} disabled={isProcessing}>
-          <Text style={{ color: colors.ink, fontWeight: "600" }}>Pick photo</Text>
+        <Pressable onPress={onPickPhoto} style={{ padding: spacing.md, backgroundColor: colors.surfaceMuted, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border }} disabled={isProcessing}>
+          <Text style={{ color: colors.textPrimary, fontWeight: "600" }}>Pick photo</Text>
         </Pressable>
-        <Text style={{ fontSize: 12, color: colors.mist }}>Pinch to zoom</Text>
+        <Text style={{ fontSize: 12, color: colors.textPlaceholder }}>Pinch to zoom</Text>
       </View>
 
       <Pressable onPress={onBack} style={{ alignSelf: "flex-start" }}>
-        <Text style={{ color: colors.ocean, textDecorationLine: "underline" }}>Use text search instead</Text>
+        <Text style={{ color: colors.link, textDecorationLine: "underline" }}>Use text search instead</Text>
       </Pressable>
 
       {scanLabels.length ? (
-        <Text style={{ ...type.small, color: colors.mist }}>Detected: {scanLabels.join(", ")}</Text>
+        <Text style={{ ...type.small, color: colors.textPlaceholder }}>Detected: {scanLabels.join(", ")}</Text>
       ) : null}
-      {scanMessage ? <Text style={{ color: colors.coral }}>{scanMessage}</Text> : null}
+      {scanMessage ? <Text style={{ color: colors.danger }}>{scanMessage}</Text> : null}
 
       {scanItems.length ? (
         <ScrollView style={{ flex: 1 }} contentContainerStyle={{ gap: spacing.md }}>
           {scanItems.map((item) => (
-            <View key={item.id} style={{ borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.lg, padding: spacing.lg, gap: spacing.sm, backgroundColor: colors.white }}>
-              <Text style={{ ...type.h3, color: colors.ink }}>{item.name}</Text>
+            <View key={item.id} style={{ borderWidth: 1, borderColor: colors.border, borderRadius: radius.lg, padding: spacing.lg, gap: spacing.sm, backgroundColor: colors.surface }}>
+              <Text style={{ ...type.h3, color: colors.textPrimary }}>{item.name}</Text>
               {(item.option_cards || []).map((c) => (
-                <View key={`${item.id}-${c.id}`} style={{ borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.md, padding: spacing.md, gap: spacing.sm }}>
-                  <Text style={{ ...type.h3, color: colors.ink }}>{c.title}</Text>
-                  {c.subtitle ? <Text style={{ color: colors.fog }}>{c.subtitle}</Text> : null}
+                <View key={`${item.id}-${c.id}`} style={{ borderWidth: 1, borderColor: colors.border, borderRadius: radius.md, padding: spacing.md, gap: spacing.sm, backgroundColor: colors.surfaceMuted }}>
+                  <Text style={{ ...type.h3, color: colors.textPrimary }}>{c.title}</Text>
+                  {c.subtitle ? <Text style={{ color: colors.textMuted }}>{c.subtitle}</Text> : null}
                   {(c.actions || []).map((action, idx) => {
                     if (action.type === "copy_text") {
                       return (
-                        <Text key={`action-${idx}`} style={{ color: colors.ink }}>{action.text}</Text>
+                        <Text key={`action-${idx}`} style={{ color: colors.textPrimary }}>{action.text}</Text>
                       );
                     }
                     if (action.type === "navigate") {
@@ -175,30 +176,30 @@ export default function ScanScreen({
                       const details = resolveLocationDetails(pack, locationId);
                       if (!details) {
                         return (
-                          <Text key={`action-${idx}`} style={{ color: colors.ink }}>Location: {locationId || "Unknown"}</Text>
+                          <Text key={`action-${idx}`} style={{ color: colors.textPrimary }}>Location: {locationId || "Unknown"}</Text>
                         );
                       }
                       const hourLines = formatHours(details.hours);
                       return (
                         <View key={`action-${idx}`} style={{ gap: 4 }}>
                           <View style={{ gap: 2 }}>
-                            <Text style={{ color: colors.ink, fontWeight: "700" }}>{details.name}</Text>
-                            {details.address ? <Text style={{ color: colors.ink }}>{details.address}</Text> : null}
+                            <Text style={{ color: colors.textPrimary, fontWeight: "700" }}>{details.name}</Text>
+                            {details.address ? <Text style={{ color: colors.textPrimary }}>{details.address}</Text> : null}
                             {(details.city || details.region || details.postal_code) ? (
-                              <Text style={{ color: colors.ink }}>{[details.city, details.region].filter(Boolean).join(", ")}{details.postal_code ? ` ${details.postal_code}` : ""}</Text>
+                              <Text style={{ color: colors.textPrimary }}>{[details.city, details.region].filter(Boolean).join(", ")}{details.postal_code ? ` ${details.postal_code}` : ""}</Text>
                             ) : null}
                           </View>
                           {hourLines.length ? (
                             <View style={{ gap: 2 }}>
-                              <Text style={{ color: colors.fog, fontWeight: "600" }}>Hours</Text>
+                              <Text style={{ color: colors.textMuted, fontWeight: "600" }}>Hours</Text>
                               {hourLines.map((line, lineIdx) => (
-                                <Text key={`hours-${lineIdx}`} style={{ color: colors.fog }}>{line}</Text>
+                                <Text key={`hours-${lineIdx}`} style={{ color: colors.textMuted }}>{line}</Text>
                               ))}
                             </View>
                           ) : null}
                           {details.website ? (
                             <Pressable onPress={() => handleOpenUrl(details.website)}>
-                              <Text style={{ color: colors.ocean, textDecorationLine: "underline" }}>{details.website}</Text>
+                              <Text style={{ color: colors.link, textDecorationLine: "underline" }}>{details.website}</Text>
                             </Pressable>
                           ) : null}
                         </View>

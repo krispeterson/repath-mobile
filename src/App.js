@@ -6,7 +6,7 @@ import { useCameraDevice, useCameraPermission } from "react-native-vision-camera
 import { useTensorflowModel } from "react-native-fast-tflite";
 import yoloLabels from "../assets/models/yolo-repath.labels.json";
 import { OnboardScreen, ZipScreen } from "./components";
-import { colors, spacing } from "./ui/theme";
+import { spacing, useAppTheme } from "./ui/theme";
 import { HomeScreen, ScanScreen } from "./screens";
 import {
   decideItem,
@@ -28,6 +28,7 @@ const NO_DETECTION_MESSAGE = "No objects detected. Can you or someone else reuse
 const LOW_CONFIDENCE_MESSAGE = "We couldn't match this confidently. Can you or someone else reuse it or compost it? If not, put it in the trash.";
 
 export default function App() {
+  const { colors } = useAppTheme();
   const [step, setStep] = useState("onboard");
   const [zip, setZip] = useState("");
   const [packId, setPackId] = useState(null);
@@ -524,7 +525,7 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1, padding: spacing.lg, backgroundColor: colors.snow }}>
+      <SafeAreaView style={{ flex: 1, padding: spacing.lg, backgroundColor: colors.background }}>
       {step === "onboard" && (
         <OnboardScreen
           onLocation={requestLocation}
@@ -605,7 +606,7 @@ export default function App() {
         />
       )}
 
-      {scanError ? <Text style={{ color: colors.coral }}>{scanError}</Text> : null}
+      {scanError ? <Text style={{ color: colors.danger }}>{scanError}</Text> : null}
 
       <Modal
         visible={isScanNoticeVisible}
@@ -616,7 +617,7 @@ export default function App() {
         <View
           style={{
             flex: 1,
-            backgroundColor: "rgba(0,0,0,0.35)",
+            backgroundColor: colors.overlayScrim,
             alignItems: "center",
             justifyContent: "center",
             padding: spacing.lg
@@ -628,16 +629,16 @@ export default function App() {
               maxWidth: 420,
               borderRadius: 16,
               borderWidth: 1,
-              borderColor: colors.cloud,
-              backgroundColor: colors.white,
+              borderColor: colors.border,
+              backgroundColor: colors.overlayCard,
               padding: spacing.lg,
               gap: spacing.sm
             }}
           >
-            <Text style={{ fontSize: 18, fontWeight: "700", color: colors.ink }}>
+            <Text style={{ fontSize: 18, fontWeight: "700", color: colors.textPrimary }}>
               Camera scan is experimental
             </Text>
-            <Text style={{ color: colors.fog }}>
+            <Text style={{ color: colors.textMuted }}>
               It works best for one item in good lighting and may misclassify materials.
               Use text search for the most reliable guidance.
             </Text>
@@ -649,11 +650,11 @@ export default function App() {
                   paddingHorizontal: spacing.md,
                   borderRadius: 10,
                   borderWidth: 1,
-                  borderColor: colors.cloud,
-                  backgroundColor: colors.white
+                  borderColor: colors.border,
+                  backgroundColor: colors.surface
                 }}
               >
-                <Text style={{ color: colors.ink, fontWeight: "600" }}>Use text search</Text>
+                <Text style={{ color: colors.textPrimary, fontWeight: "600" }}>Use text search</Text>
               </Pressable>
               <Pressable
                 onPress={continueScanFromNotice}
@@ -661,10 +662,10 @@ export default function App() {
                   paddingVertical: spacing.xs,
                   paddingHorizontal: spacing.md,
                   borderRadius: 10,
-                  backgroundColor: colors.ink
+                  backgroundColor: colors.textPrimary
                 }}
               >
-                <Text style={{ color: colors.white, fontWeight: "700" }}>Continue to scan</Text>
+                <Text style={{ color: colors.textInverse, fontWeight: "700" }}>Continue to scan</Text>
               </Pressable>
             </View>
           </View>

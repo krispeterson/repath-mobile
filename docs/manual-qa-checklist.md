@@ -10,6 +10,7 @@ Use this checklist for UI-heavy changes, especially when behavior spans native p
 
 ## Core flow checks
 - [ ] Onboarding renders without warnings/errors.
+- [ ] App follows device light/dark appearance without low-contrast text or controls.
 - [ ] Enter ZIP flow accepts valid ZIP and rejects invalid input.
 - [ ] Location permission denied path shows a clear fallback to ZIP entry.
 - [ ] Home recommendations load and scroll correctly.
@@ -35,4 +36,3 @@ Use this checklist for UI-heavy changes, especially when behavior spans native p
 ## Notes
 - Record any failures with exact repro steps and screenshot/video references.
 - Add unresolved items to PR under `Agent Reviews -> QA`.
-
