@@ -64,18 +64,23 @@ Release notes source-of-truth:
 
 Android artifact build (local):
 ```bash
-npm run release:android:debug -- --tag vX.Y.Z
+npm run release:android -- --tag vX.Y.Z
 ```
 
 Android artifact build + GitHub release upload:
 ```bash
-npm run release:android:debug:publish -- --tag vX.Y.Z
+npm run release:android:publish -- --tag vX.Y.Z
 ```
 
 The release script produces:
-- `app-debug-vX.Y.Z.apk`
-- `app-debug-vX.Y.Z.apk.sha256`
-- `output-metadata-vX.Y.Z.json`
+- `app-release-vX.Y.Z.apk`
+- `app-release-vX.Y.Z.apk.sha256`
+- `output-metadata-release-vX.Y.Z.json`
+
+Debug build command is still available for local Metro-connected testing:
+```bash
+npm run release:android:debug -- --tag vX.Y.Z
+```
 
 See `docs/release-contract.md` for artifact contract details.
 
