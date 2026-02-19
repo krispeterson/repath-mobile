@@ -22,7 +22,9 @@
     "postprebuild": "node scripts/patch-expo-prebuild.js",
     "clean": "rm -rf node_modules android ios",
     "test": "node test/run-tests.cjs",
-    "test:coverage": "npx --yes c8 --all --include='src/domain/**/*.js' --include='scripts/**/*.js' --reporter=text-summary --reporter=lcov --reporter=json-summary node test/run-tests.cjs"
+    "test:coverage": "npx --yes c8 --all --include='src/domain/**/*.js' --include='scripts/**/*.js' --reporter=text-summary --reporter=lcov --reporter=json-summary node test/run-tests.cjs",
+    "review:devsecops": "npm audit --json > audit.json || true && node scripts/ci-audit-gate.cjs audit.json ${REPATH_AUDIT_FAIL_LEVEL:-critical}",
+    "review:pm": "node scripts/ci-pr-contract.cjs"
   },
   "dependencies": {
     "buffer": "^6.0.3",

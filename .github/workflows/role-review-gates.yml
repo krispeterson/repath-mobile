@@ -1,0 +1,75 @@
+name: Role Review Gates
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  qa-contract:
+    name: QA Contract
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Smoke check
+        run: npm run smoke
+
+      - name: Test suite
+        run: npm test
+
+  devsecops-contract:
+    name: DevSecOps Contract
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run npm audit (capture JSON)
+        run: npm audit --json > audit.json || true
+
+      - name: Enforce vulnerability threshold
+        run: node scripts/ci-audit-gate.cjs audit.json "${REPATH_AUDIT_FAIL_LEVEL:-critical}"
+
+  pm-contract:
+    name: PM Contract
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate PR contract sections
+        env:
+          REPATH_PM_STRICT: ${{ vars.REPATH_PM_STRICT }}
+        run: node scripts/ci-pr-contract.cjs
