@@ -11,16 +11,26 @@ export default function HomeScreen({
   onSearch,
   onScan,
   onChangeArea,
+  onUseMyLocation,
+  onClearLocation,
+  onSelectRecentQuery,
+  recentQueries,
   decision,
   packNotice,
+  isFallbackPack,
   questionAnswers,
   onQuestionChange,
   onResolveQuestions,
-  getQuestionSuggestions
+  getQuestionSuggestions,
+  onUseZipInsteadForCity,
+  canUseZipInsteadForCity,
+  isEvaluatingDecision
 }) {
   const place = resolvePlace(pack);
   const pathways = decision && Array.isArray(decision.pathways) ? decision.pathways : [];
   const questions = decision && Array.isArray(decision.questions) ? decision.questions : [];
+  const recent = Array.isArray(recentQueries) ? recentQueries.filter(Boolean) : [];
+  const showFallbackBanner = Boolean(isFallbackPack || packNotice);
 
   return (
     <View style={{ flex: 1, gap: spacing.lg }}>
@@ -31,37 +41,93 @@ export default function HomeScreen({
         <Text style={{ ...type.small, color: colors.mist }}>Local rules, updated with your pack.</Text>
       </View>
 
-      {packNotice ? (
-        <View style={{ borderWidth: 1, borderColor: colors.sun, backgroundColor: "#FFF7E8", borderRadius: radius.md, padding: spacing.sm }}>
-          <Text style={{ color: colors.sunDark }}>{packNotice}</Text>
+      <ScrollView style={{ flex: 1 }} keyboardShouldPersistTaps="handled" contentContainerStyle={{ gap: spacing.md, paddingBottom: spacing.xl }}>
+        {showFallbackBanner ? (
+          <View style={{ borderWidth: 1, borderColor: colors.sun, backgroundColor: "#FFF7E8", borderRadius: radius.md, padding: spacing.sm, gap: spacing.xs }}>
+            {isFallbackPack ? <Text style={{ color: colors.sunDark, fontWeight: "700" }}>Limited local accuracy for this ZIP</Text> : null}
+            <Text style={{ color: colors.sunDark }}>{packNotice || "Using nationwide guidance for this location until a municipality pack is available."}</Text>
+          </View>
+        ) : null}
+
+        <View style={{ flexDirection: "row", gap: spacing.sm, alignItems: "center" }}>
+          <TextInput
+            value={query}
+            onChangeText={onQueryChange}
+            placeholder="Item name"
+            placeholderTextColor={colors.mist}
+            style={{ flex: 1, borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.md, padding: spacing.md, color: colors.ink, backgroundColor: colors.white }}
+          />
+          <Pressable
+            onPress={onSearch}
+            disabled={isEvaluatingDecision}
+            style={{
+              paddingVertical: spacing.md,
+              paddingHorizontal: spacing.lg,
+              backgroundColor: colors.ink,
+              borderRadius: radius.md,
+              opacity: isEvaluatingDecision ? 0.7 : 1
+            }}
+          >
+            <Text style={{ color: colors.white, fontWeight: "700" }}>
+              {isEvaluatingDecision ? "Loading..." : "Get guidance"}
+            </Text>
+          </Pressable>
         </View>
-      ) : null}
 
-      <View style={{ flexDirection: "row", gap: spacing.sm, alignItems: "center" }}>
-        <TextInput
-          value={query}
-          onChangeText={onQueryChange}
-          placeholder="Search item"
-          placeholderTextColor={colors.mist}
-          style={{ flex: 1, borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.md, padding: spacing.md, color: colors.ink, backgroundColor: colors.white }}
-        />
-        <Pressable onPress={onSearch} style={{ paddingVertical: spacing.md, paddingHorizontal: spacing.lg, backgroundColor: colors.ink, borderRadius: radius.md }}>
-          <Text style={{ color: colors.white, fontWeight: "700" }}>Go</Text>
+        {recent.length ? (
+          <View style={{ gap: spacing.xs }}>
+            <Text style={{ ...type.small, color: colors.fog }}>Recent searches</Text>
+            <View style={{ flexDirection: "row", flexWrap: "wrap", gap: spacing.xs }}>
+              {recent.map((entry) => (
+                <Pressable
+                  key={`recent-${entry}`}
+                  onPress={() => onSelectRecentQuery(entry)}
+                  style={{ borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.md, backgroundColor: colors.white, paddingVertical: 4, paddingHorizontal: spacing.sm }}
+                >
+                  <Text style={{ color: colors.ink }}>{entry}</Text>
+                </Pressable>
+              ))}
+            </View>
+          </View>
+        ) : null}
+
+        <View style={{ flexDirection: "row", flexWrap: "wrap", gap: spacing.xs }}>
+          <Pressable onPress={onUseMyLocation} style={{ paddingVertical: spacing.xs, paddingHorizontal: spacing.sm, borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.md, backgroundColor: colors.white }}>
+            <Text style={{ color: colors.ocean, fontWeight: "600" }}>Use current location again</Text>
+          </Pressable>
+          <Pressable onPress={onClearLocation} style={{ paddingVertical: spacing.xs, paddingHorizontal: spacing.sm, borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.md, backgroundColor: colors.white }}>
+            <Text style={{ color: colors.ocean, fontWeight: "600" }}>Clear location</Text>
+          </Pressable>
+        </View>
+
+        <Pressable onPress={onScan} style={{ padding: spacing.md, backgroundColor: colors.ocean, borderRadius: radius.md }}>
+          <Text style={{ color: colors.white, textAlign: "center", fontWeight: "700" }}>Scan with camera</Text>
         </Pressable>
-      </View>
 
-      <Pressable onPress={onScan} style={{ padding: spacing.md, backgroundColor: colors.ocean, borderRadius: radius.md }}>
-        <Text style={{ color: colors.white, textAlign: "center", fontWeight: "700" }}>Scan with camera</Text>
-      </Pressable>
+        {decision && decision.item && decision.item.name ? (
+          <Text style={{ ...type.small, color: colors.mist }}>Matched item: {decision.item.name}</Text>
+        ) : null}
 
-      {decision && decision.item && decision.item.name ? (
-        <Text style={{ ...type.small, color: colors.mist }}>Matched item: {decision.item.name}</Text>
-      ) : null}
-
-      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ gap: spacing.md, paddingBottom: spacing.lg }}>
         {questions.length ? (
           <View style={{ borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.md, padding: spacing.md, gap: spacing.sm, backgroundColor: colors.white }}>
-            <Text style={{ ...type.h3, color: colors.ink }}>More info needed</Text>
+            <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: spacing.sm }}>
+              <Text style={{ ...type.h3, color: colors.ink }}>More info needed</Text>
+              <Pressable
+                onPress={onResolveQuestions}
+                disabled={isEvaluatingDecision}
+                style={{
+                  paddingVertical: spacing.xs,
+                  paddingHorizontal: spacing.sm,
+                  borderRadius: radius.md,
+                  backgroundColor: colors.ink,
+                  opacity: isEvaluatingDecision ? 0.7 : 1
+                }}
+              >
+                <Text style={{ color: colors.white, fontWeight: "700" }}>
+                  {isEvaluatingDecision ? "Updating..." : "Update"}
+                </Text>
+              </Pressable>
+            </View>
             {questions.map((question) => {
               const answerValue = String(questionAnswers[question.id] || "");
               const isCityQuestion = question.id === "city";
@@ -92,15 +158,35 @@ export default function HomeScreen({
                     </View>
                   ) : null}
                   {showUnknownCityHint ? (
-                    <Text style={{ color: colors.fog }}>
-                      City not found in bundled municipalities. You can still continue, or provide ZIP for best results.
-                    </Text>
+                    <View style={{ gap: spacing.xs }}>
+                      <Text style={{ color: colors.fog }}>
+                        City not found in bundled municipalities. We can still provide broader guidance.
+                      </Text>
+                      {canUseZipInsteadForCity ? (
+                        <Pressable onPress={onUseZipInsteadForCity} style={{ alignSelf: "flex-start", paddingVertical: 4, paddingHorizontal: spacing.sm, borderRadius: radius.md, borderWidth: 1, borderColor: colors.cloud, backgroundColor: colors.snow }}>
+                          <Text style={{ color: colors.ink, fontWeight: "600" }}>Use city inferred from ZIP</Text>
+                        </Pressable>
+                      ) : null}
+                    </View>
                   ) : null}
                 </View>
               );
             })}
-            <Pressable onPress={onResolveQuestions} style={{ paddingVertical: spacing.sm, paddingHorizontal: spacing.md, borderRadius: radius.md, backgroundColor: colors.ink, alignSelf: "flex-start" }}>
-              <Text style={{ color: colors.white, fontWeight: "700" }}>Update recommendations</Text>
+            <Pressable
+              onPress={onResolveQuestions}
+              disabled={isEvaluatingDecision}
+              style={{
+                paddingVertical: spacing.sm,
+                paddingHorizontal: spacing.md,
+                borderRadius: radius.md,
+                backgroundColor: colors.ink,
+                alignSelf: "flex-start",
+                opacity: isEvaluatingDecision ? 0.7 : 1
+              }}
+            >
+              <Text style={{ color: colors.white, fontWeight: "700" }}>
+                {isEvaluatingDecision ? "Updating recommendations..." : "Update recommendations"}
+              </Text>
             </Pressable>
           </View>
         ) : null}

@@ -168,6 +168,100 @@ function renderChannels(channels, query) {
   );
 }
 
+function getPriorityMeta(pathway, index) {
+  const rank = typeof pathway.rank === "number" ? pathway.rank : 999;
+  const action = String(pathway.action || "");
+  if (index === 0) {
+    return {
+      label: "Best next step",
+      borderColor: colors.mint,
+      backgroundColor: "#E8FBF5",
+      textColor: colors.mintDark
+    };
+  }
+  if (rank <= 25 || ["reuse", "sell", "giveaway", "exchange", "repair"].includes(action)) {
+    return {
+      label: "High impact",
+      borderColor: colors.ocean,
+      backgroundColor: "#EEF4FF",
+      textColor: colors.ocean
+    };
+  }
+  if (rank <= 60 || action === "donate" || action === "recycle") {
+    return {
+      label: "Good fallback",
+      borderColor: colors.cloud,
+      backgroundColor: colors.snow,
+      textColor: colors.fog
+    };
+  }
+  return {
+    label: "Last resort",
+    borderColor: colors.sun,
+    backgroundColor: "#FFF7E8",
+    textColor: colors.sunDark
+  };
+}
+
+function shouldCollapseByDefault(pathway) {
+  const stepsCount = Array.isArray(pathway.steps) ? pathway.steps.length : 0;
+  const channelsCount = Array.isArray(pathway.channels) ? pathway.channels.length : 0;
+  const locationsCount = Array.isArray(pathway.locations) ? pathway.locations.length : 0;
+  return stepsCount > 2 || channelsCount > 2 || locationsCount > 1;
+}
+
+function PathwayCard({ pathway, query, index }) {
+  const collapseByDefault = shouldCollapseByDefault(pathway) && index > 0;
+  const [expanded, setExpanded] = React.useState(!collapseByDefault);
+  const steps = Array.isArray(pathway.steps) ? pathway.steps : [];
+  const visibleSteps = expanded ? steps : steps.slice(0, 2);
+  const hiddenStepsCount = Math.max(steps.length - visibleSteps.length, 0);
+  const priority = getPriorityMeta(pathway, index);
+  const channelCount = Array.isArray(pathway.channels) ? pathway.channels.length : 0;
+  const locationCount = Array.isArray(pathway.locations) ? pathway.locations.length : 0;
+
+  return (
+    <View style={{ borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.lg, padding: spacing.lg, gap: spacing.sm, backgroundColor: colors.white }}>
+      <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: spacing.sm }}>
+        <Text style={{ ...type.h3, color: colors.ink, flex: 1 }}>{pathway.title}</Text>
+        <View style={{ borderWidth: 1, borderColor: priority.borderColor, borderRadius: radius.md, backgroundColor: priority.backgroundColor, paddingVertical: 2, paddingHorizontal: spacing.sm }}>
+          <Text style={{ color: priority.textColor, fontWeight: "700", fontSize: 12 }}>{priority.label}</Text>
+        </View>
+      </View>
+      <Text style={{ color: colors.mist, textTransform: "capitalize" }}>{pathway.action}</Text>
+      {pathway.rationale ? <Text style={{ color: colors.ink }}>{pathway.rationale}</Text> : null}
+      {visibleSteps.length ? (
+        <View style={{ gap: 2 }}>
+          {visibleSteps.map((step, idx) => (
+            <Text key={`${pathway.id}-step-${idx}`} style={{ color: colors.slate }}>
+              {idx + 1}. {step}
+            </Text>
+          ))}
+          {hiddenStepsCount > 0 ? (
+            <Text style={{ color: colors.fog }}>
+              +{hiddenStepsCount} more step{hiddenStepsCount === 1 ? "" : "s"}
+            </Text>
+          ) : null}
+        </View>
+      ) : null}
+      {!expanded && (locationCount > 0 || channelCount > 0) ? (
+        <Text style={{ color: colors.fog }}>
+          Includes {locationCount} place{locationCount === 1 ? "" : "s"} and {channelCount} online/community option{channelCount === 1 ? "" : "s"}.
+        </Text>
+      ) : null}
+      {collapseByDefault ? (
+        <Pressable onPress={() => setExpanded((current) => !current)} style={{ alignSelf: "flex-start", borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.md, backgroundColor: colors.snow, paddingVertical: 4, paddingHorizontal: spacing.sm }}>
+          <Text style={{ color: colors.ink, fontWeight: "600" }}>
+            {expanded ? "Hide details" : "Show details"}
+          </Text>
+        </Pressable>
+      ) : null}
+      {expanded ? renderLocations(pathway.locations) : null}
+      {expanded ? renderChannels(pathway.channels, query) : null}
+    </View>
+  );
+}
+
 export default function CardList({ pathways, query }) {
   const cards = Array.isArray(pathways) ? pathways : [];
   if (!cards.length) {
@@ -180,23 +274,8 @@ export default function CardList({ pathways, query }) {
 
   return (
     <View style={{ gap: spacing.md }}>
-      {cards.map((pathway) => (
-        <View key={pathway.id} style={{ borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.lg, padding: spacing.lg, gap: spacing.sm, backgroundColor: colors.white }}>
-          <Text style={{ ...type.h3, color: colors.ink }}>{pathway.title}</Text>
-          <Text style={{ color: colors.mist, textTransform: "capitalize" }}>{pathway.action}</Text>
-          {pathway.rationale ? <Text style={{ color: colors.ink }}>{pathway.rationale}</Text> : null}
-          {Array.isArray(pathway.steps) && pathway.steps.length ? (
-            <View style={{ gap: 2 }}>
-              {pathway.steps.map((step, idx) => (
-                <Text key={`${pathway.id}-step-${idx}`} style={{ color: colors.slate }}>
-                  {idx + 1}. {step}
-                </Text>
-              ))}
-            </View>
-          ) : null}
-          {renderLocations(pathway.locations)}
-          {renderChannels(pathway.channels, query)}
-        </View>
+      {cards.map((pathway, index) => (
+        <PathwayCard key={pathway.id} pathway={pathway} query={query} index={index} />
       ))}
     </View>
   );

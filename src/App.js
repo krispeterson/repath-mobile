@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { BackHandler, Text, View } from "react-native";
+import { BackHandler, LogBox, Text, Vibration, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import * as Location from "expo-location";
 import { useCameraDevice, useCameraPermission } from "react-native-vision-camera";
@@ -34,6 +34,8 @@ export default function App() {
   const [decisionAnswers, setDecisionAnswers] = useState({});
   const [questionDraftAnswers, setQuestionDraftAnswers] = useState({});
   const [packNotice, setPackNotice] = useState(null);
+  const [isFallbackPack, setIsFallbackPack] = useState(false);
+  const [recentQueries, setRecentQueries] = useState([]);
   const [zipError, setZipError] = useState(null);
   const [locationError, setLocationError] = useState(null);
   const [scanError, setScanError] = useState(null);
@@ -48,6 +50,8 @@ export default function App() {
   const [hasCapture, setHasCapture] = useState(false);
   const [isCapturing, setIsCapturing] = useState(false);
   const [isLocating, setIsLocating] = useState(false);
+  const [isResolvingPack, setIsResolvingPack] = useState(false);
+  const [isEvaluatingDecision, setIsEvaluatingDecision] = useState(false);
   const MIN_DETECTION_SCORE = YOLO_SCORE_THRESHOLD;
 
   const { hasPermission, requestPermission } = useCameraPermission();
@@ -61,6 +65,12 @@ export default function App() {
       debugLogModel();
     }
   }, [model.state]);
+
+  useEffect(() => {
+    if (__DEV__) {
+      LogBox.ignoreAllLogs(true);
+    }
+  }, []);
 
   const goBackOneStep = useCallback(() => {
     if (step === "scan") {
@@ -116,6 +126,35 @@ export default function App() {
     return match ? match[1] : "";
   }
 
+  function sanitizeZipInput(value) {
+    return String(value || "").replace(/\D/g, "").slice(0, 5);
+  }
+
+  function triggerSuccessHaptic() {
+    Vibration.vibrate(10);
+  }
+
+  function addRecentQuery(value) {
+    const normalized = String(value || "").trim();
+    if (!normalized) return;
+    setRecentQueries((prev) => {
+      const deduped = prev.filter((entry) => entry.toLowerCase() !== normalized.toLowerCase());
+      return [normalized, ...deduped].slice(0, 6);
+    });
+  }
+
+  function inferCityFromZip(zipValue) {
+    const normalizedZip = sanitizeZipInput(zipValue);
+    if (!/^\d{5}$/.test(normalizedZip)) return "";
+    const selection = resolvePackFromZip(normalizedZip);
+    const inferredPackId = selection && selection.packId ? selection.packId : "";
+    if (!inferredPackId) return "";
+    const inferredPack = getBundledPack(inferredPackId);
+    return inferredPack && inferredPack.municipality && inferredPack.municipality.name
+      ? String(inferredPack.municipality.name)
+      : "";
+  }
+
   async function requestLocation() {
     if (isLocating) return;
     setIsLocating(true);
@@ -160,80 +199,106 @@ export default function App() {
   }
 
   function resolvePackForZip(nextZip) {
-    const zipValue = String(nextZip !== undefined ? nextZip : zip).trim();
-    if (!zipValue) {
-      setZipError("Enter a ZIP code.");
-      setPackId(null);
-      setPack(null);
-      setDecision(null);
-      setDecisionAnswers({});
-      setQuestionDraftAnswers({});
-      setPackNotice(null);
-      return;
-    }
-    if (!/^\d{5}$/.test(zipValue)) {
-      setZipError("Enter a valid 5-digit ZIP.");
-      setPackId(null);
-      setPack(null);
-      setDecision(null);
-      setDecisionAnswers({});
-      setQuestionDraftAnswers({});
-      setPackNotice(null);
-      return;
-    }
+    if (isResolvingPack) return;
+    setIsResolvingPack(true);
+    try {
+      const zipValue = sanitizeZipInput(nextZip !== undefined ? nextZip : zip);
+      if (!zipValue) {
+        setZipError("Enter a ZIP code.");
+        setPackId(null);
+        setPack(null);
+        setDecision(null);
+        setDecisionAnswers({});
+        setQuestionDraftAnswers({});
+        setPackNotice(null);
+        setIsFallbackPack(false);
+        return;
+      }
+      if (!/^\d{5}$/.test(zipValue)) {
+        setZipError("Enter a valid 5-digit ZIP.");
+        setPackId(null);
+        setPack(null);
+        setDecision(null);
+        setDecisionAnswers({});
+        setQuestionDraftAnswers({});
+        setPackNotice(null);
+        setIsFallbackPack(false);
+        return;
+      }
 
-    const selection = resolvePackFromZip(zipValue);
-    const pid = selection && selection.packId ? selection.packId : null;
+      setZip(zipValue);
+      const selection = resolvePackFromZip(zipValue);
+      const pid = selection && selection.packId ? selection.packId : null;
 
-    if (!pid) {
-      setZipError("No pack available for that ZIP yet.");
-      setPackId(null);
-      setPack(null);
+      if (!pid) {
+        setZipError("No pack available for that ZIP yet.");
+        setPackId(null);
+        setPack(null);
+        setDecision(null);
+        setDecisionAnswers({});
+        setQuestionDraftAnswers({});
+        setPackNotice(null);
+        setIsFallbackPack(false);
+        setStep("enter_zip");
+        return;
+      }
+
+      const p = getBundledPack(pid);
+      if (!p) {
+        setZipError("Pack configuration is unavailable right now.");
+        setPackId(null);
+        setPack(null);
+        setDecision(null);
+        setDecisionAnswers({});
+        setQuestionDraftAnswers({});
+        setPackNotice(null);
+        setIsFallbackPack(false);
+        setStep("enter_zip");
+        return;
+      }
+
+      setZipError(null);
+      setPackId(pid);
+      setPack(p);
       setDecision(null);
-      setDecisionAnswers({});
-      setQuestionDraftAnswers({});
-      setPackNotice(null);
-      setStep("enter_zip");
-      return;
+      const seededAnswers = /^\d{5}$/.test(zipValue) ? { zip: zipValue } : {};
+      setDecisionAnswers(seededAnswers);
+      setQuestionDraftAnswers(seededAnswers);
+      setPackNotice(selection && selection.notice ? selection.notice : null);
+      setIsFallbackPack(Boolean(selection && selection.isFallback));
+      setStep("home");
+      triggerSuccessHaptic();
+    } finally {
+      setIsResolvingPack(false);
     }
-
-    const p = getBundledPack(pid);
-    if (!p) {
-      setZipError("Pack configuration is unavailable right now.");
-      setPackId(null);
-      setPack(null);
-      setDecision(null);
-      setDecisionAnswers({});
-      setQuestionDraftAnswers({});
-      setPackNotice(null);
-      setStep("enter_zip");
-      return;
-    }
-
-    setZipError(null);
-    setPackId(pid);
-    setPack(p);
-    setDecision(null);
-    const seededAnswers = /^\d{5}$/.test(zipValue) ? { zip: zipValue } : {};
-    setDecisionAnswers(seededAnswers);
-    setQuestionDraftAnswers(seededAnswers);
-    setPackNotice(selection && selection.notice ? selection.notice : null);
-    setStep("home");
   }
 
-  function runDecision(overrides) {
-    if (!pack || !packId) return;
-    const seedAnswers = /^\d{5}$/.test(zip) ? { zip } : {};
-    const nextAnswers = {
-      ...seedAnswers,
-      ...decisionAnswers,
-      ...(overrides || {})
-    };
-    if (overrides) {
-      setDecisionAnswers(nextAnswers);
-      setQuestionDraftAnswers(nextAnswers);
+  function runDecision(overrides, options = {}) {
+    if (!pack || !packId || isEvaluatingDecision) return;
+    setIsEvaluatingDecision(true);
+    try {
+      const effectiveQuery = String(
+        options && typeof options.queryText === "string" ? options.queryText : query
+      ).trim();
+      const seedAnswers = /^\d{5}$/.test(zip) ? { zip } : {};
+      const nextAnswers = {
+        ...seedAnswers,
+        ...decisionAnswers,
+        ...(overrides || {})
+      };
+      if (overrides) {
+        setDecisionAnswers(nextAnswers);
+        setQuestionDraftAnswers(nextAnswers);
+      }
+      const response = decideItem(pack, packId, effectiveQuery, nextAnswers);
+      setDecision(response);
+      if (options.recordRecent && effectiveQuery) {
+        addRecentQuery(effectiveQuery);
+      }
+      triggerSuccessHaptic();
+    } finally {
+      setIsEvaluatingDecision(false);
     }
-    setDecision(decideItem(pack, packId, query, nextAnswers));
   }
 
   function handleQuestionChange(questionId, value) {
@@ -241,6 +306,35 @@ export default function App() {
       ...prev,
       [questionId]: value
     }));
+  }
+
+  function handleUseZipInsteadForCity() {
+    const inferredCity = inferCityFromZip(zip);
+    if (inferredCity) {
+      setQuestionDraftAnswers((prev) => ({
+        ...prev,
+        city: inferredCity
+      }));
+      return;
+    }
+    setQuestionDraftAnswers((prev) => ({
+      ...prev,
+      city: ""
+    }));
+  }
+
+  function clearLocationSelection() {
+    setZip("");
+    setPackId(null);
+    setPack(null);
+    setDecision(null);
+    setDecisionAnswers({});
+    setQuestionDraftAnswers({});
+    setPackNotice(null);
+    setZipError(null);
+    setLocationError(null);
+    setIsFallbackPack(false);
+    setStep("enter_zip");
   }
 
   async function startScan() {
@@ -427,12 +521,13 @@ export default function App() {
           zipError={zipError}
           locationError={locationError}
           onZipChange={(text) => {
-            setZip(text);
+            setZip(sanitizeZipInput(text));
             setZipError(null);
           }}
           onContinue={() => resolvePackForZip()}
           onLocation={requestLocation}
           isLocating={isLocating}
+          isResolvingPack={isResolvingPack}
         />
       )}
 
@@ -444,15 +539,28 @@ export default function App() {
             setQuery(value);
             setDecision(null);
           }}
-          onSearch={() => runDecision(questionDraftAnswers)}
+          onSearch={() => runDecision(questionDraftAnswers, { recordRecent: true })}
           onScan={startScan}
           onChangeArea={() => setStep("enter_zip")}
+          onUseMyLocation={requestLocation}
+          onClearLocation={clearLocationSelection}
+          onSelectRecentQuery={(value) => {
+            const nextQuery = String(value || "");
+            setQuery(nextQuery);
+            setDecision(null);
+            runDecision(questionDraftAnswers, { recordRecent: true, queryText: nextQuery });
+          }}
+          recentQueries={recentQueries}
           decision={decision || decideItem(pack, packId, query, decisionAnswers)}
           packNotice={packNotice}
+          isFallbackPack={isFallbackPack}
           questionAnswers={questionDraftAnswers}
           onQuestionChange={handleQuestionChange}
           onResolveQuestions={() => runDecision(questionDraftAnswers)}
           getQuestionSuggestions={getQuestionSuggestions}
+          onUseZipInsteadForCity={handleUseZipInsteadForCity}
+          canUseZipInsteadForCity={Boolean(inferCityFromZip(zip))}
+          isEvaluatingDecision={isEvaluatingDecision}
         />
       )}
 

@@ -2,7 +2,16 @@ import React from "react";
 import { View, Text, TextInput, Pressable } from "react-native";
 import { colors, spacing, radius, type } from "../ui/theme";
 
-export default function ZipScreen({ zip, zipError, locationError, onZipChange, onContinue, onLocation, isLocating }) {
+export default function ZipScreen({
+  zip,
+  zipError,
+  locationError,
+  onZipChange,
+  onContinue,
+  onLocation,
+  isLocating,
+  isResolvingPack
+}) {
   return (
     <View style={{ gap: spacing.lg }}>
       <View style={{ gap: spacing.xs }}>
@@ -17,12 +26,19 @@ export default function ZipScreen({ zip, zipError, locationError, onZipChange, o
           placeholder="ZIP code"
           placeholderTextColor={colors.mist}
           keyboardType="number-pad"
+          maxLength={5}
           style={{ borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.md, padding: spacing.md, color: colors.ink, backgroundColor: colors.white }}
         />
         {zipError ? <Text style={{ color: colors.coral }}>{zipError}</Text> : null}
         {locationError ? <Text style={{ color: colors.coral }}>{locationError}</Text> : null}
-        <Pressable onPress={onContinue} style={{ padding: spacing.md, backgroundColor: colors.ink, borderRadius: radius.md }}>
-          <Text style={{ color: colors.white, textAlign: "center", fontWeight: "700" }}>Continue</Text>
+        <Pressable
+          onPress={onContinue}
+          disabled={isResolvingPack}
+          style={{ padding: spacing.md, backgroundColor: colors.ink, borderRadius: radius.md, opacity: isResolvingPack ? 0.7 : 1 }}
+        >
+          <Text style={{ color: colors.white, textAlign: "center", fontWeight: "700" }}>
+            {isResolvingPack ? "Loading..." : "Continue"}
+          </Text>
         </Pressable>
         <Pressable onPress={onLocation} disabled={isLocating} style={{ padding: spacing.sm, opacity: isLocating ? 0.7 : 1 }}>
           <Text style={{ textAlign: "center", color: colors.ocean, textDecorationLine: "underline" }}>

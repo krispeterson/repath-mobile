@@ -14,6 +14,18 @@
   - metadata/tag version validation
 - Adds manual GitHub Actions workflow: `Android Release Guardrails`.
 - Wires verification into `npm run release:android*` so checks run before publish.
+- UX improvements for recommendation flow:
+  - Home screen now scrolls from item search through recommendations to avoid cramped result areas.
+  - Search action uses clearer copy (`Get guidance`) and keeps recent searches as quick chips.
+  - Adds in-context location controls (`Use current location again`, `Clear location`).
+  - Fallback ZIP handling is persistent and explicit with a visible accuracy warning banner.
+- Improves “More info needed” interactions:
+  - Adds top + bottom update actions so users do not lose the apply button while typing.
+  - Keeps city suggestions visible and provides graceful fallback messaging for unknown cities.
+  - Supports optional ZIP-inferred city fill when available.
+- Recommendation cards now include lightweight prioritization and progressive disclosure:
+  - Priority badges (`Best next step`, `High impact`, `Good fallback`, `Last resort`).
+  - Secondary pathways collapse by default with `Show details` / `Hide details`.
 
 ## Version
 - `v0.1.3`
