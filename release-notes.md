@@ -1,5 +1,13 @@
 # RePath Mobile Release Notes
 
+## Upcoming (Unreleased)
+- Adds automated Android release artifact verification:
+  - checksum validation
+  - embedded JS bundle validation (`assets/index.android.bundle`)
+  - metadata/tag version validation
+- Adds manual GitHub Actions workflow: `Android Release Guardrails`.
+- Wires verification into `npm run release:android*` so checks run before publish.
+
 ## Version
 - `v0.1.3`
 

@@ -46,4 +46,20 @@ The command:
 1. Builds Android release APK + AAB (`./gradlew assembleRelease bundleRelease`)
 2. Copies artifacts into `dist/releases/<tag>/`
 3. Generates SHA-256 files for each artifact
-4. Optionally uploads assets to GitHub Release and sets release body from `release-notes.md`
+4. Verifies checksums, embedded APK JS bundle, and metadata version fields
+5. Optionally uploads assets to GitHub Release and sets release body from `release-notes.md`
+
+## Manual verification command
+
+Use:
+```bash
+npm run verify:release:android -- --tag vX.Y.Z
+```
+
+This checks:
+- expected artifacts exist in `dist/releases/<tag>/`
+- checksum files match artifact bytes
+- release APK contains `assets/index.android.bundle`
+- `output-metadata-*.json` version fields match `vX.Y.Z`
+
+Manual CI validation is also available via the `Android Release Guardrails` GitHub Actions workflow.

@@ -79,6 +79,11 @@ The release script produces:
 - `app-release-vX.Y.Z.aab.sha256`
 - `output-metadata-release-vX.Y.Z.json`
 
+The release command also verifies:
+- checksums match generated artifacts
+- APK contains `assets/index.android.bundle`
+- metadata `versionName`/`versionCode` match the tag
+
 Debug build command is still available for local Metro-connected testing:
 ```bash
 npm run release:android:debug -- --tag vX.Y.Z
@@ -94,6 +99,14 @@ For local non-production testing only, you can bypass signing enforcement with:
 ```bash
 npm run release:android -- --tag vX.Y.Z --allow-debug-signing
 ```
+
+Manual verification for an already-built release directory:
+```bash
+npm run verify:release:android -- --tag vX.Y.Z
+```
+
+Optional CI guardrail:
+- Run the `Android Release Guardrails` workflow manually to validate release packaging on GitHub-hosted runners.
 
 See `docs/release-contract.md` for artifact contract details.
 

@@ -85,6 +85,13 @@ function run(cmd, cmdArgs, options = {}) {
   }
 }
 
+function runNodeScript(scriptPath, scriptArgs) {
+  run(process.execPath, [scriptPath, ...scriptArgs], {
+    cwd: process.cwd(),
+    env: process.env
+  });
+}
+
 function runCapture(cmd, cmdArgs, options = {}) {
   return spawnSync(cmd, cmdArgs, {
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -276,6 +283,17 @@ function main() {
     console.log(`Wrote ${metaOut}`);
     uploadPaths.push(metaOut);
   }
+
+  runNodeScript(path.join(__dirname, 'verify-android-release-artifacts.js'), [
+    '--tag',
+    tag,
+    '--variant',
+    args.variant,
+    '--artifact',
+    args.artifact,
+    '--out-dir',
+    args.outDir
+  ]);
 
   if (!args.publish) {
     return;

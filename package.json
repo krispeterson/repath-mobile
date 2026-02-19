@@ -12,6 +12,7 @@
     "release:android:aab:publish": "node scripts/release-android.js --artifact aab --publish",
     "release:android:debug": "node scripts/release-android.js --variant debug",
     "release:android:debug:publish": "node scripts/release-android.js --variant debug --publish",
+    "verify:release:android": "node scripts/verify-android-release-artifacts.js",
     "pull:model:release": "node scripts/pull-model-release.js",
     "pull:model:release:latest": "node scripts/pull-model-release.js --version latest",
     "ml:workspace": "node scripts/ml-workspace-required.js",
