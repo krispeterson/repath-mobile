@@ -24,13 +24,20 @@ export default function HomeScreen({
   getQuestionSuggestions,
   onUseZipInsteadForCity,
   canUseZipInsteadForCity,
-  isEvaluatingDecision
+  isEvaluatingDecision,
+  scanSupportedExamples
 }) {
   const place = resolvePlace(pack);
   const pathways = decision && Array.isArray(decision.pathways) ? decision.pathways : [];
   const questions = decision && Array.isArray(decision.questions) ? decision.questions : [];
   const recent = Array.isArray(recentQueries) ? recentQueries.filter(Boolean) : [];
   const showFallbackBanner = Boolean(isFallbackPack || packNotice);
+  const scanExamples = Array.isArray(scanSupportedExamples)
+    ? scanSupportedExamples.map((entry) => String(entry).trim()).filter(Boolean)
+    : [];
+  const scanExamplesText = scanExamples.length
+    ? `Works best with common items such as ${scanExamples.join(", ")}.`
+    : null;
 
   return (
     <View style={{ flex: 1, gap: spacing.lg }}>
@@ -100,9 +107,29 @@ export default function HomeScreen({
           </Pressable>
         </View>
 
-        <Pressable onPress={onScan} style={{ padding: spacing.md, backgroundColor: colors.ocean, borderRadius: radius.md }}>
-          <Text style={{ color: colors.white, textAlign: "center", fontWeight: "700" }}>Scan with camera</Text>
-        </Pressable>
+        <View style={{ borderWidth: 1, borderColor: colors.cloud, borderRadius: radius.md, backgroundColor: colors.white, padding: spacing.sm, gap: spacing.xs }}>
+          <Text style={{ ...type.small, color: colors.fog, fontWeight: "700" }}>More options</Text>
+          <Pressable
+            onPress={onScan}
+            style={{
+              paddingVertical: spacing.xs,
+              paddingHorizontal: spacing.sm,
+              borderWidth: 1,
+              borderColor: colors.cloud,
+              borderRadius: radius.md,
+              backgroundColor: colors.snow,
+              alignSelf: "flex-start"
+            }}
+          >
+            <Text style={{ color: colors.ink, fontWeight: "600" }}>Try camera scan (Beta)</Text>
+          </Pressable>
+          <Text style={{ ...type.small, color: colors.mist }}>
+            Experimental: best for one item in good lighting with close framing. Verify results before disposal.
+          </Text>
+          {scanExamplesText ? (
+            <Text style={{ ...type.small, color: colors.mist }}>{scanExamplesText}</Text>
+          ) : null}
+        </View>
 
         {decision && decision.item && decision.item.name ? (
           <Text style={{ ...type.small, color: colors.mist }}>Matched item: {decision.item.name}</Text>

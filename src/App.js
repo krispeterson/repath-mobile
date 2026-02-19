@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { BackHandler, LogBox, Text, Vibration, View } from "react-native";
+import { BackHandler, LogBox, Modal, Pressable, Text, Vibration, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import * as Location from "expo-location";
 import { useCameraDevice, useCameraPermission } from "react-native-vision-camera";
@@ -52,6 +52,8 @@ export default function App() {
   const [isLocating, setIsLocating] = useState(false);
   const [isResolvingPack, setIsResolvingPack] = useState(false);
   const [isEvaluatingDecision, setIsEvaluatingDecision] = useState(false);
+  const [isScanNoticeVisible, setIsScanNoticeVisible] = useState(false);
+  const [hasSeenScanNotice, setHasSeenScanNotice] = useState(false);
   const MIN_DETECTION_SCORE = YOLO_SCORE_THRESHOLD;
 
   const { hasPermission, requestPermission } = useCameraPermission();
@@ -59,6 +61,31 @@ export default function App() {
   const cameraRef = useRef(null);
   const model = useTensorflowModel(require("../assets/models/yolo-repath.tflite"));
   const municipalitySuggestions = useMemo(() => listBundledMunicipalities(), []);
+  const scanSupportedExamples = useMemo(() => {
+    const labels = Array.isArray(yoloLabels) ? yoloLabels : [];
+    const preferred = [
+      "Tin Can",
+      "Aluminum Can",
+      "Cardboard",
+      "Pizza Box",
+      "Paperboard",
+      "Paper Egg Carton"
+    ];
+    const availableByLower = new Map(
+      labels.map((label) => [String(label).toLowerCase(), String(label)])
+    );
+    const selected = preferred
+      .map((label) => availableByLower.get(label.toLowerCase()))
+      .filter(Boolean);
+    if (selected.length >= 4) {
+      return selected.slice(0, 4);
+    }
+    const fallback = labels
+      .map((label) => String(label))
+      .filter(Boolean)
+      .slice(0, 4);
+    return fallback;
+  }, []);
 
   useEffect(() => {
     if (model.state === "loaded") {
@@ -369,6 +396,20 @@ export default function App() {
     setStep("scan");
   }
 
+  function requestScanStart() {
+    if (hasSeenScanNotice) {
+      startScan();
+      return;
+    }
+    setIsScanNoticeVisible(true);
+  }
+
+  async function continueScanFromNotice() {
+    setIsScanNoticeVisible(false);
+    setHasSeenScanNotice(true);
+    await startScan();
+  }
+
   const handleDetections = (detections) => {
     setIsProcessing(false);
     const list = Array.isArray(detections) ? detections : [];
@@ -540,7 +581,7 @@ export default function App() {
             setDecision(null);
           }}
           onSearch={() => runDecision(questionDraftAnswers, { recordRecent: true })}
-          onScan={startScan}
+          onScan={requestScanStart}
           onChangeArea={() => setStep("enter_zip")}
           onUseMyLocation={requestLocation}
           onClearLocation={clearLocationSelection}
@@ -561,6 +602,7 @@ export default function App() {
           onUseZipInsteadForCity={handleUseZipInsteadForCity}
           canUseZipInsteadForCity={Boolean(inferCityFromZip(zip))}
           isEvaluatingDecision={isEvaluatingDecision}
+          scanSupportedExamples={scanSupportedExamples}
         />
       )}
 
@@ -586,6 +628,70 @@ export default function App() {
       )}
 
       {scanError ? <Text style={{ color: colors.coral }}>{scanError}</Text> : null}
+
+      <Modal
+        visible={isScanNoticeVisible}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setIsScanNoticeVisible(false)}
+      >
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: "rgba(0,0,0,0.35)",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: spacing.lg
+          }}
+        >
+          <View
+            style={{
+              width: "100%",
+              maxWidth: 420,
+              borderRadius: 16,
+              borderWidth: 1,
+              borderColor: colors.cloud,
+              backgroundColor: colors.white,
+              padding: spacing.lg,
+              gap: spacing.sm
+            }}
+          >
+            <Text style={{ fontSize: 18, fontWeight: "700", color: colors.ink }}>
+              Camera scan is experimental
+            </Text>
+            <Text style={{ color: colors.fog }}>
+              It works best for one item in good lighting and may misclassify materials.
+              Use text search for the most reliable guidance.
+            </Text>
+            <View style={{ flexDirection: "row", justifyContent: "flex-end", gap: spacing.sm }}>
+              <Pressable
+                onPress={() => setIsScanNoticeVisible(false)}
+                style={{
+                  paddingVertical: spacing.xs,
+                  paddingHorizontal: spacing.md,
+                  borderRadius: 10,
+                  borderWidth: 1,
+                  borderColor: colors.cloud,
+                  backgroundColor: colors.white
+                }}
+              >
+                <Text style={{ color: colors.ink, fontWeight: "600" }}>Use text search</Text>
+              </Pressable>
+              <Pressable
+                onPress={continueScanFromNotice}
+                style={{
+                  paddingVertical: spacing.xs,
+                  paddingHorizontal: spacing.md,
+                  borderRadius: 10,
+                  backgroundColor: colors.ink
+                }}
+              >
+                <Text style={{ color: colors.white, fontWeight: "700" }}>Continue to scan</Text>
+              </Pressable>
+            </View>
+          </View>
+        </View>
+      </Modal>
       </SafeAreaView>
     </SafeAreaProvider>
   );

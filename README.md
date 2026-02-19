@@ -10,7 +10,7 @@ People are expected to make correct, context-dependent decisions in real time, o
 
 **RePath Mobile exists to reduce that friction.**
 
-This app is a camera-first, offline-capable guide that helps people decide what to do with the thing in their hand *right now*: reuse it, give it away, sell it, recycle it, take it to a drop-off location, or trash it as a last resort — based on local rules and real-world constraints.
+This app is an offline-capable guide that helps people decide what to do with the thing in their hand *right now*: reuse it, give it away, sell it, recycle it, take it to a drop-off location, or trash it as a last resort — based on local rules and real-world constraints.
 
 I am building RePath Mobile because:
 - Recycling is an **information-routing problem**, not an education or motivation problem

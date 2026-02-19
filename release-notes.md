@@ -26,6 +26,11 @@
 - Recommendation cards now include lightweight prioritization and progressive disclosure:
   - Priority badges (`Best next step`, `High impact`, `Good fallback`, `Last resort`).
   - Secondary pathways collapse by default with `Show details` / `Hide details`.
+- Adjusts camera scan UX for POC maturity:
+  - Demotes camera scan to a secondary `Try camera scan (Beta)` action under `More options`.
+  - Adds persistent limitations copy to set expectations before scan use.
+  - Shows supported scan examples (for example: Tin Can, Aluminum Can, Cardboard, Pizza Box).
+  - Adds first-use confirmation modal and an in-scan `Use text search instead` fallback.
 
 ## Version
 - `v0.1.3`

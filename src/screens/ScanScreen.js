@@ -146,6 +146,10 @@ export default function ScanScreen({
         <Text style={{ fontSize: 12, color: colors.mist }}>Pinch to zoom</Text>
       </View>
 
+      <Pressable onPress={onBack} style={{ alignSelf: "flex-start" }}>
+        <Text style={{ color: colors.ocean, textDecorationLine: "underline" }}>Use text search instead</Text>
+      </Pressable>
+
       {scanLabels.length ? (
         <Text style={{ ...type.small, color: colors.mist }}>Detected: {scanLabels.join(", ")}</Text>
       ) : null}
